@@ -57,7 +57,7 @@ html, body {
     $nav-subitem-bg;
 }
 
-.tocify-wrapper {
+.toc-wrapper {
   transition: left 0.3s ease-in-out;
 
   overflow-y: auto;
@@ -86,11 +86,11 @@ html, body {
     display: block;
   }
 
-  .tocify {
+  .toc {
     margin-top: $logo-margin;
   }
 
-  .tocify-item>a, .toc-footer li {
+  .toc-item>a, .toc-footer li {
     padding: 0 $nav-padding 0 $nav-padding;
     display: block;
     overflow-x: hidden;
@@ -116,7 +116,7 @@ html, body {
   }
 
   // This is the currently selected ToC entry
-  .tocify-focus {
+  .toc-focus {
     box-shadow: 0px 1px 0px $nav-active-shadow;
     background-color: $nav-active-bg;
     color: $nav-active-text;
@@ -124,11 +124,11 @@ html, body {
 
   // Subheaders are the submenus that slide open
   // in the table of contents.
-  .tocify-subheader {
-    display: none; // tocify will override this when needed
+  .toc-subheader {
+    display: none;
     background-color: $nav-subitem-bg;
     font-weight: 500;
-    .tocify-item>a {
+    .toc-item>a {
       padding-left: $nav-padding + $nav-indent;
       font-size: 12px;
     }
@@ -292,8 +292,7 @@ html, body {
     padding-left: $main-padding + 15px;
   }
 
-  // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
+  &>h1, &>h2 {
     clear:both;
   }
 
