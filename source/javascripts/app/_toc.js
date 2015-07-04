@@ -2,7 +2,7 @@
   'use strict';
 
   var closeToc = function() {
-    $(".tocify-wrapper").removeClass('open');
+    $(".toc-wrapper").removeClass('open');
     $("#nav-button").removeClass('open');
   };
 
@@ -24,13 +24,13 @@
     // }).data('toc-tocify');
 
     $("#nav-button").click(function() {
-      $(".tocify-wrapper").toggleClass('open');
+      $(".toc-wrapper").toggleClass('open');
       $("#nav-button").toggleClass('open');
       return false;
     });
 
     $(".page-wrapper").click(closeToc);
-    $(".tocify-item").click(closeToc);
+    $(".toc-item").click(closeToc);
   };
 
   $(makeToc);
