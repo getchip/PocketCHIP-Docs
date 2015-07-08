@@ -30,6 +30,7 @@ html, body {
   &.open {
     left: 0;
   }
+  background-color: #eee;
 }
 
 .page-wrapper {
@@ -42,13 +43,12 @@ html, body {
   span {
     display: block;
     padding: 5px 5px 5px;
-    // background-color: rgba($main-bg, 0.7);
+    background-color: #fff;
     transform-origin: 0 0;
     transform: rotate(-90deg) translate(-100%, 0);
     border-radius: 0 0 0 5px;
   }
   padding: 0 1.5em 5em 0; // increase touch size area
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,13 +56,12 @@ html, body {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  opacity: 0.7;
+  opacity: 0.8;
   line-height: 16px;
   img {
     height: 16px;
     vertical-align: bottom;
   }
-
   transition: left 0.3s ease-in-out;
   &:hover { opacity: 1; }
   &.open { left: $nav-width; }
