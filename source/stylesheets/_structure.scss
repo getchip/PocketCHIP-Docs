@@ -22,7 +22,7 @@ html, body {
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
-  z-index: 30;
+  z-index: 100;
   top: 0;
   right: -$nav-width;
   bottom: 0;
@@ -38,7 +38,6 @@ html, body {
   position: relative;
   clear: both;
 }
-
 
 #nav-button {
   span {
@@ -63,13 +62,18 @@ html, body {
     height: 16px;
     vertical-align: bottom;
   }
-  &:hover { opacity: 1; }
   &.open { right: $nav-width; }
+}
+
+.lang-selector-wrapper {
+  display: none;
 }
 
 @media (min-width: $phone-width) {
   .content {
     padding: 1px 0; // prevent margin leaks
+    position: relative;
+    z-index: 20;
 
     &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
       float: left;
@@ -102,7 +106,15 @@ html, body {
     right: 0;
     bottom: 0;
     width: $code-width;
-    z-index: -50;
+  }
+  .toc-wrapper .lang-selector { display: none; }
+
+  .page-wrapper .lang-selector {
+    position: fixed;
+    left: 50%;
+    right: 0;
+    background-color: #ccc;
+    z-index: 75;
   }
 }
 
@@ -110,4 +122,5 @@ html, body {
   #nav-button { display: none; }
   .toc-wrapper { right: auto; left: 0; }
   .page-wrapper { margin-left: $nav-width; }
+  .page-wrapper .lang-selector { margin-left: $nav-width * ($content-width / 100%); }
 }
