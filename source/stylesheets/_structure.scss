@@ -5,6 +5,7 @@ $content-width: 50%;
 $code-width: 100% - $content-width;
 $tablet-width: 930px;
 $phone-width: $tablet-width - $nav-width;
+$standard-padding: 20px;
 
 html, body {
   padding: 0;
@@ -69,6 +70,14 @@ html, body {
   display: none;
 }
 
+.content {
+  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl, &>pre, &>blockquote {
+    padding-left: $standard-padding;
+    padding-right: $standard-padding;
+    box-sizing: border-box;
+  }
+}
+
 @media (min-width: $phone-width) {
   .content {
     padding: 1px 0; // prevent margin leaks
@@ -82,12 +91,12 @@ html, body {
       margin-top: 0;
     }
 
-    h1, h2 {
+    &>h1, &>h2 {
       clear: both;
       width: $content-width;
     }
 
-    pre, blockquote {
+    &>pre, &>blockquote {
       margin-left: $content-width;
       width: $code-width;
     }
