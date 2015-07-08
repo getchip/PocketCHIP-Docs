@@ -71,7 +71,7 @@ html, body {
   .content {
     padding: 1px 0; // prevent margin leaks
 
-    h3, h4, h5, h6, p, table, ul, ol, aside, dl {
+    &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
       float: left;
       clear: left;
       width: $content-width;
