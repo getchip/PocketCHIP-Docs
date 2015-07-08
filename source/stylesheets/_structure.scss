@@ -1,0 +1,114 @@
+@import 'normalize';
+
+$nav-width: 270px;
+$content-width: 50%;
+$code-width: 100% - $content-width;
+$tablet-width: 930px;
+$phone-width: $tablet-width - $nav-width;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  -webkit-text-size-adjust: none; /* Never autoresize text in landscape */
+  font-size: 14px;
+}
+
+.toc-wrapper {
+  transition: left 0.3s ease-in-out;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  left: -$nav-width;
+  bottom: 0;
+  width: $nav-width;
+  font-weight: bold;
+  &.open {
+    left: 0;
+  }
+}
+
+.page-wrapper {
+  position: relative;
+  clear: both;
+}
+
+
+#nav-button {
+  span {
+    display: block;
+    padding: 5px 5px 5px;
+    // background-color: rgba($main-bg, 0.7);
+    transform-origin: 0 0;
+    transform: rotate(-90deg) translate(-100%, 0);
+    border-radius: 0 0 0 5px;
+  }
+  padding: 0 1.5em 5em 0; // increase touch size area
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.7;
+  line-height: 16px;
+  img {
+    height: 16px;
+    vertical-align: bottom;
+  }
+
+  transition: left 0.3s ease-in-out;
+  &:hover { opacity: 1; }
+  &.open { left: $nav-width; }
+}
+
+@media (min-width: $phone-width) {
+  .content {
+    padding: 1px 0; // prevent margin leaks
+
+    h3, h4, h5, h6, p, table, ul, ol, aside, dl {
+      float: left;
+      clear: left;
+      width: $content-width;
+      margin-top: 0;
+    }
+
+    h1, h2 {
+      clear: both;
+      width: $content-width;
+    }
+
+    pre, blockquote {
+      margin-left: $content-width;
+      width: $code-width;
+    }
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  }
+
+  .dark-box {
+    position: absolute;
+    background-color: #eee;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: $code-width;
+    z-index: -50;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  #nav-button { display: none; }
+  .toc-wrapper { left: 0; }
+  .page-wrapper { margin-left: $nav-width; }
+}

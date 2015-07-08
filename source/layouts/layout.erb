@@ -81,14 +81,14 @@ under the License.
       <% end %>
     </div>
     <div class="page-wrapper">
-      <div class="dark-box"></div>
       <div class="content">
         <%= page_content %>
         <% current_page.data.includes && current_page.data.includes.each do |include| %>
           <%= partial "includes/#{include}" %>
         <% end %>
       </div>
-      <div class="dark-box">
+      <div class="dark-box"></div>
+      <div>
         <% if language_tabs %>
           <div class="lang-selector">
             <% language_tabs.each do |lang| %>
