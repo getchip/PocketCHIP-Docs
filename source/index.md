@@ -11,7 +11,8 @@ toc_footers:
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 ---
 
-# Introduction
+# General
+## Introduction
 
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
@@ -19,7 +20,7 @@ We have language bindings in Shell, Ruby, and Python! You can view code examples
 
 This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
-# Authentication
+## Authentication
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
@@ -53,17 +54,37 @@ curl "api_endpoint_here"
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-# Kittens
+# Errors
 
-## Get All Kittens
+The Kittn API uses the following error codes:
+
+Error Code | Meaning
+---------- | -------
+400 | Bad Request -- Your request sucks
+401 | Unauthorized -- Your API key is wrong
+403 | Forbidden -- The kitten requested is hidden for administrators only
+404 | Not Found -- The specified kitten could not be found
+405 | Method Not Allowed -- You tried to access a kitten with an invalid method
+406 | Not Acceptable -- You requested a format that isn't json
+410 | Gone -- The kitten requested has been removed from our servers
+418 | I'm a teapot
+429 | Too Many Requests -- You're requesting too many kittens! Slow down!
+500 | Internal Server Error -- We had a problem with our server. Try again later.
+503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
+
+# Endpoints
+
+## Kittens
+
+### Get All Kittens
 
 This endpoint retrieves all kittens.
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://example.com/api/kittens`
 
-### Query Parameters
+#### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
@@ -114,17 +135,17 @@ curl "http://example.com/api/kittens"
 ]
 ```
 
-## Get a Specific Kitten
+### Get a Specific Kitten
 
 This endpoint retrieves a specific kitten.
 
 <aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
 
-### HTTP Request
+#### HTTP Request
 
 `GET http://example.com/kittens/<ID>`
 
-### URL Parameters
+#### URL Parameters
 
 Parameter | Description
 --------- | -----------
@@ -161,23 +182,3 @@ curl "http://example.com/api/kittens/2"
 }
 ```
 
-# Errors
-
-<aside class="notice">This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.</aside>
-
-The Kittn API uses the following error codes:
-
-
-Error Code | Meaning
----------- | -------
-400 | Bad Request -- Your request sucks
-401 | Unauthorized -- Your API key is wrong
-403 | Forbidden -- The kitten requested is hidden for administrators only
-404 | Not Found -- The specified kitten could not be found
-405 | Method Not Allowed -- You tried to access a kitten with an invalid method
-406 | Not Acceptable -- You requested a format that isn't json
-410 | Gone -- The kitten requested has been removed from our servers
-418 | I'm a teapot
-429 | Too Many Requests -- You're requesting too many kittens! Slow down!
-500 | Internal Server Error -- We had a problem with our server. Try again later.
-503 | Service Unavailable -- We're temporarially offline for maintanance. Please try again later.
