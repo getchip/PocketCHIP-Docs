@@ -1,5 +1,6 @@
-Slate
-========
+<p align="center">
+  <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Docs Generator" width="226">
+</p>
 
 [![Build Status](https://travis-ci.org/tripit/slate.svg?branch=master)](https://travis-ci.org/tripit/slate) [![Dependency Status](https://gemnasium.com/tripit/slate.png)](https://gemnasium.com/tripit/slate)
 
