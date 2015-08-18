@@ -32,7 +32,21 @@ html, body {
   &.open {
     right: 0;
   }
-  background-color: #ddd;
+  background-color: #888;
+}
+
+.toc-logo {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.toc, .toc-section, .toc-submenu {
+  list-style: none;
+  padding: 0;
+}
+
+.toc a {
+  padding: 0 $standard-padding;
 }
 
 .page-wrapper {
