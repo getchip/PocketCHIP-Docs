@@ -40,12 +40,12 @@ html, body {
   margin: 0 auto;
 }
 
-.toc, .toc-section, .toc-submenu {
+.toc, .toc-section, .toc-submenu, .toc-footer {
   list-style: none;
   padding: 0;
 }
 
-.toc a {
+.toc a, .toc-footer {
   padding: 0 $standard-padding;
 }
 
