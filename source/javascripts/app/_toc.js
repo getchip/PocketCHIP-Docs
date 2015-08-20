@@ -3,6 +3,7 @@
 
   var headerHeights = {};
 
+  // hides the TOC on mobile devices
   var closeToc = function() {
     $(".toc-wrapper").removeClass('open');
     $("#nav-button").removeClass('open');
@@ -30,10 +31,20 @@
       }
     }
 
-    var target = $(".toc a[href='#" + best + "']");
-    console.log("new target " + best);
+    $(".toc a[href='#" + best + "']").addClass("active").parentsUntil('.toc', 'li').addClass("open");
+  };
 
-    target.addClass("active").parentsUntil('.toc', 'li').addClass("open");
+  var debounce = function(func, waitTime) {
+    var timeout = false;
+    return function() {
+      if (timeout === false) {
+        setTimeout(function() {
+          func();
+          timeout = false;
+        }, waitTime);
+        timeout = true;
+      }
+    };
   };
 
   var makeToc = function() {
@@ -47,11 +58,18 @@
 
     $(".page-wrapper").click(closeToc);
     $(".toc-item").click(closeToc);
+
+    // reload immediately after scrolling on toc click
+    $('.toc a').click(function() {
+      setTimeout(refreshToc, 1);
+    });
+
+    $(window).scroll(debounce(refreshToc, 200));
+    $(window).resize(debounce(recacheHeights, 200));
   };
 
   $(makeToc);
 
-  global.onscroll = refreshToc;
   global.recacheHeights = recacheHeights;
 
 })(window);
