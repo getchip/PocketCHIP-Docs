@@ -54,7 +54,7 @@ curl "api_endpoint_here"
 
 > Make sure to replace `meowmeowmeow` with your API key.
 
-# Errors
+## Errors
 
 The Kittn API uses the following error codes:
 
@@ -79,6 +79,10 @@ Error Code | Meaning
 ### Get All Kittens
 
 This endpoint retrieves all kittens.
+
+* test
+* list
+* here
 
 #### HTTP Request
 

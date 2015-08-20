@@ -32,7 +32,7 @@ under the License.
     }
     $(".highlight." + language).show();
 
-    global.toc.calculateHeights();
+    global.recacheHeights();
 
     // scroll to the new location of the position
     if ($(window.location.hash).get(0)) {
