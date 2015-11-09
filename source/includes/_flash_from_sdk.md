@@ -44,7 +44,8 @@ Now that the virtual machine is running and configured, you can connect CHIP to 
 ### Prepare CHIP for Flashing
 
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
-{{ wiki:uboot_jumper.jpg?400 }}
+
+![CHIP with jumper wire attatched](wiki:uboot_jumper.jpg?400)
 *Note: this jumper needs to be present only when you connect CHIP to power*. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.
 
 Now connect CHIP to your computer with a [micro-USB](https://commons.wikimedia.org/wiki/File:Micro_USB.jpg)->USB-B cable. The power LED will illuminate.
