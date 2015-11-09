@@ -35,4 +35,4 @@ If you have already cloned the CHIP-tools from a previous CHIP flashing, you can
 cd CHIP-tools
 git pull http://github.com/NextThingCo/CHIP-tools
 ```
-Now you are ready to [[flash_chip_from_sdk_-_minimal#Flash With NTC Buildroot OS|flash CHIP]] with firmware.
+Now you are ready to [flash CHIP](flash_chip_from_sdk_-_minimal#Flash With NTC Buildroot OS) with firmware.
