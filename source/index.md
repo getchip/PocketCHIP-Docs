@@ -10,10 +10,10 @@ toc_footers:
 
 includes:
   - install_chip_sdk.md
-  - flash_from_sdk
-  - prepare_ubuntu_toflash
-  - update_chip_sdk
-  - errors
+  - flash_from_sdk.md
+  - prepare_ubuntu_toflash.md
+  - update_chip_sdk.md
+  - errors.md
 
 search: true
 ---
