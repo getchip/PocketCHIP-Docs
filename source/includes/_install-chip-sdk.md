@@ -36,25 +36,32 @@ Installation of Git depends on your operating system:
 # Clone the CHIP-SDK repository and boot the Virtual Machine
 
 Assuming you have [git in your PATH](http://www.chambaud.com/2013/07/08/adding-git-to-path-when-using-github-for-windows/), open up a terminal and type:
+
 ```
   git clone https://github.com/NextThingCo/CHIP-SDK
 ```
+
 and start up the virtual machine:
+
 ```
   cd CHIP-SDK
   vagrant up
 ```
 
+
 # Login To Virtual Machine
 
 In the same shell on the host type the following:
+
 ```
    vagrant ssh
 ```
 If everything went well you should see the following prompt:
+
 ```
   vagrant@vagrant-ubuntu-trusty-32:~$
 ```
+
 Congratulations!  Now you're ready to Flash a C.H.I.P. from your SDK!
 
 
@@ -64,22 +71,28 @@ Here are a few possible problems.
 ## Shared Folder Out of Sync
 
 In case you run into trouble because the kernel in the VM was updated and the shared vagrant folder can no longer be mounted, update the guest additions by typing the following in the CHIP-SDK directory on the host:
+
 ```
   vagrant plugin install vagrant-vbguest
 ```
+
 This [blog post](http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/) has some more tips on keeping additions in sync.
 
 ##Invalid State
 
 If you get an error like:
+
 ```
   error: The guest machine entered an invalid state while waiting for it to boot.
 ```
+
 This probably means your version of VirtualBox needs updating and/or needs the Extension Pack. Update as necessary and try `vagrant up` again.
 
 ##Couldn't Find File
 If you get the error:
+
 ```
   error: Couldn't open file /Volumes/Satellite/gitbins/CHIP-SDK/base
 ```
+
 that means you didn't cd CHIP-SDK. Very basic, perhaps, but late nights sometimes need that bump!
