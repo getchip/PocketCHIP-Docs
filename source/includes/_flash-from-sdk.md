@@ -38,8 +38,10 @@ If you have previously installed the CHIP-SDK, you may need to update from withi
   cd ~/CHIP-SDK
   git pull https://github.com/NextThingCo/CHIP-SDK.git
 ```
+##Flash With Firmware
+Now that the virtual machine is running and configured, you can connect CHIP to your computer and give it an operating system.
 
-###### Prepare CHIP for Flashing
+### Prepare CHIP for Flashing
 
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
 {{ wiki:uboot_jumper.jpg?400 }}
@@ -47,7 +49,7 @@ Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT
 
 Now connect CHIP to your computer with a [micro-USB](https://commons.wikimedia.org/wiki/File:Micro_USB.jpg)->USB-B cable. The power LED will illuminate.
 
-###### Flash With NTC Buildroot OS
+### Option 1: Flash With NTC Buildroot OS
 
 Buildroot is a lean operating system, and does not have a package manager to install software. You can add additional software before you flash CHIP by [[##Customize buildroot|customizing buildroot]]. To flash CHIP with the buildroot OS:
 
@@ -58,7 +60,7 @@ Buildroot is a lean operating system, and does not have a package manager to ins
 
 During flashing, the terminal will fill with messages.  If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](##Buildroot Output).
 
-###### Flash With Debian
+### Option 2: Flash With Debian
 If you want to flash CHIP with the debian OS
 
 ```shell
@@ -68,7 +70,7 @@ If you want to flash CHIP with the debian OS
 
 During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](##Debian Output).
 
-###### Connect to CHIP and Do Something
+### Connect to CHIP and Do Something
 After a few minutes, you'll be able to connect to CHIP via serial:
 
 ```shell
@@ -81,7 +83,7 @@ and even test the hardware:
   hwtest
 ```
 
-###### Customize buildroot
+### Customize buildroot
 
 If you want to customize buildroot, use these commands before you run the `./chip-update-firmware.sh` script to flash CHIP with firmware:
 
@@ -110,8 +112,9 @@ This will take a while, maybe an hour. When finished, flash CHIP with the script
 ---------------------------------------
 
 ## Appendix
-Some additional info.
-###### Buildroot Output
+Some additional info and examples.
+
+### Buildroot Output
 Sample output from flashing Buildroot to CHIP looks like:
 
 ```shell
@@ -188,7 +191,7 @@ password... OK
 poweroff... OK
 ```
 
-######Debian Output
+### Debian Output
 Sample output from a successful Debian output:
 
 ```shell
@@ -266,7 +269,7 @@ password... OK
 poweroff... OK
 ```
 
-###### Failure
+### Failure
 Here's a couple common errors:
 
 ```shell
@@ -301,7 +304,7 @@ ERROR: You don't have permission to access Allwinner USB FEL device
 
 This error means that you need to run the **chip-update-firmware.sh** script with **sudo** (or you need to add a rules file as described below).
 
-###### Optional Convenience
+### Optional Convenience
 As a developer, there's a good chance you'll flash CHIP more than once in your life. You'll probably want to follow these steps.
 In order to be able to run the **chip-update-firmware.sh** script without sudo, make a rules file:
 
