@@ -1,22 +1,32 @@
 # Flash CHIP With Firmware from SDK
 Before you begin, follow the tutorial to [install the CHIP-SDK](Install CHIP SDK - minimal). If you have already installed the SDK, you may need to [update the virtual machine](Update CHIP SDK - minimal). Now you're ready to launch the virtual machine and give CHIP some firmware and operating system.
 
-# Requirements
+## Requirements
   * Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+
   * CHIP
   * Jumper wire
   * Internet connection
   * Software: terminal, VirtualBox, Vagrant, git
 
-# Boot Virtual Machine
+## Boot Virtual Machine
 
 On the host machine, open a terminal and
+
+```shell
   cd CHIP-SDK
   vagrant up
   vagrant ssh
+```
+
 This opens a virtual machine running Ubuntu Linux, and you'll get this prompt in your Terminal:
+
+```shell
   vagrant@vagrant-ubuntu-trusty-32:~$
-If you have previously installed the CHIP-SDK, you may need to update from within the virtual machine. If this is the first SDK install, [move on to flashing](#Flash With NTC Buildroot OS)):
+```
+
+If you have previously installed the CHIP-SDK, you may need to update from within the virtual machine. If this is the first SDK install, [move on to flashing](##Flash With NTC Buildroot OS)):
+
+```shell
   cd ~/
   sudo rm -r ~/sunxi-tools
   git clone https://github.com/NextThingCo/sunxi-tools.git
@@ -27,8 +37,9 @@ If you have previously installed the CHIP-SDK, you may need to update from withi
   git pull https://github.com/NextThingCo/CHIP-tools.git
   cd ~/CHIP-SDK
   git pull https://github.com/NextThingCo/CHIP-SDK.git
+```
 
-## Prepare CHIP for Flashing
+###### Prepare CHIP for Flashing
 
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
 {{ wiki:uboot_jumper.jpg?400 }}
@@ -36,50 +47,74 @@ Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT
 
 Now connect CHIP to your computer with a [micro-USB](https://commons.wikimedia.org/wiki/File:Micro_USB.jpg)->USB-B cable. The power LED will illuminate.
 
-## Flash With NTC Buildroot OS
+###### Flash With NTC Buildroot OS
 
-Buildroot is a lean operating system, and does not have a package manager to install software. You can add additional software before you flash CHIP by [[#Customize buildroot|customizing buildroot]]. To flash CHIP with the buildroot OS:
+Buildroot is a lean operating system, and does not have a package manager to install software. You can add additional software before you flash CHIP by [[##Customize buildroot|customizing buildroot]]. To flash CHIP with the buildroot OS:
+
+```shell
   cd ~/CHIP-tools
   ./chip-update-firmware.sh
-During flashing, the terminal will fill with messages. Here is a [sample successful output](#Buildroot Output).
+```
 
-## Flash With Debian
+During flashing, the terminal will fill with messages.  If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](##Buildroot Output).
+
+###### Flash With Debian
 If you want to flash CHIP with the debian OS
+
+```shell
   cd ~/CHIP-tools
   ./chip-update-firmware.sh -d
-During flashing, the terminal will fill with messages. Here is a [sample successful output](#Debian Output).
+```  
 
-## Connect to CHIP and Do Something
+During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](##Debian Output).
+
+###### Connect to CHIP and Do Something
 After a few minutes, you'll be able to connect to CHIP via serial:
-  cu -l /dev/ttyACM0 -s 115200
-and even test the hardware:
-  hwtest
 
-## Customize buildroot
+```shell
+  cu -l /dev/ttyACM0 -s 115200
+```
+
+and even test the hardware:
+
+```shell
+  hwtest
+```
+
+###### Customize buildroot
 
 If you want to customize buildroot, use these commands before you run the `./chip-update-firmware.sh` script to flash CHIP with firmware:
 
+```shell
   cd ~/CHIP-buildroot
   make chip_defconfig
   make nconfig
+```
   
 The `nconfig` command will display a text interface in your terminal. Use your arrow keys to browse and select additional software for the buildroot OS. When you're finished with your selections, exit by hitting the F9 key, which will automatically save your custom buildroot to:
+
+```shell
   /home/vagrant/CHIP-buildroot/.config
+```
+
 Now let's build your buildroot with your custom additions:
   make
 This will take a while, maybe an hour. When finished, flash CHIP with the script:
+
+```shell
   cd ~/CHIP-tools
   ./chip-update-firmware.sh
+```
 
 ---------------------------------------
 ---------------------------------------
 
-# Appendix
+## Appendix
 Some additional info.
-## Buildroot Output
+###### Buildroot Output
 Sample output from flashing Buildroot to CHIP looks like:
 
-```
+```shell
 ROOTFS_URL=http://opensource.nextthing.co.s3.amazonaws.com/chip/buildroot/stable/71/images
 BUILD=71
 BR_URL=http://opensource.nextthing.co.s3.amazonaws.com/chip/buildroot/stable/71/images
@@ -153,9 +188,10 @@ password... OK
 poweroff... OK
 ```
 
-##Debian Output
+######Debian Output
 Sample output from a successful Debian output:
-```
+
+```shell
 debian selected
 ROOTFS_URL=http://opensource.nextthing.co.s3.amazonaws.com/chip/debian/stable/37
 BUILD=37
@@ -229,9 +265,11 @@ login... OK
 password... OK
 poweroff... OK
 ```
-## Failure
+
+###### Failure
 Here's a couple common errors:
-```
+
+```shell
 == upload the SPL to SRAM and execute it ==
 ERROR: Allwinner USB FEL device not found!
 == upload images ==
@@ -242,12 +280,13 @@ ERROR: Allwinner USB FEL device not found!
 == execute the main u-boot binary ==
 ERROR: Allwinner USB FEL device not found!
 ```
+
 This indicates that CHIP is probably booted into Linux, and not ready to receive firmware. There are three possible reasons for this:
   - You already successfully flashed CHIP, and haven't disconnected the USB cable from your computer.
   - The jumper wire between Pins 7 & 39 is either not present, loose, or the jumper is in the wrong holes.
   - There is a problem with the USB cable.
 
-```
+```shell
 Image 0: 848 Bytes = 0.83 kB = 0.00 MB
 == upload the SPL to SRAM and execute it ==
 ERROR: You don't have permission to access Allwinner USB FEL device
@@ -259,17 +298,22 @@ ERROR: You don't have permission to access Allwinner USB FEL device
 == execute the main u-boot binary ==
 ERROR: You don't have permission to access Allwinner USB FEL device
 ```
+
 This error means that you need to run the **chip-update-firmware.sh** script with **sudo** (or you need to add a rules file as described below).
 
-## Optional Convenience
+###### Optional Convenience
 As a developer, there's a good chance you'll flash CHIP more than once in your life. You'll probably want to follow these steps.
 In order to be able to run the **chip-update-firmware.sh** script without sudo, make a rules file:
-```
+
+```shell
 sudo touch /etc/udev/rules.d/99-allwinner.rules
-</code>
+```
+
 and add the content with the tee command:
-<code>
+
+```shell
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1f3a", ATTRS{idProduct}=="efe8", GROUP="plugdev", MODE="0660" SYMLINK+="usb-chip"' | sudo tee /etc/udev/rules.d/99-allwinner.rules
 ```
+
 then, to make this rules file work:
   sudo udevadm control --reload-rules
