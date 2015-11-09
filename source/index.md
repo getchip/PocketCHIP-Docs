@@ -9,9 +9,10 @@ toc_footers:
   - <a href='http://github.com/NextThingCo/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - errors
+  - install-chip-sdk.md
   - flash-from-sdk
   - prepare-ubuntu-toflash
+  - errors
 
 search: true
 ---
