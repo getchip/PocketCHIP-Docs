@@ -1,5 +1,5 @@
 # Flash CHIP With Firmware from SDK
-Before you begin, follow the tutorial to [[Install CHIP SDK - minimal | install the CHIP-SDK]]. If you have already installed the SDK, you may need to [[Update CHIP SDK - minimal|update the virtual machine.]] Now you're ready to launch the virtual machine and give CHIP some firmware and operating system.
+Before you begin, follow the tutorial to [install the CHIP-SDK](Install CHIP SDK - minimal). If you have already installed the SDK, you may need to [update the virtual machine](Update CHIP SDK - minimal). Now you're ready to launch the virtual machine and give CHIP some firmware and operating system.
 
 # Requirements
   * Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+
@@ -16,7 +16,7 @@ On the host machine, open a terminal and
   vagrant ssh
 This opens a virtual machine running Ubuntu Linux, and you'll get this prompt in your Terminal:
   vagrant@vagrant-ubuntu-trusty-32:~$
-If you have previously installed the CHIP-SDK, you may need to update from within the virtual machine. If this is the first SDK install, [[#Flash With NTC Buildroot OS|move on to flashing]]):
+If you have previously installed the CHIP-SDK, you may need to update from within the virtual machine. If this is the first SDK install, [move on to flashing](#Flash With NTC Buildroot OS)):
   cd ~/
   sudo rm -r ~/sunxi-tools
   git clone https://github.com/NextThingCo/sunxi-tools.git
@@ -34,20 +34,20 @@ Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT
 {{ wiki:uboot_jumper.jpg?400 }}
 *Note: this jumper needs to be present only when you connect CHIP to power*. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.
 
-Now connect CHIP to your computer with a [[https://commons.wikimedia.org/wiki/File:Micro_USB.jpg|micro-USB]]->USB-B cable. The power LED will illuminate.
+Now connect CHIP to your computer with a [micro-USB](https://commons.wikimedia.org/wiki/File:Micro_USB.jpg)->USB-B cable. The power LED will illuminate.
 
 ## Flash With NTC Buildroot OS
 
 Buildroot is a lean operating system, and does not have a package manager to install software. You can add additional software before you flash CHIP by [[#Customize buildroot|customizing buildroot]]. To flash CHIP with the buildroot OS:
   cd ~/CHIP-tools
   ./chip-update-firmware.sh
-During flashing, the terminal will fill with messages. Here is a [[#Buildroot Output|sample successful output]].
+During flashing, the terminal will fill with messages. Here is a [sample successful output](#Buildroot Output).
 
 ## Flash With Debian
 If you want to flash CHIP with the debian OS
   cd ~/CHIP-tools
   ./chip-update-firmware.sh -d
-During flashing, the terminal will fill with messages. Here is a [[#Debian Output|sample successful output]].
+During flashing, the terminal will fill with messages. Here is a [sample successful output](#Debian Output).
 
 ## Connect to CHIP and Do Something
 After a few minutes, you'll be able to connect to CHIP via serial:
