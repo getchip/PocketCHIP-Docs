@@ -316,4 +316,6 @@ echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1f3a", ATTRS{idProduct}=="efe8", GROUP
 ```
 
 then, to make this rules file work:
+```shell
   sudo udevadm control --reload-rules
+```
