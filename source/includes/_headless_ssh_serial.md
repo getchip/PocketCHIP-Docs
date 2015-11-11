@@ -31,7 +31,7 @@ which results in your IP address, which might look like this:
 If the `hostname -i` command doesn't work you can use
 
 ```shell
-ifconfig
+ip addr show dev wlan0
 ```
 
 which will output a lot of data. Look for the line `wlan0` and the entry `inet`, something like:
