@@ -10,10 +10,13 @@ toc_footers:
 
 includes:
   - main.md
+  - main_faq.md
+  - main_advanced.md
+  - main_adapters.md
+  - main_pocketchip.md
 
 search: true
 ---
 
 # Introduction
-
 Welcome to Next Thing Co documentation.
