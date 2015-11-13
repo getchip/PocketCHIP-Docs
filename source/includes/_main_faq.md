@@ -1,8 +1,8 @@
-# FAQs
+## FAQs
 Frequently Asked Questions
 
-## Why?
+### Why?
 Because computers.
 
-## How?
+### How?
 First A, then B.
