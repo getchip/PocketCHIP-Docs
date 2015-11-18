@@ -1,8 +1,10 @@
-# Welcome to DERP
+## Welcome to DERP
 
 We made a computer. *A $9 computer*. And every computer needs an operating system. 
 
-Ours is **DERP**: **D**ebian **E**nvironment for **R**adical **P**roducts. Grab an old TV (or any screen with a composite video input), a keyboard and mouse, and stick some electricity  in the micro USB port. In a few seconds, you'll have CHIP's DERP on your screen, ready for your commands. 
+Ours is **DERP**: **D**ebian **E**nvironment for **R**adical **P**roducts. Grab an old TV (or any screen with a composite video input), a keyboard and mouse, and stick some electricity  in the micro USB port. In a few seconds, you'll have CHIP's DERP on your screen, ready to do computer things. 
+
+![DERP desktop](images/screen_desktop.jpg)
 
 CHIP is built for making - we've packed a powerful processor, 8 GB of storage, stereo audio, video out,  and lots of connections for playing and making your projects and products. 
 
@@ -11,7 +13,7 @@ DERP is built for doing. You probably didn't expect to be able to browse the 'ne
 So how do use this thing? Read on and learn how much you can do. 
 
 ## Start CHIP
-First things first. Let's boot CHIP into DERP and do some computer things! Add some power, then we can turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
+First things first. Let's boot CHIP into DERP and do some computer things! Add some power, and only then we can turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
 
 ### Power up
 The single most important thing to using any electronic device is getting electricity to the right places. This tutorial covers how to turn CHIP "on". This might seem so straightforward that it doesn't deserve several paragraphs, but CHIP is pretty clever, so there's actually a few things worth knowing.
@@ -37,24 +39,52 @@ The JST can only plug it in one way, so if you are having a hard time lining thi
 What's really great is that if you plug in to a charger and plug in a battery, the battery will charge - all the power management is on CHIP itself. Roughly, it takes about four to six hours to charge a 3000 mAh LiPo battery from a 5V 1A power source. Also, our delightful little Power Management IC, the AXP209, handles pass-through power, so while on and charging a battery, CHIP is basically running on a un-interruped power supply -- If charge power fails, CHIP seamlessly switches onto battery power without shutting off.
 
 ### Connect to WiFi
-Use the Desktop environment to connect to a WiFi network.
-![Screenshot of GUI showing where to change WiFi settings](images/screencap_wifisettings.jpg)
+A connection to a WiFi network is easily made using the WiFi icon the top right system tray. Just select a network to initiate a connection. If you need a password, you'll be prompted for it.
+
+![Select a wireless connection access point](images/screen_wifisettings.jpg)
+
+If you need more control and information over your network connection, use the Settings->Network Connections panel to show your connections. Double click on a connection to bring up the connection editor:
+
+![Network connection editor](images/screen_networksettings.jpg)
 
 ### Connect Bluetooth
-Use the Desktop environment to connect a bluetooth device.
-![Screenshot of GUI showing where to change BT settings](images/screencap_btsettings.jpg)
+Bluetooth device setup can be accessed using the Bluetooth icon in the top right system tray.
+
+![Bluetooth settings menu](images/screen_btsettings.jpg)
+
+When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
+
+![Bluetooth settings menu](images/screen_btsetup01.jpg)
+
+You can manage, and also connect to, your devices using the the Bluetooth Devices panel, accessed from the Bluetooth system tray:
+
+![Bluetooth devices panel](images/screen_btdevices.jpg)
+
 ### Terminal for Beginners Glossary
-One of the great things about Linux is the terminal application. While it may look unfriendly and terse, if you want to really extend the capabilities of CHIP, you'll often find yourself in the terminal. If you're a beginner, here's a quick reference of some really important and common commands.
-*  cd
-*  ls
-*  apt-get
-*  pwd
-*  grep
-* | (pipe)
-* < (redirect)
-*  cat
-*  less
-*  nano
+One of the great things about Linux is the terminal application. 
+While it may look unfriendly and terse, if you want to really extend the capabilities of CHIP, you'll often find yourself in the terminal. 
+If you're a beginner, here's a quick reference of some really important and common commands. You can simply add `-h` to get some hints on how to use a command, such as `cp -h` or you can read a manual page using `man cp`. Most unix commands have a variety of options that can be executed in the command with *flags*, such as `ls -l -a`. Even better, search the internet! This primer is simply here to help you understand what a command might be doing, not to help you use it to its full ability.
+
+* **cd** change directory. open a folder. ex: `cd ~/Pictures` changes your current directory to the home Pictures folder, so you can easily access the files within.
+* **mkdir** make directory. create a folder. ex: `mkdir Vacation` makes a folder named *Vacation* in the current directory. `mkdir ~/Pictures/Vacation` makes a `Vacation` folder in the home Pictures directory.
+* **ls** list files in the current directory so you know what is in it. Some options are `ls -l` to list in long format to provide information about permissions, size, and date. `ls -a` to show hidden files that start with the `.` character.
+* **mv** move a file from one directory to another, or to give it a new name. Ex: `mv this.one that.one` renames a file. `mv this.one ~/Pictures/Vacation/` puts the file *this.one* into the `Vacation` directory.
+* **cp** copy a file from one place to another. Ex: `cp this.one this_01.one` will copy `this.one` to another file `this_01.one`. Add directories for more fun: `cp ~/Pictures/Vacation/saturn.jpg /Users/otherone/Pictures/Vacation/saturn.jpg`. 
+* **rm** remove a file. delete it, and beware!. Use the `-r` to make it recursive to delete a directory. Ex: `rm this.one` deletes that file. `rm -r ~/Pictures/Vacation` to forget the good times.
+* **apt-get** the command used for installing, removing, and finding software for Debian Linux systems, such as DERP. `apt-get install puredata` installs the Pure Data program and any dependencies. `apt-get remove puredata` will remove the program. `apt-cache search image` will search apt repositories for the keyword *search*. And so on.
+* **pwd** present working directory. In case you forget where you are. Not much to it: `pwd` will output the directory name, such as `/Users/home/chip/Pictures/Vacation/`
+* **grep** a tool used for searching through files. It's quite deep and can be complicated, but if you see the word `grep` in some command, you know it's searching for a match.
+* **| (pipe)**  a command used to redirect data into an application.
+* **< (redirect)** a command use to redirect data into a file.
+* **cat** concactenate. used to append data to a file. Ex: `cat "Last line of text" > sometext.txt`. Merge files: `cat append.txt > main.txt` will put all the text in append.txt into main.txt.
+* **less** makes it so you can paginate and read a text tile. Ex: `less longtext.txt` will fill the screen with the first part of the longtext.txt file. Use the space bar to view the next page. Type `q` to exit.
+* **nano** a text editor. You'll often see commands that call `nano` so you can edit a configuration. Ex: `nano /etc/avahi/services/afpd.service` to edit the avahi Apple file service file.
+* **find** look for files in the filesystem. Ex: `find ~/Documents -name particular.txt -type f` will look for the file with the name `particular.txt` in the Documents directory.
+* **chmod** change mode. Used for file permissions, which can be important when sharing things on the network, scripting actions, and many more reasons. 
+* **htop** display the processes currently alive on the CPU. If things seem slow, or you want to see how much CPU or memory a program is using, just type `htop` to see a table of all running processes, then type `q` when you want to exit.
+* **scp** secure copy. copy a file from one computer to another over a network. Ex: `cp Pictures/Vacation/motel.jpg Pictures/Vacation/accident.jpg chip@otherchip.local:~/Pictures` copies a couple jpegs to another computer on the network.
+* **ssh** secure shell. access another computer on the network and use the terminal commands to make changes and control it. Ex: `ssh chip@chip.local` to access your CHIP on a local network.
+* **CTRL C** if you can't use the terminal because a process is taking too long, type CTRL-C on your keyboard to cancel the most recent command.
 
 ## Connecting Accessories
 CHIP has a lot of connectors, some for building, some for doing normal computer things. This section covers the normal computer things, like audio, video, and input.
@@ -93,7 +123,7 @@ CHIPs (except the very first shipment of Alpha CHIPs) ship with cables confirmed
 
 The conductors on the TRRS plug are arranged like this:
 
-![Tip: Audio Left, Ring: Audio Right, Ring: Ground, Sleeve: Video](images/trrs_annotated.png)
+![Tip: Audio Left, Ring: Audio Right, Ring: Ground, Sleeve: Video](images/trrs_annotated.jpg)
 
 [This page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details about TRRS plugs.
 
@@ -122,38 +152,67 @@ Many of the drivers have not been tested with CHIP - as CHIP matures, more infor
 Like any modern laptop, CHIP can run and charge any single-cell LiPo battery. Read more in the [powering CHIP section](#powerchip).
 
 ## Settings
+Most of the settings for the computer and for the desktop can be set using the apps in the "Computer Things" menu. Select the appropriate app from either the Settings Menu or the Settings Manager.
+
+![Screenshot of GUI showing where to change WiFi settings](images/screen_settingsmenu.jpg)
+
+![Screenshot of GUI showing where to change WiFi settings](images/screen_settingsmgr.jpg)
+
 ### WiFi
 
-Description of using GUI desktop to change WiFi settings.
+A connection to a WiFi network is easily made using the WiFi icon the top right system tray. Just select a network to initiate a connection. If you need a password, you'll be prompted for it.
 
-![Screenshot of GUI showing where to change WiFi settings](images/screencap_wifisettings.jpg)
+![Select a wireless connection access point](images/screen_wifisettings.jpg)
+
+If you need more control and information over your network connection, use the Settings->Network Connections panel to show your connections. Double click on a connection to bring up the connection editor:
+
+![Network connection editor](images/screen_networksettings.jpg)
 
 ### Bluetooth
-Screenshot and description of using GUI desktop to change Bluetooth settings.
+Bluetooth device setup can be accessed using the Bluetooth icon in the top right system tray.
 
-![Screenshot of GUI showing where to change Bluetooth settings](images/screencap_btsettings.jpg)
+![Bluetooth settings menu](images/screen_btsettings.jpg)
+
+When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
+
+![Bluetooth settings menu](images/screen_btsetup01.jpg)
+
+You can manage, and also connect to, your devices using the the Bluetooth Devices panel, accessed from the Bluetooth system tray:
+
+![Bluetooth devices panel](images/screen_btdevices.jpg)
 
 ### Sound
-Screenshot and description of using GUI desktop to change Sound settings.
+By default, sound output comes from the built-in connector, served by the "sunxi codec" driver. If you want to change the volume, you can use the volume control in the top right system tray:
 
-![Screenshot of GUI showing where to change audio settings](images/screencap_audiosettings.jpg)
+![Desktop volume control](images/screen_volumectl.jpg)
+
+Or, open the Audio Mixer in the Multimedia category:
+
+![Open Audio Mixer app in Multimedia category](images/screen_audiomixermenu.jpg)
+
+where you can select the "Playback" category to change the volume.
+
+![Control panel for sound](images/screen_audiosettings03.jpg)
+
+If you don't see that control, just click on the "Select Controls" button and enable all controls:
+
+![Enable all controls for audio mixer](images/screen_audiosettings02.jpg)
 
 ### Display
-Screenshot and description of using GUI desktop to change Display settings.
+Use the Settings->Display control panel to adjust the monitor's resolution and rotation settings:
 
-![Screenshot of GUI showing where to change monitor settings](images/screencap_monsettings.jpg)
+If you want to customize the desktop image, icons, colors, and fonts, there are two different panels. The Appearance panel lets you select a theme to make instant changes for several properties.
 
-![Screenshot of GUI showing where to change desktop picture](images/screencap_desktoppic.jpg)
+![Change monitor settings with the Display control panel](images/screen_desktopsettings04.jpg)
+
+The Desktop panel lets you customize images and colors, along with the behavior of menus.
+
+![Change desktop look with Desktop panel](images/screen_desktopsettings01.jpg)
 
 ### Time and Date
-Screenshot and description of using GUI desktop to change Time and Date settings.
+Set the Time with the Orage Globaltime panel. This can be found in Accessories->Orage Globaltime or in Office->Orage Globaltime. Simply click the time to bring up the preferences panel. You can quickly view the date from the Orage Calendar in the Office menu.
 
-![Screenshot of GUI showing where to change time](images/screencap_timesettings.jpg)
-
-### Printing
-Screenshot and description of using GUI desktop to change Printer settings.
-
-![Screenshot of GUI showing where to setup printer](images/screencap_printer.jpg)
+![Orage Globaltime is used to set the time and date](images/screencap_timesettings.jpg)
 
 ### Mouse Sensitivity
 Screenshot and description of using GUI desktop to change Mouse Sensitivity settings.
@@ -162,49 +221,43 @@ Screenshot and description of using GUI desktop to change Mouse Sensitivity sett
 
 ## Launching Installed Apps
 DERP comes prepackaged with many open-source applications to get you started. It's easy to launch an application. 
+You can select an application from the "Computer Things!" menu and select an app from the categories:
 
-![Screenshot of GUI launching apps](images/screencap_launchapp.jpg)
+![Screenshot of GUI launching apps](images/screen_appfinder01.jpg)
+
+Or, for more control, launch the Application Finder in Accessories, where you can use the search bar and easily navigate among the categories:
+
+![Screenshot of GUI launching apps](images/screen_appfinder02.jpg)
+
+Below are some of the applications that come pre-installed with CHIP:
 
 ### AbiWord
-A word processor.
+AbiWord is a fully featured word processor. You can learn more at [The AbiWord website](http://www.abiword.org)
 
-![Screenshot of AbiWord](images/appscreen_abiword.jpg)
-
-### Maelstrom
-A game
-
-![Screenshot of Maelstrom](images/appscreen_maelstrom.jpg)
-
-### Alex 4
-A retro game
-
-![Screenshot of Alex](images/appscreen_alex.jpg)
+![AbiWord can process words.](images/appscreen_abiword.jpg)
 
 ### Web Browser
-Ice Weasel is like Firefox, just cooler. Hah.
+Ice Weasel is a Debian Linux version of the Firefox browser. The browser is largely the same as Firefox, but has a different name for the sake of trademark protection by the Mozilla corporation. More information is at the [Debian website](https://wiki.debian.org/Iceweasel) and in this [stack exchange thread](http://unix.stackexchange.com/questions/44215/is-there-any-advantage-of-using-iceweasel-and-firefox).
 
-![Screenshot of CHIP's web browser](images/appscreen_webbrowser.jpg)
+![Browse the web with IceWeasel](images/appscreen_webbrowser.jpg)
 
 ### Video Player
-Plays video.
+CHIP plays video! Use the built-in Mplayer to open and play videos.
 
-![Screenshot of CHIP's video player](images/appscreen_videoplayer.jpg)
-
-### Quake
-A video game
-
-![Screenshot of Quake game](images/appscreen_quake.jpg)
+![Mplayer plays video](images/appscreen_videoplayer.jpg)
 
 ### Terminal (commandline)
-The life blood of linux.
+The life blood of linux. If there's something you can't do on the desktop, or you want to automate tasks, or access different hardware settings using nothing but a keyboard and text, you'll open up Terminal.
 
-![Screenshot of Terminal](images/appscreen_terminal.jpg)
+![Terminal does even more computer things](images/appscreen_terminal.jpg)
 
 # Install and Update Software
 
 ## Synaptic Package Manager
 Launch the Synaptic Package Manager to find and install new software. 
 This is a graphical interface to the `apt-get` command and will install software for DERP and other debain-based systems.
+
+![Install software with Synaptic](images/appscreen_synaptic.jpg)
 
 ## Auto Update
 CHIP will automatically look for any updates and alert you if updates are available for your existing software and DERP operating system.
@@ -217,7 +270,7 @@ If you are new to apt, some important commands to know:
 ```shell
 apt-get update
 ```shell
-updates the information from repositories, so any installs will be the latest package
+updates the information from repositories, so any installs you make with `install` will be the latest package
 ```shell
 apt-get upgrade
 ```
@@ -239,8 +292,9 @@ apt-cache search <search terms>
 ```
 will search through the package repositories for names and descriptions that include your search term.
 
-## Chrome-based Interface
-## Design Decisions
+## Chrome-based Update Interface
+
+# Design Decisions
 There's a reason why CHIP is the way it is.
 
 # CHIP Hardware
@@ -273,7 +327,7 @@ CHIP has several General Purpose Input/Output (GPIO) pins available for you to b
 ### How You See GPIO
 There are eight (8) GPIO pins always available for connecting CHIP to the sense-able world. These are in the middle of the right header, U14, Pins 13-20, labeled XIO-P0 to P7: 
 
-![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.png)
+![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
 
 ### How The System Sees GPIO
 There is a sysfs interface available for the GPIO. This just means you can access the GPIO states in a file-system-like manner. For example, you can reference XIO-P0 using this path:
@@ -403,7 +457,7 @@ Connect a USB to UART cable to the Ground (GND), Transmit (TX), and Recieve (RX)
 We'll find those on header U14, pin outs 1,3 and 5.
 See the following diagram, which assumes CHIP's USB ports are pointed up...
 
-![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.png)
+![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
 
 #### About the Cable
 If you need a connector, search your favorite shop for 'USB to UART cable' - any will do.

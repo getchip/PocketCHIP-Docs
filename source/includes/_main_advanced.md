@@ -131,7 +131,7 @@ Now that the virtual machine is running and configured, you can connect CHIP to 
 #### Prepare CHIP for Flashing
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
 
-![CHIP with jumper wire attatched](wiki:uboot_jumper.jpg?400)
+![CHIP with jumper wire attatched](images/uboot_jumper.jpg)
 
 *Note: this jumper needs to be present only when you connect CHIP to power*. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.
 
@@ -805,7 +805,7 @@ will open up a simple interface. Use the left and right arrow keys on your keybo
   * PA - set to desired volume
   * Right Mixer - set to Right
 
-![alsamixer interface](wiki:alsamixer.png?400)
+![alsamixer interface](images/alsamixer.jpg)
 
 ### Play a Sound
 Change to the root media directory:
@@ -1207,7 +1207,7 @@ It might take some time to download and install all the packages, since there ar
 
 (the `&` runs Xwindows in the background, so you can still use your terminal). After a minute or so, you'll get an image on the monitor:
 
-![Xwindows up and running on CHIP](images/xwindows_first.png)
+![Xwindows up and running on CHIP](images/xwindows_first.jpg)
 
 Now you can use a mouse and keyboard to explore CHIP and launch programs.
 
