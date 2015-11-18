@@ -873,11 +873,11 @@ In this tutorial, we'll describe how you can use the USB port to add more storag
 
 This tutorial is suitable for the buildroot image. If you are following this for other Linux distributions, there are some adjustments that you'll need to make for paths, permissions, and enabling 'sudo.' With buildroot, you work as the root user, so this tutorial is appropriately terse.
 
-## Requirements 
+### Requirements 
   * USB thumb drive or hard drive
   * Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+ (to format USB device, if needed)
 
-## Step 1: Format the Drive
+### Step 1: Format the Drive
 First, you'll want to format the drive as an MS-DOS (FAT), NTFS, or ext3 volume. You can do this on another computer.
 
 Once formatted, insert the drive into CHIP's USB port. Enter the command
@@ -928,7 +928,7 @@ which lists them, along with the names you might have initialized them with:
 /dev/sda1: LABEL="TEST" UUID="6668-11E9"
 ```
 
-## Step 2: Mount the Drive Device to Your Filesystem
+### Step 2: Mount the Drive Device to Your Filesystem
 Now that you know where your partition is, it's time to mount the partition so you can access the files. 
 
 First, make a directory where your drive can mount:
@@ -950,14 +950,14 @@ cd /drives
 ls
 ```
 
-## Step 3: Unmount the Drive From Filesystem
+### Step 3: Unmount the Drive From Filesystem
 If you want to remove the drive from the USB port on CHIP, it's best to unmount it:
 
 ```shell
 umount /dev/sda1
 ```
 
-## Step 4: Automatic Mounting on Boot
+### Step 4: Automatic Mounting on Boot
 You'll probably want to mount this drive automatically next time you use it, though. We can set that up with a quick modification to the `fstab` (file system table) document:
 
 ```shell
@@ -999,16 +999,16 @@ mount -a
 ## Connecting Bluetooth Devices
 CHIP has built-in bluetooth. This tutorial instructs how to use a bluetooth keyboard, since it is a simple and obvious example. There are, of course, several types of bluetooth devices, such as earpieces, audio connectors, vacuum cleaners, and more. Future tutorials will cover those devices, but the keyboard is a good introduction to the commands and an easy way to test your system.
 
-## Requirements
+### Requirements
   * CHIP
   * SSH or serial connection to CHIP or
   * Monitor and keyboard
   * Bluetooth device, preferably keyboard
 
-## Important!
+### Important!
 Start with a CHIP completely unplugged and powered down. Add power and boot up. A known limitation is that after `reboot`, CHIP's Bluetooth controller may not work until you `power` and physically disconnect from a power source.
 
-## About `bluetoothctl`
+### About `bluetoothctl`
 We'll be using the command `bluetoothctl` to find, pair with, and connect to devices.
 
 Type
@@ -1044,7 +1044,7 @@ Changing power on succeeded
 [CHG] Controller 7C:C7:08:05:CD:77 Powered: yes
 ```
 
-## Find A Bluetooth Device
+### Find A Bluetooth Device
 If you need to discover a device, start the scan process:
 
 ```shell
@@ -1059,7 +1059,7 @@ which will start printing MAC addresses and names (if available) of bluetooth de
 [NEW] Device 60:33:4B:13:A7:45 nyb
 ```
 
-## Pair With A Bluetooth Device
+### Pair With A Bluetooth Device
 Pair to a device with the MAC address and the `pair` command:
 
 ```shell
@@ -1136,7 +1136,7 @@ Pairing successful
 
 Now that you are paired, you will have to connect.
 
-## Connect With A Bluetooth Device
+### Connect With A Bluetooth Device
 Now that you have paired the bluetooth device, you won't have to do that again. However, the device still needs to be connected:
 
 ```shell
@@ -1163,7 +1163,7 @@ Attempting to connect to 15:03:26:A0:26:26
 Failed to connect: org.bluez.Error.Failed
 ```
 
-## Troubleshooting
+### Troubleshooting
 If your bluetooth controller module on CHIP is not functioning, you can easily find the problem. Type
 
 ```shell
