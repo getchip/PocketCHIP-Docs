@@ -9,12 +9,19 @@ toc_footers:
   - <a href='http://github.com/NextThingCo/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - main.md
-  - main_faq.md
-  - main_advanced.md
-  - main_adapters.md
-  - main_pocketchip.md
-
+  - welcome-to-derp.md
+  - start-chip-boot-derp.md
+  - connecting-accys.md
+  - using-derp.md
+  - design-decisions.md
+  - chip-hardware.md
+  - making.md
+  - advanced.md
+  - advanced-headless.md
+  - adapters.md
+  - pocketchip.md
+  - faq.md
+  
 search: true
 ---
 

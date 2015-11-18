@@ -178,10 +178,14 @@ html, body {
     background-color: $nav-active-bg;
     color: $nav-active-text;
   }
-
+  .tocify-header {
+    font-size: 14px;
+  }
   // Subheaders are the submenus that slide open
   // in the table of contents.
-  .tocify-subheader {
+  .tocify-subheader {  
+  padding-left: 10px;
+  font-size: 13px;
   .tocify-subheader {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
