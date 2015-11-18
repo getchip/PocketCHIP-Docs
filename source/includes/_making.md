@@ -63,11 +63,30 @@ When you are done experimenting, you can tell the system to stop listening to th
 ### Learn More
 You can learn a bit more about GPIO and Linux [here:](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
 
+## GPIO Types
+There are many different types of sensors that can be used with GPIO
+
 ### Switches
+More info about using switches on GPIO
+
 ### LEDs
+More info about using LEDs on GPIO
+
 ### Relays
+More info about using relays on GPIO
+
 ### Continuous sensors (temperature, pots, FSR, photoresistor, etc)
+More info about using continuous sensors on GPIO
+
+## Expanding GPIO
+If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to.
 
 ## Project Examples
+Here are some projects we've made
+
 ### Chippy Ruxpin
+The talking bear. As wise or as foolish as you desire.
+
 ### Another Example
+Another interesting thing to do with hardware!
+
