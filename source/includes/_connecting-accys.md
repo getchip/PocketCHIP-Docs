@@ -37,7 +37,10 @@ The conductors on the TRRS plug are arranged like this:
 
 ![Tip: Audio Left, Ring: Audio Right, Ring: Ground, Sleeve: Video](images/trrs_annotated.jpg)
 
-[This page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details about TRRS plugs.
+If you want to learn even more about TRRS connectors and the general lack of standardization with them, [this page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details.
+
+## NTSC or PAL
+Information on how to switch NTSC to PAL. This may need to go into [software settings](#Settings and Configuration).
 
 ## Headphones
 The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound. Just connect a standard 3.5 mm (1/8") TRS audio plug into CHIP's a/v jack.
