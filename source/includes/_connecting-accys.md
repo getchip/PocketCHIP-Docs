@@ -39,7 +39,7 @@ The conductors on the TRRS plug are arranged like this:
 
 If you want to learn even more about TRRS connectors and the general lack of standardization with them, [this page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details.
 
-## NTSC or PAL
+### NTSC or PAL
 Information on how to switch NTSC to PAL. This may need to go into [software settings](#Settings and Configuration).
 
 ## Headphones
