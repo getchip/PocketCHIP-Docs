@@ -139,10 +139,6 @@ Now that it's installed, you can launch scratch:
 
 ![Scratch installed](images/screen_scratchinstalled.jpg)
 
-## Uninstall Software
-How to uninstall software.
-
-
 ### Auto Update
 CHIP will automatically look for any updates and alert you if updates are available for your existing software and DERP operating system.
 
@@ -177,3 +173,6 @@ apt-cache search <search terms>
 will search through the package repositories for names and descriptions that include your search term.
 
 ### Chrome-based Update Interface
+
+## Uninstall Software
+How to uninstall software.
