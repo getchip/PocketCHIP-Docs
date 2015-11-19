@@ -69,6 +69,9 @@ Screenshot and description of using GUI desktop to change Mouse Sensitivity sett
 
 ![Screenshot of GUI showing where to change mouse sensitivity](images/screencap_mousesettings.jpg)
 
+### Language and Location
+CHIP with DERP comes with a default language of English. You can change the language and the location. <insert more info here>
+
 ## Launching Installed Apps
 DERP comes prepackaged with many open-source applications to get you started. It's easy to launch an application. 
 You can select an application from the "Computer Things!" menu and select an app from the categories:
