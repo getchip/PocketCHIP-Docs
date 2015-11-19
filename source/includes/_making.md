@@ -6,6 +6,7 @@ CHIP has several General Purpose Input/Output (GPIO) pins available for you to b
 ### Requirements
   * CHIP
   * Jumper Wire
+  * LED
   * SSH or serial connection to CHIP or
   * Monitor and keyboard
 
@@ -53,6 +54,7 @@ Now that it's in output mode, you can write a value to the pin:
 ```shell
   echo 1 > /sys/class/gpio/gpio415/value
 ```
+If you attach an LED to the pin and ground, the LED will illuminate according to your control messages.
 
 ### Enough IO
 When you are done experimenting, you can tell the system to stop listening to the gpio pin:
@@ -61,25 +63,32 @@ When you are done experimenting, you can tell the system to stop listening to th
 ```
 
 ### Learn More
-You can learn a bit more about GPIO and Linux [here:](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
+You can learn more about GPIO and Linux [here:](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
 
 ## GPIO Types
 There are many different types of sensors that can be used with GPIO
 
 ### Switches
-More info about using switches on GPIO
+Switches provide on/off state input from the physical world to your computer. You can [use the commandline interface](#Some GPIO Switch Action) to listen to switch values. A python library was created for the [ChippyRuxpin project](https://github.com/NextThingCo/ChippyRuxpin) if you need a higher-level example in python. 
 
 ### LEDs
-More info about using LEDs on GPIO
+LEDs can be illuminated and turned off using the [commandline interface](#Some GPIO Output). Refer to the [ChippyRuxpin project](https://github.com/NextThingCo/ChippyRuxpin) on a good example on how to manipulate the commandline using python.
 
 ### Relays
-More info about using relays on GPIO
+Relays are special hardware bridges used to switch higher voltage electronics, protecting CHIP from the high voltages that would destroy it.  Using a relay board is programmatically no different from using switches.
 
 ### Continuous sensors (temperature, pots, FSR, photoresistor, etc)
-More info about using continuous sensors on GPIO
+To learn about using analog sensors, see the [ADC section](#Analog to Digital conversion)
 
 ## Expanding GPIO
-If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to.
+If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to. These are the pins numbered 13-40 on U13 to act as GPIO to increase the number of available GPIO pins. Documentation on this process is forthcoming!
+
+![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
+
+## Analog to Digital conversion
+Pin 9 on header U14 provides a link for analog to digital conversion. There is no driver for this link yet.
+
+![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
 
 ## Project Examples
 Here are some projects we've made
@@ -89,4 +98,3 @@ The talking bear. As wise or as foolish as you desire.
 
 ### Another Example
 Another interesting thing to do with hardware!
-
