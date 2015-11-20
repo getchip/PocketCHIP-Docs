@@ -108,7 +108,8 @@ The life blood of linux. If there's something you can't do on the desktop, or yo
 
 ### Synaptic Package Manager
 Launch the Synaptic Package Manager to find and install new software. 
-Synaptic is a graphical interface to the `apt-get` command and will install software intended for DERP and other debain-based systems.
+Synaptic is a graphical interface to the `apt-get` command and will install software intended for DERP and other debain-based systems. You can learn more about Synaptic [here](https://help.ubuntu.com/community/SynapticHowto)
+
 There's a simple search bar to make it easy to find packages you are interested. If you don't find the package you are looking for, hit the **Reload** button to refresh Synaptic's record of available packages.
 
 ![Install software with Synaptic](images/appscreen_synaptic.jpg)
