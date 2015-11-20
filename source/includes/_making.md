@@ -90,6 +90,18 @@ Pin 9 on header U14 provides a link for analog to digital conversion. There is n
 
 ![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
 
+## I2C
+Some info about how I2C is implemented on CHIP and DERP
+
+## OneWire
+Some info about how One Wire is implemented on CHIP
+
+## UART
+Some info about how UART is implemented on CHIP
+
+## LCD
+Some info about how LCDs are implemented on CHIP
+
 ## Project Examples
 Here are some projects we've made
 
