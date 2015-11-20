@@ -93,6 +93,9 @@ Pin 9 on header U14 provides a link for analog to digital conversion. There is n
 ## I2C
 Some info about how I2C is implemented on CHIP and DERP
 
+## SPI
+Some info about how SPI is implemented on CHIP and DERP
+
 ## OneWire
 Some info about how One Wire is implemented on CHIP
 
