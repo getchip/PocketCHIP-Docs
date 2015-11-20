@@ -102,6 +102,9 @@ Some info about how One Wire is implemented on CHIP
 ## UART
 Some info about how UART is implemented on CHIP
 
+## PWM
+Some info about how pulse width modulation is implemented on CHIP
+
 ## LCD
 Some info about how LCDs are implemented on CHIP
 
