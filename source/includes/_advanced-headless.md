@@ -73,7 +73,7 @@ Connect a USB to UART cable to the Ground (GND), Transmit (TX), and Recieve (RX)
 We'll find those on header U14, pin outs 1,3 and 5.
 See the following diagram, which assumes CHIP's USB ports are pointed up...
 
-![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
+![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
 #### About the Cable
 If you need a connector, search your favorite shop for 'USB to UART cable' - any will do.

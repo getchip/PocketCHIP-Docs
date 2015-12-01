@@ -1,6 +1,21 @@
 # Connecting Accessories
 CHIP has a lot of connectors, some for building, some for doing normal computer things. This section covers the normal computer things, like audio, video, and input.
 
+##Recommended Accessories
+CHIP is a minimal computer. Many CHIP users may never connect common peripherals, instead using CHIP as a "headless" computer. 
+Like desktop computers from Best Buy, you may find that certain accessories will improve the overal usability of CHIP. We recommend:
+  * Bluetooth Keyboard
+  * USB mouse
+  * Monitor with a composite video input
+  * USB cable: microUSB to USB B
+  * TRRS to RCA connector
+  
+Additionally, some of the advanced tutorials require:
+  * Speakers with RCA audio input
+  * Jumper wire
+  * USB to UART cable
+  * Single cell Lithium Polymer battery
+  
 ## Powered USB Hub
 You'll find that a simple powered USB hub is pretty essential if you want to use a lot of USB devices with CHIP. Not only is there only one USB port (keeping CHIP nice and small), but CHIP's micro USB power port can only provide so much power for the USB port. So if you don't have a powered USB port, you'll quickly max out power if you attach too many accessories. 
 
@@ -43,7 +58,8 @@ If you want to learn even more about TRRS connectors and the general lack of sta
 Information on how to switch NTSC to PAL. This may need to go into [software settings](#Settings and Configuration).
 
 ## Headphones
-The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound. Just connect a standard 3.5 mm (1/8") TRS audio plug into CHIP's a/v jack.
+The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound. 
+Just connect a standard 3.5 mm (1/8") TRS audio plug into CHIP's a/v jack. Of course, if headphones are plugged in, there will be no room for a composite video output jack.
 
 ![CHIP connected to audio devices or groovy people listening to music](images/chip_withaudio.jpg)
 

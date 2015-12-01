@@ -1,5 +1,5 @@
-# Start CHIP. Boot DERP.
-First things first. Let's boot CHIP into DERP and do some computer things! Add some power, and only then we can turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
+# Start CHIP. Boot CHIP.
+First things first. Let's boot CHIP into the CHIP Operating System and do some computer things! Add some power, and only then we can turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
 
 ## Power up
 The single most important thing to using any electronic device is getting electricity to the right places. This tutorial covers how to turn CHIP "on". This might seem so straightforward that it doesn't deserve several paragraphs, but CHIP is pretty clever, so there's actually a few things worth knowing.
@@ -57,7 +57,7 @@ If you're a beginner, here's a quick reference of some really important and comm
 * **mv** move a file from one directory to another, or to give it a new name. Ex: `mv this.one that.one` renames a file. `mv this.one ~/Pictures/Vacation/` puts the file *this.one* into the `Vacation` directory.
 * **cp** copy a file from one place to another. Ex: `cp this.one this_01.one` will copy `this.one` to another file `this_01.one`. Add directories for more fun: `cp ~/Pictures/Vacation/saturn.jpg /Users/otherone/Pictures/Vacation/saturn.jpg`. 
 * **rm** remove a file. delete it, and beware!. Use the `-r` to make it recursive to delete a directory. Ex: `rm this.one` deletes that file. `rm -r ~/Pictures/Vacation` to forget the good times.
-* **apt-get** the command used for installing, removing, and finding software for Debian Linux systems, such as DERP. `apt-get install puredata` installs the Pure Data program and any dependencies. `apt-get remove puredata` will remove the program. `apt-cache search image` will search apt repositories for the keyword *search*. And so on.
+* **apt-get** the command used for installing, removing, and finding software for Debian Linux systems, such as the CHIP Operating System. `apt-get install puredata` installs the Pure Data program and any dependencies. `apt-get remove puredata` will remove the program. `apt-cache search image` will search apt repositories for the keyword *search*. And so on.
 * **pwd** present working directory. In case you forget where you are. Not much to it: `pwd` will output the directory name, such as `/Users/home/chip/Pictures/Vacation/`
 * **grep** a tool used for searching through files. It's quite deep and can be complicated, but if you see the word `grep` in some command, you know it's searching for a match.
 * **| (pipe)**  a command used to redirect data into an application.

@@ -1,5 +1,8 @@
 # Making Stuff
+
 ## GPIO
+GPIO provides basic digital connections to the physical world to create physical products with CHIP.
+
 ### From Commandline
 CHIP has several General Purpose Input/Output (GPIO) pins available for you to build around. If you want to access them in a very primitive way, just to confirm their existence, here's some things to try.
 
@@ -13,7 +16,7 @@ CHIP has several General Purpose Input/Output (GPIO) pins available for you to b
 ### How You See GPIO
 There are eight (8) GPIO pins always available for connecting CHIP to the sense-able world. These are in the middle of the right header, U14, Pins 13-20, labeled XIO-P0 to P7: 
 
-![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
+![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
 ### How The System Sees GPIO
 There is a sysfs interface available for the GPIO. This just means you can access the GPIO states in a file-system-like manner. For example, you can reference XIO-P0 using this path:
@@ -65,6 +68,9 @@ When you are done experimenting, you can tell the system to stop listening to th
 ### Learn More
 You can learn more about GPIO and Linux [here:](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
 
+## Python Library
+A Python-based library for accessing GPIO data is in development.
+
 ## GPIO Types
 There are many different types of sensors that can be used with GPIO
 
@@ -83,12 +89,27 @@ To learn about using analog sensors, see the [ADC section](#Analog to Digital co
 ## Expanding GPIO
 If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to. These are the pins numbered 13-40 on U13 to act as GPIO to increase the number of available GPIO pins. Documentation on this process is forthcoming!
 
-![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
+![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
 ## Analog to Digital conversion
 Pin 9 on header U14 provides a link for analog to digital conversion. There is no driver for this link yet.
 
-![Pinout diagram for CHIP](images/chip_alpha_v02_pinouts.jpg)
+![Pinout diagram for CHIP](images/chip_pinouts.jpg)
+
+## 1 Wire
+The 1 Wire serial protocol is not yet implemented for CHIP
+
+## UART
+UART connections can be made using the UART connections on header U14. 
+
+## PWM
+Pulse Width Modulation is used to control motors and other devices. It is possible to use GPIO pins to drive motors, but they generally are not fast enough for robust and smooth control.
+
+## I2C
+Basic information about how to use I2C
+
+## LCD Monitor Support
+Basic information about connecting and using a touch-screen LCD monitor
 
 ## Project Examples
 Here are some projects we've made

@@ -1,5 +1,5 @@
-# Using DERP
-If you've used a desktop or laptop computer before, DERP should be pretty familiar. There are menus, icons to click, right-click for more stuff, keyboard shortcuts, applications to run, and settings to set. CHIP is small, so we keep DERP simple. Almost everything can be accessed from the **Computer Things** menu: settings, launching apps, and access to files. There's also a few convenient functions in the top right **system tray.** Keep reading this document to find out more about how to use and configure DERP on CHIP!
+# Using The CHIP Operating System
+If you've used a desktop or laptop computer before, the CHIP Operating System should be pretty familiar. There are menus, icons to click, right-click for more stuff, keyboard shortcuts, applications to run, and settings to set. CHIP is small, so we keep our operating system simple. Almost everything can be accessed from the **Computer Things** menu: settings, launching apps, and access to files. There's also a few convenient functions in the top right **system tray.** Keep reading this document to find out more about how to use and configure the operating system on CHIP!
 
 ## Settings and Configuration
 Most of the settings for the computer and for the desktop can be set using the apps in the "Computer Things" menu. Select the appropriate app from either the Settings Menu or the Settings Manager.
@@ -59,6 +59,8 @@ The Desktop panel lets you customize images and colors, along with the behavior 
 
 ![Change desktop look with Desktop panel](images/screen_desktopsettings01.jpg)
 
+If you want to change the theme or the icon sets, you can search for these using the [Synaptic Package Manager](#synaptic-package-manager). Search for `gtk2 themes` or `icon sets`. There are also packages that can make it easy to find and configure themes, such as `gtk-theme-config.` Similarly you can use the command line to search packages with `apt-cache search gtk2 theme`.
+
 ### Time and Date
 Set the Time with the Orage Globaltime panel. This can be found in Accessories->Orage Globaltime or in Office->Orage Globaltime. Simply click the time to bring up the preferences panel. You can quickly view the date from the Orage Calendar in the Office menu.
 
@@ -70,10 +72,10 @@ Screenshot and description of using GUI desktop to change Mouse Sensitivity sett
 ![Screenshot of GUI showing where to change mouse sensitivity](images/screencap_mousesettings.jpg)
 
 ### Language and Location
-CHIP with DERP comes with a default language of English. You can change the language and the location. <insert more info here>
+CHIP's operating system comes with a default language of English. You can change the language and the location. -insert more info here-
 
 ## Launching Installed Apps
-DERP comes prepackaged with many open-source applications to get you started. It's easy to launch an application. 
+CHIP comes prepackaged with many open-source applications to get you started. It's easy to launch an application. 
 You can select an application from the "Computer Things!" menu and select an app from the categories:
 
 ![Screenshot of GUI launching apps](images/screen_appfinder01.jpg)
@@ -108,7 +110,7 @@ The life blood of linux. If there's something you can't do on the desktop, or yo
 
 ### Synaptic Package Manager
 Launch the Synaptic Package Manager to find and install new software. 
-Synaptic is a graphical interface to the `apt-get` command and will install software intended for DERP and other debain-based systems.
+Synaptic is a graphical interface to the `apt-get` command and will install software intended for CHIP and other debain-based systems.
 There's a simple search bar to make it easy to find packages you are interested. If you don't find the package you are looking for, hit the **Reload** button to refresh Synaptic's record of available packages.
 
 ![Install software with Synaptic](images/appscreen_synaptic.jpg)
@@ -140,7 +142,7 @@ Now that it's installed, you can launch scratch:
 ![Scratch installed](images/screen_scratchinstalled.jpg)
 
 ### Auto Update
-CHIP will automatically look for any updates and alert you if updates are available for your existing software and DERP operating system.
+CHIP will automatically look for any updates and alert you if updates are available for your existing software and the operating system.
 
 ### apt-get
 
