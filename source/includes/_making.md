@@ -111,6 +111,24 @@ Basic information about how to use I2C
 ## LCD Monitor Support
 Basic information about connecting and using a touch-screen LCD monitor
 
+## I2C
+Some info about how I2C is implemented on CHIP and DERP
+
+## SPI
+Some info about how SPI is implemented on CHIP and DERP
+
+## OneWire
+Some info about how One Wire is implemented on CHIP
+
+## UART
+Some info about how UART is implemented on CHIP
+
+## PWM
+Some info about how pulse width modulation is implemented on CHIP
+
+## LCD
+Some info about how LCDs are implemented on CHIP
+
 ## Project Examples
 Here are some projects we've made
 
