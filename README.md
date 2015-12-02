@@ -1,7 +1,7 @@
 Next Thing Documentation
 ========
 
-All documentation is written in markdown and staged on github pages. Stage link coming soon.
+All documentation is written in markdown and staged on github pages. Stage is [currently here](http://nyboer.github.io/slate/#introduction) but will soon move to github pages on this repo.
 
 If you want to add a document, add your markdown file to the [includes](https://github.com/NextThingCo/slate/tree/master/source/includes) directory and make a pull request. You can use [Github markdown](https://help.github.com/articles/github-flavored-markdown/) or [regular markdown](https://daringfireball.net/projects/markdown/syntax). 
 Each include represents a top-level topic in the left-hand navigation.
