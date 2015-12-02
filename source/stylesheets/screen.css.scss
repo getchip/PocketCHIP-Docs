@@ -596,11 +596,28 @@ html, body {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
   }
+  
+  .dark-box {
+    display: none;
+  }
+
+  %right-col {
+    width: auto;
+    float: none;
+  }
+
+ 
 }
 
 @media (max-width: $phone-width) {
+
   .dark-box {
     display: none;
+  }
+
+  %right-col {
+    width: auto;
+    float: none;
   }
 
   %left-col {
@@ -613,11 +630,6 @@ html, body {
 
   .page-wrapper .lang-selector {
     display: none;
-  }
-
-  %right-col {
-    width: auto;
-    float: none;
   }
 
   %right-col + %left-col {
