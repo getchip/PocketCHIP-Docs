@@ -17,8 +17,6 @@ includes:
   - making.md
   - advanced.md
   - advanced-headless.md
-  - adapters.md
-  - pocketchip.md
   - faq.md
   
 search: true

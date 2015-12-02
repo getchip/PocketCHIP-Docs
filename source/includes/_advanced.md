@@ -422,7 +422,7 @@ sudo apt-get install u-boot-tools android-tools-fastboot git build-essential lib
 ```
 
 If you intend to customize buildroot with additional software, install these packages:
-  apt-get install libncurses5-dev libc6-i386 lib32stdc++6 lib32z1 android-tools-fsutils
+  sudo apt-get install libncurses5-dev libc6-i386 lib32stdc++6 lib32z1 android-tools-fsutils
 Get and make the fel tools:
 
 ```shell
@@ -783,13 +783,13 @@ Getting simple audio playback working on CHIP is pretty easy, once you install t
 Update your apt repository list if you haven't done so recently:
 
 ```shell
-  apt-get update
+  sudo apt-get update
 ```
   
 Then install ALSA:
 
 ```shell
-  apt-get install libasound2 alsa-utils
+  sudo apt-get install libasound2 alsa-utils
 ```
 
 This will install alsa and some utilities for playing sound from the command line. Once those have installed, you'll need to make the outputs active for sound
@@ -829,7 +829,7 @@ Use `wget` to download a sound of piano chords to the file test.wav:
 If wget returns command not found you can install it:
 
 ```shell
-  apt-get install wget
+  sudo apt-get install wget
 ```
 
 We can finally play the sound and hear it over CHIP's headphone jack:
@@ -841,7 +841,7 @@ We can finally play the sound and hear it over CHIP's headphone jack:
 If you want to play mp3 or ogg files, you can install mplayer:
 
 ```shell
-  apt-get install mplayer
+  sudo apt-get install mplayer
 ```
 
 Then try an ogg file:
@@ -862,10 +862,10 @@ And mp3 file:
 Developers that want to use sound will probably want to download these packages:
 
 ```shell
-apt-get install portaudio19-dev &&
-apt-get install swig &&
-apt-get install python-setup-tools &&
-apt-get install python-dev
+sudo apt-get install portaudio19-dev &&
+sudo apt-get install swig &&
+sudo apt-get install python-setup-tools &&
+sudo apt-get install python-dev
 ```
 
 ## USB Storage Devices
@@ -1196,7 +1196,7 @@ If you want a windowed desktop on C.H.I.P., you can install X-Windows.
 CHIP is a lightweight computer, so we'll install the lightweight xfce4:
 
 ```shell
-  apt-get install xfce4
+  sudo apt-get install xfce4
 ```
 
 It might take some time to download and install all the packages, since there are a lot of dependencies and libraries involved. Once installed, start the windowing system with the command
@@ -1216,7 +1216,7 @@ Now you can use a mouse and keyboard to explore CHIP and launch programs.
 If you get errors from apt that report "unmet dependencies," you can run the command
 
 ```shell
-apt-get install -f
+sudo apt-get install -f
 ```
 
 which will force installation of any alternate or missing dependencies of any installed packages.

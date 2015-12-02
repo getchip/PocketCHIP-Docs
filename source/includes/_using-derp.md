@@ -151,23 +151,23 @@ If you are using the commandline, you will use `apt-get` to install and update n
 
 If you are new to apt, some important commands to know:
 ```shell
-apt-get update
+sudo apt-get update
 ```shell
 updates the information from repositories, so any installs you make with `install` will be the latest package
 ```shell
-apt-get upgrade
+sudo apt-get upgrade
 ```
 upgrades any installed packages.
 ```
-apt-get install (name of package)
+sudo apt-get install (name of package)
 ```
 to install a package and any of its dependencies.
 ```shell
-apt-get remove (name of package)
+sudo apt-get remove (name of package)
 ```
 will remove a package and any dependencies not used by other packages
 ```shell
-apt-get purge  (name of package)
+sudo apt-get purge  (name of package)
 ```
 will remove a package and any dependencies not used by other packages along with all settings data
 ```shell

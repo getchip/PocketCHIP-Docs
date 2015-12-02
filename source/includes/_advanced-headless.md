@@ -163,7 +163,7 @@ With zero-conf properly configured, your CHIP can be contacted using a name, suc
 Getting avahi running is extremely simple. First, install the avahi-daemon:
 
 ```shell
-  apt-get install avahi-daemon
+  sudo apt-get install avahi-daemon
 ```
 
 to install the necessary libraries. To configure the daemon, you'll probably need to add this service file:
@@ -232,7 +232,7 @@ You can now access chip with the new name:
 You may want to explore some of the other features of avahi, such as browsing a network for other zero-configure enabled computers. There's a package you can install:
 
 ```shell
-  apt-get install avahi-utils
+  sudo apt-get install avahi-utils
 ```
 
 which gives you a set of tools for browsing the network, such as the command
@@ -244,7 +244,7 @@ which gives you a set of tools for browsing the network, such as the command
 An alternative to just installing the avahi-daemon, you can
 
 ```shell
-  apt-get install libnss-mdns
+  sudo apt-get install libnss-mdns
 ```
 
 which installs some other tools for network name propagation.
@@ -256,7 +256,7 @@ If your computer returns the error
   ssh: Could not resolve hostname chip.local: nodename nor servname provided, or not known
 ```
 
-then you either need to wait a minute or try installing avahi-daemon again, but pay closer attention to any errors that apt-get returns.
+then you either need to wait a minute or try installing avahi-daemon again, but pay closer attention to any errors that `apt-get` returns.
 
 If you can't connect to CHIP even though you are sure avahi is properly configured, confirm that your CHIP and the computer you are trying to connect are on the same local network (and on the same subnet).
 
