@@ -1,9 +1,9 @@
 # Making Stuff
 
 ## GPIO
-GPIO provides basic digital connections to the physical world to create physical products with CHIP.
+GPIO provides basic digital connections to the physical world to create physical products with CHIP. These pins can act as 'reads' or 'writes', for example, to sense switch positions or turn an LED on or off.
 
-### From Commandline
+### Read and Write From Command Line
 CHIP has several General Purpose Input/Output (GPIO) pins available for you to build around. If you want to access them in a very primitive way, just to confirm their existence, here's some things to try.
 
 ### Requirements
@@ -14,12 +14,12 @@ CHIP has several General Purpose Input/Output (GPIO) pins available for you to b
   * Monitor and keyboard
 
 ### How You See GPIO
-There are eight (8) GPIO pins always available for connecting CHIP to the sense-able world. These are in the middle of the right header, U14, Pins 13-20, labeled XIO-P0 to P7: 
+There are eight (8) GPIO pins always available for connecting CHIP to the sense-able world. If you orient CHIP with the USB connector pointed up, you'll find the GPIO pins in the middle of the right header, U14, Pins 13-20, labeled XIO-P0 to P7: 
 
 ![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
 ### How The System Sees GPIO
-There is a sysfs interface available for the GPIO. This just means you can access the GPIO states in a file-system-like manner. For example, you can reference XIO-P0 using this path:
+There is a `sysfs` interface available for the GPIO. This just means you can access the GPIO states in a file-system-like manner. For example, you can reference XIO-P0 using this path:
 
 ```shell
   /sys/class/gpio/gpio408/
@@ -72,7 +72,7 @@ You can learn more about GPIO and Linux [here:](https://www.kernel.org/doc/Docum
 A Python-based library for accessing GPIO data is in development.
 
 ## GPIO Types
-There are many different types of sensors that can be used with GPIO
+There are many types of sensors that can be used with GPIO:
 
 ### Switches
 Switches provide on/off state input from the physical world to your computer. You can [use the commandline interface](#Some GPIO Switch Action) to listen to switch values. A python library was created for the [ChippyRuxpin project](https://github.com/NextThingCo/ChippyRuxpin) if you need a higher-level example in python. 
@@ -83,16 +83,13 @@ LEDs can be illuminated and turned off using the [commandline interface](#Some G
 ### Relays
 Relays are special hardware bridges used to switch higher voltage electronics, protecting CHIP from the high voltages that would destroy it.  Using a relay board is programmatically no different from using switches.
 
-### Continuous sensors (temperature, pots, FSR, photoresistor, etc)
-To learn about using analog sensors, see the [ADC section](#Analog to Digital conversion)
-
 ## Expanding GPIO
 If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to. These are the pins numbered 13-40 on U13 to act as GPIO to increase the number of available GPIO pins. Documentation on this process is forthcoming!
 
 ![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
-## Analog to Digital conversion
-Pin 9 on header U14 provides a link for analog to digital conversion. There is no driver for this link yet.
+## Analog to Digital Conversion
+Pin 9 on header U14 provides a link for analog to digital conversion (ADC). There is no driver for this link yet. ADC is used to read continuous sensors (temperature, pots, FSR, photoresistor, etc)
 
 ![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
@@ -130,10 +127,4 @@ Some info about how pulse width modulation is implemented on CHIP
 Some info about how LCDs are implemented on CHIP
 
 ## Project Examples
-Here are some projects we've made
-
-### Chippy Ruxpin
-The talking bear. As wise or as foolish as you desire.
-
-### Another Example
-Another interesting thing to do with hardware!
+Projects coming soon!

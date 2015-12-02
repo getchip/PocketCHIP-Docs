@@ -1,5 +1,5 @@
 # Using The CHIP Operating System
-If you've used a desktop or laptop computer before, the CHIP Operating System should be pretty familiar. There are menus, icons to click, right-click for more stuff, keyboard shortcuts, applications to run, and settings to set. CHIP is small, so we keep our operating system simple. Almost everything can be accessed from the **Computer Things** menu: settings, launching apps, and access to files. There's also a few convenient functions in the top right **system tray.** Keep reading this document to find out more about how to use and configure the operating system on CHIP!
+If you've used a desktop or laptop computer before, the CHIP Operating System should be pretty familiar. There are menus, icons to click, menus with more stuff when you right-click, keyboard shortcuts, applications to run, and settings to set. CHIP is small, so we keep our operating system simple. Almost everything can be accessed from the **Computer Things** menu: settings, launching apps, and access to files. There's also a few convenient functions in the top right **system tray.** 
 
 ## Settings and Configuration
 Most of the settings for the computer and for the desktop can be set using the apps in the "Computer Things" menu. Select the appropriate app from either the Settings Menu or the Settings Manager.
@@ -10,7 +10,7 @@ Most of the settings for the computer and for the desktop can be set using the a
 
 ### WiFi
 
-A connection to a WiFi network is easily made using the WiFi icon the top right system tray. Just select a network to initiate a connection. If you need a password, you'll be prompted for it.
+Connecting to a WiFi network is easy using the WiFi icon the top right system tray. Just select a network to initiate a connection. If you need a password, you'll be prompted for it.
 
 ![Select a wireless connection access point](images/screen_wifisettings.jpg)
 
@@ -23,7 +23,7 @@ Bluetooth device setup can be accessed using the Bluetooth icon in the top right
 
 ![Bluetooth settings menu](images/screen_btsettings.jpg)
 
-When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
+When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll often be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
 
 ![Bluetooth settings menu](images/screen_btsetup01.jpg)
 
@@ -32,7 +32,7 @@ You can manage, and also connect to, your devices using the the Bluetooth Device
 ![Bluetooth devices panel](images/screen_btdevices.jpg)
 
 ### Sound
-By default, sound output comes from the built-in connector, served by the "sunxi codec" driver. If you want to change the volume, you can use the volume control in the top right system tray:
+By default sound output comes from the built-in connector, served by the "sunxi codec" driver. If you want to change the volume, you can use the volume control in the top right system tray:
 
 ![Desktop volume control](images/screen_volumectl.jpg)
 
@@ -40,7 +40,7 @@ Or, open the Audio Mixer in the Multimedia category:
 
 ![Open Audio Mixer app in Multimedia category](images/screen_audiomixermenu.jpg)
 
-where you can select the "Playback" category to change the volume.
+Here, you can select the "Playback" category to change the volume:
 
 ![Control panel for sound](images/screen_audiosettings03.jpg)
 
@@ -91,8 +91,8 @@ AbiWord is a fully featured word processor. You can learn more at [The AbiWord w
 
 ![AbiWord can process words.](images/appscreen_abiword.jpg)
 
-### Web Browser
-Ice Weasel is a Debian Linux version of the Firefox browser. The browser is largely the same as Firefox, but has a different name for the sake of trademark protection by the Mozilla corporation. More information is at the [Debian website](https://wiki.debian.org/Iceweasel) and in this [stack exchange thread](http://unix.stackexchange.com/questions/44215/is-there-any-advantage-of-using-iceweasel-and-firefox).
+### Ice Weasel Browser
+Ice Weasel is a Debian Linux version of the Firefox browser. The browser is largely the same as Firefox, just with a different name. More information is at the [Debian website](https://wiki.debian.org/Iceweasel) and in this [stack exchange thread](http://unix.stackexchange.com/questions/44215/is-there-any-advantage-of-using-iceweasel-and-firefox).
 
 ![Browse the web with IceWeasel](images/appscreen_webbrowser.jpg)
 
@@ -112,11 +112,11 @@ The life blood of linux. If there's something you can't do on the desktop, or yo
 Launch the Synaptic Package Manager to find and install new software. 
 Synaptic is a graphical interface to the `apt-get` command and will install software intended for DERP and other debain-based systems. You can learn more about Synaptic [here](https://help.ubuntu.com/community/SynapticHowto)
 
-There's a simple search bar to make it easy to find packages you are interested. If you don't find the package you are looking for, hit the **Reload** button to refresh Synaptic's record of available packages.
+There's a simple search bar to make it easy to find packages you are interested in. If you don't find the package you are looking for, hit the **Reload** button to refresh Synaptic's record of available packages.
 
 ![Install software with Synaptic](images/appscreen_synaptic.jpg)
 
-#### Example: Installing Scratch Programming Environment
+### Example: Installing Scratch Programming Environment
 Using Synapitc is very easy. For example, if you wanted to install the Scratch Programming Environment, you can simply search for "scratch" and you'll get a lot of results. Scroll through, and you'll eventually find "scratch" in the packages window.
 However, you'll probably want to narrow your results with better search terms, such as "scratch programming environments"
 
@@ -174,8 +174,6 @@ will remove a package and any dependencies not used by other packages along with
 apt-cache search (search terms)
 ```
 will search through the package repositories for names and descriptions that include your search term.
-
-### Chrome-based Update Interface
 
 ## Uninstall Software
 How to uninstall software.

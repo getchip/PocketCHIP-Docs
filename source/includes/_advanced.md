@@ -1,4 +1,5 @@
 # Advanced
+For those interested in building with a stripped-down version of an operating system, or looking to customize CHIP from the commandline, we have several tutorials that describe how to setup CHIP with more depth.
 
 ## Installing C.H.I.P. SDK
 CHIP-SDK has everything needed to develop software for C.H.I.P. Most importantly, if you want to load an operating system onto CHIP, the only supported way is to do this from a virtual machine. Given that the virtual machine runs Ubuntu, it's pretty safe to say that Ubuntu users can flash without the virtual machine.
@@ -9,7 +10,7 @@ CHIP-SDK has everything needed to develop software for C.H.I.P. Most importantly
 * Software: VirtualBox, Vagrant, git, terminal
 
 ### Software Setup
-There are several required software pieces to get the CHIP SDK virtual machine running. Follow the instructions to get it all setup.
+There are several required software pieces to get the CHIP SDK virtual machine running.
 
 #### Install VirtualBox and Extensions
 * Get the installer for [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
@@ -195,7 +196,7 @@ This will take a while, maybe an hour. When finished, flash CHIP with the script
 ```
 
 ### Appendix
-Some additional info and examples.
+Sample outputs are provided in this appendix so you can more easily troubleshoot or proceed with confidence when flashing CHIP with firmware.
 
 #### Buildroot Output
 Sample output from flashing Buildroot to CHIP looks like:
@@ -353,8 +354,14 @@ poweroff... OK
 ```
 
 #### Failure
-Here's a couple common errors:
+There are a couple common errors that occur when flashing. 
 
+The first is a that CHIP is not in `fel` mode, ready to receive firmware. There are three possible reasons for this:
+  * You already successfully flashed CHIP, and haven't disconnected the USB cable from your computer.
+  * The jumper wire between Pins 7 & 39 is either not present, loose, or the jumper is in the wrong holes.
+  * There is a problem with the USB cable.
+  
+You'll know this is the problem when you see this error in the terminal window:
 ```shell
 == upload the SPL to SRAM and execute it ==
 ERROR: Allwinner USB FEL device not found!
@@ -367,11 +374,7 @@ ERROR: Allwinner USB FEL device not found!
 ERROR: Allwinner USB FEL device not found!
 ```
 
-This indicates that CHIP is probably booted into Linux, and not ready to receive firmware. There are three possible reasons for this:
-  - You already successfully flashed CHIP, and haven't disconnected the USB cable from your computer.
-  - The jumper wire between Pins 7 & 39 is either not present, loose, or the jumper is in the wrong holes.
-  - There is a problem with the USB cable.
-
+The other common error is that you need to run the **chip-update-firmware.sh** script with **sudo** (or you need to add a rules file as described in the next section). This error looks like this in your terminal window:
 ```shell
 Image 0: 848 Bytes = 0.83 kB = 0.00 MB
 == upload the SPL to SRAM and execute it ==
@@ -385,9 +388,7 @@ ERROR: You don't have permission to access Allwinner USB FEL device
 ERROR: You don't have permission to access Allwinner USB FEL device
 ```
 
-This error means that you need to run the **chip-update-firmware.sh** script with **sudo** (or you need to add a rules file as described below).
-
-#### Optional Convenience
+#### Option: Flash Without sudo
 As a developer, there's a good chance you'll flash CHIP more than once in your life. You'll probably want to follow these steps.
 In order to be able to run the **chip-update-firmware.sh** script without sudo, make a rules file:
 
@@ -902,7 +903,7 @@ You'll get output like:
 [ 4954.650000] sd 0:0:0:0: [sda] Attached SCSI removable disk
 ```
 
-Notice the second to last line. This tells you the device location for the drive. Storage devices generally have device names that start with “sd”, so if you wanted to see all the storage devices attached to CHIP, you can use a wildcard to display all devices that start with “sd”:
+Notice the second to last line. This tells you the device location for the drive. Storage devices generally have device names that start with “sd”. If you want to see all the storage devices attached to CHIP, you can use a wildcard to display all devices that start with “sd”:
 
 ```shell
 ls /dev/sd*
@@ -964,7 +965,7 @@ You'll probably want to mount this drive automatically next time you use it, tho
 vi /etc/fstab
 ```
 
-Getting around vi is not very intutive, so if you are new to it, here's a quick guide on getting this text into fstab: 
+Getting around vi is not very intutive. If you are new to it, here's a quick guide on getting this text into the fstab document:
   * 'arrow' key to the end of the file,
   * press the 'i' key to insert text
   * type (or copy-paste) this:

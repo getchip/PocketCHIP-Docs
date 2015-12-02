@@ -1,8 +1,8 @@
 # Start CHIP. Boot CHIP.
-First things first. Let's boot CHIP into the CHIP Operating System and do some computer things! Add some power, and only then we can turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
+First things first. Let's boot CHIP into the CHIP Operating System and do some computer things! Add some power, turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
 
 ## Power up
-The single most important thing to using any electronic device is getting electricity to the right places. This tutorial covers how to turn CHIP "on". This might seem so straightforward that it doesn't deserve several paragraphs, but CHIP is pretty clever, so there's actually a few things worth knowing.
+The single most important thing to using any electronic device is getting electricity to the right places. We're going to cover how to turn CHIP "on". This might seem so straightforward that it doesn't deserve several paragraphs, but CHIP is pretty clever, so there's actually a few things worth knowing.
 
 ### What's It Need?
 In general, CHIP is powered by a 5-volt source like a USB port or phone charger, and draws about 300mA peak (at boot time), runs on around 100mA, and rests with around 80mA with the processor totally unloaded. This may be more than you need to know if you just want to plug it in to the wall, but, as you build projects with CHIP, you'll be happy to know there's a lot of ways to get the electricity flowing.
@@ -11,7 +11,7 @@ In general, CHIP is powered by a 5-volt source like a USB port or phone charger,
 CHIP is silent. It doesn't take much energy, so it's not very hot. It has no discernible smell. As a result, many of your senses are not great indicators that it is working. There are two LEDs next to the USB micro connector. When CHIP is on, you should see the `PWR` LED light up nice and bright.
 
 ### Power From The Wall
-The CHIP's microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don't have one, you can buy one from us or any electronics retailer. Just plug a USB-A-to-microUSB-B cable (that's the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you'll see the `PWR`LED light up (forgive the underexposure, but you can see a small pink LED under the green one, and FWIW, LED colors may be different on your CHIP!).
+The CHIP's microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don't have one, you can buy one any electronics retailer. Just plug a USB-A-to-microUSB-B cable (that's the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you'll see the `PWR` LED light up. This CHIP is using the power from a computer's USB port:
 
 ![CHIP indicator LEDs](images/chip_ledon.jpg)
 
@@ -20,12 +20,12 @@ CHIP can also be battery powered. Specifically, any single cell (1S) 3.7V Lithiu
 
 ![CHIP powered by a battery. Slick!](images/chip_battery.jpg)
 
-The JST can only plug it in one way, so if you are having a hard time lining things up, turn it around! Needless to say, do not force the battery connector into the socket if something doesn't feel right!
+The JST can only plug it in one way: if you are having a hard time lining things up, turn it around! Needless to say, do not force the battery connector into the socket if something doesn't feel right!
 
 What's really great is that if you plug in to a charger and plug in a battery, the battery will charge - all the power management is on CHIP itself. Roughly, it takes about four to six hours to charge a 3000 mAh LiPo battery from a 5V 1A power source. Also, our delightful little Power Management IC, the AXP209, handles pass-through power, so while on and charging a battery, CHIP is basically running on a un-interruped power supply -- If charge power fails, CHIP seamlessly switches onto battery power without shutting off.
 
 ## Connect to WiFi
-A connection to a WiFi network is easily made using the WiFi icon the top right system tray. Just select a network to initiate a connection. If you need a password, you'll be prompted for it.
+Connecting to a WiFi network is easy using the WiFi icon the top right system tray. Just select a network to initiate a connection.  If the network requires a password you’ll be prompted for it.
 
 ![Select a wireless connection access point](images/screen_wifisettings.jpg)
 
@@ -38,7 +38,7 @@ Bluetooth device setup can be accessed using the Bluetooth icon in the top right
 
 ![Bluetooth settings menu](images/screen_btsettings.jpg)
 
-When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
+When you begin a connection, you'll be guided through the necessary steps to connect to your device. For example, when you pair with a keyboard, you'll often be prompted for a code to enter to ensure a unique connection. Once you have paired a device, future connections will usually be automatic when the devices are in range and powered up.
 
 ![Bluetooth settings menu](images/screen_btsetup01.jpg)
 

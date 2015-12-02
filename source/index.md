@@ -1,11 +1,11 @@
 ---
-title: API Reference
+title: Next Thing Co Documentation
 
 language_tabs:
   - shell
 
 toc_footers:
-  - <a href='http://github.com/NextThingCo/slate'>Documentation Powered by Slate</a>
+  - <a href='http://github.com/NextThingCo/slate'>Have something to add or change? Visit GitHub!</a>
 
 includes:
   - welcome-to-derp.md
