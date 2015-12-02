@@ -1,6 +1,7 @@
 ## Building and Installing PureData (PD) on CHIP
 
-PureData is a graphical programming environment, primarily for making audio and multimedia applications. This tutorial describes how to build the "vanilla" version of PD.
+PureData is a graphical programming environment, primarily for making audio and multimedia applications. This tutorial describes how to build the "vanilla" version of PD. This is a very rudimentary version of PD - it does not compile or build the extras objects, such as "bob~" or "expr~".
+
 ### Get Source
 First, download and un-archive the source from Miller Puckette's website:
 ```
@@ -66,13 +67,15 @@ wget http://log.liminastudio.com/wp-content/uploads/2012/06/testPatch.pd_.zip
 unzip testPatch.pd_.zip
 pd -rt -nogui -noadc -alsa testPatch.pd
 ```
+
+### Uninstall
 If you need to remove pd, it takes a few steps:
 ```
 sudo apt-get remove puredata-core
 sudo apt-get remove puredata-dev puredata-import puredata-utils
 sudo apt-get purge puredata-core
 sudo apt-get install aptitude wget unzip
-apt-get autoremove
+sudo apt-get autoremove
 ```
 
 ### Run PD

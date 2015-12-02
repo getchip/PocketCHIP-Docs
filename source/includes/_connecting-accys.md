@@ -27,7 +27,7 @@ Many keyboards have USB hubs built-in, so you can attach a mouse to the keyboard
 ![keyboard, mouse, and powered USB hub connected to CHIP](images/chip_usbconnections.jpg)
 
 ## Bluetooth Keyboard and Mouse
-As you know, CHIP has built-in bluetooth. If you want to use a keyboard and mouse, you can keep your USB port free for other things (like mass storage or a MIDI controller!) and keep your desk clean. See [connecting to bluetooth section](#Bluetooth)
+As you know, CHIP has built-in bluetooth. If you want to use a keyboard and mouse, you can keep your USB port free for other things (like mass storage or a MIDI controller!) and keep your desk clean. See [connecting to bluetooth section](#bluetooth)
 
 ## Monitor
 In the spirit of keeping things small, CHIP packs all the audio and video into a small TRRS (Tip-Ring-Ring-Sleeve) connector. Built-in video output is restricted to standard composite video resolution of 640x480. (Higher resolutions can be achieved with the upcoming VGA and DVI output accessories.)
@@ -57,7 +57,7 @@ The conductors on the TRRS plug are arranged like this:
 If you want to learn even more about TRRS connectors and the general lack of standardization with them, [this page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details.
 
 ### NTSC or PAL
-Information on how to switch NTSC to PAL. This may need to go into [software settings](#Settings and Configuration).
+Information on how to switch NTSC to PAL. This may need to go into [software settings](#settings-and-configuration).
 
 ## Headphones
 The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound. 
@@ -74,12 +74,10 @@ If you have files that you want to modify, use, or transfer to CHIP's internal s
 ![USB drive attatched to CHIP](images/chip_usbstorage.jpg)
 
 ## USB Audio
-CHIP can use Class-compliant USB audio devices. A popular, and inexpensive choice for audio devices are USB dongbles based on the C-Media chipset. These have been tested successfully with CHIP and can often be purchased for less than $10. Some good resources for linux and audio compatibility are:
+CHIP can use Class-compliant USB audio devices. A popular, and inexpensive choice for audio devices are USB dongbles based on the C-Media chipset. These have been tested successfully with CHIP and can often be purchased for less than $10. Some good resources for linux and audio compatibility are on the [linux audio](http://wiki.linuxaudio.org/wiki/hardware_matrix) and [alsa project](http://www.alsa-project.org/main/index.php/Matrix:Main) websites.
 
-*  http://wiki.linuxaudio.org/wiki/hardware_matrix
-*  http://www.alsa-project.org/main/index.php/Matrix:Main
 
 Many of the drivers have not been tested with CHIP - as CHIP matures, more information will be available. For now, we recommened USB Class-compliant or "plug-and-play" audio devices.
 
 ## Battery and Charging
-Like any modern laptop, CHIP can run and charge any single-cell LiPo battery. Read more in the [powering CHIP section](#powerchip).
+Like any modern laptop, CHIP can run and charge any single-cell LiPo battery. Read more in the [powering CHIP section](#power-up).

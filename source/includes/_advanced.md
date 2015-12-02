@@ -127,7 +127,7 @@ Once you see the trusty prompt, your CHIP SDK virtual machine is ready to use:
 ```
 
 ## Flash CHIP Firmware
-Now that the virtual machine is running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#Setup Ubuntu For Flashing)
+Now that the virtual machine is running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
 
 #### Prepare CHIP for Flashing
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
@@ -139,14 +139,14 @@ Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT
 Now connect CHIP to your computer with a [micro-USB](https://commons.wikimedia.org/wiki/File:Micro_USB.jpg)->USB-B cable. The power LED will illuminate.
 
 #### Option 1: Flash With NTC Buildroot OS
-Buildroot is a lean operating system, and does not have a package manager to install software. You can add additional software before you flash CHIP by [[##Customize buildroot|customizing buildroot]]. To flash CHIP with the buildroot OS:
+Buildroot is a lean operating system, and does not have a package manager to install software. You can add additional software before you flash CHIP by [customizing buildroot](#customize-buildroot). To flash CHIP with the buildroot OS:
 
 ```shell
   cd ~/CHIP-tools
   ./chip-update-firmware.sh
 ```
 
-During flashing, the terminal will fill with messages.  If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](##Buildroot Output).
+During flashing, the terminal will fill with messages.  If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](#buildroot-output).
 
 #### Option 2: Flash With Debian
 If you want to flash CHIP with the debian OS
@@ -156,7 +156,7 @@ If you want to flash CHIP with the debian OS
   ./chip-update-firmware.sh -d
 ```  
 
-During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](##Debian Output).
+During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](#debian-output).
 
 #### Connect to CHIP and Do Something
 After a few minutes, you'll be able to connect to CHIP via serial:
@@ -171,7 +171,7 @@ and even test the hardware:
   hwtest
 ```
 
-#### Customize buildroot
+#### Customize Buildroot
 If you want to customize buildroot, use these commands before you run the `./chip-update-firmware.sh` script to flash CHIP with firmware:
 
 ```shell
@@ -1183,7 +1183,7 @@ If you get the response
   No default controller available
 ```
 
-Then there's a problem with CHIP recognizing the bluetooth module. [Read the very first instructions](#Important) at the top of this tutorial.
+Then there's a problem with CHIP recognizing the bluetooth module. [Read the very first instructions](#important!) at the top of this tutorial.
 
 ## Install X-windows
 If you want a windowed desktop on C.H.I.P., you can install X-Windows. 

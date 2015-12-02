@@ -1,7 +1,7 @@
 # Start CHIP. Boot CHIP.
 First things first. Let's boot CHIP into the CHIP Operating System and do some computer things! Add some power, turn on the wireless network, and even connect a bluetooth keyboard to get rid of those annoying cables.
 
-## Power up
+## Power Up
 The single most important thing to using any electronic device is getting electricity to the right places. We're going to cover how to turn CHIP "on". This might seem so straightforward that it doesn't deserve several paragraphs, but CHIP is pretty clever, so there's actually a few things worth knowing.
 
 ### What's It Need?
@@ -15,7 +15,7 @@ The CHIP's microUSB connector is used to provide power from most any USB power s
 
 ![CHIP indicator LEDs](images/chip_ledon.jpg)
 
-### Power From a Battery
+### Power From A Battery
 CHIP can also be battery powered. Specifically, any single cell (1S) 3.7V Lithium Polymer (LiPo) battery with a 2-pin JST-PH 2.0mm end can be connected to the JST-PH socket.
 
 ![CHIP powered by a battery. Slick!](images/chip_battery.jpg)
@@ -24,7 +24,7 @@ The JST can only plug it in one way: if you are having a hard time lining things
 
 What's really great is that if you plug in to a charger and plug in a battery, the battery will charge - all the power management is on CHIP itself. Roughly, it takes about four to six hours to charge a 3000 mAh LiPo battery from a 5V 1A power source. Also, our delightful little Power Management IC, the AXP209, handles pass-through power, so while on and charging a battery, CHIP is basically running on a un-interruped power supply -- If charge power fails, CHIP seamlessly switches onto battery power without shutting off.
 
-## Connect to WiFi
+## Connect To WiFi
 Connecting to a WiFi network is easy using the WiFi icon the top right system tray. Just select a network to initiate a connection.  If the network requires a password you’ll be prompted for it.
 
 ![Select a wireless connection access point](images/screen_wifisettings.jpg)

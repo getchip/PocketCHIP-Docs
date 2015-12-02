@@ -1,6 +1,7 @@
 # CHIP Hardware
 ## Parts and Pieces
-![Callout graphic of chip parts](images/chip_pcb.jpg)
+![Callout graphic of chip parts on top](images/chip_top.jpg)
+![Callout graphic of chip parts on bottom](images/chip_bottom.jpg)
 ## Wireless
 ### WiFi
 description of wifi hardware.
@@ -19,5 +20,5 @@ technical overview of USB-OTG hardware. How to configure different capabilities 
 technical overview of pin headers (probably best handled in Making Stuff, though)
 ## Diagrams/Schematics
 ![Schematic of CHIP](images/chip_schematic.jpg)
-## Open Source: where to get
-CHIP is open source hardware. Here's where you can get all the data you need to make, modify, or learn about your own CHIP. Visit the (CHIP Hardware git repository)[https://github.com/NextThingCo/CHIP-Hardware].
+## Open Source: Where To Get It
+CHIP is open source hardware. Here's where you can get all the data you need to make, modify, or learn about your own CHIP. Visit the [CHIP Hardware git repository](https://github.com/NextThingCo/CHIP-Hardware).
