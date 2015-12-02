@@ -114,6 +114,5 @@ Some info about how SPI is implemented on CHIP and DERP
 ## UART
 Some info about how UART is implemented on CHIP
 
-
 ## Project Examples
 Projects coming soon!
