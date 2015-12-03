@@ -72,7 +72,12 @@ Screenshot and description of using GUI desktop to change Mouse Sensitivity sett
 ![Screenshot of GUI showing where to change mouse sensitivity](images/screencap_mousesettings.jpg)
 
 ### Language and Location
-CHIP's operating system comes with a default language of English. You can change the language and the location. -insert more info here-
+CHIP's operating system comes with a default language of English. You can change the language and the location, but you'll need to use the terminal to do so. Use the "Computer Things!" menu to launch the Terminal Emulator. Then use the [`apt-get`](#apt-get) command to install these language packs:
+
+```shell
+sudo apt-get install locales
+sudo dpkg-reconfigure locales
+```
 
 ## Launching Installed Apps
 CHIP comes prepackaged with many open-source applications to get you started. It's easy to launch an application. 
@@ -159,4 +164,8 @@ If you are new to apt, some important commands to know:
   * `apt-cache search (search terms)` will search through the package repositories for names and descriptions that include your search term.
 
 ## Uninstall Software
-How to uninstall software.
+You can use the Synaptic Package manager to uninstall any packages you no longer need.
+If you know the name, you can use the Search function to find the package, then Mark it for Removal.
+
+![Uninstall with Synaptic](images/screen_synapticuninstall_01.jpg)
+![Uninstall with Synaptic](images/screen_synapticuninstall_02.jpg)

@@ -58,7 +58,24 @@ The conductors on the TRRS plug are arranged like this:
 If you want to learn even more about TRRS connectors and the general lack of standardization with them, [this page](http://wiki.robotz.com/index.php/TRRS_Phono_Plug) has even more details.
 
 ### NTSC or PAL
-Information on how to switch NTSC to PAL. This may need to go into [software settings](#settings-and-configuration).
+The composite video format is NTSC by default. If you need to hook up to a monitor that only uses a PAL signal, you'll need to change that at u-boot time.
+First, connect to CHIP with a [UART cable](#usb-to-uart-serial-connection).
+Then power up CHIP to boot into u-boot over UART and change the environment variable manually.
+
+```shell
+printenv video-mode
+setenv video-mode (mode data)
+saveenv
+reset
+```
+where *mode data* can be, for NTSC and PAL respectively:
+
+```shell
+setenv video-mode sunxi:640x480-24@60,monitor=composite-ntsc,overscan_x=40,overscan_y=20
+
+setenv video-mode sunxi:640x576-24@50,monitor=composite-pal,overscan_x=40,overscan_y=20
+
+```
 
 ## Headphones
 The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound. 
