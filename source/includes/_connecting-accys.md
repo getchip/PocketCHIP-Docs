@@ -35,6 +35,7 @@ In the spirit of keeping things small, CHIP packs all the audio and video into a
 ![monitor connected to CHIP](images/chip_withmonitor.jpg)
 
 Here's what the other end of the cable looks like, attached to a monitor with stereo audio inputs (red and white) and the composite video plug, moved so you can see the label on the monitor:
+
 ![monitor connected to CHIP](images/chip_withmonitor_cnxn.jpg)
 
 ### About the TRRS Connector
