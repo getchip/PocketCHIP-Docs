@@ -79,12 +79,20 @@ setenv video-mode sunxi:640x576-24@50,monitor=composite-pal,overscan_x=40,oversc
 
 ## Headphones
 The audio and video connector on CHIP can be dedicated to audio output suitable for headphones or connecting to an amplifier for filling a room or public space with glorious sound. 
-Just connect a standard 3.5 mm (1/8") TRS audio plug into CHIP's a/v jack. Of course, if headphones are plugged in, there will be no room for a composite video output jack.
+Just connect a standard 3.5 mm (1/8") TRS audio plug into CHIP's a/v jack. Of course, if headphones are plugged in, there will be no room for a composite video output jack. You can also get audio left, common, and right output from [pins 4, 6 & 8 on header U14](#pin-headers).
 
 ![CHIP connected to headphones](images/chip_withaudio.jpg)
 
-## Microphone
-Currently non-op - no driver.
+## Microphone and Audio Input
+If you want to use audio input, you might find it easiest to use the pins on [pins 10 and 12 on header U14](#pin-headers). However, if you want to use the 1/8" TRRS connector, you can modify the CHIP board to replace the composite video connection with an audio input connection. 
+
+If you look at the bottom of CHIP with the audio and USB jacks pointed up, you'll see three small contact pads to the left of the audio jack. The left pad has a small label of **mic** and the right pad has a **tv** label. Between the middle pad and the **tv** pad is a trace that can be carefully cut with an Exacto or utility razor blade. Once that is cut (check with a volt or continuity meter), you can put a solder blob between the **mic** and middle pad. Now the outer ring can be used for audio input.
+
+![Slice video trace, bridge mic in pad](images/chip_audioinbridge.jpg)
+
+As another reference, if you had X-ray vision and you were looking from the **top** of CHIP, you'd see a trace like this:
+
+![Xray vision of TV and Mic traces from top of CHIP](images/chip_tvmonxray.jpg)
 
 ## USB Storage
 If you have files that you want to modify, use, or transfer to CHIP's internal storage, you can attach a USB thumb drive, card-reader, or hard drive. Open the file manager and access the files.

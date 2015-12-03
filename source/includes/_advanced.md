@@ -956,6 +956,14 @@ And mp3 file:
   mplayer test.mp3
 ```
 
+### Record A Sound
+If you want to try the audio input, you need to connect audio input to [header U14, pins 10 & 12](#pin-headers) or [modify CHIP](#microphone-and-audio-input) to use audio in on the TRRS connector.
+Once you have an audio signal going into CHIP, you can test it out by recording a three second (`-d 3`) WAV file with arecord:
+
+```shell
+arecord -f cd -d 3 -D hw:0,0 chipaudioin.wav
+```
+
 ### More Packages
 Developers that want to use sound will probably want to download these packages:
 
