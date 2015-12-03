@@ -21,8 +21,6 @@ Additionally, some of the advanced tutorials require:
 ## Powered USB Hub
 You'll find that a simple powered USB hub is pretty essential if you want to use a lot of USB devices with CHIP. Not only is there only one USB port (keeping CHIP nice and small), but CHIP's micro USB power port can only provide so much power for the USB port. If you don't have a powered USB port, you'll quickly max out power if you attach too many accessories. 
 
-![powered USB hub connected to CHIP](images/chip_usbhub.jpg)
-
 ## Keyboard and Mouse
 Many keyboards have USB hubs built-in, so you can attach a mouse to the keyboard, attach the keyboard to CHIP, and immediately have control. However, it's likely the two will draw too much current, so you'll want to connect to a powered hub before you connect.
 
