@@ -4,6 +4,7 @@ CHIP has a lot of connectors, some for building, some for doing normal computer 
 ##Recommended Accessories
 CHIP is a minimal computer. Many CHIP users may never connect common peripherals, instead using CHIP as a "headless" computer. 
 Like desktop computers from Best Buy, you may find that certain accessories will improve the overal usability of CHIP. We recommend:
+
   * Bluetooth Keyboard
   * USB mouse
   * Monitor with a composite video input
@@ -11,6 +12,7 @@ Like desktop computers from Best Buy, you may find that certain accessories will
   * TRRS to RCA connector
   
 Additionally, some of the advanced tutorials require:
+
   * Speakers with RCA audio input
   * Jumper wire
   * USB to UART cable
