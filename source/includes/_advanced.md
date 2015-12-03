@@ -57,6 +57,16 @@ If everything went well you should see the following prompt:
 vagrant@vagrant-ubuntu-trusty-32:~$
 ```
 
+#### All The Commands At Once
+Here's all the commands in one place:
+
+```shell
+git clone https://github.com/NextThingCo/CHIP-SDK
+cd CHIP-SDK
+vagrant up
+vagrant ssh
+```
+
 Congratulations! Now you're ready to Flash a C.H.I.P. from your SDK!
 
 ### Troubleshooting
@@ -124,6 +134,17 @@ Once you see the trusty prompt, your CHIP SDK virtual machine is ready to use:
 
 ```shell
   vagrant@vagrant-ubuntu-trusty-32:~$
+```
+#### All The Commands At Once
+Here's all the commands in one place:
+
+```shell
+  cd ~/CHIP-SDK
+  git pull
+  vagrant halt
+  vagrant provision
+  vagrant up
+  vagrant ssh
 ```
 
 ## Flash CHIP Firmware
@@ -423,7 +444,11 @@ sudo apt-get install u-boot-tools android-tools-fastboot git build-essential lib
 ```
 
 If you intend to customize buildroot with additional software, install these packages:
+
+```shell
   sudo apt-get install libncurses5-dev libc6-i386 lib32stdc++6 lib32z1 android-tools-fsutils
+```
+
 Get and make the fel tools:
 
 ```shell
@@ -451,6 +476,22 @@ git pull http://github.com/NextThingCo/CHIP-tools
 
 Now you are ready to [flash CHIP](flash_chip_from_sdk_-_minimal#Flash With NTC Buildroot OS) with firmware.
 
+#### All The Commands At Once
+Here's all the commands in one place:
+
+```shell
+sudo apt-get update
+sudo apt-get install u-boot-tools android-tools-fastboot git build-essential libusb-1.0-0-dev libncurses5-dev libc6-i386 lib32stdc++6 lib32z1 android-tools-fsutils
+git clone http://github.com/NextThingCo/sunxi-tools
+cd sunxi-tools
+make
+sudo rm -f /usr/local/bin/fel
+sudo ln -s $PWD/fel /usr/local/bin/fel
+cd .. 
+git clone http://github.com/NextThingCo/CHIP-tools 
+cd CHIP-tools
+```
+
 ## WiFi Connection
 ### Connecting C.H.I.P. to a Wireless Network With connman
 The buildroot operating system uses the `connman` command-line network manager to connect and manage your network connections.
@@ -463,12 +504,15 @@ If you want all the details of `connman` [visit the ArchLinux wiki.](https://wik
     * [Serial connection](Headless CHIP - ssh and serial) to CHIP
 
 #### Step 1: Enable WiFi and Find a Network
-First enable WiFi:
+
+These three commands will, in turn, enable wifi, scan for access points, and see what netowrks are available:
+
+```shell
   connmanctl enable wifi
-then scan for access points:
   connmanctl scan wifi
-and see what networks are available:
   connmanctl services
+```
+  
 The `services` command has output similar to:
 
 ```shell
@@ -491,7 +535,11 @@ The `services` command has output similar to:
 Unfortunately, connman doesn't use the nice name on the left of the services list. It wants the unfriendly string on the right, so you'll want to get copy and paste ready.
 ##### A: No Password
 For example, to connect to NTC Guest, which has no password, `services` shows two choices. We want the one without “hidden” in the string. Use the connect command to connect:
+
+```shell
   connmanctl connect wifi_7cc70905cd77_4e5443204775657374_managed_psk
+```
+
 If your network is not password protected, you'll get some output that will indicate a successful connection, such as:
 
 ```shell
@@ -510,23 +558,61 @@ If your network is password protected, you'll get an error.
 
 ##### B: Password-Protected
 To deal with passwords, you'll need to put `connman` into interactive mode:
+
+```shell
   connmanctl
+```
+
 which gives a connmanctl prompt:
+
+```shell
   connmanctl>
-turn the 'agent' on so it can process password requests:
+```
+
+In the shell, turn the 'agent' on so it can process password requests:
+
+```shell
   agent on
-and now use the connect command
+```
+
+and now use the connect command (your network name will be different than what's below of course)
+
+```shell
   connect wifi_7cc70905cd77_4e5443_managed_psk
+```
+
 and enter your password when prompted:
+
+```shell
   Agent RequestInput wifi_7cc70905cd77_4e5443_managed_psk
   Passphrase = [ Type=psk, Requirement=mandatory ]
   Passphrase?
+```
+
 Now that you are connected to a wireless network, you can exit connmanctl interactive mode by typing
+
+```shell
   quit
+```
+
+###### All The Commands In One Place
+Here's all the commands in one place:
+
+```shell
+  connmanctl
+  agent on
+  connect wifi_7cc70905cd77_4e5443_managed_psk
+  quit
+```
+
 
 #### Step 3: Test Connection
 In CHIP's command line, you can ping Google four times:
+
+```shell
   ping -c 4 8.8.8.8
+```
+
 and expect ping to output some timing messages like:
 
 ```shell
@@ -554,7 +640,11 @@ ping: sendto: Network is unreachable
 
 #### Disconnecting And Forgetting Networks
 To disconnect from your network, you might first want a reminder of what unfriendly string is used to describe your access point, so type:
+
+```shell
   connmanctl services
+```
+
 which will output information about your current link:
 
 ```shell
@@ -562,7 +652,11 @@ which will output information about your current link:
 ```
 
 Use the ID to disconnect:
+
+```shell
   connmanctl disconnect wifi_7cc70905cd77_4e5443_managed_psk
+```
+
 and you'll get some status like this:
 
 ```shell
@@ -596,7 +690,7 @@ You can delete all the “wifi” directories with
   rm -r wifi*
 ```
 
-(the -r is needed because these are directories you are deleting, and the wifi* assumes your configurations all start with the string “wifi”)
+(the `-r` is needed because these are directories you are deleting, and the star at the end of `wifi*` assumes your configurations all start with the string “wifi”)
 
 #### For Advanced Users
 It's worth noting that you'll see two wireless networking interfaces if you list them with
@@ -670,9 +764,12 @@ sit0     sit       unmanaged     --
 ```
 
 Because it is worth knowing that Linux offers many ways of doing things, another command that shows your current active connection is
-```
+
+```shell
 nmcli connection show --active
 ```
+
+which outputs like so:
 
 ```shell
 NAME  UUID                                  TYPE             DEVICE 
@@ -699,7 +796,7 @@ results in output like:
 
 You can stop this command by pressing CTRL-C on your keyboard. The `-c 4` option means it will happen only 4 times.
 
-Congratulations! You are now network with C.H.I.P.!
+Congratulations! You are now network with CHIP!
 
 #### Disconnecting and Forgetting Networks
 The command to disconnect from a wireless device needs a few parameters:
@@ -738,7 +835,7 @@ Try connecting again with the correct password.
 
 ##### Failed ping
 If you don't have access to the internet, your ping to an outside IP will fail. 
-It is possible that you can connect to a wireless network, but have no access to the internet, so you'd see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the C.H.I.P.
+It is possible that you can connect to a wireless network, but have no access to the internet, so you'd see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.
 
 A failed ping looks something like:
 
@@ -1012,12 +1109,13 @@ Start with a CHIP completely unplugged and powered down. Add power and boot up. 
 ### About `bluetoothctl`
 We'll be using the command `bluetoothctl` to find, pair with, and connect to devices.
 
-Type
+In the terminal, type
+
 ```shell
   bluetoothctl
 ```
 
-in the command line. This starts up `bluetoothctl` in interactive mode. You should see output like
+This starts up `bluetoothctl` in interactive mode. You should see output like
 
 ```shell
 [NEW] Controller 7C:C7:08:05:CD:77 BlueZ 5.27 [default]
@@ -1025,15 +1123,10 @@ in the command line. This starts up `bluetoothctl` in interactive mode. You shou
 [NEW] Device 15:03:26:A0:26:26 SK032B02-2626
 ```
 
-which is a list of MAC addresses of CHIP's bluetooth controller chip (the first line) and any other devices that have been paired with CHIP in the past. Use the
-
-```shell
-  help
-```
-
-command - it lists all the very useful commands in the `bluetoothctl` interactive mode.
+which is a list of MAC addresses of CHIP's bluetooth controller chip (the first line) and any other devices that have been paired with CHIP in the past. Use the `help` command - it lists all the very useful commands in the `bluetoothctl` interactive mode.
 
 In bluetooth interactive mode, use the command
+
 ```shell
   power on
 ```

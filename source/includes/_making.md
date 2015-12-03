@@ -54,13 +54,16 @@ You could also change the mode of a pin from “in” to “out”
 ```
 
 Now that it's in output mode, you can write a value to the pin:
+
 ```shell
   echo 1 > /sys/class/gpio/gpio415/value
 ```
+
 If you attach an LED to the pin and ground, the LED will illuminate according to your control messages.
 
 ### Enough IO
 When you are done experimenting, you can tell the system to stop listening to the gpio pin:
+
 ```shell
   echo 415 > /sys/class/gpio/unexport
 ```

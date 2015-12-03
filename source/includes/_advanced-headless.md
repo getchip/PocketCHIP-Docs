@@ -259,7 +259,3 @@ If your computer returns the error
 then you either need to wait a minute or try installing avahi-daemon again, but pay closer attention to any errors that `apt-get` returns.
 
 If you can't connect to CHIP even though you are sure avahi is properly configured, confirm that your CHIP and the computer you are trying to connect are on the same local network (and on the same subnet).
-
-## Project Examples
-### Chippy Ruxpin
-### Another Example
