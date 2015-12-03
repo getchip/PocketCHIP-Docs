@@ -150,30 +150,13 @@ CHIP will automatically look for any updates and alert you if updates are availa
 If you are using the commandline, you will use `apt-get` to install and update new software.
 
 If you are new to apt, some important commands to know:
-```shell
-sudo apt-get update
-```shell
-updates the information from repositories, so any installs you make with `install` will be the latest package
-```shell
-sudo apt-get upgrade
-```
-upgrades any installed packages.
-```
-sudo apt-get install (name of package)
-```
-to install a package and any of its dependencies.
-```shell
-sudo apt-get remove (name of package)
-```
-will remove a package and any dependencies not used by other packages
-```shell
-sudo apt-get purge  (name of package)
-```
-will remove a package and any dependencies not used by other packages along with all settings data
-```shell
-apt-cache search (search terms)
-```
-will search through the package repositories for names and descriptions that include your search term.
+
+  * `sudo apt-get update` updates the information from repositories, so any installs you make with `install` will be the latest package
+  * `sudo apt-get upgrade` upgrades any installed packages.
+  * `sudo apt-get install (name of package)` to install a package and any of its dependencies.
+  * `sudo apt-get remove (name of package)` will remove a package and any dependencies not used by other packages
+  * `sudo apt-get purge  (name of package)` will remove a package and any dependencies not used by other packages along with all settings data
+  * `apt-cache search (search terms)` will search through the package repositories for names and descriptions that include your search term.
 
 ## Uninstall Software
 How to uninstall software.
