@@ -4,9 +4,9 @@
 ![Callout graphic of chip parts on bottom](images/chip_bottom.jpg)
 ## Wireless
 ### WiFi
-description of wifi hardware.
+CHIP supports 802.11b/g/n using the built-in WiFi. 
 ### Bluetooth
-description of bt hardware
+CHIP supports the Bluetooth 4.0 LE standard using the built-in Bluetooth.
 
 ## Physical Connectors
 CHIP is loaded with essential connectors for USB, serial, audio, video, and loads of IO on the pin headers.
@@ -21,6 +21,7 @@ The 1/8" [TRRS connector](#about-the-trrs-connector) provides composite video an
 Audio Input uses the same connection on the TRRS connector as the composite video signal. If you want to make audio input active on the TRRS connector, you need to [cut a circuit board trace](#microphone-and-audio-input). This is not as permanent as it sounds, as it is easy to re-enable composite video out with a small amount of soldering.
 ### Pin Headers
 The Pin Headers provide a massive amount of connectivity, making CHIP a suitable platform for product development for physical computing and "internet of things" devices. Here's a basic diagram that labels all the pins:
+
 ![CHIP pinout](images/chip_pinouts.jpg)
 
 U13L | U13R | U14L | U13R
@@ -48,4 +49,5 @@ GND : ground | LCD-DE : RGB666 data | GND : ground | GND : ground
 
 ## Open Source Hardware: Where To Get It
 CHIP is open source hardware. Here's where you can get all the data you need to make, modify, or learn about your own CHIP. Visit the [CHIP Hardware git repository](https://github.com/NextThingCo/CHIP-Hardware).
+
 ![Sample schematic of CHIP](images/chip_schematic.jpg)
