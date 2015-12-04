@@ -60,7 +60,7 @@ If you want to learn even more about TRRS connectors and the general lack of sta
 ### NTSC or PAL
 The composite video format is NTSC by default. If you need to hook up to a monitor that only uses a PAL signal, you'll need to change that at u-boot time.
 First, connect to CHIP with a [UART cable](#usb-to-uart-serial-connection).
-Then power up CHIP to boot into u-boot over UART and change the environment variable manually.
+Then power up CHIP, and press a key on the keyboard to boot into u-boot mode to change the environment variable manually.
 
 ```shell
 printenv video-mode
@@ -73,7 +73,7 @@ where *mode data* can be, for NTSC and PAL respectively:
 ```shell
 setenv video-mode sunxi:640x480-24@60,monitor=composite-ntsc,overscan_x=40,overscan_y=20
 
-setenv video-mode sunxi:640x576-24@50,monitor=composite-pal,overscan_x=40,overscan_y=20
+setenv video-mode sunxi:720x576-24@50,monitor=composite-pal,overscan_x=40,overscan_y=20
 
 ```
 
