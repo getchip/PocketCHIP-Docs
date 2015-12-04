@@ -169,7 +169,7 @@ Getting avahi running is extremely simple. First, install the avahi-daemon:
 to install the necessary libraries. To configure the daemon, you'll probably need to add this service file:
 
 ```shell
-  nano /etc/avahi/services/afpd.service
+  sudo nano /etc/avahi/services/afpd.service
 ```
 
 Then just copy and paste this XML into it:
@@ -189,7 +189,7 @@ Then just copy and paste this XML into it:
 Then restart avahi-daemon:
 
 ```shell
-  /etc/init.d/avahi-daemon restart
+ sudo /etc/init.d/avahi-daemon restart
 ```
 
 You can now find the hostname that you can use to reach CHIP:
@@ -232,13 +232,19 @@ You can now access chip with the new name:
 You may want to explore some of the other features of avahi, such as browsing a network for other zero-configure enabled computers. There's a package you can install:
 
 ```shell
+  sudo apt-get update &
   sudo apt-get install avahi-utils
 ```
 
 which gives you a set of tools for browsing the network, such as the command
 
 ```shell
-  avahi-browse
+  avahi-browse -d local _ssh._tcp --resolve -t
+```
+which will list other zero-configure-enabled devices on the local network. You could ssh to your Macintosh named "bananna", for example with 
+
+```shell
+  ssh username@bananna
 ```
 
 An alternative to just installing the avahi-daemon, you can

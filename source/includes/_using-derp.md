@@ -123,6 +123,8 @@ These are the applications installed by default on CHIP as accessed through the 
   * Screenshot
   * Task Manager
   * Thuner File Manger
+  * Xarchiver
+  * Alex the Allegator 4
   * Spout
   * Viewnior
   * Ice Weasel Web Browser

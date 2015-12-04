@@ -1,7 +1,10 @@
 # CHIP Hardware
+CHIP is small, but it packs a lot of hardware on the PCB. Here's an overview of the connections and components.
+
 ## Parts and Pieces
-![Callout graphic of chip parts on top](images/chip_top.jpg)
-![Callout graphic of chip parts on bottom](images/chip_bottom.jpg)
+![Callout graphic of chip parts on top](images/chip_top_annotated.jpg)
+![Callout graphic of chip parts on bottom](images/chip_bottom_annotated.jpg)
+
 ## Wireless
 ### WiFi
 CHIP supports 802.11b/g/n using the built-in WiFi. 
