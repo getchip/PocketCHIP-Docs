@@ -94,6 +94,8 @@ As another reference, if you had X-ray vision and you were looking from the **to
 
 ![Xray vision of TV and Mic traces from top of CHIP](images/chip_tvmonxray.jpg)
 
+If the composite video connection is needed again, just reverse the process: desolder the connection between **mic** and the middle pad, then solder a bridge between **tv** and the middle pad.
+
 ## USB Storage
 If you have files that you want to modify, use, or transfer to CHIP's internal storage, you can attach a USB thumb drive, card-reader, or hard drive. Open the file manager and access the files.
 
