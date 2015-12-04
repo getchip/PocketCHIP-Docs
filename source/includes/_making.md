@@ -1,4 +1,6 @@
 # Making Stuff
+CHIP is more than cool, small, inexpensive computer. It's a complete system for building projects that require remote control, network connectivity, and physical interfacing with people and the environment.
+CHIP's pin headers have all the connections to make this happen. An annotated diagram of the pin headers can be found in the [hardware section](#pin-headers) of this manual.
 
 ## GPIO
 GPIO provides basic digital connections to the physical world to create physical products with CHIP. These pins can act as 'reads' or 'writes', for example, to sense switch positions or turn an LED on or off.
@@ -87,35 +89,34 @@ LEDs can be illuminated and turned off using the [commandline interface](#some-g
 Relays are special hardware bridges used to switch higher voltage electronics, protecting CHIP from the high voltages that would destroy it.  Using a relay board is programmatically no different from using switches.
 
 ## Expanding GPIO
-If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to. These are the pins numbered 13-40 on U13 to act as GPIO to increase the number of available GPIO pins. Documentation on this process is forthcoming!
-
-![Pinout diagram for CHIP](images/chip_pinouts.jpg)
+If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to. 
+These are the pins numbered 13-40 on U13 to act as GPIO to increase the number of available GPIO pins. Documentation on this process is forthcoming!
 
 ## Analog to Digital Conversion
-Pin 9 on header U14 provides a link for analog to digital conversion (ADC). There is no driver for this link yet. ADC is used to read continuous sensors (temperature, pots, FSR, photoresistor, etc)
+Pin 9 on header U14 provides a link for low resolution analog to digital conversion (ADC). 
+There is no driver for this link yet. ADC is used to read continuous sensors (temperature, pots, FSR, photoresistor, etc)
 
-![Pinout diagram for CHIP](images/chip_pinouts.jpg)
 
 ## 1 Wire
-The 1 Wire serial protocol is not yet implemented for CHIP
+The 1 Wire serial protocol is not yet implemented for CHIP. 
 
 ## UART
 UART connections can be made using the UART connections on header U14. 
 
 ## PWM
-Pulse Width Modulation is used to control motors and other devices. It is possible to use GPIO pins to drive motors, but they generally are not fast enough for robust and smooth control.
+Pulse Width Modulation is used to control motors and other devices. 
+It is possible to use GPIO pins to drive motors, but they generally are not fast enough for robust and smooth control.
+PWM can be accessed through an `sysfs` protocol.
 
 ## I2C
-Basic information about how to use I2C
+I2C can be accessed through a `sysfs` protocol using the debian i2c-tools. In the terminal, use
+
+```shell
+sudo apt-get install i2c-tools
+```
 
 ## LCD Monitor Support
-Basic information about connecting and using a touch-screen LCD monitor
-
-## SPI
-Some info about how SPI is implemented on CHIP and DERP
-
-## UART
-Some info about how UART is implemented on CHIP
+Using the numerous LCD header pins, a color touchscreen panel can be directly implemented on CHIP.
 
 ## Project Examples
 Projects coming soon!
