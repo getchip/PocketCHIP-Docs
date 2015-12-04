@@ -12,7 +12,6 @@ includes:
   - start-chip-boot-derp.md
   - connecting-accys.md
   - using-derp.md
-  - design-decisions.md
   - chip-hardware.md
   - making.md
   - advanced.md
