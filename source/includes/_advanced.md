@@ -716,6 +716,7 @@ There are several tools in Linux for connecting and configuring networks. We wil
 
 #### Requirements
 You will need one of these scenarios:
+
   * CHIP with monitor and keyboard attached
   * [SSH or serial](Headless CHIP - ssh and serial) connection
   * Wireless access to internet
