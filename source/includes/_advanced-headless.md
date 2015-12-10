@@ -166,7 +166,8 @@ Getting avahi running is extremely simple. First, install the avahi-daemon:
   sudo apt-get install avahi-daemon
 ```
 
-to install the necessary libraries. To configure the daemon, you'll probably need to add this service file:
+to install the necessary libraries. 
+You may want to configure the daemon with this service file so you can find Apple Bonjour devices from CHIP :
 
 ```shell
   sudo nano /etc/avahi/services/afpd.service
@@ -205,7 +206,7 @@ which will probably return “chip” as the hostname.
 From a terminal on another computer you can try accessing CHIP with the network name `chip.local`
 
 ```shell
-  ssh root@chip.local
+  ssh chip@chip.local
 ```
 
 and enter the password (default is `chip`). That's it. You can now reach CHIP without knowing the IP.
@@ -214,13 +215,20 @@ and enter the password (default is `chip`). That's it. You can now reach CHIP wi
 If you have more than one CHIP on the network, or you just want to change the name from “chip” to fit into your network name scheme, you can modify the hostnames file. Open the file in an editor:
 
 ```shell
-  nano /etc/hostname
+  sudo nano /etc/hostname
 ```
   
-where you'll see a single word “chip.” Just modify that line (for example, change it to “bobofettywap”) and save the file. For this name to broadcast over the network restart avahi-daemon:
+where you'll see a single word “chip.” Just modify that line (for example, change it to “bobofettywap”) and save the file. 
+You'll also need to modify the hosts file where you'll need to change the first line `127.0.0.1    chip` where you replace "chip" with your new username.
 
 ```shell
-  /etc/init.d/avahi-daemon restart
+  sudo nano /etc/hosts
+```
+
+Finally, to get this new name to broadcast over the network restart avahi-daemon:
+
+```shell
+  sudo /etc/init.d/avahi-daemon restart
 ```
 You can now access chip with the new name:
 
