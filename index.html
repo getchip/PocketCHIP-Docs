@@ -1510,10 +1510,13 @@ Disconnected wifi_7cc70905cd77_4e5443_managed_psk
 
 <h4 id="requirements">Requirements</h4>
 
-<p>You will need one of these scenarios:
-  * CHIP with monitor and keyboard attached
-  * <a href="Headless CHIP - ssh and serial">SSH or serial</a> connection
-  * Wireless access to internet</p>
+<p>You will need one of these scenarios:</p>
+
+<ul>
+<li>CHIP with monitor and keyboard attached</li>
+<li><a href="Headless CHIP - ssh and serial">SSH or serial</a> connection</li>
+<li>Wireless access to internet</li>
+</ul>
 
 <h4 id="step-1-list-available-wi-fi-networks">Step 1: List available Wi-Fi networks</h4>
 
@@ -2106,6 +2109,35 @@ You&rsquo;ll want to double check that the <code class="prettyprint">chip</code>
 <pre class="highlight shell"><code>wget http://log.liminastudio.com/wp-content/uploads/2012/06/testPatch.pd_.zip
 unzip testPatch.pd_.zip
 pd -rt -nogui -noadc -alsa testPatch.pd
+</code></pre>
+
+<h3 id="test-midi-controller">Test MIDI Controller</h3>
+
+<p>If you need to test out a midi controller to make sure data is coming into CHIP, you can do this from the terminal.
+You&rsquo;ll want to list the connected devices, if not just to get the port name as ALSA sees it.</p>
+<pre class="highlight shell"><code>amidi -l
+</code></pre>
+
+<p>Example output might look like
+<code class="prettyprint">shell
+Dir Device    Name
+IO  hw:1,0,0  DS1 MIDI 1
+</code></p>
+
+<p>You can then use the command to display MIDI data bytes (in hex) in the terminal window:</p>
+<pre class="highlight shell"><code>amidi -p hw:1,0,0 -d
+</code></pre>
+
+<p>Moving a fader might provide output like:</p>
+<pre class="highlight shell"><code>B0 29 1D
+B0 29 20
+B0 29 24
+B0 29 29
+B0 29 2E
+B0 29 32
+B0 29 37
+B0 29 3A
+B0 29 3C
 </code></pre>
 
 <h3 id="uninstall">Uninstall</h3>
