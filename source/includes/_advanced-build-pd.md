@@ -81,6 +81,42 @@ unzip testPatch.pd_.zip
 pd -rt -nogui -noadc -alsa testPatch.pd
 ```
 
+### Test MIDI Controller
+
+If you need to test out a midi controller to make sure data is coming into CHIP, you can do this from the terminal.
+You'll want to list the connected devices, if not just to get the port name as ALSA sees it.
+
+```shell
+amidi -l
+```
+
+Example output might look like
+```shell
+Dir Device    Name
+IO  hw:1,0,0  DS1 MIDI 1
+```
+
+You can then use the command to display MIDI data bytes (in hex) in the terminal window:
+
+```shell
+amidi -p hw:1,0,0 -d
+```
+
+Moving a fader might provide output like:
+
+```shell
+B0 29 1D
+B0 29 20
+B0 29 24
+B0 29 29
+B0 29 2E
+B0 29 32
+B0 29 37
+B0 29 3A
+B0 29 3C
+```
+
+
 ### Uninstall
 If you need to remove pd, it takes a few steps:
 
