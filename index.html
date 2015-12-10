@@ -2307,7 +2307,8 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 <pre class="highlight shell"><code>  sudo apt-get install avahi-daemon
 </code></pre>
 
-<p>to install the necessary libraries. To configure the daemon, you&rsquo;ll probably need to add this service file:</p>
+<p>to install the necessary libraries. 
+You may want to configure the daemon with this service file so you can find Apple Bonjour devices from CHIP :</p>
 <pre class="highlight shell"><code>  sudo nano /etc/avahi/services/afpd.service
 </code></pre>
 
@@ -2336,7 +2337,7 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 <h3 id="use-zero-conf">Use Zero-Conf</h3>
 
 <p>From a terminal on another computer you can try accessing CHIP with the network name <code class="prettyprint">chip.local</code></p>
-<pre class="highlight shell"><code>  ssh root@chip.local
+<pre class="highlight shell"><code>  ssh chip@chip.local
 </code></pre>
 
 <p>and enter the password (default is <code class="prettyprint">chip</code>). That&rsquo;s it. You can now reach CHIP without knowing the IP.</p>
@@ -2344,11 +2345,16 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 <h3 id="change-the-hostname">Change the hostname</h3>
 
 <p>If you have more than one CHIP on the network, or you just want to change the name from “chip” to fit into your network name scheme, you can modify the hostnames file. Open the file in an editor:</p>
-<pre class="highlight shell"><code>  nano /etc/hostname
+<pre class="highlight shell"><code>  sudo nano /etc/hostname
 </code></pre>
 
-<p>where you&rsquo;ll see a single word “chip.” Just modify that line (for example, change it to “bobofettywap”) and save the file. For this name to broadcast over the network restart avahi-daemon:</p>
-<pre class="highlight shell"><code>  /etc/init.d/avahi-daemon restart
+<p>where you&rsquo;ll see a single word “chip.” Just modify that line (for example, change it to “bobofettywap”) and save the file. 
+You&rsquo;ll also need to modify the hosts file where you&rsquo;ll need to change the first line <code class="prettyprint">127.0.0.1    chip</code> where you replace &ldquo;chip&rdquo; with your new username.</p>
+<pre class="highlight shell"><code>  sudo nano /etc/hosts
+</code></pre>
+
+<p>Finally, to get this new name to broadcast over the network restart avahi-daemon:</p>
+<pre class="highlight shell"><code>  sudo /etc/init.d/avahi-daemon restart
 </code></pre>
 
 <p>You can now access chip with the new name:</p>
@@ -2517,11 +2523,11 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 
 <p><strong>IC: 20863-HELLA1337</strong></p>
 
-<h2 id="fcc">FCC:</h2>
+<h2 id="fcc">FCC</h2>
 
 <p>This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions: (1) This device may not cause harmful interference, and (2) this device must accept any interference received, including interference that may cause undesired operation.</p>
 
-<h2 id="industry-canada">Industry Canada:</h2>
+<h2 id="industry-canada">Industry Canada</h2>
 
 <p>This device complies with Industry Canada license-exempt RSS standard(s). Operation is subject to the following two conditions:</p>
 
@@ -2533,6 +2539,10 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 <p>Cet appareil est conforme à Industrie Canada une licence standard RSS exonérés (s). Son fonctionnement est soumis aux deux conditions suivantes:
 1. Cet appareil ne doit pas provoquer d&#39;interférences
 2. Cet appareil doit accepter toute interférence reçue, y compris les interférences pouvant provoquer un fonctionnement indésirable de l&#39;appareil.</p>
+
+<h2 id="information-to-user">Information to User</h2>
+
+<p>CAUTION: Changes or modifications not expressly approved for compliance could void your authority to operate this equipment.</p>
 
       </div>
       <div class="dark-box">
