@@ -94,3 +94,77 @@ No. But it does have built-in 802.11b/g/n wifi. But if you like wires, you can u
 
 ## Does C.H.I.P. come with a banana?
 C.H.I.P. is strictly B.Y.O.B. ;)
+
+## Is there a command that lets me know more about the CPU and Memory? 
+It's a computer! It will tell you anything. If you want to find out more details about CHIP's processor, use the command:
+
+```shell
+cat /proc/cpuinfo
+```
+
+This will give output similar to:
+
+```shell
+processor	: 0
+model name	: ARMv7 Processor rev 2 (v7l)
+BogoMIPS	: 1001.88
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpd32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x3
+CPU part	: 0xc08
+CPU revision	: 2
+
+Hardware	: Allwinner sun4i/sun5i Families
+Revision	: 0000
+Serial		: 162542c10c427777
+```
+
+If you want know more about the memory:
+
+```
+cat /proc/meminfo
+```
+
+with output something like:
+
+```shell
+MemTotal:         507108 kB
+MemFree:          298600 kB
+MemAvailable:     382592 kB
+Buffers:               0 kB
+Cached:            92216 kB
+SwapCached:            0 kB
+Active:            98752 kB
+Inactive:          64096 kB
+Active(anon):      73180 kB
+Inactive(anon):     5812 kB
+Active(file):      25572 kB
+Inactive(file):    58284 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         507108 kB
+LowFree:          298600 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         70660 kB
+Mapped:            37768 kB
+Shmem:              8360 kB
+Slab:              22784 kB
+SReclaimable:      11560 kB
+SUnreclaim:        11224 kB
+KernelStack:        1176 kB
+PageTables:         2240 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      253552 kB
+Committed_AS:     615216 kB
+VmallocTotal:     507904 kB
+VmallocUsed:       14560 kB
+VmallocChunk:     482532 kB
+```
