@@ -946,7 +946,7 @@ vagrant ssh
 
 <ul>
 <li>Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+</li>
-<li>Existing <a href="Install CHIP SDK - minimal">installation of CHIP-SDK</a></li>
+<li>Existing <a href="installing-c-h-i-p-sdk">installation of CHIP-SDK</a></li>
 </ul>
 
 <h4 id="how-to-update">How To Update</h4>
@@ -1306,7 +1306,7 @@ git clone http://github.com/NextThingCo/CHIP-tools
 git pull http://github.com/NextThingCo/CHIP-tools
 </code></pre>
 
-<p>Now you are ready to <a href="flash_chip_from_sdk_-_minimal#Flash With NTC Buildroot OS">flash CHIP</a> with firmware.</p>
+<p>Now you are ready to <a href="flash-chip-firmware">flash CHIP</a> with firmware.</p>
 
 <h4 id="all-the-commands-at-once">All The Commands At Once</h4>
 
@@ -1338,7 +1338,7 @@ If you want all the details of <code class="prettyprint">connman</code> <a href=
 
 <ul>
 <li>Keyboard and monitor for CHIP</li>
-<li><a href="Headless CHIP - ssh and serial">Serial connection</a> to CHIP</li>
+<li><a href="headless-chip">Serial connection</a> to CHIP</li>
 </ul></li>
 </ul>
 
@@ -1514,7 +1514,7 @@ Disconnected wifi_7cc70905cd77_4e5443_managed_psk
 
 <ul>
 <li>CHIP with monitor and keyboard attached</li>
-<li><a href="Headless CHIP - ssh and serial">SSH or serial</a> connection</li>
+<li><a href="headless-chip">SSH or serial</a> connection</li>
 <li>Wireless access to internet</li>
 </ul>
 
@@ -1668,10 +1668,10 @@ pipe 4
 
 <ul>
 <li>CHIP</li>
-<li>A <a href="Headless CHIP - ssh and serial">SSH or serial connection to CHIP</a> or</li>
+<li>A <a href="headless-chip">SSH or serial connection to CHIP</a> or</li>
 <li>Monitor and keyboard</li>
 <li>Headphones or powered speakers connected to CHIP a/v jack</li>
-<li>A <a href="Connect To A Wireless Network with nmcli">Connection to the internet</a></li>
+<li>A <a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
 </ul>
 
 <h3 id="setup-chip">Setup CHIP</h3>
@@ -2016,9 +2016,9 @@ Failed to connect: org.bluez.Error.Failed
 <h3 id="requirements">Requirements</h3>
 
 <ul>
-<li>CHIP <a href="Connect To A Wireless Network with nmcli">connected to WiFi</a></li>
+<li>CHIP <a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">connected to WiFi</a></li>
 <li>Monitor attached to CHIP</li>
-<li>Keyboard or <a href="Headless CHIP - ssh and serial">Serial or SSH Connection</a> to CHIP</li>
+<li>Keyboard or <a href="headless-chip">Serial or SSH Connection</a> to CHIP</li>
 </ul>
 
 <h3 id="installation-xfce4">Installation (xfce4)</h3>
@@ -2187,7 +2187,7 @@ Of course, you&rsquo;ll still want to access it and control it without a monitor
 <li>Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+</li>
 <li>CHIP</li>
 <li>Monitor and keyboard (somewhat optional, though handy)</li>
-<li><a href="Connect To A Wireless Network with nmcli">Connection to the internet</a></li>
+<li><a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
 </ul>
 
 <h3 id="ssh">SSH</h3>
@@ -2196,7 +2196,7 @@ Of course, you&rsquo;ll still want to access it and control it without a monitor
 
 <h4 id="how-to-get-your-ip-address">How to get your IP address.</h4>
 
-<p>The easiest way to get CHIPs IP address is to hook up a monitor and keyboard. Bootup, log in, <a href="Connect To A Wireless Network">connect to the network</a> if you need to, and use the command</p>
+<p>The easiest way to get CHIPs IP address is to hook up a monitor and keyboard. Bootup, log in, <a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">connect to the network</a> if you need to, and use the command</p>
 <pre class="highlight shell"><code>hostname -i
 </code></pre>
 
@@ -2221,11 +2221,11 @@ Of course, you&rsquo;ll still want to access it and control it without a monitor
 <p>You&rsquo;ll be asked for CHIP&rsquo;s password. The default password is <code class="prettyprint">chip</code>.
 This process is the same if CHIP is connected to the network using built-in wireless or a USB-Ethernet adapter.</p>
 
-<h4 id="make-connections-easy">Make Connections Easy</h4>
+<h4 id="make-connections-to-chip-easy">Make Connections To CHIP Easy</h4>
 
 <p>You may want to setup your network so it will always provide the same (static) IP address to CHIP. You can then rely on CHIP always having the same IP address. </p>
 
-<p>Alternatively, you can <a href="Zero Configuration Networking">setup zero configuration networking</a> to give your CHIP an easily remembered name. </p>
+<p>Alternatively, you can <a href="zero-configuration-networking">setup zero configuration networking</a> to give your CHIP an easily remembered name. </p>
 
 <p>You are now free to do whatever it is you do with Linux command line on CHIP.</p>
 
@@ -2328,9 +2328,9 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 
 <ul>
 <li>CHIP</li>
-<li><a href="Headless CHIP - ssh and serial">SSH or serial connection to CHIP</a> or</li>
+<li><a href="headless-chip">SSH or serial connection to CHIP</a> or</li>
 <li>Monitor and keyboard</li>
-<li><a href="Connect To A Wireless Network with nmcli">Connection to the internet</a></li>
+<li><a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
 </ul>
 
 <h3 id="install-avahi">Install avahi</h3>
@@ -2470,6 +2470,14 @@ You&rsquo;ll also need to modify the hosts file where you&rsquo;ll need to chang
 <p>Eight digital GPIOs, one PWM pin, SPI, TWI (I2C), UART, USB, CSI, Parallel LCD output, touchpanel input, stereo audio out, mono audio in, composite video out, and a whole bunch of power rails in and out.</p>
 
 <p>The most up-to-date information is on <a href="https://github.com/NextThingCo">our GitHub repo</a>.</p>
+
+<h2 id="can-i-make-my-own-adapter-board">Can I make my own adapter board?</h2>
+
+<p>Absolutely! The schematics and layout for the boards, both of C.H.I.P. and C.H.I.P.’s adapters will be released as they are finalized for production. From that, you can build whatever sort of adapters or add-ons you want!</p>
+
+<h2 id="does-the-hdmi-adapter-have-hdmi-audio-output">Does the HDMI adapter have HDMI audio output?</h2>
+
+<p>Not at this time. Because there is no onboard digital audio support from our processor, C.H.I.P.’s current design only has analog audio output via the ⅛” headphone/composite jack. Adding a USB sound card is the easiest way to beef up your CHIP’s digital audio output options.</p>
 
 <h2 id="does-linux-come-pre-installed">Does Linux come pre-installed?</h2>
 
