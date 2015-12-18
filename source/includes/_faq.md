@@ -35,6 +35,12 @@ Eight digital GPIOs, one PWM pin, SPI, TWI (I2C), UART, USB, CSI, Parallel LCD o
 
 The most up-to-date information is on [our GitHub repo](https://github.com/NextThingCo).
 
+## Can I make my own adapter board?
+Absolutely! The schematics and layout for the boards, both of C.H.I.P. and C.H.I.P.’s adapters will be released as they are finalized for production. From that, you can build whatever sort of adapters or add-ons you want!
+
+## Does the HDMI adapter have HDMI audio output?
+Not at this time. Because there is no onboard digital audio support from our processor, C.H.I.P.’s current design only has analog audio output via the ⅛” headphone/composite jack. Adding a USB sound card is the easiest way to beef up your CHIP’s digital audio output options.
+
 ## Does Linux come pre-installed?
 YES! C.H.I.P. comes with Linux installed, and a selection of our favorite programs and games. Like any real computer, you can download more software and customize C.H.I.P.s applications and operating system to suit your needs!
 
@@ -80,8 +86,7 @@ CHIP uses 3V3 digital logic on GPIOs.
 We are using a JST-2.0 PH 2-pin shrouded male connector to connect LiPo cells to C.H.I.P. In the current design there are also BATT pins available on the interconnect headers, which allow alternate battery connectors/placements when attaching C.H.I.P. to a custom PCBA.
 
 ## I want to know more about the Allwinner R8 processor!
-The R8 is based on Allwinner's A13, so for tech references you can get a good sense of the R8's features from the A13 datasheet [on linux-sunxi.org](
-https://linux-sunxi.org/images/e/eb/A13_Datasheet.pdf)
+The R8 is based on Allwinner's A13, so for tech references you can get a good sense of the R8's features from the A13 datasheet [on linux-sunxi.org](https://linux-sunxi.org/images/e/eb/A13_Datasheet.pdf)
 
 ## What kind of battery can I use with CHIP?
 Any single-cell (3.7V) LiPo battery will work with C.H.I.P. You can go bigger or smaller than 3000mAH as needed for your project!
