@@ -2,10 +2,9 @@
 title: Next Thing Co Documentation
 
 language_tabs:
-  - shell
 
 toc_footers:
-  - <a href='http://github.com/getchip/chipdocs'>Have something to add or change? Visit our GitHub!</a>
+  - <a href='http://github.com/getchip/chipdocs'>Have something to add or change?<br>Visit our GitHub!</a>
 
 includes:
   - welcome-to-derp.md

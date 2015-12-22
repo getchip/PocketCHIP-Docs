@@ -12,7 +12,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may
 not use this file except in compliance with the License. You may obtain
 a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  http://www.apache.org/licen©904ses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
@@ -43,7 +43,7 @@ html, body {
 
 #toc > ul > li > a > span {
   float: right;
-  background-color: #2484FF;
+  background-color: $pink51;
   border-radius: 40px;
   width: 20px;
 }
@@ -84,6 +84,14 @@ html, body {
   // This is the logo at the top of the ToC
   &>img {
     display: block;
+  }
+  & .nav-bar-logo {
+    padding-top: 15px;
+    text-align: center;
+    
+    & img {
+      width: 40%;
+    }
   }
 
   &>.search {
@@ -154,6 +162,12 @@ html, body {
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+  .tocify-item {
+    transition: all .35s;
+  }
+  li.tocify-item:hover {
+    background: $pink51;
+  }
 
   // The Table of Contents is composed of multiple nested
   // unordered lists.  These styles remove the default
@@ -175,11 +189,11 @@ html, body {
   // This is the currently selected ToC entry
   .tocify-focus {
     box-shadow: 0px 1px 0px $nav-active-shadow;
-    background-color: $nav-active-bg;
+    background-color: $pink51;
     color: $nav-active-text;
   }
   .tocify-header {
-    font-size: 14px;
+    font-size: 15px;
   }
   // Subheaders are the submenus that slide open
   // in the table of contents.
@@ -190,11 +204,12 @@ html, body {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
     font-weight: 500;
-    .tocify-item>a {
-      padding-left: $nav-padding + $nav-indent;
-      font-size: 12px;
+    .tocify-item {
+      &>a {
+        padding-left: $nav-padding + $nav-indent;
+        font-size: 12px;
+      }
     }
-
     // for embossed look:
     @include embossed-bg;
     &>li:last-child {
@@ -243,7 +258,7 @@ html, body {
   top: 0;
   left: 0;
   z-index: 100;
-  color: #000;
+  color: $pink51;
   text-decoration: none;
   font-weight: bold;
   opacity: 0.7;
@@ -336,6 +351,14 @@ html, body {
   position: relative;
   z-index: 30;
 
+  & a {
+    text-decoration: none;
+    color: #EB008B;
+    &:hover {
+      color: #6b56d0;
+    }
+  }
+
   &:after {
     content: '';
     display: block;
@@ -363,14 +386,15 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 30px;
+    font-size: 26px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
-    margin-top: 2em;
+    margin-top: 1em;
     border-top: 1px solid #ddd;
     background-image: linear-gradient(to bottom, #fff, #f9f9f9);
+    color: $pink51;
   }
 
   h1:first-child, div:first-child + h1 {
@@ -380,13 +404,14 @@ html, body {
 
   h2 {
     @extend %header-font;
-    font-size: 20px;
-    margin-top: 4em;
+    font-size: 24px;
+    margin-top: 2em;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
+    color: $pink51;
   }
 
   // h2s right after h1s should bump right up
@@ -398,13 +423,14 @@ html, body {
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    font-size: 15px;
-    margin-top: 2.5em;
+    font-size: 18px;
+    margin-top: 1em;
     margin-bottom: 0.8em;
+    color: $pink51;
   }
 
   h4, h5, h6 {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   hr {

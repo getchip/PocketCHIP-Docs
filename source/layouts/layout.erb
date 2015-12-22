@@ -43,12 +43,14 @@ under the License.
   <body class="<%= page_classes %>">
     <a href="#" id="nav-button">
       <span>
-        NAV
+        NAVI
         <%= image_tag('navbar.png') %>
       </span>
     </a>
     <div class="tocify-wrapper">
-      <%= image_tag "logo.png" %>
+      <div class="nav-bar-logo">
+        <%= image_tag "chipLogo.png" %>
+      </div>
       <% if language_tabs %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>
