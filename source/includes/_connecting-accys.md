@@ -8,7 +8,7 @@ Like desktop computers from Best Buy, you may find that certain accessories will
   * Bluetooth Keyboard
   * USB mouse
   * Monitor with a composite video input
-  * USB cable: microUSB to USB B
+  * USB cable: USB-A to microUSB-B
   * TRRS to RCA connector
   
 Additionally, some of the advanced tutorials require:

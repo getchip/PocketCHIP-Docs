@@ -743,7 +743,7 @@ You can connect to password -protected or open access points.
 To connect to an open network with no password, use this command:
 
 ```shell
-nmcli device wifi connect '(your wifi network name/SSID)' ifname wlan0
+sudo nmcli device wifi connect '(your wifi network name/SSID)' ifname wlan0
 ```
 
 These commands will respond with information about the connection.
@@ -751,7 +751,7 @@ These commands will respond with information about the connection.
 To connect to a password protected network, use this command, inserting your own network name and password:
 
 ```shell
-nmcli device wifi connect '(your wifi network name/SSID)' password '(your wifi password)' ifname wlan0
+sudo nmcli device wifi connect '(your wifi network name/SSID)' password '(your wifi password)' ifname wlan0
 ```
 
 #### Step 3: Test your Connection
@@ -813,13 +813,13 @@ Congratulations! You are now network with CHIP!
 The command to disconnect from a wireless device needs a few parameters:
 
 ```shell
-nmcli dev disconnect iface wlan0
+sudo nmcli dev disconnect iface wlan0
 ```
 
 You may want to prevent auto-connection to a network, so you can use this command to "forget" a network:
 
 ```shell
-nmcli connection delete id  (your wifi network name/SSID) 
+sudo nmcli connection delete id  (your wifi network name/SSID) 
 ```
 
 #### Troubleshooting
