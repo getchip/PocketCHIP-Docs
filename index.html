@@ -73,7 +73,7 @@
 
 <h3 id="power-from-the-wall">Power From The Wall</h3>
 
-<p>The CHIP&rsquo;s microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don&rsquo;t have one, you can buy one any electronics retailer. Just plug a USB-A-to-microUSB-B cable (that&rsquo;s the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you&rsquo;ll see the <code class="prettyprint">PWR</code> LED light up. This CHIP is using the power from a computer&rsquo;s USB port:</p>
+<p>The CHIP&rsquo;s microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don&rsquo;t have one, you can buy one at any electronics retailer. Just plug a USB-A-to-microUSB-B cable (that&rsquo;s the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you&rsquo;ll see the <code class="prettyprint">PWR</code> LED light up. This CHIP is using the power from a computer&rsquo;s USB port:</p>
 
 <p><img alt="CHIP indicator LEDs" src="images/chip_ledon.jpg" /></p>
 
@@ -154,7 +154,7 @@ Like desktop computers from Best Buy, you may find that certain accessories will
 <li>Bluetooth Keyboard</li>
 <li>USB mouse</li>
 <li>Monitor with a composite video input</li>
-<li>USB cable: microUSB to USB B</li>
+<li>USB cable: USB-A to microUSB-B</li>
 <li>TRRS to RCA connector</li>
 </ul>
 
@@ -1532,7 +1532,7 @@ Disconnected wifi_7cc70905cd77_4e5443_managed_psk
 <h5 id="a-no-password">A: No Password</h5>
 
 <p>To connect to an open network with no password, use this command:</p>
-<pre class="highlight shell"><code>nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> ifname wlan0
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> ifname wlan0
 </code></pre>
 
 <p>These commands will respond with information about the connection.</p>
@@ -1540,7 +1540,7 @@ Disconnected wifi_7cc70905cd77_4e5443_managed_psk
 <h5 id="b-password-protected">B: Password Protected</h5>
 
 <p>To connect to a password protected network, use this command, inserting your own network name and password:</p>
-<pre class="highlight shell"><code>nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> password <span class="s1">'(your wifi password)'</span> ifname wlan0
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> password <span class="s1">'(your wifi password)'</span> ifname wlan0
 </code></pre>
 
 <h4 id="step-3-test-your-connection">Step 3: Test your Connection</h4>
@@ -1593,11 +1593,11 @@ NTC   59962bac-3441-437b-94ea-bf31dee66e8f  802-11-wireless  wlan0
 <h4 id="disconnecting-and-forgetting-networks">Disconnecting and Forgetting Networks</h4>
 
 <p>The command to disconnect from a wireless device needs a few parameters:</p>
-<pre class="highlight shell"><code>nmcli dev disconnect iface wlan0
+<pre class="highlight shell"><code>sudo nmcli dev disconnect iface wlan0
 </code></pre>
 
 <p>You may want to prevent auto-connection to a network, so you can use this command to &ldquo;forget&rdquo; a network:</p>
-<pre class="highlight shell"><code>nmcli connection delete id  <span class="o">(</span>your wifi network name/SSID<span class="o">)</span> 
+<pre class="highlight shell"><code>sudo nmcli connection delete id  <span class="o">(</span>your wifi network name/SSID<span class="o">)</span> 
 </code></pre>
 
 <h4 id="troubleshooting">Troubleshooting</h4>
