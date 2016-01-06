@@ -84,7 +84,8 @@ You may find other USB-UART cables that have more wires. There will be some labe
 Just be sure to check your datasheets to make sure you're using the correct pins.
 
 #### Install the driver
-For this tutorial, we are using a PL2303 USB to Serial cable. You'll most likely need to [install the PL2303 driver](http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&showlevel=0041-0041) for your computer.
+For this tutorial, we are using a PL2303 USB to Serial cable. 
+If you are using this one too, you'll probably need to [install the PL2303 driver](http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&showlevel=0041-0041) for your computer.
 
 #### Connect the Cable
 You only need to worry about three of the wires:
@@ -112,7 +113,7 @@ Simpler than the UART cable, you can connect to CHIP with a USB cable to your co
 
 Once you've connected CHIP to your computer with the UART or USB cable, open up a terminal. There's lots out there. Here's a few:
   * OS X: [Zterm](http://www.dalverson.com/zterm/), `screen` (built-in to OS X terminal)
-  * Windows: [PuTTy](http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/)
+  * Windows: [PuTTy](http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/) or [cygwin](https://cygwin.com)
   * Linux: `screen`, `cu`
 No matter the software, you'll need to set some settings for the port (aka connection). You'll probably only need to set the baud rate, as the others will be defaults:
   * Baud Rate (Data Rate): 115200
@@ -121,12 +122,13 @@ No matter the software, you'll need to set some settings for the port (aka conne
   * Stop bits: 1
   * Flow control: none
 
+#### Using screen
 If you are using screen, the command will look something like this:
 
 ```shell
 screen /dev/tty.usbserial 115200
 ```
-  
+
 or
 
 ```shell
@@ -147,6 +149,14 @@ You'll then be prompted for login. Defaults are username `root` and password `ch
 
 You are now free to do whatever it is you do with Linux command line on CHIP.
 
+#### Using PuTTy
+If you are on Windows using PuTTy, you'll probably want to open the windows Device Manager to get the COM name for the serial port. The device won't show up in the Ports list until after the kernel loads and presents the device, so it may take a minute or so before Windows actually detects it.
+![Device Manager showing serial ports](images/win_putty_00.jpg)
+In the PuTTy configuration panel, you can now use the COM name to set it up. In this case, it's "COM4":
+![PuTTy configuration](images/win_putty_01.jpg)
+Press "Open" to open a terminal window ,where you can log in to CHIP with username and password `chip`.
+
+You are now free to do whatever it is you do with Linux command line on CHIP.
 
 ## Zero Configuration Networking
 You can make working with CHIP on a local network much more convenient by installing zero-conf networking. OS X users may know this as “Bonjour”.
