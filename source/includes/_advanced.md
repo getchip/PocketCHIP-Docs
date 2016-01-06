@@ -174,27 +174,28 @@ If you want to flash CHIP with the debian OS with no window manager or GUI
 
 ```shell
   cd ~/CHIP-tools
-  ./chip-update-firmware.sh -d
+  ./chip-update-firmware.sh -d -f
 ```  
-To speed up flashing, you can run `./chip-update-firmware.sh -d -f` to enable fastboot flashing. 
+
+If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: `./chip-update-firmware.sh -d`.
 
 #### Option 3: Flash With CHIP Operating System
 If you want to flash CHIP with the complete CHIP Operating System
 
 ```shell
   cd ~/CHIP-tools
-  ./chip-update-firmware.sh -d -b next-gui
+  ./chip-update-firmware.sh -d -b stable-gui -f
 ```  
 
-To speed up flashing, you can run `./chip-update-firmware.sh -d -b next-gui` to enable fastboot flashing. 
 During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](#debian-output).
 
 #### Connect to CHIP and Do Something
-After a few minutes, you'll be able to connect to CHIP via serial:
+If everything went OK, you can now power up your CHIP again and connect via serial as a USB gadget:
 
 ```shell
-  cu -l /dev/ttyACM0 -s 115200
+  screen /dev/ttyACM0 115200
 ```
+You can login to CHIP as `chip` or `root` using the password `chip`.
 
 and even test the hardware:
 
@@ -223,8 +224,10 @@ This will take a while, maybe an hour. When finished, flash CHIP with the script
 
 ```shell
   cd ~/CHIP-tools
-  ./chip-update-firmware.sh
+  BUILDROOT_OUTPUT_DIR=../CHIP-buildroot/output ./chip-fel-flash.sh
 ```
+
+Unless you changed the users or passwords, you can login to CHIP as `chip` or `root` using the password `chip`.
 
 ### Appendix
 Sample outputs are provided in this appendix so you can more easily troubleshoot or proceed with confidence when flashing CHIP with firmware.
