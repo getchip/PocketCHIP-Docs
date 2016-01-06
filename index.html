@@ -564,7 +564,7 @@ By default, connecting CHIP&rsquo;s micro USB to a computer will create a USB Se
 <th>U13L</th>
 <th>U13R</th>
 <th>U14L</th>
-<th>U13R</th>
+<th>U14R</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -1005,26 +1005,27 @@ During flashing, the terminal will fill with messages.  If successful, you&rsquo
 
 <p>If you want to flash CHIP with the debian OS with no window manager or GUI</p>
 <pre class="highlight shell"><code>  <span class="nb">cd</span> ~/CHIP-tools
-  ./chip-update-firmware.sh -d
+  ./chip-update-firmware.sh -d -f
 </code></pre>
 
-<p>To speed up flashing, you can run <code class="prettyprint">./chip-update-firmware.sh -d -f</code> to enable fastboot flashing. </p>
+<p>If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: <code class="prettyprint">./chip-update-firmware.sh -d</code>.</p>
 
 <h4 id="option-3-flash-with-chip-operating-system">Option 3: Flash With CHIP Operating System</h4>
 
 <p>If you want to flash CHIP with the complete CHIP Operating System</p>
 <pre class="highlight shell"><code>  <span class="nb">cd</span> ~/CHIP-tools
-  ./chip-update-firmware.sh -d -b next-gui
+  ./chip-update-firmware.sh -d -b stable-gui -f
 </code></pre>
 
-<p>To speed up flashing, you can run <code class="prettyprint">./chip-update-firmware.sh -d -b next-gui</code> to enable fastboot flashing. 
-During flashing, the terminal will fill with messages. If successful, you&rsquo;ll see C.H.I.P. run through a hardware test, with the answers being &#39;OK&rsquo;.  If C.H.I.P. is &#39;OK&rsquo;, you can remove the jumper wire. Here is a <a href="#debian-output">sample successful output</a>.</p>
+<p>During flashing, the terminal will fill with messages. If successful, you&rsquo;ll see C.H.I.P. run through a hardware test, with the answers being &#39;OK&rsquo;.  If C.H.I.P. is &#39;OK&rsquo;, you can remove the jumper wire. Here is a <a href="#debian-output">sample successful output</a>.</p>
 
 <h4 id="connect-to-chip-and-do-something">Connect to CHIP and Do Something</h4>
 
-<p>After a few minutes, you&rsquo;ll be able to connect to CHIP via serial:</p>
-<pre class="highlight shell"><code>  cu -l /dev/ttyACM0 -s 115200
+<p>If everything went OK, you can now power up your CHIP again and connect via serial as a USB gadget:</p>
+<pre class="highlight shell"><code>  screen /dev/ttyACM0 115200
 </code></pre>
+
+<p>You can login to CHIP as <code class="prettyprint">chip</code> or <code class="prettyprint">root</code> using the password <code class="prettyprint">chip</code>.</p>
 
 <p>and even test the hardware:</p>
 <pre class="highlight shell"><code>  hwtest
@@ -1046,8 +1047,10 @@ During flashing, the terminal will fill with messages. If successful, you&rsquo;
   make
 This will take a while, maybe an hour. When finished, flash CHIP with the script:</p>
 <pre class="highlight shell"><code>  <span class="nb">cd</span> ~/CHIP-tools
-  ./chip-update-firmware.sh
+  <span class="nv">BUILDROOT_OUTPUT_DIR</span><span class="o">=</span>../CHIP-buildroot/output ./chip-fel-flash.sh
 </code></pre>
+
+<p>Unless you changed the users or passwords, you can login to CHIP as <code class="prettyprint">chip</code> or <code class="prettyprint">root</code> using the password <code class="prettyprint">chip</code>.</p>
 
 <h3 id="appendix">Appendix</h3>
 
@@ -2252,7 +2255,8 @@ Just be sure to check your datasheets to make sure you&rsquo;re using the correc
 
 <h4 id="install-the-driver">Install the driver</h4>
 
-<p>For this tutorial, we are using a PL2303 USB to Serial cable. You&rsquo;ll most likely need to <a href="http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&amp;showlevel=0041-0041">install the PL2303 driver</a> for your computer.</p>
+<p>For this tutorial, we are using a PL2303 USB to Serial cable. 
+If you are using this one too, you&rsquo;ll probably need to <a href="http://www.prolific.com.tw/US/ShowProduct.aspx?pcid=41&amp;showlevel=0041-0041">install the PL2303 driver</a> for your computer.</p>
 
 <h4 id="connect-the-cable">Connect the Cable</h4>
 
@@ -2283,7 +2287,7 @@ Please check your data sheets!</p>
 
 <p>Once you&rsquo;ve connected CHIP to your computer with the UART or USB cable, open up a terminal. There&rsquo;s lots out there. Here&rsquo;s a few:
   * OS X: <a href="http://www.dalverson.com/zterm/">Zterm</a>, <code class="prettyprint">screen</code> (built-in to OS X terminal)
-  * Windows: <a href="http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/">PuTTy</a>
+  * Windows: <a href="http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/">PuTTy</a> or <a href="https://cygwin.com">cygwin</a>
   * Linux: <code class="prettyprint">screen</code>, <code class="prettyprint">cu</code>
 No matter the software, you&rsquo;ll need to set some settings for the port (aka connection). You&rsquo;ll probably only need to set the baud rate, as the others will be defaults:
   * Baud Rate (Data Rate): 115200
@@ -2291,6 +2295,8 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
   * Parity: none
   * Stop bits: 1
   * Flow control: none</p>
+
+<h4 id="using-screen">Using screen</h4>
 
 <p>If you are using screen, the command will look something like this:</p>
 <pre class="highlight shell"><code>screen /dev/tty.usbserial 115200
@@ -2309,6 +2315,16 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 <p>Now power up CHIP. You could do this at anytime, but you&rsquo;ll have the most reliable experience powering CHIP after connecting the USB-UART wires. If you make the serial connection after booting chip, you&rsquo;ll probably need to hit &#39;return&rsquo; on your keyboard a few times to get CHIP to send some data to you and print in your terminal.</p>
 
 <p>You&rsquo;ll then be prompted for login. Defaults are username <code class="prettyprint">root</code> and password <code class="prettyprint">chip</code>.</p>
+
+<p>You are now free to do whatever it is you do with Linux command line on CHIP.</p>
+
+<h4 id="using-putty">Using PuTTy</h4>
+
+<p>If you are on Windows using PuTTy, you&rsquo;ll probably want to open the windows Device Manager to get the COM name for the serial port. The device won&rsquo;t show up in the Ports list until after the kernel loads and presents the device, so it may take a minute or so before Windows actually detects it.
+<img alt="Device Manager showing serial ports" src="images/win_putty_00.jpg" />
+In the PuTTy configuration panel, you can now use the COM name to set it up. In this case, it&rsquo;s &ldquo;COM4&rdquo;:
+<img alt="PuTTy configuration" src="images/win_putty_01.jpg" />
+Press &ldquo;Open&rdquo; to open a terminal window ,where you can log in to CHIP with username and password <code class="prettyprint">chip</code>.</p>
 
 <p>You are now free to do whatever it is you do with Linux command line on CHIP.</p>
 
