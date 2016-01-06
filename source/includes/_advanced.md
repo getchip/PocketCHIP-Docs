@@ -813,7 +813,7 @@ Congratulations! You are now network with CHIP!
 The command to disconnect from a wireless device needs a few parameters:
 
 ```shell
-sudo nmcli dev disconnect iface wlan0
+sudo nmcli dev disconnect wlan0
 ```
 
 You may want to prevent auto-connection to a network, so you can use this command to "forget" a network:
