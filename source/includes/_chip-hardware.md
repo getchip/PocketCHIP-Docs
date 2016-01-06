@@ -27,7 +27,7 @@ The Pin Headers provide a massive amount of connectivity, making CHIP a suitable
 
 ![CHIP pinout](images/chip_pinouts.jpg)
 
-U13L | U13R | U14L | U13R
+U13L | U13R | U14L | U14R
 ------|------|------|------
 GND : ground | CHG-IN : 5V input (power and battery charge) | GND : ground | VCC-5V : 5V power
 VCC-5V : 5V power | GND : ground | UART1-TX : UART serial transmit | HPL : audio out left
