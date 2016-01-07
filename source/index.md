@@ -17,6 +17,7 @@ includes:
   - advanced-build-pd.md
   - advanced-headless.md
   - faq.md
+  - trouble-faq
   - compliance.md
   
 search: true
