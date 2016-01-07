@@ -18,7 +18,7 @@
 ## CHIP Won't Startup
 ***Problem:*** I pressed the start button, the lights come on, but nothing seems to happen. I have a monitor connected, and there's just a few lines of text and nothing else. Nothing!
 
-***Fixes:*** It has been observed that this can happen if CHIP is trying to boot when too hot. For example, if it's in a sealed enclosure in a hot place, and is rebooted after computationally heavy work. 
+***Fixes:*** It has been observed that this can happen if CHIP is trying to boot when too hot, or if the NAND has become corrupted. For example, if it's in a sealed enclosure in a hot place, and is rebooted after computationally heavy work. 
 - **Fix 1** is to let CHIP rest for several minutes, then try again.
 - **Fix 2** is to reflash CHIP with new firmware. This, of course, is the "nuclear option" because you will lose any files or data stored on CHIP.
 
