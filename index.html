@@ -2643,7 +2643,7 @@ VmallocChunk:     482532 kB
 <p><strong><em>Fixes:</em></strong> Like most tiny computers, the USB port on CHIP provides a limited amount of power. When you plug in a keyboard and an optical mouse, for example, they will draw too much current from CHIP, not leaving enough for the processor. As a result, CHIP will immediately shut down. There are a few ways to avoid this. 
  - Use a <a href="powered-usb-hub">powered USB hub</a>
  - Use a <a href="bluetooth-keyboard-and-mouse">bluetooth keyboard and mouse</a>. Yes, this is a very specific solution, but a good one when you are only using the USB port for keyboard and mouse. Keeps your desk cleaner too!
- - Execute the command <code class="prettyprint">axp209 --no-limit</code> in the terminal before you attach your USB peripherals.</p>
+ - Execute the command <code class="prettyprint">sudo axp209 --no_limit</code> in the terminal before you attach your USB peripherals.</p>
 
 <p><strong><em>Problem:</em></strong> My CHIP booted fine until it got to loading the desktop GUI, then it shut down.</p>
 
