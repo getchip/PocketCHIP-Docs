@@ -735,7 +735,7 @@ CHIP&rsquo;s pin headers have all the connections to make this happen. An annota
 <h3 id="some-gpio-switch-action">Some GPIO Switch Action</h3>
 
 <p>These lines of code will let us read values on pin XIO-P7. First, we tell the system we want to listen to this pin:</p>
-<pre class="highlight shell"><code>  <span class="nb">echo </span>415 | sudo tee /sys/class/gpio/export
+<pre class="highlight shell"><code>  sudo sh -c <span class="s1">'echo 415 &gt; /sys/class/gpio/export'</span>
 </code></pre>
 
 <p>View the mode of the pin. It should return “in”:</p>
@@ -749,11 +749,11 @@ CHIP&rsquo;s pin headers have all the connections to make this happen. An annota
 <h3 id="some-gpio-output">Some GPIO Output</h3>
 
 <p>You could also change the mode of a pin from “in” to “out”</p>
-<pre class="highlight shell"><code>  <span class="nb">echo </span>out &gt; /sys/class/gpio/gpio415/direction
+<pre class="highlight shell"><code>  sudo sh -c <span class="s1">'echo out &gt; /sys/class/gpio/gpio415/direction'</span>
 </code></pre>
 
 <p>Now that it&rsquo;s in output mode, you can write a value to the pin:</p>
-<pre class="highlight shell"><code>  <span class="nb">echo </span>1 &gt; /sys/class/gpio/gpio415/value
+<pre class="highlight shell"><code>  sudo sh -c <span class="s1">'echo 1 &gt; /sys/class/gpio/gpio415/value'</span>
 </code></pre>
 
 <p>If you attach an LED to the pin and ground, the LED will illuminate according to your control messages.</p>
@@ -761,7 +761,7 @@ CHIP&rsquo;s pin headers have all the connections to make this happen. An annota
 <h3 id="enough-io">Enough IO</h3>
 
 <p>When you are done experimenting, you can tell the system to stop listening to the gpio pin:</p>
-<pre class="highlight shell"><code>  <span class="nb">echo </span>415 | sudo tee /sys/class/gpio/unexport
+<pre class="highlight shell"><code>  sudo sh -c <span class="s1">'echo 415 &gt; /sys/class/gpio/unexport'</span>
 </code></pre>
 
 <h3 id="learn-more">Learn More</h3>
@@ -1008,7 +1008,7 @@ During flashing, the terminal will fill with messages.  If successful, you&rsquo
   ./chip-update-firmware.sh -d -f
 </code></pre>
 
-<p>If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: <code class="prettyprint">./chip-update-firmware.sh -d</code>.</p>
+<p>If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: <code class="prettyprint">./chip-update-firmware.sh -d</code>. Here is a <a href="#debian-output">sample successful output</a>.</p>
 
 <h4 id="option-3-flash-with-chip-operating-system">Option 3: Flash With CHIP Operating System</h4>
 
@@ -1303,7 +1303,7 @@ git clone http://github.com/NextThingCo/CHIP-tools
 git pull http://github.com/NextThingCo/CHIP-tools
 </code></pre>
 
-<p>Now you are ready to <a href="flash-chip-firmware">flash CHIP</a> with firmware.</p>
+<p>Now you are ready to <a href="#flash-chip-firmware">flash CHIP</a> with firmware.</p>
 
 <h4 id="all-the-commands-at-once">All The Commands At Once</h4>
 
@@ -1335,7 +1335,7 @@ If you want all the details of <code class="prettyprint">connman</code> <a href=
 
 <ul>
 <li>Keyboard and monitor for CHIP</li>
-<li><a href="headless-chip">Serial connection</a> to CHIP</li>
+<li><a href="#headless-chip">Serial connection</a> to CHIP</li>
 </ul></li>
 </ul>
 
@@ -1511,7 +1511,7 @@ Disconnected wifi_7cc70905cd77_4e5443_managed_psk
 
 <ul>
 <li>CHIP with monitor and keyboard attached</li>
-<li><a href="headless-chip">SSH or serial</a> connection</li>
+<li><a href="#headless-chip">SSH or serial</a> connection</li>
 <li>Wireless access to internet</li>
 </ul>
 
@@ -1665,10 +1665,10 @@ pipe 4
 
 <ul>
 <li>CHIP</li>
-<li>A <a href="headless-chip">SSH or serial connection to CHIP</a> or</li>
+<li>A <a href="#headless-chip">SSH or serial connection to CHIP</a> or</li>
 <li>Monitor and keyboard</li>
 <li>Headphones or powered speakers connected to CHIP a/v jack</li>
-<li>A <a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
+<li>A <a href="#connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
 </ul>
 
 <h3 id="setup-chip">Setup CHIP</h3>
@@ -2013,9 +2013,9 @@ Failed to connect: org.bluez.Error.Failed
 <h3 id="requirements">Requirements</h3>
 
 <ul>
-<li>CHIP <a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">connected to WiFi</a></li>
+<li>CHIP <a href="#connecting-c-h-i-p-to-wi-fi-with-nmcli">connected to WiFi</a></li>
 <li>Monitor attached to CHIP</li>
-<li>Keyboard or <a href="headless-chip">Serial or SSH Connection</a> to CHIP</li>
+<li>Keyboard or <a href="#headless-chip">Serial or SSH Connection</a> to CHIP</li>
 </ul>
 
 <h3 id="installation-xfce4">Installation (xfce4)</h3>
