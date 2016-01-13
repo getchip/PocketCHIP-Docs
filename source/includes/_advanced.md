@@ -177,7 +177,7 @@ If you want to flash CHIP with the debian OS with no window manager or GUI
   ./chip-update-firmware.sh -d -f
 ```  
 
-If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: `./chip-update-firmware.sh -d`.
+If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: `./chip-update-firmware.sh -d`. Here is a [sample successful output](#debian-output).
 
 #### Option 3: Flash With CHIP Operating System
 If you want to flash CHIP with the complete CHIP Operating System
@@ -487,7 +487,7 @@ cd CHIP-tools
 git pull http://github.com/NextThingCo/CHIP-tools
 ```
 
-Now you are ready to [flash CHIP](flash-chip-firmware) with firmware.
+Now you are ready to [flash CHIP](#flash-chip-firmware) with firmware.
 
 #### All The Commands At Once
 Here's all the commands in one place:
@@ -514,7 +514,7 @@ If you want all the details of `connman` [visit the ArchLinux wiki.](https://wik
   * CHIP
   * One of the following:
     * Keyboard and monitor for CHIP
-    * [Serial connection](headless-chip) to CHIP
+    * [Serial connection](#headless-chip) to CHIP
 
 #### Step 1: Enable WiFi and Find a Network
 
@@ -721,7 +721,7 @@ There are several tools in Linux for connecting and configuring networks. We wil
 You will need one of these scenarios:
 
   * CHIP with monitor and keyboard attached
-  * [SSH or serial](headless-chip) connection
+  * [SSH or serial](#headless-chip) connection
   * Wireless access to internet
 
 #### Step 1: List available Wi-Fi networks
@@ -886,10 +886,10 @@ Getting simple audio playback working on CHIP is pretty easy, once you install t
 
 ### Requirements
   * CHIP
-  * A [SSH or serial connection to CHIP](headless-chip) or
+  * A [SSH or serial connection to CHIP](#headless-chip) or
   * Monitor and keyboard
   * Headphones or powered speakers connected to CHIP a/v jack
-  * A [Connection to the internet](connecting-c-h-i-p-to-wi-fi-with-nmcli)
+  * A [Connection to the internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
 
 ### Setup CHIP
 Update your apt repository list if you haven't done so recently:
@@ -1304,9 +1304,9 @@ Then there's a problem with CHIP recognizing the bluetooth module. [Read the ver
 If you want a windowed desktop on C.H.I.P., you can install X-Windows. 
 
 ### Requirements
-  * CHIP [connected to WiFi](connecting-c-h-i-p-to-wi-fi-with-nmcli)
+  * CHIP [connected to WiFi](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
   * Monitor attached to CHIP
-  * Keyboard or [Serial or SSH Connection](headless-chip) to CHIP
+  * Keyboard or [Serial or SSH Connection](#headless-chip) to CHIP
 
 ### Installation (xfce4)
 CHIP is a lightweight computer, so we'll install the lightweight xfce4:
