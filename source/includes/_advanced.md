@@ -104,7 +104,7 @@ You may have been working with CHIP for a while now, and you want to updated you
 
 #### Requirements
   * Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+
-  * Existing [installation of CHIP-SDK](installing-c-h-i-p-sdk)
+  * Existing [installation of CHIP-SDK](#installing-c-h-i-p-sdk)
 
 #### How To Update
 Just follow these steps:
@@ -148,7 +148,7 @@ Here's all the commands in one place:
 ```
 
 ## Flash CHIP Firmware
-Now that the virtual machine is running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
+Now that the [virtual machine and SDK](#installing-c.h.i.p.-sdk) are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
 
 #### Prepare CHIP for Flashing
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:

@@ -13,13 +13,13 @@ If you want to use CHIP without a monitor or keyboard attached, there's a few wa
   * Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+
   * CHIP
   * Monitor and keyboard (somewhat optional, though handy)
-  * [Connection to the internet](connecting-c-h-i-p-to-wi-fi-with-nmcli)
+  * [Connection to the internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
 
 ### SSH
 SSH (or "Secure Shell") is a common way to control a computer remotely over a network. You'll need to first get your computer's network name or IP address before you can connect.
 
 #### How to get your IP address.
-The easiest way to get CHIPs IP address is to hook up a monitor and keyboard. Bootup, log in, [connect to the network](connecting-c-h-i-p-to-wi-fi-with-nmcli) if you need to, and use the command
+The easiest way to get CHIPs IP address is to hook up a monitor and keyboard. Bootup, log in, [connect to the network](#connecting-c-h-i-p-to-wi-fi-with-nmcli) if you need to, and use the command
 
 ```shell
 hostname -i
@@ -56,7 +56,7 @@ This process is the same if CHIP is connected to the network using built-in wire
 #### Make Connections To CHIP Easy
 You may want to setup your network so it will always provide the same (static) IP address to CHIP. You can then rely on CHIP always having the same IP address. 
 
-Alternatively, you can [setup zero configuration networking](zero-configuration-networking) to give your CHIP an easily remembered name. 
+Alternatively, you can [setup zero configuration networking](#zero-configuration-networking) to give your CHIP an easily remembered name. 
 
 You are now free to do whatever it is you do with Linux command line on CHIP.
 
@@ -165,9 +165,9 @@ With zero-conf properly configured, your CHIP can be contacted using a name, suc
 
 ### Requirements
   * CHIP
-  * [SSH or serial connection to CHIP](headless-chip) or
+  * [SSH or serial connection to CHIP](#headless-chip) or
   * Monitor and keyboard
-  * [Connection to the internet](connecting-c-h-i-p-to-wi-fi-with-nmcli)
+  * [Connection to the internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
 
 ### Install avahi
 Getting avahi running is extremely simple. First, install the avahi-daemon:
