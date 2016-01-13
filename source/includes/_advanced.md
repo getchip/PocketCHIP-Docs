@@ -518,7 +518,7 @@ If you want all the details of `connman` [visit the ArchLinux wiki.](https://wik
 
 #### Step 1: Enable WiFi and Find a Network
 
-These three commands will, in turn, enable wifi, scan for access points, and see what netowrks are available:
+These three commands will, in turn, enable wifi, scan for access points, and see what networks are available:
 
 ```shell
   connmanctl enable wifi
