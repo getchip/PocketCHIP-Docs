@@ -2656,35 +2656,47 @@ VmallocChunk:     482532 kB
 
 <p><strong><em>Problem:</em></strong> I attached a mouse and keyboard, and my CHIP suddenly turned off.</p>
 
-<p><strong><em>Fixes:</em></strong> Like most tiny computers, the USB port on CHIP provides a limited amount of power. When you plug in a keyboard and an optical mouse, for example, they will draw too much current from CHIP, not leaving enough for the processor. As a result, CHIP will immediately shut down. There are a few ways to avoid this. 
- - Use a <a href="#powered-usb-hub">powered USB hub</a>
- - Use a <a href="#bluetooth-keyboard-and-mouse">bluetooth keyboard and mouse</a>. Yes, this is a very specific solution, but a good one when you are only using the USB port for keyboard and mouse. Keeps your desk cleaner too!
- - Execute the command <code class="prettyprint">sudo axp209 --no_limit</code> in the terminal before you attach your USB peripherals.
- - Provide power from a supply connecting ground and 5V the pins <a href="#pin-headers">headers 1 and 2 on U13</a>.</p>
+<p><strong><em>Fixes:</em></strong> Like most tiny computers, the USB port on CHIP provides a limited amount of power. When you plug in a keyboard and an optical mouse, for example, they will draw too much current from CHIP, not leaving enough for the processor. As a result, CHIP will immediately shut down. There are a few ways to avoid this. </p>
+
+<ul>
+<li>Use a <a href="#powered-usb-hub">powered USB hub</a></li>
+<li>Use a <a href="#bluetooth-keyboard-and-mouse">bluetooth keyboard and mouse</a>. Yes, this is a very specific solution, but a good one when you are only using the USB port for keyboard and mouse. Keeps your desk cleaner too!</li>
+<li>Execute the command <code class="prettyprint">sudo axp209 --no_limit</code> in the terminal before you attach your USB peripherals.</li>
+<li>Provide power from a supply connecting ground and 5V the pins <a href="#pin-headers">headers 1 and 2 on U13</a>.</li>
+</ul>
 
 <p><strong><em>Problem:</em></strong> My CHIP booted fine until it got to loading the desktop GUI, then it shut down.</p>
 
-<p><strong><em>Fixes:</em></strong> This is usually the result of an underpowered power supply. We recommend a 5V power supply with a minimum 1A current rating. 
-- You can find the current rating on your power supply&rsquo;s &ldquo;Output&rdquo; - it should read <em>1000 mA</em> or <em>1A</em> (or a higher number). You may need a magnifying glass to read it, but they all should have this info on the label!
-- Instead of powering CHIP using the microUSB port, try using the <a href="#pin-headers">header pins</a> CHG-IN (U13-2) and GND (U13-1). 
-- Add a <a href="#power-from-a-battery">LiPo battery</a>. This provides enough extra current and power buffer to prevent this problem. </p>
+<p><strong><em>Fixes:</em></strong> This is usually the result of an underpowered power supply. We recommend a 5V power supply with a minimum 1A current rating. </p>
+
+<ul>
+<li>You can find the current rating on your power supply&rsquo;s &ldquo;Output&rdquo; - it should read <em>1000 mA</em> or <em>1A</em> (or a higher number). You may need a magnifying glass to read it, but they all should have this info on the label!</li>
+<li>Instead of powering CHIP using the microUSB port, try using the <a href="#pin-headers">header pins</a> CHG-IN (U13-2) and GND (U13-1). </li>
+<li>Add a <a href="#power-from-a-battery">LiPo battery</a>. This provides enough extra current and power buffer to prevent this problem. </li>
+</ul>
 
 <h2 id="chip-won-39-t-startup">CHIP Won&rsquo;t Startup</h2>
 
 <p><strong><em>Problem:</em></strong> I pressed the start button, the lights come on, but nothing seems to happen. I have a monitor connected, and there&rsquo;s just a few lines of text and nothing else. Nothing!</p>
 
-<p><strong><em>Fixes:</em></strong> It has been observed that this can happen if CHIP is trying to boot when too hot, or if the NAND has become corrupted. For example, if it&rsquo;s in a sealed enclosure in a hot place, and is rebooted after computationally heavy work. 
-- <strong>Fix 1</strong> is to let CHIP rest for several minutes, then try again.
-- <strong>Fix 2</strong> is to reflash CHIP with new firmware. This, of course, is the &ldquo;nuclear option&rdquo; because you will lose any files or data stored on CHIP.</p>
+<p><strong><em>Fixes:</em></strong> It has been observed that this can happen if CHIP is trying to boot when too hot, or if the NAND has become corrupted. For example, if it&rsquo;s in a sealed enclosure in a hot place, and is rebooted after computationally heavy work. </p>
+
+<ul>
+<li><strong>Fix 1</strong> is to let CHIP rest for several minutes, then try again.</li>
+<li><strong>Fix 2</strong> is to reflash CHIP with new firmware. This, of course, is the &ldquo;nuclear option&rdquo; because you will lose any files or data stored on CHIP.</li>
+</ul>
 
 <h2 id="no-video-output">No Video Output</h2>
 
 <p>Problem: Monitor is attached, but there is no video on my monitor</p>
 
-<p>Fixes: There are a few possible problems here
-- <strong>wrong TRRS arrangement</strong>: try different ends of your cable. Make sure is subscribes to <a href="#about-the-trrs-connector">this use of the tip, rings, and sleeve</a>
-- <strong>PAL monitor</strong>: CHIP outputs NTSC format video by default. You can change this, however, by following <a href="#ntsc-or-pal">this guide</a>.
-- <strong>Video trace cut for mic in</strong>: This is pretty unlikely, but if you are working with a used CHIP, it may be that the tip connector has been switched to <a href="#microphone-and-audio-input">work as a microphone input</a>. Before you do fix this with a bit of solder, take a close look at your board to see if there is evidence of a score mark indicating the cut trace. </p>
+<p>Fixes: There are a few possible problems here</p>
+
+<ul>
+<li><strong>wrong TRRS arrangement</strong>: try different ends of your cable. Make sure is subscribes to <a href="#about-the-trrs-connector">this use of the tip, rings, and sleeve</a></li>
+<li><strong>PAL monitor</strong>: CHIP outputs NTSC format video by default. You can change this, however, by following <a href="#ntsc-or-pal">this guide</a>.</li>
+<li><strong>Video trace cut for mic in</strong>: This is pretty unlikely, but if you are working with a used CHIP, it may be that the tip connector has been switched to <a href="#microphone-and-audio-input">work as a microphone input</a>. Before you do fix this with a bit of solder, take a close look at your board to see if there is evidence of a score mark indicating the cut trace. </li>
+</ul>
 
 <h2 id="how-to-contact-us">How to Contact Us</h2>
 
