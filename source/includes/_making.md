@@ -33,7 +33,7 @@ The number is somewhat unfortunate, since the `sysfs` names do not match the lab
 These lines of code will let us read values on pin XIO-P7. First, we tell the system we want to listen to this pin:
 
 ```shell
-  echo 415 | sudo tee /sys/class/gpio/export
+  sudo sh -c 'echo 415 > /sys/class/gpio/export'
 ```
 
 View the mode of the pin. It should return “in”:
@@ -52,13 +52,13 @@ Connect a jumper wire between Pin 20 (XIO-P7) and Pin 39 (GND). Now use this lin
 You could also change the mode of a pin from “in” to “out”
 
 ```shell
-  echo out > /sys/class/gpio/gpio415/direction
+  sudo sh -c 'echo out > /sys/class/gpio/gpio415/direction'
 ```
 
 Now that it's in output mode, you can write a value to the pin:
 
 ```shell
-  echo 1 > /sys/class/gpio/gpio415/value
+  sudo sh -c 'echo 1 > /sys/class/gpio/gpio415/value'
 ```
 
 If you attach an LED to the pin and ground, the LED will illuminate according to your control messages.
@@ -67,7 +67,7 @@ If you attach an LED to the pin and ground, the LED will illuminate according to
 When you are done experimenting, you can tell the system to stop listening to the gpio pin:
 
 ```shell
-  echo 415 | sudo tee /sys/class/gpio/unexport
+  sudo sh -c 'echo 415 > /sys/class/gpio/unexport'
 ```
 
 ### Learn More
