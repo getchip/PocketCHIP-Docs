@@ -169,7 +169,8 @@ Like desktop computers from Best Buy, you may find that certain accessories will
 
 <h2 id="powered-usb-hub">Powered USB Hub</h2>
 
-<p>You&rsquo;ll find that a simple powered USB hub is pretty essential if you want to use a lot of USB devices with CHIP. Not only is there only one USB port (keeping CHIP nice and small), but CHIP&rsquo;s micro USB power port can only provide so much power for the USB port. If you don&rsquo;t have a powered USB port, you&rsquo;ll quickly max out power if you attach too many accessories. </p>
+<p>You&rsquo;ll find that a simple powered USB hub is pretty essential if you want to use a lot of USB devices with CHIP. 
+Not only is there only one USB port (keeping CHIP nice and small), but CHIP&rsquo;s micro USB power port can only provide so much power for the USB port. If you don&rsquo;t have a powered USB port, you&rsquo;ll quickly max out power if you attach too many accessories. </p>
 
 <h2 id="keyboard-and-mouse">Keyboard and Mouse</h2>
 
@@ -514,6 +515,21 @@ If you know the name, you can use the Search function to find the package, then 
 <p>Finally, you can confirm that AbiWord has been removed by checking the Applications menu:</p>
 
 <p><img alt="Uninstall with Synaptic" src="images/screen_uninstall08.jpg" /></p>
+
+<h2 id="boot-into-console">Boot into Console</h2>
+
+<p>If you want want CHIP to boot directly into a console, and not load the Desktop or Window manager GUIs, there are a couple options.
+For the temporary case, you can open a terminal window and use the command </p>
+<pre class="highlight shell"><code>sudo systemctl <span class="nb">set</span>-default multi-user.target
+</code></pre>
+
+<p>Next time you boot CHIP, it will not load the desktop or window environment, leaving you with command-line operation only.
+If you wanted to return to booting into the GUI, you can use this command before you reboot:</p>
+<pre class="highlight shell"><code>sudo systemctl <span class="nb">set</span>-default graphical.target
+</code></pre>
+
+<p>The other option is to run a linux distribution with no GUI installed. You may want to do this if you want to use commandline only and want to save some storage space. 
+You can follow instructions to <a href="#flash-chip-firmware">flash CHIP</a> with buildroot, or Debian (with no GUI).</p>
 
           <h1 id="chip-hardware">CHIP Hardware</h1>
 
@@ -940,7 +956,7 @@ vagrant ssh
 
 <ul>
 <li>Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+</li>
-<li>Existing <a href="installing-c-h-i-p-sdk">installation of CHIP-SDK</a></li>
+<li>Existing <a href="#installing-c-h-i-p-sdk">installation of CHIP-SDK</a></li>
 </ul>
 
 <h4 id="how-to-update">How To Update</h4>
@@ -979,7 +995,7 @@ vagrant ssh
 
 <h2 id="flash-chip-firmware">Flash CHIP Firmware</h2>
 
-<p>Now that the virtual machine is running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to <a href="#setup-ubuntu-for-flashing">prepare Ubuntu to flash</a></p>
+<p>Now that the <a href="#installing-c.h.i.p.-sdk">virtual machine and SDK</a> are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to <a href="#setup-ubuntu-for-flashing">prepare Ubuntu to flash</a></p>
 
 <h4 id="prepare-chip-for-flashing">Prepare CHIP for Flashing</h4>
 
@@ -2184,7 +2200,7 @@ Of course, you&rsquo;ll still want to access it and control it without a monitor
 <li>Computer running OS X 10.10+, Ubuntu 14.04+, or Windows 7+</li>
 <li>CHIP</li>
 <li>Monitor and keyboard (somewhat optional, though handy)</li>
-<li><a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
+<li><a href="#connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
 </ul>
 
 <h3 id="ssh">SSH</h3>
@@ -2193,7 +2209,7 @@ Of course, you&rsquo;ll still want to access it and control it without a monitor
 
 <h4 id="how-to-get-your-ip-address">How to get your IP address.</h4>
 
-<p>The easiest way to get CHIPs IP address is to hook up a monitor and keyboard. Bootup, log in, <a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">connect to the network</a> if you need to, and use the command</p>
+<p>The easiest way to get CHIPs IP address is to hook up a monitor and keyboard. Bootup, log in, <a href="#connecting-c-h-i-p-to-wi-fi-with-nmcli">connect to the network</a> if you need to, and use the command</p>
 <pre class="highlight shell"><code>hostname -i
 </code></pre>
 
@@ -2222,7 +2238,7 @@ This process is the same if CHIP is connected to the network using built-in wire
 
 <p>You may want to setup your network so it will always provide the same (static) IP address to CHIP. You can then rely on CHIP always having the same IP address. </p>
 
-<p>Alternatively, you can <a href="zero-configuration-networking">setup zero configuration networking</a> to give your CHIP an easily remembered name. </p>
+<p>Alternatively, you can <a href="#zero-configuration-networking">setup zero configuration networking</a> to give your CHIP an easily remembered name. </p>
 
 <p>You are now free to do whatever it is you do with Linux command line on CHIP.</p>
 
@@ -2338,9 +2354,9 @@ Press &ldquo;Open&rdquo; to open a terminal window ,where you can log in to CHIP
 
 <ul>
 <li>CHIP</li>
-<li><a href="headless-chip">SSH or serial connection to CHIP</a> or</li>
+<li><a href="#headless-chip">SSH or serial connection to CHIP</a> or</li>
 <li>Monitor and keyboard</li>
-<li><a href="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
+<li><a href="#connecting-c-h-i-p-to-wi-fi-with-nmcli">Connection to the internet</a></li>
 </ul>
 
 <h3 id="install-avahi">Install avahi</h3>
@@ -2641,16 +2657,17 @@ VmallocChunk:     482532 kB
 <p><strong><em>Problem:</em></strong> I attached a mouse and keyboard, and my CHIP suddenly turned off.</p>
 
 <p><strong><em>Fixes:</em></strong> Like most tiny computers, the USB port on CHIP provides a limited amount of power. When you plug in a keyboard and an optical mouse, for example, they will draw too much current from CHIP, not leaving enough for the processor. As a result, CHIP will immediately shut down. There are a few ways to avoid this. 
- - Use a <a href="powered-usb-hub">powered USB hub</a>
- - Use a <a href="bluetooth-keyboard-and-mouse">bluetooth keyboard and mouse</a>. Yes, this is a very specific solution, but a good one when you are only using the USB port for keyboard and mouse. Keeps your desk cleaner too!
- - Execute the command <code class="prettyprint">sudo axp209 --no_limit</code> in the terminal before you attach your USB peripherals.</p>
+ - Use a <a href="#powered-usb-hub">powered USB hub</a>
+ - Use a <a href="#bluetooth-keyboard-and-mouse">bluetooth keyboard and mouse</a>. Yes, this is a very specific solution, but a good one when you are only using the USB port for keyboard and mouse. Keeps your desk cleaner too!
+ - Execute the command <code class="prettyprint">sudo axp209 --no_limit</code> in the terminal before you attach your USB peripherals.
+ - Provide power from a supply connecting ground and 5V the pins <a href="#pin-headers">headers 1 and 2 on U13</a>.</p>
 
 <p><strong><em>Problem:</em></strong> My CHIP booted fine until it got to loading the desktop GUI, then it shut down.</p>
 
 <p><strong><em>Fixes:</em></strong> This is usually the result of an underpowered power supply. We recommend a 5V power supply with a minimum 1A current rating. 
 - You can find the current rating on your power supply&rsquo;s &ldquo;Output&rdquo; - it should read <em>1000 mA</em> or <em>1A</em> (or a higher number). You may need a magnifying glass to read it, but they all should have this info on the label!
-- Instead of powering CHIP using the microUSB port, try using the <a href="pin-headers">header pins</a> CHG-IN (U13-2) and GND (U13-1). 
-- Add a <a href="power-from-a-battery">LiPo battery</a>. This provides enough extra current and power buffer to prevent this problem. </p>
+- Instead of powering CHIP using the microUSB port, try using the <a href="#pin-headers">header pins</a> CHG-IN (U13-2) and GND (U13-1). 
+- Add a <a href="#power-from-a-battery">LiPo battery</a>. This provides enough extra current and power buffer to prevent this problem. </p>
 
 <h2 id="chip-won-39-t-startup">CHIP Won&rsquo;t Startup</h2>
 
@@ -2665,9 +2682,9 @@ VmallocChunk:     482532 kB
 <p>Problem: Monitor is attached, but there is no video on my monitor</p>
 
 <p>Fixes: There are a few possible problems here
-- <strong>wrong TRRS arrangement</strong>: try different ends of your cable. Make sure is subscribes to <a href="about-the-trrs-connector">this use of the tip, rings, and sleeve</a>
-- <strong>PAL monitor</strong>: CHIP outputs NTSC format video by default. You can change this, however, by following <a href="ntsc-or-pal">this guide</a>.
-- <strong>Video trace cut for mic in</strong>: This is pretty unlikely, but if you are working with a used CHIP, it may be that the tip connector has been switched to <a href="microphone-and-audio-input">work as a microphone input</a>. Before you do fix this with a bit of solder, take a close look at your board to see if there is evidence of a score mark indicating the cut trace. </p>
+- <strong>wrong TRRS arrangement</strong>: try different ends of your cable. Make sure is subscribes to <a href="#about-the-trrs-connector">this use of the tip, rings, and sleeve</a>
+- <strong>PAL monitor</strong>: CHIP outputs NTSC format video by default. You can change this, however, by following <a href="#ntsc-or-pal">this guide</a>.
+- <strong>Video trace cut for mic in</strong>: This is pretty unlikely, but if you are working with a used CHIP, it may be that the tip connector has been switched to <a href="#microphone-and-audio-input">work as a microphone input</a>. Before you do fix this with a bit of solder, take a close look at your board to see if there is evidence of a score mark indicating the cut trace. </p>
 
 <h2 id="how-to-contact-us">How to Contact Us</h2>
 
