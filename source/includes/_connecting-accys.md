@@ -103,7 +103,7 @@ If you have files that you want to modify, use, or transfer to CHIP's internal s
 ![USB drive attatched to CHIP](images/chip_usbstorage.jpg)
 
 ## USB Audio
-CHIP can use Class-compliant USB audio devices. A popular, and inexpensive choice for audio devices are USB dongbles based on the C-Media chipset. These have been tested successfully with CHIP and can often be purchased for less than $10. Some good resources for linux and audio compatibility are on the [linux audio](http://wiki.linuxaudio.org/wiki/hardware_matrix) and [alsa project](http://www.alsa-project.org/main/index.php/Matrix:Main) websites.
+CHIP can use Class-compliant USB audio devices. A popular, and inexpensive choice for audio devices are USB dongles based on the C-Media chipset. These have been tested successfully with CHIP and can often be purchased for less than $10. Some good resources for linux and audio compatibility are on the [linux audio](http://wiki.linuxaudio.org/wiki/hardware_matrix) and [alsa project](http://www.alsa-project.org/main/index.php/Matrix:Main) websites.
 
 
 Many of the drivers have not been tested with CHIP - as CHIP matures, more information will be available. For now, we recommened USB Class-compliant or "plug-and-play" audio devices.
