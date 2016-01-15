@@ -453,13 +453,13 @@ Install some tools:
 
 ```shell
 sudo apt-get update
-sudo apt-get install u-boot-tools android-tools-fastboot git build-essential curl libusb-1.0-0-dev
+sudo apt-get install u-boot-tools android-tools-fastboot git build-essential curl android-tools-fsutils libusb-1.0-0-dev
 ```
 
 If you intend to customize buildroot with additional software, install these packages:
 
 ```shell
-  sudo apt-get install libncurses5-dev libc6-i386 lib32stdc++6 lib32z1 android-tools-fsutils
+  sudo apt-get install libncurses5-dev libc6-i386 lib32stdc++6 lib32z1
 ```
 
 Get and make the fel tools:
