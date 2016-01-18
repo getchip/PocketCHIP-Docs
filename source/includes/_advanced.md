@@ -649,7 +649,7 @@ ping: sendto: Network is unreachable
 ##### Troubleshooting Connection Problems
   * You'll need to make sure you used the right network when you used the connect commnand. 
   * Review any messages that the connect commnand gave you. Did they look like the examples of a successful connection? 
-  * If everything checked out until you got to `ping`, there's a good chance the problem is with your router or connection to the Internet.
+  * If everything checked out until you got to `ping`, there's a good chance the problem is with your router or connection to the internet.
 
 #### Disconnecting And Forgetting Networks
 To disconnect from your network, you might first want a reminder of what unfriendly string is used to describe your access point, so type:
@@ -715,14 +715,14 @@ It's worth noting that you'll see two wireless networking interfaces if you list
 `connman` is configured to see only the physical interface wlan0 which simplifies setup. We do this with a blacklist, which can be modified at `/etc/connman/main.conf`
 
 ### Connecting C.H.I.P. to Wi-Fi with nmcli
-There are several tools in Linux for connecting and configuring networks. We will be using the command nmcli (Network Manager Client). You may see other tutorials that reference iw or iwconfig, however, these tools are not recommended for C.H.I.P. You can read more about nmcli on the Internet.
+There are several tools in Linux for connecting and configuring networks. We will be using the command nmcli (Network Manager Client). You may see other tutorials that reference iw or iwconfig, however, these tools are not recommended for C.H.I.P. You can read more about nmcli on the internet.
 
 #### Requirements
 You will need one of these scenarios:
 
   * CHIP with monitor and keyboard attached
   * [SSH or serial](#headless-chip) connection
-  * Wireless access to Internet
+  * Wireless access to internet
 
 #### Step 1: List available Wi-Fi networks
 In the terminal, type
@@ -793,7 +793,7 @@ NTC   59962bac-3441-437b-94ea-bf31dee66e8f  802-11-wireless  wlan0
 After you have connected once, your C.H.I.P. will automatically connect to this network next time you reboot (or start NetworkManager services).
 
 ##### Test
-Finally, you can test your connection to the Internet with `ping`. Google's DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the Internet, so:
+Finally, you can test your connection to the internet with `ping`. Google's DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:
 
 ```shell
 ping -c 4 8.8.8.8
@@ -848,8 +848,8 @@ Error: Timeout 90 sec expired.
 Try connecting again with the correct password.
 
 ##### Failed ping
-If you don't have access to the Internet, your ping to an outside IP will fail. 
-It is possible that you can connect to a wireless network, but have no access to the Internet, so you'd see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.
+If you don't have access to the internet, your ping to an outside IP will fail. 
+It is possible that you can connect to a wireless network, but have no access to the internet, so you'd see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.
 
 A failed ping looks something like:
 
@@ -889,7 +889,7 @@ Getting simple audio playback working on CHIP is pretty easy, once you install t
   * A [SSH or serial connection to CHIP](#headless-chip) or
   * Monitor and keyboard
   * Headphones or powered speakers connected to CHIP a/v jack
-  * A [Connection to the Internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
+  * A [Connection to the internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
 
 ### Setup CHIP
 Update your apt repository list if you haven't done so recently:
