@@ -5,13 +5,13 @@ First things first. Let's boot CHIP into the CHIP Operating System and do some c
 The single most important thing to using any electronic device is getting electricity to the right places. We're going to cover how to turn CHIP "on". This might seem so straightforward that it doesn't deserve several paragraphs, but CHIP is pretty clever, so there's actually a few things worth knowing.
 
 ### What's It Need?
-In general, CHIP is powered by a 5-volt source like a USB port or phone charger, and draws about 300mA peak (at boot time), runs on around 100mA, and rests with around 80mA with the processor totally unloaded. This may be more than you need to know if you just want to plug it in to the wall, but, as you build projects with CHIP, you'll be happy to know there's a lot of ways to get the electricity flowing.
+In general, CHIP is powered by a 5-volt source like a USB port or phone charger, and draws about 500mA peak (at boot time), runs on around 100mA, and rests with around 80mA with the processor totally unloaded. To make sure you have enough headroom, we recommend that you use a 5v power supply with at least 900mA current available. This may be more than you need to know if you just want to plug it in to the wall, but, as you build projects with CHIP, you'll be happy to know there's a lot of ways to get the electricity flowing.
 
 ### How Do I Know CHIP Is On?
 CHIP is silent. It doesn't take much energy, so it's not very hot. It has no discernible smell. As a result, many of your senses are not great indicators that it is working. There are two LEDs next to the USB micro connector. When CHIP is on, you should see the `PWR` LED light up nice and bright.
 
 ### Power From The Wall
-The CHIP's microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don't have one, you can buy one at any electronics retailer. Just plug a USB-A-to-microUSB-B cable (that's the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you'll see the `PWR` LED light up. This CHIP is using the power from a computer's USB port:
+The CHIP's microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don't have one, you can buy one at any electronics retailer. We recommend a 5V powersupply with at least 900mA current available. Just plug a USB-A-to-microUSB-B cable (that's the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you'll see the `PWR` LED light up. This CHIP is using the power from a computer's USB port:
 
 ![CHIP indicator LEDs](images/chip_ledon.jpg)
 
