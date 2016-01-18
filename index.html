@@ -65,7 +65,7 @@
 
 <h3 id="what-39-s-it-need">What&rsquo;s It Need?</h3>
 
-<p>In general, CHIP is powered by a 5-volt source like a USB port or phone charger, and draws about 300mA peak (at boot time), runs on around 100mA, and rests with around 80mA with the processor totally unloaded. This may be more than you need to know if you just want to plug it in to the wall, but, as you build projects with CHIP, you&rsquo;ll be happy to know there&rsquo;s a lot of ways to get the electricity flowing.</p>
+<p>In general, CHIP is powered by a 5-volt source like a USB port or phone charger, and draws about 500mA peak (at boot time), runs on around 100mA, and rests with around 80mA with the processor totally unloaded. To make sure you have enough headroom, we recommend that you use a 5v power supply with at least 900mA current available. This may be more than you need to know if you just want to plug it in to the wall, but, as you build projects with CHIP, you&rsquo;ll be happy to know there&rsquo;s a lot of ways to get the electricity flowing.</p>
 
 <h3 id="how-do-i-know-chip-is-on">How Do I Know CHIP Is On?</h3>
 
@@ -73,7 +73,7 @@
 
 <h3 id="power-from-the-wall">Power From The Wall</h3>
 
-<p>The CHIP&rsquo;s microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don&rsquo;t have one, you can buy one at any electronics retailer. Just plug a USB-A-to-microUSB-B cable (that&rsquo;s the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you&rsquo;ll see the <code class="prettyprint">PWR</code> LED light up. This CHIP is using the power from a computer&rsquo;s USB port:</p>
+<p>The CHIP&rsquo;s microUSB connector is used to provide power from most any USB power source. USB wall-wart adapters are probably littered all over your house. If for some reason you don&rsquo;t have one, you can buy one at any electronics retailer. We recommend a 5V powersupply with at least 900mA current available. Just plug a USB-A-to-microUSB-B cable (that&rsquo;s the same cable most phones, tablets, and whatnot use to charge) into the wall-wart and CHIP, and you&rsquo;ll see the <code class="prettyprint">PWR</code> LED light up. This CHIP is using the power from a computer&rsquo;s USB port:</p>
 
 <p><img alt="CHIP indicator LEDs" src="images/chip_ledon.jpg" /></p>
 
@@ -844,7 +844,7 @@ PWM can be accessed through an <code class="prettyprint">sysfs</code> protocol.<
 
           <h1 id="advanced">Advanced</h1>
 
-<p>For those interested in building with a stripped-down version of an operating system, or looking to customize CHIP from the commandline, we have several tutorials that describe how to setup CHIP with more depth.</p>
+<p>For those interested in building with a stripped-down version of an operating system, or looking to customize CHIP from the command line, we have several tutorials that describe how to setup CHIP with more depth.</p>
 
 <h2 id="installing-c-h-i-p-sdk">Installing C.H.I.P. SDK</h2>
 
@@ -868,7 +868,7 @@ PWM can be accessed through an <code class="prettyprint">sysfs</code> protocol.<
 <li>Get the installer for <a href="https://www.virtualbox.org/wiki/Downloads">Virtual Box</a></li>
 <li>Install the Oracle VM VirtualBox <a href="https://www.virtualbox.org/wiki/Downloads">Extension Pack</a>.</li>
 <li>If you are using Windows, you need to add the VirtualBox installation directory to your PATH.</li>
-<li>In case of a Ubuntu host: add your user to the vboxusers group!</li>
+<li>In case of an Ubuntu host: add your user to the vboxusers group!</li>
 </ul>
 
 <h4 id="install-vagrant">Install Vagrant</h4>
@@ -1001,7 +1001,7 @@ vagrant ssh
 
 <p>Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here&rsquo;s a reference image that labels the headers and pins:</p>
 
-<p><img alt="CHIP with jumper wire attatched" src="images/uboot_jumper.jpg" /></p>
+<p><img alt="CHIP with jumper wire attached" src="images/uboot_jumper.jpg" /></p>
 
 <p><em>Note: this jumper needs to be present only when you connect CHIP to power</em>. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.</p>
 
@@ -1846,7 +1846,7 @@ ls
 <pre class="highlight shell"><code>vi /etc/fstab
 </code></pre>
 
-<p>Getting around vi is not very intutive. If you are new to it, here&rsquo;s a quick guide on getting this text into the fstab document:
+<p>Getting around vi is not very intuitive. If you are new to it, here&rsquo;s a quick guide on getting this text into the fstab document:
   * &#39;arrow&rsquo; key to the end of the file,
   * press the &#39;i&rsquo; key to insert text
   * type (or copy-paste) this:</p>
@@ -1872,7 +1872,7 @@ ls
 
 <h2 id="connecting-bluetooth-devices">Connecting Bluetooth Devices</h2>
 
-<p>CHIP has built-in bluetooth. This tutorial instructs how to use a bluetooth keyboard, since it is a simple and obvious example. There are, of course, several types of bluetooth devices, such as earpieces, audio connectors, vacuum cleaners, and more. Future tutorials will cover those devices, but the keyboard is a good introduction to the commands and an easy way to test your system.</p>
+<p>CHIP has built-in Bluetooth. This tutorial instructs how to use a Bluetooth keyboard, since it is a simple and obvious example. There are, of course, several types of Bluetooth devices, such as earpieces, audio connectors, vacuum cleaners, and more. Future tutorials will cover those devices, but the keyboard is a good introduction to the commands and an easy way to test your system.</p>
 
 <h3 id="requirements">Requirements</h3>
 
@@ -1901,9 +1901,9 @@ ls
 <span class="o">[</span>NEW] Device 15:03:26:A0:26:26 SK032B02-2626
 </code></pre>
 
-<p>which is a list of MAC addresses of CHIP&rsquo;s bluetooth controller chip (the first line) and any other devices that have been paired with CHIP in the past. Use the <code class="prettyprint">help</code> command - it lists all the very useful commands in the <code class="prettyprint">bluetoothctl</code> interactive mode.</p>
+<p>which is a list of MAC addresses of CHIP&rsquo;s Bluetooth controller chip (the first line) and any other devices that have been paired with CHIP in the past. Use the <code class="prettyprint">help</code> command - it lists all the very useful commands in the <code class="prettyprint">bluetoothctl</code> interactive mode.</p>
 
-<p>In bluetooth interactive mode, use the command</p>
+<p>In Bluetooth interactive mode, use the command</p>
 <pre class="highlight shell"><code>  power on
 </code></pre>
 
@@ -1918,7 +1918,7 @@ ls
 <pre class="highlight shell"><code>  scan on
 </code></pre>
 
-<p>which will start printing MAC addresses and names (if available) of bluetooth devices in your vicinity.</p>
+<p>which will start printing MAC addresses and names (if available) of Bluetooth devices in your vicinity.</p>
 <pre class="highlight shell"><code><span class="o">[</span>NEW] Device 15:03:26:A0:26:26 SK032B02-2626
 <span class="o">[</span>NEW] Device 1C:1A:C0:85:5E:2C 1C-1A-C0-85-5E-2C
 <span class="o">[</span>NEW] Device 60:33:4B:13:A7:45 nyb
@@ -1971,7 +1971,7 @@ Pair with a Bluetooth Device with Password <span class="o">(</span>keyboard<span
 <span class="o">[</span>agent] PIN code: 245261
 </code></pre>
 
-<p>Now you can use the bluetooth device to enter the PIN code, then hit enter. The terminal will give some status about the pairing:</p>
+<p>Now you can use the Bluetooth device to enter the PIN code, then hit enter. The terminal will give some status about the pairing:</p>
 <pre class="highlight shell"><code><span class="o">[</span>CHG] Device DC:2C:26:D7:B6:8F Modalias: usb:v05ACp022Cd011B
 <span class="o">[</span>CHG] Device DC:2C:26:D7:B6:8F UUIDs:
         00001000-0000-1000-8000-00805f9b34fb
@@ -1986,7 +1986,7 @@ Pairing successful
 
 <h3 id="connect-with-a-bluetooth-device">Connect With A Bluetooth Device</h3>
 
-<p>Now that you have paired the bluetooth device, you won&rsquo;t have to do that again. However, the device still needs to be connected:</p>
+<p>Now that you have paired the Bluetooth device, you won&rsquo;t have to do that again. However, the device still needs to be connected:</p>
 <pre class="highlight shell"><code>  connect 15:03:26:A0:26:26
 </code></pre>
 
@@ -2008,7 +2008,7 @@ Failed to connect: org.bluez.Error.Failed
 
 <h3 id="troubleshooting">Troubleshooting</h3>
 
-<p>If your bluetooth controller module on CHIP is not functioning, you can easily find the problem. Type</p>
+<p>If your Bluetooth controller module on CHIP is not functioning, you can easily find the problem. Type</p>
 <pre class="highlight shell"><code>  bluetoothctl
 </code></pre>
 
@@ -2020,7 +2020,7 @@ Failed to connect: org.bluez.Error.Failed
 <pre class="highlight shell"><code>  No default controller available
 </code></pre>
 
-<p>Then there&rsquo;s a problem with CHIP recognizing the bluetooth module. <a href="#important!">Read the very first instructions</a> at the top of this tutorial.</p>
+<p>Then there&rsquo;s a problem with CHIP recognizing the Bluetooth module. <a href="#important!">Read the very first instructions</a> at the top of this tutorial.</p>
 
 <h2 id="install-x-windows">Install X-windows</h2>
 
