@@ -1,5 +1,5 @@
 # Advanced
-For those interested in building with a stripped-down version of an operating system, or looking to customize CHIP from the commandline, we have several tutorials that describe how to setup CHIP with more depth.
+For those interested in building with a stripped-down version of an operating system, or looking to customize CHIP from the command line, we have several tutorials that describe how to setup CHIP with more depth.
 
 ## Installing C.H.I.P. SDK
 CHIP-SDK has everything needed to develop software for C.H.I.P. Most importantly, if you want to load an operating system onto CHIP, the only supported way is to do this from a virtual machine. Given that the virtual machine runs Ubuntu, it's pretty safe to say that Ubuntu users can flash without the virtual machine.
@@ -16,7 +16,7 @@ There are several required software pieces to get the CHIP SDK virtual machine r
 * Get the installer for [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
 * Install the Oracle VM VirtualBox [Extension Pack](https://www.virtualbox.org/wiki/Downloads).
 * If you are using Windows, you need to add the VirtualBox installation directory to your PATH.
-* In case of a Ubuntu host: add your user to the vboxusers group!
+* In case of an Ubuntu host: add your user to the vboxusers group!
 
 #### Install Vagrant
 Install Vagrant from the [Vagrant site.](https://www.vagrantup.com/downloads.html)
@@ -153,7 +153,7 @@ Now that the [virtual machine and SDK](#installing-c.h.i.p.-sdk) are running and
 #### Prepare CHIP for Flashing
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
 
-![CHIP with jumper wire attatched](images/uboot_jumper.jpg)
+![CHIP with jumper wire attached](images/uboot_jumper.jpg)
 
 *Note: this jumper needs to be present only when you connect CHIP to power*. If for some reason the wire becomes disconnected after you have powered CHIP, there is no problem or need to panic.
 
@@ -649,7 +649,7 @@ ping: sendto: Network is unreachable
 ##### Troubleshooting Connection Problems
   * You'll need to make sure you used the right network when you used the connect commnand. 
   * Review any messages that the connect commnand gave you. Did they look like the examples of a successful connection? 
-  * If everything checked out until you got to `ping`, there's a good chance the problem is with your router or connection to the internet.
+  * If everything checked out until you got to `ping`, there's a good chance the problem is with your router or connection to the Internet.
 
 #### Disconnecting And Forgetting Networks
 To disconnect from your network, you might first want a reminder of what unfriendly string is used to describe your access point, so type:
@@ -715,14 +715,14 @@ It's worth noting that you'll see two wireless networking interfaces if you list
 `connman` is configured to see only the physical interface wlan0 which simplifies setup. We do this with a blacklist, which can be modified at `/etc/connman/main.conf`
 
 ### Connecting C.H.I.P. to Wi-Fi with nmcli
-There are several tools in Linux for connecting and configuring networks. We will be using the command nmcli (Network Manager Client). You may see other tutorials that reference iw or iwconfig, however, these tools are not recommended for C.H.I.P. You can read more about nmcli on the internet.
+There are several tools in Linux for connecting and configuring networks. We will be using the command nmcli (Network Manager Client). You may see other tutorials that reference iw or iwconfig, however, these tools are not recommended for C.H.I.P. You can read more about nmcli on the Internet.
 
 #### Requirements
 You will need one of these scenarios:
 
   * CHIP with monitor and keyboard attached
   * [SSH or serial](#headless-chip) connection
-  * Wireless access to internet
+  * Wireless access to Internet
 
 #### Step 1: List available Wi-Fi networks
 In the terminal, type
@@ -793,7 +793,7 @@ NTC   59962bac-3441-437b-94ea-bf31dee66e8f  802-11-wireless  wlan0
 After you have connected once, your C.H.I.P. will automatically connect to this network next time you reboot (or start NetworkManager services).
 
 ##### Test
-Finally, you can test your connection to the internet with `ping`. Google's DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:
+Finally, you can test your connection to the Internet with `ping`. Google's DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the Internet, so:
 
 ```shell
 ping -c 4 8.8.8.8
@@ -848,8 +848,8 @@ Error: Timeout 90 sec expired.
 Try connecting again with the correct password.
 
 ##### Failed ping
-If you don't have access to the internet, your ping to an outside IP will fail. 
-It is possible that you can connect to a wireless network, but have no access to the internet, so you'd see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.
+If you don't have access to the Internet, your ping to an outside IP will fail. 
+It is possible that you can connect to a wireless network, but have no access to the Internet, so you'd see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.
 
 A failed ping looks something like:
 
@@ -889,7 +889,7 @@ Getting simple audio playback working on CHIP is pretty easy, once you install t
   * A [SSH or serial connection to CHIP](#headless-chip) or
   * Monitor and keyboard
   * Headphones or powered speakers connected to CHIP a/v jack
-  * A [Connection to the internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
+  * A [Connection to the Internet](#connecting-c-h-i-p-to-wi-fi-with-nmcli)
 
 ### Setup CHIP
 Update your apt repository list if you haven't done so recently:
@@ -1084,7 +1084,7 @@ You'll probably want to mount this drive automatically next time you use it, tho
 vi /etc/fstab
 ```
 
-Getting around vi is not very intutive. If you are new to it, here's a quick guide on getting this text into the fstab document:
+Getting around vi is not very intuitive. If you are new to it, here's a quick guide on getting this text into the fstab document:
   * 'arrow' key to the end of the file,
   * press the 'i' key to insert text
   * type (or copy-paste) this:
@@ -1117,7 +1117,7 @@ mount -a
 ```
 
 ## Connecting Bluetooth Devices
-CHIP has built-in bluetooth. This tutorial instructs how to use a bluetooth keyboard, since it is a simple and obvious example. There are, of course, several types of bluetooth devices, such as earpieces, audio connectors, vacuum cleaners, and more. Future tutorials will cover those devices, but the keyboard is a good introduction to the commands and an easy way to test your system.
+CHIP has built-in Bluetooth. This tutorial instructs how to use a Bluetooth keyboard, since it is a simple and obvious example. There are, of course, several types of Bluetooth devices, such as earpieces, audio connectors, vacuum cleaners, and more. Future tutorials will cover those devices, but the keyboard is a good introduction to the commands and an easy way to test your system.
 
 ### Requirements
   * CHIP
@@ -1145,9 +1145,9 @@ This starts up `bluetoothctl` in interactive mode. You should see output like
 [NEW] Device 15:03:26:A0:26:26 SK032B02-2626
 ```
 
-which is a list of MAC addresses of CHIP's bluetooth controller chip (the first line) and any other devices that have been paired with CHIP in the past. Use the `help` command - it lists all the very useful commands in the `bluetoothctl` interactive mode.
+which is a list of MAC addresses of CHIP's Bluetooth controller chip (the first line) and any other devices that have been paired with CHIP in the past. Use the `help` command - it lists all the very useful commands in the `bluetoothctl` interactive mode.
 
-In bluetooth interactive mode, use the command
+In Bluetooth interactive mode, use the command
 
 ```shell
   power on
@@ -1167,7 +1167,7 @@ If you need to discover a device, start the scan process:
   scan on
 ```
 
-which will start printing MAC addresses and names (if available) of bluetooth devices in your vicinity.
+which will start printing MAC addresses and names (if available) of Bluetooth devices in your vicinity.
 
 ```shell
 [NEW] Device 15:03:26:A0:26:26 SK032B02-2626
@@ -1237,7 +1237,7 @@ Attempting to pair with DC:2C:26:D7:B6:8F
 [agent] PIN code: 245261
 ```
 
-Now you can use the bluetooth device to enter the PIN code, then hit enter. The terminal will give some status about the pairing:
+Now you can use the Bluetooth device to enter the PIN code, then hit enter. The terminal will give some status about the pairing:
 
 ```shell
 [CHG] Device DC:2C:26:D7:B6:8F Modalias: usb:v05ACp022Cd011B
@@ -1253,7 +1253,7 @@ Pairing successful
 Now that you are paired, you will have to connect.
 
 ### Connect With A Bluetooth Device
-Now that you have paired the bluetooth device, you won't have to do that again. However, the device still needs to be connected:
+Now that you have paired the Bluetooth device, you won't have to do that again. However, the device still needs to be connected:
 
 ```shell
   connect 15:03:26:A0:26:26
@@ -1280,7 +1280,7 @@ Failed to connect: org.bluez.Error.Failed
 ```
 
 ### Troubleshooting
-If your bluetooth controller module on CHIP is not functioning, you can easily find the problem. Type
+If your Bluetooth controller module on CHIP is not functioning, you can easily find the problem. Type
 
 ```shell
   bluetoothctl
@@ -1298,7 +1298,7 @@ If you get the response
   No default controller available
 ```
 
-Then there's a problem with CHIP recognizing the bluetooth module. [Read the very first instructions](#important!) at the top of this tutorial.
+Then there's a problem with CHIP recognizing the Bluetooth module. [Read the very first instructions](#important!) at the top of this tutorial.
 
 ## Install X-windows
 If you want a windowed desktop on C.H.I.P., you can install X-Windows. 
