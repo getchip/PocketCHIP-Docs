@@ -164,9 +164,10 @@ Buildroot is a lean operating system, and does not have a package manager to ins
 
 ```shell
   cd ~/CHIP-tools
-  ./chip-update-firmware.sh
+  ./chip-update-firmware.sh -f
 ```
-To speed up flashing, you can run `./chip-update-firmware.sh -f` to enable fastboot flashing. 
+The `-f` option means "fastboot." If you have problems flashing, particularly on Windows or OS X, you can run `./chip-update-firmware.sh` to disable fastboot flashing. 
+
 During flashing, the terminal will fill with messages.  If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](#buildroot-output).
 
 #### Option 2: Flash With Debian
@@ -177,7 +178,7 @@ If you want to flash CHIP with the debian OS with no window manager or GUI
   ./chip-update-firmware.sh -d -f
 ```  
 
-If you experience a problem with fastboot flashing, please let us know. You can disable fastboot by leaving off the -f option: `./chip-update-firmware.sh -d`. Here is a [sample successful output](#debian-output).
+The `-f` option means "fastboot." If you have problems flashing, particularly on Windows or OS X, you can disable fastboot by leaving off the -f option: `./chip-update-firmware.sh -d`. Here is a [sample successful output](#debian-output).
 
 #### Option 3: Flash With CHIP Operating System
 If you want to flash CHIP with the complete CHIP Operating System
@@ -187,7 +188,7 @@ If you want to flash CHIP with the complete CHIP Operating System
   ./chip-update-firmware.sh -d -b stable-gui -f
 ```  
 
-During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](#debian-output).
+During flashing, the terminal will fill with messages. If successful, you'll see C.H.I.P. run through a hardware test, with the answers being 'OK'.  If C.H.I.P. is 'OK', you can remove the jumper wire. Here is a [sample successful output](#debian-output). Because of filesize, the "gui" option must also include the `-f` fastboot option. Windows and OS X are not yet supported as flashing hosts.
 
 #### Connect to CHIP and Do Something
 If everything went OK, you can now power up your CHIP again and connect via serial as a USB gadget:
