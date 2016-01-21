@@ -32,12 +32,12 @@ U13L | U13R | U14L | U14R
 GND : ground | CHG-IN : 5V input (power and battery charge) | GND : ground | VCC-5V : 5V power
 VCC-5V : 5V power | GND : ground | UART1-TX : UART serial transmit | HPL : audio out left
 VCC-3V3 : 3V power | TS : analog temperature sensor input | UART1-RX : UART serial receive | HPCOM : audio out common ground
-VCC-1V8 : 1.8 V power | BAT : LiPo battery | FEL : "fel mode": connect to ground to put CHIP in fel mode for firmware HPR : audio out right
+VCC-1V8 : 1.8 V power | BAT : LiPo battery | FEL : "fel mode": connect to ground to put CHIP in fel mode for firmware | HPR : audio out right
 TWI1-SDA : two-wire serial bus 1 | PWRON : power on | VCC-3V3 : 3 volt power | MICM : audio in ground
 TWI1-SCK : two-wire serial bus 1 | GND : ground | LRADC : low-res Analog-Digital Converter | MICIN1 : audio in
-X1 : Resistive touchpanel input (touchscreen) | X2 : Resistive touchpanel input (touchscreen) | XIO-P0 : expander GPIOXIO-P1 : expander GPIO pin 1
+X1 : Resistive touchpanel input (touchscreen) | X2 : Resistive touchpanel input (touchscreen) | XIO-P0 : expander GPIO | XIO-P1 : expander GPIO pin 1
 Y1 : Resistive touchpanel input | Y2 : Resistive touchpanel input (touchscreen) | XIO-P2 : expander GPIO pin 2 | XIO-P3 : expander GPIO pin 3
-LCD-D2 : RGB666 data | PWM0 : pulse width modulation (also used for LCD backlight dimming) | XIO-P4 : expander GPIO piXIO-P5 : expander GPIO pin 5
+LCD-D2 : RGB666 data | PWM0 : pulse width modulation (also used for LCD backlight dimming) | XIO-P4 : expander GPIO pi | XIO-P5 : expander GPIO pin 5
 LCD-D4 : RGB666 data | LCD-D3 : RGB666 data | XIO-P6 : expander GPIO pin 6 | XIO-P7 : expander GPIO pin 7
 LCD-D6 : RGB666 data | LCD-D5 : RGB666 data | GND : ground | GND : ground
 LCD-D10 : RGB666 data | LCD-D7 : RGB666 data | AP-EINT1 : Application Processor Interrupt  | AP-EINT3 : Application Processor Interrupt pin, necessary for certain kinds of hardware-software interactions (keyboard expander, etc.)
