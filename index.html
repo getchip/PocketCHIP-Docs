@@ -1751,7 +1751,7 @@ pipe 4
 
 <h3 id="record-a-sound">Record A Sound</h3>
 
-<p>If you want to try the audio input, you need to connect audio input to <a href="#pin-headers">header U14, pins 10 &amp; 12</a> or <a href="#microphone-and-audio-input">modify CHIP</a> to use audio in on the TRRS connector.
+<p>If you want to try the audio input, you need to connect audio input to <a href="#pin-headers">header U14, pins 06 &amp; 12</a> or <a href="#microphone-and-audio-input">modify CHIP</a> to use audio in on the TRRS connector.
 Once you have an audio signal going into CHIP, you can test it out by recording a three second (<code class="prettyprint">-d 3</code>) WAV file with arecord:</p>
 <pre class="highlight shell"><code>arecord -f <span class="nb">cd</span> -d 3 -D hw:0,0 chipaudioin.wav
 </code></pre>
