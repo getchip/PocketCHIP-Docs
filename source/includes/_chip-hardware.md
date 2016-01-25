@@ -33,7 +33,7 @@ GND : ground | CHG-IN : 5V input (power and battery charge) | GND : ground | VCC
 VCC-5V : 5V power | GND : ground | UART1-TX : UART serial transmit | HPL : audio out left
 VCC-3V3 : 3V power | TS : analog temperature sensor input | UART1-RX : UART serial receive | HPCOM : audio out common ground
 VCC-1V8 : 1.8 V power | BAT : LiPo battery | FEL : "fel mode": connect to ground to put CHIP in fel mode for firmware | HPR : audio out right
-TWI1-SDA : two-wire serial bus 1 | PWRON : power on | VCC-3V3 : 3 volt power | MICM : audio in ground
+TWI1-SDA : two-wire serial bus 1 | PWRON : power on | VCC-3V3 : 3 volt power | MICM : mic mute
 TWI1-SCK : two-wire serial bus 1 | GND : ground | LRADC : low-res Analog-Digital Converter | MICIN1 : audio in
 X1 : Resistive touchpanel input (touchscreen) | X2 : Resistive touchpanel input (touchscreen) | XIO-P0 : expander GPIO | XIO-P1 : expander GPIO pin 1
 Y1 : Resistive touchpanel input | Y2 : Resistive touchpanel input (touchscreen) | XIO-P2 : expander GPIO pin 2 | XIO-P3 : expander GPIO pin 3
