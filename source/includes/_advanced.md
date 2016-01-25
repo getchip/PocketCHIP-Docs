@@ -972,7 +972,7 @@ And mp3 file:
 ```
 
 ### Record A Sound
-If you want to try the audio input, you need to connect audio input to [header U14, pins 10 & 12](#pin-headers) or [modify CHIP](#microphone-and-audio-input) to use audio in on the TRRS connector.
+If you want to try the audio input, you need to connect audio input to [header U14, pins 06 & 12](#pin-headers) or [modify CHIP](#microphone-and-audio-input) to use audio in on the TRRS connector.
 Once you have an audio signal going into CHIP, you can test it out by recording a three second (`-d 3`) WAV file with arecord:
 
 ```shell
