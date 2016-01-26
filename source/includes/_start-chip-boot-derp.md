@@ -46,6 +46,24 @@ You can manage, and also connect to, your devices using the the Bluetooth Device
 
 ![Bluetooth devices panel](images/screen_btdevices.jpg)
 
+## Using The Terminal
+
+One of the great powers of Linux is the so-called "command-line." This simple text interface for computing unveils many of the gears and levers that make a computer tick. Many find it easier to get things done, as it is a focused and terse way to interact with the computer.
+
+When you first use the Terminal Emulator program, you may quickly find that you do not have permission to do something. That is because many commands are safely reserved for "root" access, and you are automatically logged in as the "chip" user. Don't fear: you can often use the `sudo` command and use the default password `chip` to execute these restricted commands.
+
+Finally, it is probably wise to change the default password on your CHIP. You can do with with
+```shell
+passwd
+```
+or
+```shell
+sudo passwd root
+```
+and you'll be asked for a new password. Don't forget it!!
+
+If you are such a fan of the command line, you may want to boot with out the desktop and window system. Instructions for that are [here](#boot-into-console)
+
 ## Terminal for Beginners Glossary
 One of the great things about Linux is the terminal application. 
 While it may look unfriendly and terse, if you want to really extend the capabilities of CHIP, you'll often find yourself in the terminal. 
@@ -57,7 +75,7 @@ If you're a beginner, here's a quick reference of some really important and comm
 * **mv** move a file from one directory to another, or to give it a new name. Ex: `mv this.one that.one` renames a file. `mv this.one ~/Pictures/Vacation/` puts the file *this.one* into the `Vacation` directory.
 * **cp** copy a file from one place to another. Ex: `cp this.one this_01.one` will copy `this.one` to another file `this_01.one`. Add directories for more fun: `cp ~/Pictures/Vacation/saturn.jpg /Users/otherone/Pictures/Vacation/saturn.jpg`. 
 * **rm** remove a file. delete it, and beware!. Use the `-r` to make it recursive to delete a directory. Ex: `rm this.one` deletes that file. `rm -r ~/Pictures/Vacation` to forget the good times.
-* **sudo** super user do. many commands need administrator-like privileges, otherwise they won't work. `apt-get` is a command that needs to be run with `sudo` to allow files to be written to protected directories. You'll see `sudo` as the first word in a lot of commands - all it is doing is giving the command the necessary access. You'll be asked for a password the first time you use `sudo`.
+* **sudo** super user do. many commands need administrator-like privileges, otherwise they won't work. `apt-get` is a command that needs to be run with `sudo` to allow files to be written to protected directories. You'll see `sudo` as the first word in a lot of commands - all it is doing is giving the command the necessary access. You'll be asked for a password the first time you use `sudo`. The default password and user is "chip".
 * **apt-get** the command used for installing, removing, and finding software for Debian Linux systems, such as the CHIP Operating System. `sudo apt-get install puredata` installs the Pure Data program and any dependencies. `sudo apt-get remove puredata` will remove the program. `sudo apt-cache search image` will search apt repositories for the keyword *search*. And so on.
 * **pwd** present working directory. In case you forget where you are. Not much to it: `pwd` will output the directory name, such as `/Users/home/chip/Pictures/Vacation/`
 * **grep** a tool used for searching through files. It's quite deep and can be complicated, but if you see the word `grep` in some command, you know it's searching for a match.
