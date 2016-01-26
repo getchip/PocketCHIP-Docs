@@ -111,6 +111,24 @@
 
 <p><img alt="Bluetooth devices panel" src="images/screen_btdevices.jpg" /></p>
 
+<h2 id="using-the-terminal">Using The Terminal</h2>
+
+<p>One of the great powers of Linux is the so-called &ldquo;command-line.&rdquo; This simple text interface for computing unveils many of the gears and levers that make a computer tick. Many find it easier to get things done, as it is a focused and terse way to interact with the computer.</p>
+
+<p>When you first use the Terminal Emulator program, you may quickly find that you do not have permission to do something. That is because many commands are safely reserved for &ldquo;root&rdquo; access, and you are automatically logged in as the &ldquo;chip&rdquo; user. Don&rsquo;t fear: you can often use the <code class="prettyprint">sudo</code> command and use the default password <code class="prettyprint">chip</code> to execute these restricted commands.</p>
+
+<p>Finally, it is probably wise to change the default password on your CHIP. You can do with with
+<code class="prettyprint">shell
+passwd
+</code>
+or
+<code class="prettyprint">shell
+sudo passwd root
+</code>
+and you&rsquo;ll be asked for a new password. Don&rsquo;t forget it!!</p>
+
+<p>If you are such a fan of the command line, you may want to boot with out the desktop and window system. Instructions for that are <a href="#boot-into-console">here</a></p>
+
 <h2 id="terminal-for-beginners-glossary">Terminal for Beginners Glossary</h2>
 
 <p>One of the great things about Linux is the terminal application. 
@@ -124,7 +142,7 @@ If you&rsquo;re a beginner, here&rsquo;s a quick reference of some really import
 <li><strong>mv</strong> move a file from one directory to another, or to give it a new name. Ex: <code class="prettyprint">mv this.one that.one</code> renames a file. <code class="prettyprint">mv this.one ~/Pictures/Vacation/</code> puts the file <em>this.one</em> into the <code class="prettyprint">Vacation</code> directory.</li>
 <li><strong>cp</strong> copy a file from one place to another. Ex: <code class="prettyprint">cp this.one this_01.one</code> will copy <code class="prettyprint">this.one</code> to another file <code class="prettyprint">this_01.one</code>. Add directories for more fun: <code class="prettyprint">cp ~/Pictures/Vacation/saturn.jpg /Users/otherone/Pictures/Vacation/saturn.jpg</code>. </li>
 <li><strong>rm</strong> remove a file. delete it, and beware!. Use the <code class="prettyprint">-r</code> to make it recursive to delete a directory. Ex: <code class="prettyprint">rm this.one</code> deletes that file. <code class="prettyprint">rm -r ~/Pictures/Vacation</code> to forget the good times.</li>
-<li><strong>sudo</strong> super user do. many commands need administrator-like privileges, otherwise they won&rsquo;t work. <code class="prettyprint">apt-get</code> is a command that needs to be run with <code class="prettyprint">sudo</code> to allow files to be written to protected directories. You&rsquo;ll see <code class="prettyprint">sudo</code> as the first word in a lot of commands - all it is doing is giving the command the necessary access. You&rsquo;ll be asked for a password the first time you use <code class="prettyprint">sudo</code>.</li>
+<li><strong>sudo</strong> super user do. many commands need administrator-like privileges, otherwise they won&rsquo;t work. <code class="prettyprint">apt-get</code> is a command that needs to be run with <code class="prettyprint">sudo</code> to allow files to be written to protected directories. You&rsquo;ll see <code class="prettyprint">sudo</code> as the first word in a lot of commands - all it is doing is giving the command the necessary access. You&rsquo;ll be asked for a password the first time you use <code class="prettyprint">sudo</code>. The default password and user is &ldquo;chip&rdquo;.</li>
 <li><strong>apt-get</strong> the command used for installing, removing, and finding software for Debian Linux systems, such as the CHIP Operating System. <code class="prettyprint">sudo apt-get install puredata</code> installs the Pure Data program and any dependencies. <code class="prettyprint">sudo apt-get remove puredata</code> will remove the program. <code class="prettyprint">sudo apt-cache search image</code> will search apt repositories for the keyword <em>search</em>. And so on.</li>
 <li><strong>pwd</strong> present working directory. In case you forget where you are. Not much to it: <code class="prettyprint">pwd</code> will output the directory name, such as <code class="prettyprint">/Users/home/chip/Pictures/Vacation/</code></li>
 <li><strong>grep</strong> a tool used for searching through files. It&rsquo;s quite deep and can be complicated, but if you see the word <code class="prettyprint">grep</code> in some command, you know it&rsquo;s searching for a match.</li>
