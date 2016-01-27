@@ -14,6 +14,9 @@ The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don
  * Computer with Ubuntu 14.4
 
 ## For Ubuntu
+  * Open a terminal and type `sudo apt-get update && sudo apt-get upgrade`. Hit enter to execute the command. This updates the debian package repositories and upgrades your system to reflect any package changes.
+
+![apt-get update && apt-get upgrade](images/apt.png)
 
   * Download the repair tool [here](http://opensource.nextthing.co/chip-boot-repair.deb).
 
