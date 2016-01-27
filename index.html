@@ -1257,32 +1257,30 @@ poweroff... OK
   * The jumper wire between Pins 7 &amp; 39 is either not present, loose, or the jumper is in the wrong holes.
   * There is a problem with the USB cable.</p>
 
-<p>You&rsquo;ll know this is the problem when you see this error in the terminal window:
-<code class="prettyprint">shell
-== upload the SPL to SRAM and execute it ==
+<p>You&rsquo;ll know this is the problem when you see this error in the terminal window:</p>
+<pre class="highlight shell"><code><span class="o">==</span> upload the SPL to SRAM and execute it <span class="o">==</span>
 ERROR: Allwinner USB FEL device not found!
-== upload images ==
-ERROR: Allwinner USB FEL device not found!
+<span class="o">==</span> upload images <span class="o">==</span>
 ERROR: Allwinner USB FEL device not found!
 ERROR: Allwinner USB FEL device not found!
 ERROR: Allwinner USB FEL device not found!
-== execute the main u-boot binary ==
 ERROR: Allwinner USB FEL device not found!
-</code></p>
+<span class="o">==</span> execute the main u-boot binary <span class="o">==</span>
+ERROR: Allwinner USB FEL device not found!
+</code></pre>
 
-<p>The other common error is that you need to run the <strong>chip-update-firmware.sh</strong> script with <strong>sudo</strong> (or you need to add a rules file as described in the next section). This error looks like this in your terminal window:
-<code class="prettyprint">shell
-Image 0: 848 Bytes = 0.83 kB = 0.00 MB
-== upload the SPL to SRAM and execute it ==
-ERROR: You don&#39;t have permission to access Allwinner USB FEL device
+<p>The other common error is that you need to run the <strong>chip-update-firmware.sh</strong> script with <strong>sudo</strong> (or you need to add a rules file as described in the next section). This error looks like this in your terminal window:</p>
+<pre class="highlight shell"><code>Image 0: 848 Bytes <span class="o">=</span> 0.83 kB <span class="o">=</span> 0.00 MB
+<span class="o">==</span> upload the SPL to SRAM and execute it <span class="o">==</span>
+ERROR: You don<span class="s1">'t have permission to access Allwinner USB FEL device
 == upload images ==
-ERROR: You don&#39;t have permission to access Allwinner USB FEL device
-ERROR: You don&#39;t have permission to access Allwinner USB FEL device
-ERROR: You don&#39;t have permission to access Allwinner USB FEL device
-ERROR: You don&#39;t have permission to access Allwinner USB FEL device
+ERROR: You don'</span>t have permission to access Allwinner USB FEL device
+ERROR: You don<span class="s1">'t have permission to access Allwinner USB FEL device
+ERROR: You don'</span>t have permission to access Allwinner USB FEL device
+ERROR: You don<span class="s1">'t have permission to access Allwinner USB FEL device
 == execute the main u-boot binary ==
-ERROR: You don&#39;t have permission to access Allwinner USB FEL device
-</code></p>
+ERROR: You don'</span>t have permission to access Allwinner USB FEL device
+</code></pre>
 
 <h4 id="option-flash-without-sudo">Option: Flash Without sudo</h4>
 
@@ -1316,6 +1314,11 @@ In order to be able to run the <strong>chip-update-firmware.sh</strong> script w
 
 <p>Install some tools:</p>
 <pre class="highlight shell"><code>sudo apt-get update
+sudo apt-get install u-boot-tools android-tools-fastboot git build-essential curl android-tools-fsutils libusb-1.0-0-dev pkg-config
+</code></pre>
+
+<p>If you get an error that &ldquo;the repository android-tools-fastboot can&rsquo;t be found&rdquo;, you are probably booting from an Ubuntu Live CD (or USB stick). You&rsquo;ll need to add a repository so you can install the android-tools-fastboot:</p>
+<pre class="highlight shell"><code>sudo add-apt-repository universe <span class="o">&amp;&amp;</span> sudo apt-get update
 sudo apt-get install u-boot-tools android-tools-fastboot git build-essential curl android-tools-fsutils libusb-1.0-0-dev pkg-config
 </code></pre>
 
