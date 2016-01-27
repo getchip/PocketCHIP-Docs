@@ -402,6 +402,7 @@ The first is a that CHIP is not in `fel` mode, ready to receive firmware. There 
   * There is a problem with the USB cable.
   
 You'll know this is the problem when you see this error in the terminal window:
+
 ```shell
 == upload the SPL to SRAM and execute it ==
 ERROR: Allwinner USB FEL device not found!
@@ -415,6 +416,7 @@ ERROR: Allwinner USB FEL device not found!
 ```
 
 The other common error is that you need to run the **chip-update-firmware.sh** script with **sudo** (or you need to add a rules file as described in the next section). This error looks like this in your terminal window:
+
 ```shell
 Image 0: 848 Bytes = 0.83 kB = 0.00 MB
 == upload the SPL to SRAM and execute it ==
@@ -459,6 +461,13 @@ Install some tools:
 
 ```shell
 sudo apt-get update
+sudo apt-get install u-boot-tools android-tools-fastboot git build-essential curl android-tools-fsutils libusb-1.0-0-dev pkg-config
+```
+
+If you get an error that "the repository android-tools-fastboot can't be found", you are probably booting from an Ubuntu Live CD (or USB stick). You'll need to add a repository so you can install the android-tools-fastboot:
+
+```shell
+sudo add-apt-repository universe && sudo apt-get update
 sudo apt-get install u-boot-tools android-tools-fastboot git build-essential curl android-tools-fsutils libusb-1.0-0-dev pkg-config
 ```
 
