@@ -1,4 +1,4 @@
-# The Flash Repair Tool
+# CHIP Boot Repair Tool 
 
 
 The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don't worry, this is a software issue, and we've built a repair tool to correct this issue.
@@ -13,18 +13,18 @@ The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don
  * Paper clip (a jumper wire works too)
  * Computer with Ubuntu 14.4
 
-## Ubuntu Flash Repair Tool
+## For Ubuntu
 
+  * Download the repair tool [here](http://opensource.nextthing.co/chip-boot-repair.deb).
 
-  * Download the repair tool.
+  * Double-click on the repair tool icon and follow the Ubuntu software install process. Once the install finishes, use the Ubuntu search tool to find the CHIP boot repair application.
 
-![Double-click_Icon](Double-Click_Icon.png)
+![Search for the app](search.png)
 
-  * Double-click on the repair tool icon.
+* Follow the onscreen messages to complete the repair process.
 
 ![Waiting for FEL](Wait.png)
 
-  * Follow the onscreen messages to complete the repair process.
 
   * Grab a paper clip (or jumper wire. Heck a stripped metal twist tie works) and bend it so one end fits in the FEL pin (U14 - pin 7) and the other end fits in the GND pin (U14 - pin 39). 
 
