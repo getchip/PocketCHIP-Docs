@@ -1015,6 +1015,10 @@ vagrant ssh
 
 <p>Now that the <a href="#installing-c.h.i.p.-sdk">virtual machine and SDK</a> are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to <a href="#setup-ubuntu-for-flashing">prepare Ubuntu to flash</a></p>
 
+<h4 id="have-you-repaired-your-chip">Have you repaired your CHIP?</h4>
+
+<p>The original batch of CHIPs shipped with a software bug in the NAND flash storage. We&rsquo;ve built a repair tool.</p>
+
 <h4 id="prepare-chip-for-flashing">Prepare CHIP for Flashing</h4>
 
 <p>Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here&rsquo;s a reference image that labels the headers and pins:</p>
@@ -2469,6 +2473,70 @@ You&rsquo;ll also need to modify the hosts file where you&rsquo;ll need to chang
 
 <p>If you can&rsquo;t connect to CHIP even though you are sure avahi is properly configured, confirm that your CHIP and the computer you are trying to connect are on the same local network (and on the same subnet).</p>
 
+          <h1 id="chip-boot-repair-tool">CHIP Boot Repair Tool</h1>
+
+<p>The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don&rsquo;t worry, this is a software issue, and we&rsquo;ve built a repair tool to correct this issue.</p>
+
+<h2 id="things-you-will-need">Things you will need</h2>
+
+<p><img alt="Things you will need" src="images/All_the_Things.png" /></p>
+
+<ul>
+<li>C.H.I.P.</li>
+<li>Standard-USB to micro-USB connector</li>
+<li>Paper clip (a jumper wire works too)</li>
+<li>Computer with Ubuntu 14.04</li>
+</ul>
+
+<h2 id="for-ubuntu">For Ubuntu</h2>
+
+<ul>
+<li>Open a terminal and type <code class="prettyprint">sudo apt-get update &amp;&amp; sudo apt-get upgrade</code>. Hit enter to execute the command. This updates the debian package repositories and upgrades your system to reflect any package changes.</li>
+</ul>
+
+<p><img alt="apt-get update &amp;&amp; apt-get upgrade" src="images/apt.png" /></p>
+
+<ul>
+<li><p>Download the repair tool <a href="http://opensource.nextthing.co/chip-boot-repair.deb">here</a>.</p></li>
+<li><p>Double-click on the repair tool icon and follow the Ubuntu software install process. Once the install finishes, use the Ubuntu search tool to find the CHIP boot repair application.</p></li>
+</ul>
+
+<p><img alt="Search for the app" src="images/search.png" /></p>
+
+<ul>
+<li>Follow the onscreen messages to complete the repair process.</li>
+</ul>
+
+<p><img alt="Waiting for FEL" src="images/Wait.png" /></p>
+
+<ul>
+<li>Grab a paper clip (or jumper wire. Heck a stripped metal twist tie works) and bend it so one end fits in the FEL pin (U14 - pin 7) and the other end fits in the GND pin (U14 - pin 39). </li>
+</ul>
+
+<p><img alt="FEL the board" src="images/FEL_the_Board.jpg" /></p>
+
+<ul>
+<li>Connect C.H.I.P. to your computer using a standard-USB to USB-micro cable.</li>
+</ul>
+
+<p><img alt="CHIP to laptop" src="images/CHIP_to_Laptop.png" /></p>
+
+<ul>
+<li>As soon as the repair tool software detects that CHIP is in FEL mode and connected by USB, the application begins the repair process.</li>
+</ul>
+
+<p><img alt="FEL Mode" src="images/CHIP_in_FEL_Mode.png" /></p>
+
+<ul>
+<li>The repair takes only seconds.</li>
+</ul>
+
+<p><img alt="CHIP fixed" src="images/CHIP_Repair_Complete.png" /></p>
+
+<ul>
+<li>Congratulations, your C.H.I.P. is now repaired. \(•◡•)/</li>
+</ul>
+
           <h1 id="faqs">FAQs</h1>
 
 <p>Frequently Asked Questions</p>
@@ -2669,7 +2737,21 @@ VmallocUsed:       14560 kB
 VmallocChunk:     482532 kB
 </code></pre>
 
-          <h1 id="troubleshooting-faq">Troubleshooting FAQ</h1>
+          <h1 id="troubleshooting">Troubleshooting</h1>
+
+<h2 id="chip-repair-tool">CHIP Repair Tool</h2>
+
+<h2 id="chip-won-39-t-boot">CHIP Won&rsquo;t Boot</h2>
+
+<p><strong><em>Problem:</em></strong> I attached a keyboard, monitor, and powered CHIP, but it does not do anything.</p>
+
+<p><strong><em>Fixes:</em></strong> The initial batch of CHIPs shipped with a problem in their NAND flash storage. Don&rsquo;t worry, this is a software issue, and we&rsquo;ve built a repair tool.</p>
+
+<ul>
+<li>Download the repair tool.</li>
+<li>Double-click on the repair tool icon.</li>
+<li>Follow the onscreen messages to complete the repair process.</li>
+</ul>
 
 <h2 id="sudden-shutdown-brown-out">Sudden Shutdown (Brown-out)</h2>
 
