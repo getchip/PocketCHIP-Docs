@@ -11,7 +11,7 @@ The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don
  * C.H.I.P.
  * Standard-USB to micro-USB connector
  * Paper clip (a jumper wire works too)
- * Computer with Ubuntu 14.4
+ * Computer with Ubuntu 14.04
 
 ## For Ubuntu
   * Open a terminal and type `sudo apt-get update && sudo apt-get upgrade`. Hit enter to execute the command. This updates the debian package repositories and upgrades your system to reflect any package changes.
