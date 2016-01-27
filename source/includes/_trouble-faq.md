@@ -1,4 +1,21 @@
-# Troubleshooting FAQ
+# Troubleshooting
+
+## CHIP Repair Tool
+
+
+
+
+## CHIP Won't Boot
+
+***Problem:*** I attached a keyboard, monitor, and powered CHIP, but it does not do anything.
+
+***Fixes:*** The initial batch of CHIPs shipped with a problem in their NAND flash storage. Don't worry, this is a software issue, and we've built a repair tool.
+
+  * Download the repair tool.
+  * Double-click on the repair tool icon.
+  * Follow the onscreen messages to complete the repair process.
+
+
 
 ## Sudden Shutdown (Brown-out)
 ***Problem:*** I attached a mouse and keyboard, and my CHIP suddenly turned off.
