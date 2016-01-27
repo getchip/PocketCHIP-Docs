@@ -150,6 +150,11 @@ Here's all the commands in one place:
 ## Flash CHIP Firmware
 Now that the [virtual machine and SDK](#installing-c.h.i.p.-sdk) are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
 
+#### Have you repaired your CHIP?
+
+The original batch of CHIPs shipped with a software bug in the NAND flash storage. We've built a repair tool.
+
+
 #### Prepare CHIP for Flashing
 Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
 
