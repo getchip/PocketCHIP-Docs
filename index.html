@@ -1364,15 +1364,175 @@ git clone http://github.com/NextThingCo/CHIP-tools
 
 <h2 id="wifi-connection">WiFi Connection</h2>
 
+<p>Below are detailed instructions for connecting to Wi-Fi networks using two different command line protocols: <code class="prettyprint">nmcli</code> and <code class="prettyprint">connman</code>. If you are using the CHIP OS that comes installed on CHIP, or you have flashed with our Debian distribution, you&rsquo;ll want to use the first section about connecting with <code class="prettyprint">nmcli</code>. If you have flashed CHIP with our buildroot OS, you&rsquo;ll need to use <code class="prettyprint">connman</code>.</p>
+
+<h3 id="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connecting C.H.I.P. to Wi-Fi with nmcli</h3>
+
+<p>There are several tools in Linux for connecting and configuring networks. We will be using the command nmcli (Network Manager Client). You may see other tutorials that reference iw or iwconfig, however, these tools are not recommended for C.H.I.P. You can read more about nmcli on the internet.</p>
+
+<h4 id="requirements">Requirements</h4>
+
+<p>You will need one of these scenarios:</p>
+
+<ul>
+<li>CHIP with monitor and keyboard attached</li>
+<li><a href="#headless-chip">SSH or serial</a> connection</li>
+<li>Wireless access to internet</li>
+<li>CHIP loaded with CHIP OS or Debian</li>
+</ul>
+
+<h4 id="step-1-list-available-wi-fi-networks">Step 1: List available Wi-Fi networks</h4>
+
+<p>In the terminal, type</p>
+<pre class="highlight shell"><code>nmcli device wifi list
+</code></pre>
+
+<p>The output will list available access points</p>
+<pre class="highlight shell"><code><span class="k">*</span>  SSID      MODE   CHAN  RATE       SIGNAL  BARS  SECURITY  
+<span class="k">*</span>  NextThing HQ    Infra  11    54 Mbit/s  100     ▂▄▆█  --        
+   NextThing Shop  Infra  6     54 Mbit/s  30      ▂___  WPA1 WPA2 
+   2WIRE533        Infra  10    54 Mbit/s  44      ▂▄__  WPA1 WPA2 
+</code></pre>
+
+<h4 id="step-2-connect-to-a-network">Step 2: Connect to a network</h4>
+
+<p>You can connect to password -protected or open access points.</p>
+
+<h5 id="a-no-password">A: No Password</h5>
+
+<p>To connect to an open network with no password, use this command:</p>
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> ifname wlan0
+</code></pre>
+
+<p>These commands will respond with information about the connection.</p>
+
+<h5 id="b-password-protected">B: Password Protected</h5>
+
+<p>To connect to a password protected network, use this command, inserting your own network name and password:</p>
+<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> password <span class="s1">'(your wifi password)'</span> ifname wlan0
+</code></pre>
+
+<h4 id="step-3-test-your-connection">Step 3: Test your Connection</h4>
+
+<p>You can verify and test your wireless network connection.</p>
+
+<h5 id="verify">Verify</h5>
+
+<p>You can verify your connection using the command</p>
+<pre class="highlight shell"><code>nmcli device status
+</code></pre>
+
+<p>which outputs a list of the various network devices and their connections. For example, a successful connection would look like this:</p>
+<pre class="highlight shell"><code>DEVICE   TYPE      STATE         CONNECTION 
+wlan0    wifi      connected     NextThing HQ   
+wlan1    wifi      disconnected  --         
+ip6tnl0  ip6tnl    unmanaged     --         
+lo       loopback  unmanaged     --         
+sit0     sit       unmanaged     --
+</code></pre>
+
+<p>Because it is worth knowing that Linux offers many ways of doing things, another command that shows your current active connection is</p>
+<pre class="highlight shell"><code>nmcli connection show --active
+</code></pre>
+
+<p>which outputs like so:</p>
+<pre class="highlight shell"><code>NAME  UUID                                  TYPE             DEVICE 
+NTC   59962bac-3441-437b-94ea-bf31dee66e8f  802-11-wireless  wlan0 
+</code></pre>
+
+<p>After you have connected once, your C.H.I.P. will automatically connect to this network next time you reboot (or start NetworkManager services).</p>
+
+<h5 id="test">Test</h5>
+
+<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google&rsquo;s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
+<pre class="highlight shell"><code>ping -c 4 8.8.8.8
+</code></pre>
+
+<p>results in output like:</p>
+<pre class="highlight shell"><code>64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>297 ms
+64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>2 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>26.3 ms
+64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>3 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>24.8 ms
+64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>4 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>55.7 ms
+</code></pre>
+
+<p>You can stop this command by pressing CTRL-C on your keyboard. The <code class="prettyprint">-c 4</code> option means it will happen only 4 times.</p>
+
+<p>Congratulations! You are now network with CHIP!</p>
+
+<h4 id="step-4-disconnecting-and-forgetting-networks">Step 4: Disconnecting and Forgetting Networks</h4>
+
+<p>The command to disconnect from a wireless device needs a few parameters:</p>
+<pre class="highlight shell"><code>sudo nmcli dev disconnect wlan0
+</code></pre>
+
+<p>You may want to prevent auto-connection to a network, so you can use this command to &ldquo;forget&rdquo; a network:</p>
+<pre class="highlight shell"><code>sudo nmcli connection delete id  <span class="o">(</span>your wifi network name/SSID<span class="o">)</span> 
+</code></pre>
+
+<h4 id="troubleshooting">Troubleshooting</h4>
+
+<p>Here are a few possible problems with connections.</p>
+
+<h5 id="no-network-found">No network found</h5>
+
+<p>Not much to say about that. If there&rsquo;s no network, you can&rsquo;t connect. Go find a network!</p>
+
+<h5 id="incorrect-password">Incorrect password</h5>
+
+<p>If you type in the wrong password, you&rsquo;ll get some errors like this:</p>
+<pre class="highlight shell"><code><span class="o">[</span>32258.690000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>32258.800000] RTL871X: start auth
+<span class="o">[</span>32263.720000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>32263.820000] RTL871X: start auth
+<span class="o">[</span>32264.430000] RTL871X: auth success, start assoc
+<span class="o">[</span>32269.850000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
+<span class="o">[</span>32269.970000] RTL871X: start auth
+Error: Timeout 90 sec expired.
+</code></pre>
+
+<p>Try connecting again with the correct password.</p>
+
+<h5 id="failed-ping">Failed ping</h5>
+
+<p>If you don&rsquo;t have access to the internet, your ping to an outside IP will fail. 
+It is possible that you can connect to a wireless network, but have no access to the internet, so you&rsquo;d see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.</p>
+
+<p>A failed ping looks something like:</p>
+<pre class="highlight shell"><code>From 192.168.2.56 <span class="nv">icmp_seq</span><span class="o">=</span>14 Destination Host Unreachable
+From 192.168.2.56 <span class="nv">icmp_seq</span><span class="o">=</span>15 Destination Host Unreachable
+From 192.168.2.56 <span class="nv">icmp_seq</span><span class="o">=</span>16 Destination Host Unreachable
+18 packets transmitted, 0 received, +9 errors, 100% packet loss, <span class="nb">time </span>17013ms
+pipe 4
+</code></pre>
+
+<h5 id="loss-of-wireless-network">Loss of wireless network</h5>
+
+<p>A sudden, unplanned disconnection will post an error in the terminal window, for example:</p>
+<pre class="highlight shell"><code><span class="o">[</span>30863.880000] RTL871X: linked_status_chk<span class="o">(</span>wlan0<span class="o">)</span> disconnect or roaming
+</code></pre>
+
+<p>The Network Manager will periodically try to reconnect. If the access point is restored, you&rsquo;ll get something like this in your terminal window:</p>
+<pre class="highlight shell"><code><span class="o">[</span>31798.970000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>
+<span class="o">[</span>31799.030000] RTL871X: start auth
+<span class="o">[</span>31799.040000] RTL871X: auth success, start assoc
+<span class="o">[</span>31799.050000] RTL871X: rtw_cfg80211_indicate_connect<span class="o">(</span>wlan0<span class="o">)</span> BSS not found !!
+<span class="o">[</span>31799.060000] RTL871X: assoc success
+</code></pre>
+
+<h5 id="nmcli-not-installed-error">nmcli not installed error</h5>
+
+<p>If you try to use <code class="prettyprint">nmcli</code> and you get an error that it is not found or is not a command, chances are that you are using the CHIP buildroot image. The <code class="prettyprint">nmcli</code> commands only apply to CHIPs running CHIP OS or Debian linux.</p>
+
 <h3 id="connecting-c-h-i-p-to-a-wireless-network-with-connman">Connecting C.H.I.P. to a Wireless Network With connman</h3>
 
-<p>The buildroot operating system uses the <code class="prettyprint">connman</code> command-line network manager to connect and manage your network connections.
-If you want all the details of <code class="prettyprint">connman</code> <a href="https://wiki.archlinux.org/index.php/Connman">visit the ArchLinux wiki.</a></p>
+<p>The buildroot operating system uses the <code class="prettyprint">connman</code> command-line network manager to connect and manage your network connections. If you are using CHIP OS (or Debian), you will find that <code class="prettyprint">connman</code> is not installed - you&rsquo;ll need to <a href="#connecting-c-h-i-p-to-wi-fi-with-nmcli">use  nmcli</a>.</p>
+
+<p>If you want all the details of <code class="prettyprint">connman</code> <a href="https://wiki.archlinux.org/index.php/Connman">visit the ArchLinux wiki.</a></p>
 
 <h4 id="requirements">Requirements</h4>
 
 <ul>
-<li>CHIP</li>
+<li>CHIP running buildroot OS</li>
 <li>One of the following:
 
 <ul>
@@ -1496,7 +1656,11 @@ ping: sendto: Network is unreachable
 <li>If everything checked out until you got to <code class="prettyprint">ping</code>, there&rsquo;s a good chance the problem is with your router or connection to the internet.</li>
 </ul>
 
-<h4 id="disconnecting-and-forgetting-networks">Disconnecting And Forgetting Networks</h4>
+<h5 id="connman-not-installed-error">connman not installed error</h5>
+
+<p>If you try to use <code class="prettyprint">connman</code> and you get an error that it is not found or is not a command, chances are that you are using the CHIP OS or Debian image. The <code class="prettyprint">connman</code> commands only apply to CHIPs running the simple buildroot OS.</p>
+
+<h4 id="step-4-disconnecting-and-forgetting-networks">Step 4: Disconnecting And Forgetting Networks</h4>
 
 <p>To disconnect from your network, you might first want a reminder of what unfriendly string is used to describe your access point, so type:</p>
 <pre class="highlight shell"><code>  connmanctl services
@@ -1543,165 +1707,10 @@ Disconnected wifi_7cc70905cd77_4e5443_managed_psk
 
 <p><code class="prettyprint">connman</code> is configured to see only the physical interface wlan0 which simplifies setup. We do this with a blacklist, which can be modified at <code class="prettyprint">/etc/connman/main.conf</code></p>
 
-<h3 id="connecting-c-h-i-p-to-wi-fi-with-nmcli">Connecting C.H.I.P. to Wi-Fi with nmcli</h3>
-
-<p>There are several tools in Linux for connecting and configuring networks. We will be using the command nmcli (Network Manager Client). You may see other tutorials that reference iw or iwconfig, however, these tools are not recommended for C.H.I.P. You can read more about nmcli on the internet.</p>
-
-<h4 id="requirements">Requirements</h4>
-
-<p>You will need one of these scenarios:</p>
-
-<ul>
-<li>CHIP with monitor and keyboard attached</li>
-<li><a href="#headless-chip">SSH or serial</a> connection</li>
-<li>Wireless access to internet</li>
-</ul>
-
-<h4 id="step-1-list-available-wi-fi-networks">Step 1: List available Wi-Fi networks</h4>
-
-<p>In the terminal, type</p>
-<pre class="highlight shell"><code>nmcli device wifi list
-</code></pre>
-
-<p>The output will list available access points</p>
-<pre class="highlight shell"><code><span class="k">*</span>  SSID      MODE   CHAN  RATE       SIGNAL  BARS  SECURITY  
-<span class="k">*</span>  NextThing HQ    Infra  11    54 Mbit/s  100     ▂▄▆█  --        
-   NextThing Shop  Infra  6     54 Mbit/s  30      ▂___  WPA1 WPA2 
-   2WIRE533        Infra  10    54 Mbit/s  44      ▂▄__  WPA1 WPA2 
-</code></pre>
-
-<h4 id="step-2-connect-to-a-network">Step 2: Connect to a network</h4>
-
-<p>You can connect to password -protected or open access points.</p>
-
-<h5 id="a-no-password">A: No Password</h5>
-
-<p>To connect to an open network with no password, use this command:</p>
-<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> ifname wlan0
-</code></pre>
-
-<p>These commands will respond with information about the connection.</p>
-
-<h5 id="b-password-protected">B: Password Protected</h5>
-
-<p>To connect to a password protected network, use this command, inserting your own network name and password:</p>
-<pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> password <span class="s1">'(your wifi password)'</span> ifname wlan0
-</code></pre>
-
-<h4 id="step-3-test-your-connection">Step 3: Test your Connection</h4>
-
-<p>You can verify and test your wireless network connection.</p>
-
-<h5 id="verify">Verify</h5>
-
-<p>You can verify your connection using the command</p>
-<pre class="highlight shell"><code>nmcli device status
-</code></pre>
-
-<p>which outputs a list of the various network devices and their connections. For example, a successful connection would look like this:</p>
-<pre class="highlight shell"><code>DEVICE   TYPE      STATE         CONNECTION 
-wlan0    wifi      connected     NextThing HQ   
-wlan1    wifi      disconnected  --         
-ip6tnl0  ip6tnl    unmanaged     --         
-lo       loopback  unmanaged     --         
-sit0     sit       unmanaged     --
-</code></pre>
-
-<p>Because it is worth knowing that Linux offers many ways of doing things, another command that shows your current active connection is</p>
-<pre class="highlight shell"><code>nmcli connection show --active
-</code></pre>
-
-<p>which outputs like so:</p>
-<pre class="highlight shell"><code>NAME  UUID                                  TYPE             DEVICE 
-NTC   59962bac-3441-437b-94ea-bf31dee66e8f  802-11-wireless  wlan0 
-</code></pre>
-
-<p>After you have connected once, your C.H.I.P. will automatically connect to this network next time you reboot (or start NetworkManager services).</p>
-
-<h5 id="test">Test</h5>
-
-<p>Finally, you can test your connection to the internet with <code class="prettyprint">ping</code>. Google&rsquo;s DNS server at the IP address 8.8.8.8 is probably the most reliable computer on the internet, so:</p>
-<pre class="highlight shell"><code>ping -c 4 8.8.8.8
-</code></pre>
-
-<p>results in output like:</p>
-<pre class="highlight shell"><code>64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>1 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>297 ms
-64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>2 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>26.3 ms
-64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>3 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>24.8 ms
-64 bytes from 8.8.8.8: <span class="nv">icmp_seq</span><span class="o">=</span>4 <span class="nv">ttl</span><span class="o">=</span>55 <span class="nb">time</span><span class="o">=</span>55.7 ms
-</code></pre>
-
-<p>You can stop this command by pressing CTRL-C on your keyboard. The <code class="prettyprint">-c 4</code> option means it will happen only 4 times.</p>
-
-<p>Congratulations! You are now network with CHIP!</p>
-
-<h4 id="disconnecting-and-forgetting-networks">Disconnecting and Forgetting Networks</h4>
-
-<p>The command to disconnect from a wireless device needs a few parameters:</p>
-<pre class="highlight shell"><code>sudo nmcli dev disconnect wlan0
-</code></pre>
-
-<p>You may want to prevent auto-connection to a network, so you can use this command to &ldquo;forget&rdquo; a network:</p>
-<pre class="highlight shell"><code>sudo nmcli connection delete id  <span class="o">(</span>your wifi network name/SSID<span class="o">)</span> 
-</code></pre>
-
-<h4 id="troubleshooting">Troubleshooting</h4>
-
-<p>Here are a few possible problems with connections.</p>
-
-<h5 id="no-network-found">No network found</h5>
-
-<p>Not much to say about that. If there&rsquo;s no network, you can&rsquo;t connect. Go find a network!</p>
-
-<h5 id="incorrect-password">Incorrect password</h5>
-
-<p>If you type in the wrong password, you&rsquo;ll get some errors like this:</p>
-<pre class="highlight shell"><code><span class="o">[</span>32258.690000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
-<span class="o">[</span>32258.800000] RTL871X: start auth
-<span class="o">[</span>32263.720000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
-<span class="o">[</span>32263.820000] RTL871X: start auth
-<span class="o">[</span>32264.430000] RTL871X: auth success, start assoc
-<span class="o">[</span>32269.850000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span> <span class="nv">fw_state</span><span class="o">=</span>0x00000008
-<span class="o">[</span>32269.970000] RTL871X: start auth
-Error: Timeout 90 sec expired.
-</code></pre>
-
-<p>Try connecting again with the correct password.</p>
-
-<h5 id="failed-ping">Failed ping</h5>
-
-<p>If you don&rsquo;t have access to the internet, your ping to an outside IP will fail. 
-It is possible that you can connect to a wireless network, but have no access to the internet, so you&rsquo;d see a connection when you request device status, but have a failed ping. This indicates a problem or restriction with the router or the access point, not a problem with the CHIP.</p>
-
-<p>A failed ping looks something like:</p>
-<pre class="highlight shell"><code>From 192.168.2.56 <span class="nv">icmp_seq</span><span class="o">=</span>14 Destination Host Unreachable
-From 192.168.2.56 <span class="nv">icmp_seq</span><span class="o">=</span>15 Destination Host Unreachable
-From 192.168.2.56 <span class="nv">icmp_seq</span><span class="o">=</span>16 Destination Host Unreachable
-18 packets transmitted, 0 received, +9 errors, 100% packet loss, <span class="nb">time </span>17013ms
-pipe 4
-</code></pre>
-
-<h5 id="loss-of-wireless-network">Loss of wireless network</h5>
-
-<p>A sudden, unplanned disconnection will post an error in the terminal window, for example:</p>
-<pre class="highlight shell"><code><span class="o">[</span>30863.880000] RTL871X: linked_status_chk<span class="o">(</span>wlan0<span class="o">)</span> disconnect or roaming
-</code></pre>
-
-<p>The Network Manager will periodically try to reconnect. If the access point is restored, you&rsquo;ll get something like this in your terminal window:</p>
-<pre class="highlight shell"><code><span class="o">[</span>31798.970000] RTL871X: rtw_set_802_11_connect<span class="o">(</span>wlan0<span class="o">)</span>
-<span class="o">[</span>31799.030000] RTL871X: start auth
-<span class="o">[</span>31799.040000] RTL871X: auth success, start assoc
-<span class="o">[</span>31799.050000] RTL871X: rtw_cfg80211_indicate_connect<span class="o">(</span>wlan0<span class="o">)</span> BSS not found !!
-<span class="o">[</span>31799.060000] RTL871X: assoc success
-</code></pre>
-
-<h5 id="nmcli-not-installed-error">nmcli not installed error</h5>
-
-<p>If you try to use <code class="prettyprint">nmcli</code> and you get an error that it is not found or is not a command, chances are that you are using the CHIP buildroot image. The <code class="prettyprint">nmcli</code> commands only apply to CHIPs running debian linux.</p>
-
 <h2 id="configure-sound-output-on-debian">Configure Sound Output on Debian</h2>
 
-<p>Getting simple audio playback working on CHIP is pretty easy, once you install the correct packages and enable audio output. In the code examples below, we&rsquo;ve inserted the &amp;&amp; characters at the end of lines so you can copy and paste the entire block into a terminal window and execute each line in series.</p>
+<p>Getting simple audio playback working on CHIP is pretty easy, once you install the correct packages and enable audio output. In the code examples below, we&rsquo;ve inserted the &amp;&amp; characters at the end of lines so you can copy and paste the entire block into a terminal window and execute each line in series.
+If you are using CHIP OS, sound output is already configured and working. However, you may be running a simple version of Debian or buildroot, so these instructions will help you get sound working on CHIP.</p>
 
 <h3 id="requirements">Requirements</h3>
 
