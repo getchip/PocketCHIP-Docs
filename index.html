@@ -570,7 +570,11 @@ You can follow instructions to <a href="#flash-chip-firmware">flash CHIP</a> wit
 
 <h2 id="physical-connectors">Physical Connectors</h2>
 
-<p>CHIP is loaded with essential connectors for USB, serial, audio, video, and loads of IO on the pin headers.</p>
+<p>CHIP is loaded with essential connectors for USB, serial, audio, video, and loads of IO on the pin headers. Oh, and a button too!</p>
+
+<h3 id="button">Button</h3>
+
+<p>There is a tiny tiny button on CHIP next to pin header U13 that is used for turning CHIP on or off. If CHIP is off and connected to a power source, hold down the button for one second to power it up. To turn CHIP off (rather brutally), hold the button for 10 seconds. We recommend using the operating system to power CHIP off, but if you need to, you can use this button.</p>
 
 <h3 id="usb">USB</h3>
 
@@ -2301,7 +2305,7 @@ See the following diagram, which assumes CHIP&rsquo;s USB ports are pointed up&h
 
 <p>Here&rsquo;s the <a href="http://www.amazon.com/Armorview-PL2303HX-RS232-Module-Converter/dp/B008AGDTA4">one we bought</a>. Most of them will have a USB A plug for your computer on one end and four wires (red, green, black, and white) with female header pins on the other.</p>
 
-<p>You may find other USB-UART cables that have more wires. There will be some labels that will help you connect to the correct pins (GND, TX, RX) on terminal U14. Take a look at this example of a <a href="http://www.newegg.com/Product/Product.aspx?Item=9SIA86V2Z33892&amp;nm_mc=KNC-GoogleMKP-PC&amp;cm_mmc=KNC-GoogleMKP-PC-_-pla-_-Gadgets-_-9SIA86V2Z33892&amp;gclid=CjwKEAiApYGyBRC-g_jIstuduV8SJABCEzhZMxn2i7ZmCxk47Jt730KDjUlUfmmJIyvQlkDFRFcGfxoCuJPw_wcB&amp;gclsrc=aw.ds">CP2102 UART converter</a>.
+<p>You may find other USB-UART cables that have more wires. There will be some labels that will help you connect to the correct pins (GND, TX, RX) on terminal U14.
 Just be sure to check your datasheets to make sure you&rsquo;re using the correct pins.</p>
 
 <h4 id="install-the-driver">Install the driver</h4>
