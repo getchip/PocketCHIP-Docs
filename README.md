@@ -23,6 +23,19 @@ You're going to need:
  - **Ruby, version 1.9.3 or newer**
  - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
 
+#### Getting El Capitan to Behave
+Installing on El Capitan (OS X 10.11) can be difficult. 
+Once you clone the directory, you may need to `cd` to the chipdocs directory, then run the command `bundle install`. 
+If you get errors when you try to run `rake publish` after that, try `bundle update` to install the bundler, and then try `rake publish` again. 
+
+There may be some other black magic involved in getting it working on El Capitan, including:
+```
+brew install ruby
+sudo gem install therubyracer -v '0.12.2'
+sudo gem install libv8 -v '3.16.14.13' -- --with-system-v8
+```
+or perhaps even adding `-n /usr/local/bin` to the end of those last two items. I had to fumble around with a lot of various suggestions on the internets to finally get this working on El Capitan, so it is hard to say exactly which one fixed it. The last command I tried before it worked was `bundle update`, so I'd try that first!
+
 ### Publish
 
 If you are a contributor, it is easy to publish any changes you make. First, push your local changes to the master branch, then, in a terminal `cd` to your local repo and use the command `rake publish`. This will render static html pages, and push the changes to the gh-pages branch of this repo, making them live at http://docs.getchip.com
