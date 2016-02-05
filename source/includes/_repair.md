@@ -3,19 +3,21 @@
 The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don't worry, this is a software issue, and we've built a repair tool to correct this issue. Here's everything you need to know to repair your CHIP's NAND.
 
 ## Things you will need
-![Things you will need](images/repair_All_the_Things.jpg)
+
  * C.H.I.P.
  * Standard-USB to micro-USB connector
  * Thin Paper clip (a jumper wire works too)
  * Computer with Ubuntu 14.4 or Windows 7, 8, or 10
 
+![Required materials for repairing](images/repair_All_the_Things.jpg)
+
 ## For Ubuntu 14.4
+
   * Open a terminal and type `sudo apt-get update && sudo apt-get upgrade`. Hit enter to execute the command. This updates the debian package repositories and upgrades your system to reflect any package changes.
 
 ![apt-get update && apt-get upgrade](images/repair_apt.jpg)
 
   * Download the repair tool [here](http://opensource.nextthing.co/chip-boot-repair.deb).
-
   * Double-click on the repair tool icon and follow the Ubuntu software install process. Once the install finishes, use the Ubuntu search tool to find the CHIP boot repair application.
 
 ![Search for the app](images/repair_search.jpg)
