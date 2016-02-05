@@ -9,12 +9,12 @@ The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don
  * Thin Paper clip (a jumper wire works too)
  * Computer with Ubuntu 14.4 or Windows 7, 8, or 10
 
+![Required materials for repairing](repair_all_the_things.jpg)
 
 ## For Ubuntu 14.4
 
   * Open a terminal and type `sudo apt-get update && sudo apt-get upgrade`. Hit enter to execute the command. This updates the debian package repositories and upgrades your system to reflect any package changes.
 
-![Required materials for repairing](repair_all_the_things.jpg)
 ![apt-get commands in terminal](images/repair_apt.jpg)
 
   * Download the repair tool [here](http://opensource.nextthing.co/chip-boot-repair.deb).
