@@ -9,7 +9,7 @@ The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don
  * Thin Paper clip (a jumper wire works too)
  * Computer with Ubuntu 14.4 or Windows 7, 8, or 10
 
-![Required materials for repairing](images/repair_All_the_Things.jpg)
+![Required materials for repairing](repair_All_the_Things.jpg)
 
 ## For Ubuntu 14.4
 
