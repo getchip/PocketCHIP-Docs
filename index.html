@@ -2491,67 +2491,100 @@ You&rsquo;ll also need to modify the hosts file where you&rsquo;ll need to chang
 
           <h1 id="chip-boot-repair-tool">CHIP Boot Repair Tool</h1>
 
-<p>The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don&rsquo;t worry, this is a software issue, and we&rsquo;ve built a repair tool to correct this issue.</p>
+<p>The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don&rsquo;t worry, this is a software issue, and we&rsquo;ve built a repair tool to correct this issue. Here&rsquo;s everything you need to know to repair your CHIP&rsquo;s NAND.</p>
 
 <h2 id="things-you-will-need">Things you will need</h2>
 
-<p><img alt="Things you will need" src="images/All_the_Things.png" /></p>
+<p><img alt="Things you will need" src="images/images/repair_All_the_Things.jpg" /></p>
 
 <ul>
 <li>C.H.I.P.</li>
 <li>Standard-USB to micro-USB connector</li>
-<li>Paper clip (a jumper wire works too)</li>
-<li>Computer with Ubuntu 14.04</li>
+<li>Thin Paper clip (a jumper wire works too)</li>
+<li>Computer with Ubuntu 14.4 or Windows 7, 8, or 10</li>
 </ul>
 
-<h2 id="for-ubuntu">For Ubuntu</h2>
+<h2 id="for-ubuntu-14-4">For Ubuntu 14.4</h2>
 
 <ul>
 <li>Open a terminal and type <code class="prettyprint">sudo apt-get update &amp;&amp; sudo apt-get upgrade</code>. Hit enter to execute the command. This updates the debian package repositories and upgrades your system to reflect any package changes.</li>
 </ul>
 
-<p><img alt="apt-get update &amp;&amp; apt-get upgrade" src="images/apt.png" /></p>
+<p><img alt="apt-get update &amp;&amp; apt-get upgrade" src="images/repair_apt.jpg" /></p>
 
 <ul>
 <li><p>Download the repair tool <a href="http://opensource.nextthing.co/chip-boot-repair.deb">here</a>.</p></li>
 <li><p>Double-click on the repair tool icon and follow the Ubuntu software install process. Once the install finishes, use the Ubuntu search tool to find the CHIP boot repair application.</p></li>
 </ul>
 
-<p><img alt="Search for the app" src="images/search.png" /></p>
+<p><img alt="Search for the app" src="images/repair_search.jpg" /></p>
 
 <ul>
 <li>Follow the onscreen messages to complete the repair process.</li>
 </ul>
 
-<p><img alt="Waiting for FEL" src="images/Wait.png" /></p>
+<p><img alt="Waiting for FEL" src="images/repair_wait.jpg" /></p>
 
 <ul>
-<li>Grab a paper clip (or jumper wire. Heck a stripped metal twist tie works) and bend it so one end fits in the FEL pin (U14 - pin 7) and the other end fits in the GND pin (U14 - pin 39). </li>
+<li>Grab a paper clip (or jumper wire. Heck a stripped metal twist tie works) and bend it so one end fits in the FEL pin (U14 - pin 7) and the other end fits in the GND pin (U14 - pin 39). If it don&rsquo;t fit, don&rsquo;t force it! You will need a skinny gauge paper-clip: if it&rsquo;s too thick and you&rsquo;re too assertive, it may damage the header.</li>
 </ul>
 
-<p><img alt="FEL the board" src="images/FEL_the_Board.jpg" /></p>
+<p><img alt="FEL the board" src="images/images/repair_FEL_the_Board.jpg" /></p>
 
 <ul>
 <li>Connect C.H.I.P. to your computer using a standard-USB to USB-micro cable.</li>
 </ul>
 
-<p><img alt="CHIP to laptop" src="images/CHIP_to_Laptop.png" /></p>
+<p><img alt="CHIP to laptop" src="images/images/repair_CHIP_to_Laptop.jpg" /></p>
 
 <ul>
 <li>As soon as the repair tool software detects that CHIP is in FEL mode and connected by USB, the application begins the repair process.</li>
 </ul>
 
-<p><img alt="FEL Mode" src="images/CHIP_in_FEL_Mode.png" /></p>
+<p><img alt="FEL Mode" src="images/images/repair_CHIP_in_FEL_Mode.jpg" /></p>
 
 <ul>
-<li>The repair takes only seconds.</li>
+<li>The repair takes mere seconds.</li>
 </ul>
 
-<p><img alt="CHIP fixed" src="images/CHIP_Repair_Complete.png" /></p>
+<p><img alt="CHIP fixed" src="images/images/repair_CHIP_Repair_Complete.jpg" /></p>
 
 <ul>
-<li>Congratulations, your C.H.I.P. is now repaired. \(•◡•)/</li>
+<li>Congratulations, your C.H.I.P. is now repaired. \(•◡•)//</li>
 </ul>
+
+<h2 id="for-windows-7-8-amp-10">For Windows 7, 8, &amp; 10</h2>
+
+<p>Download the Repair Tool <a href="http://opensource.nextthing.co/chip-boot-repair.zip">here</a>. 
+Double-click on the application icon and follow the on-screen directions to complete the repair process. </p>
+
+<p>The Repair Tool works on Windows 7, 8, and 10. It&rsquo;d problably work on Windows 9, but they didn&rsquo;t make it!</p>
+
+<hr>
+
+<p><img alt="startRepair" src="images/repair_startScreen.jpg" /></p>
+
+<hr>
+
+<p><img alt="step1" src="images/repair_step1Screen.jpg" /></p>
+
+<hr>
+
+<p><img alt="step2" src="images/repair_step2Screen.jpg" /></p>
+
+<hr>
+
+<p><img alt="step4" src="images/repair_step3ScreenFlashStart.jpg" /></p>
+
+<hr>
+
+<p><img alt="step5" src="images/repair_step3ScreenFlashFinished.jpg" /></p>
+
+<hr>
+
+<p><img alt="step6" src="images/repair_endScreen.jpg" /></p>
+
+<hr>
 
           <h1 id="faqs">FAQs</h1>
 
