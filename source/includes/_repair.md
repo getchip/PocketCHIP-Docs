@@ -3,9 +3,7 @@
 The initial batch of CHIPs shipped with a problem in the NAND flash storage. Don't worry, this is a software issue, and we've built a repair tool to correct this issue. Here's everything you need to know to repair your CHIP's NAND.
 
 ## Things you will need
-
 ![Things you will need](images/repair_All_the_Things.jpg)
-
  * C.H.I.P.
  * Standard-USB to micro-USB connector
  * Thin Paper clip (a jumper wire works too)
