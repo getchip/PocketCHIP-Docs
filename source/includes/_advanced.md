@@ -566,6 +566,15 @@ To connect to a password protected network, use this command, inserting your own
 ```shell
 sudo nmcli device wifi connect '(your wifi network name/SSID)' password '(your wifi password)' ifname wlan0
 ```
+##### C: Hidden SSID and Password Protected
+To connect to a hidden, WPA2-password protected network, use these set of commands, inserting your own network name and password:
+
+```shell
+sudo nmcli con add con-name 'mywifi' ifname wlan0 type wifi ssid '(your wifi network name/SSID)'
+sudo nmcli con modify 'mywifi' wifi-sec.key-mgmt wpa-psk
+sudo nmcli con modify 'mywifi' wifi-sec.psk '(your wifi password)'
+sudo nmcli con up id 'mywifi'
+```
 
 #### Step 3: Test your Connection
 You can verify and test your wireless network connection.
