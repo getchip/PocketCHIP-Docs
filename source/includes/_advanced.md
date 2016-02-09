@@ -449,7 +449,7 @@ then, to make this rules file work:
   sudo udevadm control --reload-rules
 ```
 ## Setup Ubuntu For Flashing
-If you are running Ubuntu OS on your computer, and don't want to bother with a virtual machine, you can flash CHIP from your real computer.
+If you are running Ubuntu OS on your computer, and don't want to bother with a virtual machine, you can flash CHIP from your real computer. A generous member of our forums created a script that duplicates the below steps in a convenient package. You can get it [from github](https://github.com/techgeeksid/chip-Flash-tool). Please note that this is not supported or maintained by Next Thing - we only link to it here for your potential convenience.
 
 ### Requirements
   * Computer running Ubuntu 14.04+
