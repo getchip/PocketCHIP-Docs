@@ -53,7 +53,7 @@ For more advanced use cases, C.H.I.P. can be powered via its interconnects, leav
 Due to a lack of support for Silverlight (the back-end software that allows Netflix to be streamed) in Linux, it is unlikely that Netflix will work on C.H.I.P. using entirely open-source software. This would require someone to come up with an alternate back-end. That said, some very astute backers have reported that Netflix should be possible by installing the Google Chrome browser, which allows Netflix streaming via HTML5.
 
 ## Does CHIP have a power switch?
-Yes! C.H.I.P. has a tiny power / reset button and a status LED on the board itself.
+Yes! C.H.I.P. has a tiny power on-off button and a status LED on the board itself.
 
 ## Can I make a supercomputer by linking 100 CHIPs together?
 We’re focused on individual uses of C.H.I.P. but what you’re talking about is called clustering, and may be possible -- A good place to start, if you’re interested in clustering, is reading up on [Debian-Beowulf](https://www.debian.org/ports/beowulf/)

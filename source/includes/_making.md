@@ -90,7 +90,8 @@ Relays are special hardware bridges used to switch higher voltage electronics, p
 
 ## Expanding GPIO
 If you don't need to drive an LCD, you can use those pins for more, faster GPIO if you want to. 
-These are the pins numbered 13-40 on U13 to act as GPIO to increase the number of available GPIO pins. Documentation on this process is forthcoming!
+These are the pins numbered 18-40 on U13 and 27-40 on U14 to act as GPIO to increase the number of available GPIO pins. 
+Documentation on this process is forthcoming!
 
 ## Analog to Digital Conversion
 Pin 9 on header U14 provides a link for low resolution analog to digital conversion (ADC). 
