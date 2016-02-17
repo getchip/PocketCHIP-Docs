@@ -78,7 +78,7 @@ The Repair Tool works on Windows 7, 8, and 10. It'd problably work on Windows 9,
 ![step6](images/repair_endScreen.jpg)
 
 ---
-## For Mac OS X 10.10 (Yosemite) and 10.11 (El Capitan).
+## For Mac OS X 10.10 (Yosemite) and 10.11 (El Capitan)
 
 Download the Repair Tool [here](http://opensource.nextthing.co/chip/chip-boot-repair/osx/latest/chip-boot-repair.zip). 
 Double-click on the application icon and follow the on-screen directions to complete the repair process. 
