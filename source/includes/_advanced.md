@@ -148,7 +148,7 @@ Here's all the commands in one place:
 ```
 
 ## Flash CHIP Firmware
-Now that the [virtual machine and SDK](#installing-c.h.i.p.-sdk) are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
+Now that the [virtual machine and SDK](#installing-chip-sdk) are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
 
 #### Have you repaired your CHIP?
 
@@ -1077,13 +1077,13 @@ Now that you know where your partition is, it's time to mount the partition so y
 First, make a directory where your drive can mount:
 
 ```shell
-mkdir /drives
+sudo mkdir /drives
 ```
 
 Mount the drive device to your /drives directory:
 
 ```shell
-mount /dev/sda1 /drives
+sudo mount /dev/sda1 /drives
 ```
 
 Now you can navigate to the `drives` directory and see all the files in the drive:
@@ -1097,7 +1097,7 @@ ls
 If you want to remove the drive from the USB port on CHIP, it's best to unmount it:
 
 ```shell
-umount /dev/sda1
+sudo umount /dev/sda1
 ```
 
 ### Step 4: Automatic Mounting on Boot
