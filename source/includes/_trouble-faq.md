@@ -1,21 +1,14 @@
 # Troubleshooting
 
-## CHIP Repair Tool
+## CHIP Won't Boot or Startup
 
-
-
-
-## CHIP Won't Boot
-
-***Problem:*** I attached a keyboard, monitor, and powered CHIP, but it does not do anything.
+***Problem:*** I attached a keyboard, monitor, and powered CHIP, but it does not do anything. The LEDs are on, but I can't do anything with CHIP!
 
 ***Fixes:*** The initial batch of CHIPs shipped with a problem in their NAND flash storage. Don't worry, this is a software issue, and we've built a repair tool.
 
   * Download the repair tool.
   * Double-click on the repair tool icon.
   * Follow the onscreen messages to complete the repair process.
-
-
 
 ## Sudden Shutdown (Brown-out)
 ***Problem:*** I attached a mouse and keyboard, and my CHIP suddenly turned off.
@@ -34,14 +27,6 @@
   *  You can find the current rating on your power supply's "Output" - it should read *1000 mA* or *1A* (or a higher number). You may need a magnifying glass to read it, but they all should have this info on the label!
   *  Instead of powering CHIP using the microUSB port, try using the [header pins](#pin-headers) CHG-IN (U13-2) and GND (U13-1). 
   *  Add a [LiPo battery](#power-from-a-battery). This provides enough extra current and power buffer to prevent this problem. 
-
-## CHIP Won't Startup
-***Problem:*** I pressed the start button, the lights come on, but nothing seems to happen. I have a monitor connected, and there's just a few lines of text and nothing else. Nothing!
-
-***Fixes:*** It has been observed that this can happen if CHIP is trying to boot when too hot, or if the NAND has become corrupted. For example, if it's in a sealed enclosure in a hot place, and is rebooted after computationally heavy work. 
-
-  *  **Fix 1** is to let CHIP rest for several minutes, then try again.
-  *  **Fix 2** is to reflash CHIP with new firmware. This, of course, is the "nuclear option" because you will lose any files or data stored on CHIP.
 
 ## No Video Output
 Problem: Monitor is attached, but there is no video on my monitor
