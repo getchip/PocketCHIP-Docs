@@ -2822,11 +2822,9 @@ VmallocChunk:     482532 kB
 
           <h1 id="troubleshooting">Troubleshooting</h1>
 
-<h2 id="chip-repair-tool">CHIP Repair Tool</h2>
+<h2 id="chip-won-39-t-boot-or-startup">CHIP Won&rsquo;t Boot or Startup</h2>
 
-<h2 id="chip-won-39-t-boot">CHIP Won&rsquo;t Boot</h2>
-
-<p><strong><em>Problem:</em></strong> I attached a keyboard, monitor, and powered CHIP, but it does not do anything.</p>
+<p><strong><em>Problem:</em></strong> I attached a keyboard, monitor, and powered CHIP, but it does not do anything. The LEDs are on, but I can&rsquo;t do anything with CHIP!</p>
 
 <p><strong><em>Fixes:</em></strong> The initial batch of CHIPs shipped with a problem in their NAND flash storage. Don&rsquo;t worry, this is a software issue, and we&rsquo;ve built a repair tool.</p>
 
@@ -2857,17 +2855,6 @@ VmallocChunk:     482532 kB
 <li> You can find the current rating on your power supply&rsquo;s &ldquo;Output&rdquo; - it should read <em>1000 mA</em> or <em>1A</em> (or a higher number). You may need a magnifying glass to read it, but they all should have this info on the label!</li>
 <li> Instead of powering CHIP using the microUSB port, try using the <a href="#pin-headers">header pins</a> CHG-IN (U13-2) and GND (U13-1). </li>
 <li> Add a <a href="#power-from-a-battery">LiPo battery</a>. This provides enough extra current and power buffer to prevent this problem. </li>
-</ul>
-
-<h2 id="chip-won-39-t-startup">CHIP Won&rsquo;t Startup</h2>
-
-<p><strong><em>Problem:</em></strong> I pressed the start button, the lights come on, but nothing seems to happen. I have a monitor connected, and there&rsquo;s just a few lines of text and nothing else. Nothing!</p>
-
-<p><strong><em>Fixes:</em></strong> It has been observed that this can happen if CHIP is trying to boot when too hot, or if the NAND has become corrupted. For example, if it&rsquo;s in a sealed enclosure in a hot place, and is rebooted after computationally heavy work. </p>
-
-<ul>
-<li> <strong>Fix 1</strong> is to let CHIP rest for several minutes, then try again.</li>
-<li> <strong>Fix 2</strong> is to reflash CHIP with new firmware. This, of course, is the &ldquo;nuclear option&rdquo; because you will lose any files or data stored on CHIP.</li>
 </ul>
 
 <h2 id="no-video-output">No Video Output</h2>
