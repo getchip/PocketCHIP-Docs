@@ -681,7 +681,7 @@ By default, connecting CHIP&rsquo;s micro USB to a computer will create a USB Se
 <td>LCD-D12 : RGB666 data</td>
 <td>LCD-D11 : RGB666 data</td>
 <td>TWI2-SDA : two-wire serial bus 2 (I2C)</td>
-<td>TWI2-SCK : two-wire serial bus 2 (I2C)</td>
+<td>TWI2-SCK(*) : two-wire serial bus 2 (I2C)</td>
 </tr>
 <tr>
 <td>LCD-D14 : RGB666 data</td>
@@ -727,6 +727,8 @@ By default, connecting CHIP&rsquo;s micro USB to a computer will create a USB Se
 </tr>
 </tbody></table>
 
+<p>(*)The XIO GPIO pins are provided by an I2C Expander at address 0x38 on the TWI bus 2, as such, this address is not available on bus 2.</p>
+
 <h2 id="open-source-hardware-where-to-get-it">Open Source Hardware: Where To Get It</h2>
 
 <p>CHIP is open source hardware. Here&rsquo;s where you can get all the data you need to make, modify, or learn about your own CHIP. Visit the <a href="https://github.com/NextThingCo/CHIP-Hardware">CHIP Hardware git repository</a>.</p>
@@ -740,7 +742,9 @@ CHIP&rsquo;s pin headers have all the connections to make this happen. An annota
 
 <h2 id="gpio">GPIO</h2>
 
-<p>GPIO provides basic digital connections to the physical world to create physical products with CHIP. These pins can act as &lsquo;reads&rsquo; or &#39;writes&rsquo;, for example, to sense switch positions or turn an LED on or off.</p>
+<p>GPIO provides basic digital connections to the physical world to create physical products with CHIP. These pins can act as &lsquo;reads&rsquo; or &#39;writes&rsquo;, for example, to sense switch positions or turn an LED on or off. </p>
+
+<p>CHIP&rsquo;s most easily available IO pins are the &ldquo;XIO&rdquo; pins on header U14. This is the &ldquo;GPIO eXpander&rdquo; that uses an I2C bus to create eight (8) convenient pins for GPIO. These use address <code class="prettyprint">0x38</code> on the TWI bus 2. Other pins are available for GPIO if more than eight are needed.</p>
 
 <h3 id="read-and-write-from-command-line">Read and Write From Command Line</h3>
 
@@ -808,7 +812,7 @@ CHIP&rsquo;s pin headers have all the connections to make this happen. An annota
 
 <h2 id="python-library">Python Library</h2>
 
-<p>A Python-based library for accessing GPIO data is in development.</p>
+<p>A Python-based library for accessing GPIO data is in development. You can see some examples in use </p>
 
 <h2 id="gpio-types">GPIO Types</h2>
 
