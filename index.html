@@ -861,6 +861,8 @@ PWM can be accessed through an <code class="prettyprint">sysfs</code> protocol.<
 <pre class="highlight shell"><code>sudo apt-get install i2c-tools
 </code></pre>
 
+<p>Note that the &ldquo;XIO GPIO&rdquo; pins are provided by an I2C expander at address 0x38 on the TWI bus 2, so that address cannot be used on bus 2.</p>
+
 <h2 id="lcd-monitor-support">LCD Monitor Support</h2>
 
 <p>Using the numerous LCD header pins, a color touchscreen panel can be directly implemented on CHIP.</p>
