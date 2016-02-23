@@ -118,6 +118,8 @@ I2C can be accessed through a `sysfs` protocol using the debian i2c-tools. In th
 sudo apt-get install i2c-tools
 ```
 
+Note that the "XIO GPIO" pins are provided by an I2C expander at address 0x38 on the TWI bus 2, so that address cannot be used on bus 2.
+
 ## LCD Monitor Support
 Using the numerous LCD header pins, a color touchscreen panel can be directly implemented on CHIP.
 
