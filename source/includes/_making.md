@@ -3,7 +3,9 @@ CHIP is more than cool, small, inexpensive computer. It's a complete system for 
 CHIP's pin headers have all the connections to make this happen. An annotated diagram of the pin headers can be found in the [hardware section](#pin-headers) of this manual.
 
 ## GPIO
-GPIO provides basic digital connections to the physical world to create physical products with CHIP. These pins can act as 'reads' or 'writes', for example, to sense switch positions or turn an LED on or off.
+GPIO provides basic digital connections to the physical world to create physical products with CHIP. These pins can act as 'reads' or 'writes', for example, to sense switch positions or turn an LED on or off. 
+
+CHIP's most easily available IO pins are the "XIO" pins on header U14. This is the "GPIO eXpander" that uses an I2C bus to create eight (8) convenient pins for GPIO. These use address `0x38` on the TWI bus 2. Other pins are available for GPIO if more than eight are needed.
 
 ### Read and Write From Command Line
 CHIP has several General Purpose Input/Output (GPIO) pins available for you to build around. If you want to access them in a very primitive way, just to confirm their existence, here's some things to try.
@@ -74,7 +76,7 @@ When you are done experimenting, you can tell the system to stop listening to th
 You can learn more about GPIO and Linux [here:](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt)
 
 ## Python Library
-A Python-based library for accessing GPIO data is in development.
+A Python-based library for accessing GPIO data is in development. You can see some examples in use 
 
 ## GPIO Types
 There are many types of sensors that can be used with GPIO:

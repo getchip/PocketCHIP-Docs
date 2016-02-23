@@ -43,7 +43,7 @@ LCD-D2 : RGB666 data | PWM0 : pulse width modulation (also used for LCD backligh
 LCD-D4 : RGB666 data | LCD-D3 : RGB666 data | XIO-P6 : expander GPIO pin 6 | XIO-P7 : expander GPIO pin 7
 LCD-D6 : RGB666 data | LCD-D5 : RGB666 data | GND : ground | GND : ground
 LCD-D10 : RGB666 data | LCD-D7 : RGB666 data | AP-EINT1 : Application Processor Interrupt  | AP-EINT3 : Application Processor Interrupt pin, necessary for certain kinds of hardware-software interactions (keyboard expander, etc.)
-LCD-D12 : RGB666 data | LCD-D11 : RGB666 data | TWI2-SDA : two-wire serial bus 2 (I2C) | TWI2-SCK : two-wire serial bus 2 (I2C)
+LCD-D12 : RGB666 data | LCD-D11 : RGB666 data | TWI2-SDA : two-wire serial bus 2 (I2C) | TWI2-SCK(*) : two-wire serial bus 2 (I2C)
 LCD-D14 : RGB666 data | LCD-D13 : RGB666 data | CSIPCK : CMOS serial interface | CSICK : CMOS serial interface, can be used for attaching a serial camera sensor
 LCD-D18 : RGB666 data | LCD-D15 : RGB666 data | CSIHSYNC : CMOS serial interface | CSIVSYNC : CMOS sync
 LCD-D20 : RGB666 data | LCD-D19 : RGB666 data | CSID0 : CMOS serial interface | CSID1 : CMOS serial interface
@@ -51,6 +51,8 @@ LCD-D22 : RGB666 data | LCD-D21 : RGB666 data  | CSID2 : CMOS serial interface |
 LCD-CLK : RGB666 clock | LCD-D23 : RGB666 data | CSID4 : CMOS serial interface | CSID5 : CMOS serial interface
 LCD-VSYNC : vertical sync for LCD screen | LCD-HSYNC : horizontal sync for LCD | CSID6 : CMOS serial interface | CSID7 : CMOS serial interface
 GND : ground | LCD-DE : RGB666 data | GND : ground | GND : ground
+
+(*)The XIO GPIO pins are provided by an I2C Expander at address 0x38 on the TWI bus 2, as such, this address is not available on bus 2.
 
 ## Open Source Hardware: Where To Get It
 CHIP is open source hardware. Here's where you can get all the data you need to make, modify, or learn about your own CHIP. Visit the [CHIP Hardware git repository](https://github.com/NextThingCo/CHIP-Hardware).
