@@ -148,7 +148,7 @@ Here's all the commands in one place:
 ```
 
 ## Flash CHIP Firmware
-Now that the [virtual machine and SDK](#installing-chip-sdk) are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
+Now that the [virtual machine and SDK](#installing-c-h-i-p-sdk) are running and configured, you can connect CHIP to your computer and give it an operating system. If you want to flash using a native Ubuntu installation, read how to [prepare Ubuntu to flash](#setup-ubuntu-for-flashing)
 
 #### Have you repaired your CHIP?
 
