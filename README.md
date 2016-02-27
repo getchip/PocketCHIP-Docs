@@ -36,6 +36,13 @@ sudo gem install libv8 -v '3.16.14.13' -- --with-system-v8
 ```
 or perhaps even adding `-n /usr/local/bin` to the end of those last two items. I had to fumble around with a lot of various suggestions on the internets to finally get this working on El Capitan, so it is hard to say exactly which one fixed it. The last command I tried before it worked was `bundle update`, so I'd try that first!
 
+### Preview
+If you want to preview your changes to the documents in a browser before you make a pull request or push changes, navigate to the chipdocs/ directory, and use the middleman server to render and serve the documentation in HTML. The terminal will tell you the URL to use to check out the docs.
+```
+bundle install
+bundle exec middleman server
+```
+
 ### Publish
 
 If you are a contributor, it is easy to publish any changes you make. First, push your local changes to the master branch, then, in a terminal `cd` to your local repo and use the command `rake publish`. This will render static html pages, and push the changes to the gh-pages branch of this repo, making them live at http://docs.getchip.com
