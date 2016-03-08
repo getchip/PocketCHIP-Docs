@@ -1423,6 +1423,15 @@ git clone http://github.com/NextThingCo/CHIP-tools
 <pre class="highlight shell"><code>sudo nmcli device wifi connect <span class="s1">'(your wifi network name/SSID)'</span> password <span class="s1">'(your wifi password)'</span> ifname wlan0
 </code></pre>
 
+<h5 id="c-hidden-ssid-and-password-protected">C: Hidden SSID and Password Protected</h5>
+
+<p>To connect to a hidden, WPA2-password protected network, use these set of commands, inserting your own network name and password:</p>
+<pre class="highlight shell"><code>sudo nmcli con add con-name <span class="s1">'mywifi'</span> ifname wlan0 <span class="nb">type </span>wifi ssid <span class="s1">'(your wifi network name/SSID)'</span>
+sudo nmcli con modify <span class="s1">'mywifi'</span> wifi-sec.key-mgmt wpa-psk
+sudo nmcli con modify <span class="s1">'mywifi'</span> wifi-sec.psk <span class="s1">'(your wifi password)'</span>
+sudo nmcli con up id <span class="s1">'mywifi'</span>
+</code></pre>
+
 <h4 id="step-3-test-your-connection">Step 3: Test your Connection</h4>
 
 <p>You can verify and test your wireless network connection.</p>
@@ -2219,11 +2228,14 @@ sudo apt-get autoremove
 
 <h3 id="references">References</h3>
 
-<p>Here are some reference links
-https://puredata.info/docs/faq/how-can-i-run-pd-with-realtime-priority-in-gnu-linux
-http://www.alsa-project.org/main/index.php/Low_latency_howto
-http://sourceforge.net/p/pure-data/pure-data/ci/master/tree/INSTALL.txt
-http://log.liminastudio.com/writing/tutorials/how-to-build-pd-extended-on-the-raspberry-pi</p>
+<p>Here are some reference links</p>
+
+<ul>
+<li><a href="https://puredata.info/docs/faq/how-can-i-run-pd-with-realtime-priority-in-gnu-linux">real time priority mode</a></li>
+<li><a href="http://www.alsa-project.org/main/index.php/Low_latency_howto">low latency alsa</a></li>
+<li><a href="http://sourceforge.net/p/pure-data/pure-data/ci/master/tree/INSTALL.txt">pure data on sourceforge</a></li>
+<li><a href="http://log.liminastudio.com/writing/tutorials/how-to-build-pd-extended-on-the-raspberry-pi">pd extended on RPi</a></li>
+</ul>
 
           <h2 id="headless-chip">Headless CHIP</h2>
 
@@ -2382,11 +2394,15 @@ No matter the software, you&rsquo;ll need to set some settings for the port (aka
 
 <h4 id="using-putty">Using PuTTy</h4>
 
-<p>If you are on Windows using PuTTy, you&rsquo;ll probably want to open the windows Device Manager to get the COM name for the serial port. The device won&rsquo;t show up in the Ports list until after the kernel loads and presents the device, so it may take a minute or so before Windows actually detects it.
-<img alt="Device Manager showing serial ports" src="images/win_putty_00.jpg" />
-In the PuTTy configuration panel, you can now use the COM name to set it up. In this case, it&rsquo;s &ldquo;COM4&rdquo;:
-<img alt="PuTTy configuration" src="images/win_putty_01.jpg" />
-Press &ldquo;Open&rdquo; to open a terminal window ,where you can log in to CHIP with username and password <code class="prettyprint">chip</code>.</p>
+<p>If you are on Windows using PuTTy, you&rsquo;ll probably want to open the windows Device Manager to get the COM name for the serial port. The device won&rsquo;t show up in the Ports list until after the kernel loads and presents the device, so it may take a minute or so before Windows actually detects it.</p>
+
+<p><img alt="Device Manager showing serial ports" src="images/win_putty_00.jpg" /></p>
+
+<p>In the PuTTy configuration panel, you can now use the COM name to set it up. In this case, it&rsquo;s &ldquo;COM4&rdquo;:</p>
+
+<p><img alt="PuTTy configuration" src="images/win_putty_01.jpg" /></p>
+
+<p>Press &ldquo;Open&rdquo; to open a terminal window ,where you can log in to CHIP with username and password <code class="prettyprint">chip</code>.</p>
 
 <p>You are now free to do whatever it is you do with Linux command line on CHIP.</p>
 
