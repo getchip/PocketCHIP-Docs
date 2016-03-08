@@ -151,9 +151,13 @@ You are now free to do whatever it is you do with Linux command line on CHIP.
 
 #### Using PuTTy
 If you are on Windows using PuTTy, you'll probably want to open the windows Device Manager to get the COM name for the serial port. The device won't show up in the Ports list until after the kernel loads and presents the device, so it may take a minute or so before Windows actually detects it.
+
 ![Device Manager showing serial ports](images/win_putty_00.jpg)
+
 In the PuTTy configuration panel, you can now use the COM name to set it up. In this case, it's "COM4":
+
 ![PuTTy configuration](images/win_putty_01.jpg)
+
 Press "Open" to open a terminal window ,where you can log in to CHIP with username and password `chip`.
 
 You are now free to do whatever it is you do with Linux command line on CHIP.
