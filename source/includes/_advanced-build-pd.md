@@ -139,7 +139,8 @@ You can then use the mouse and keyboard to go through the Browser and learn more
 
 ### References
 Here are some reference links
-https://puredata.info/docs/faq/how-can-i-run-pd-with-realtime-priority-in-gnu-linux
-http://www.alsa-project.org/main/index.php/Low_latency_howto
-http://sourceforge.net/p/pure-data/pure-data/ci/master/tree/INSTALL.txt
-http://log.liminastudio.com/writing/tutorials/how-to-build-pd-extended-on-the-raspberry-pi
+
+* [real time priority mode](https://puredata.info/docs/faq/how-can-i-run-pd-with-realtime-priority-in-gnu-linux)
+* [low latency alsa](http://www.alsa-project.org/main/index.php/Low_latency_howto)
+* [pure data on sourceforge](http://sourceforge.net/p/pure-data/pure-data/ci/master/tree/INSTALL.txt)
+* [pd extended on RPi](http://log.liminastudio.com/writing/tutorials/how-to-build-pd-extended-on-the-raspberry-pi)
