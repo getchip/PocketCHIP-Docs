@@ -156,7 +156,7 @@ The original batch of CHIPs shipped with a software bug in the NAND flash storag
 
 
 #### Prepare CHIP for Flashing
-Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here's a reference image that labels the headers and pins:
+Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (FEL pin and GND). Here's a reference image that labels the headers and pins:
 
 ![CHIP with jumper wire attached](images/uboot_jumper.jpg)
 
