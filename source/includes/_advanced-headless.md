@@ -112,10 +112,13 @@ Simpler than the UART cable, you can connect to CHIP with a USB cable to your co
 ### Control CHIP Using a Serial Terminal
 
 Once you've connected CHIP to your computer with the UART or USB cable, open up a terminal. There's lots out there. Here's a few:
+
   * OS X: [Zterm](http://www.dalverson.com/zterm/), `screen` (built-in to OS X terminal)
   * Windows: [PuTTy](http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/) or [cygwin](https://cygwin.com)
   * Linux: `screen`, `cu`
+
 No matter the software, you'll need to set some settings for the port (aka connection). You'll probably only need to set the baud rate, as the others will be defaults:
+
   * Baud Rate (Data Rate): 115200
   * Data Bits: 8
   * Parity: none
