@@ -86,8 +86,7 @@ CHIP uses 3V3 digital logic on GPIOs.
 We are using a JST-2.0 PH 2-pin shrouded male connector to connect LiPo cells to C.H.I.P. In the current design there are also BATT pins available on the interconnect headers, which allow alternate battery connectors/placements when attaching C.H.I.P. to a custom PCBA.
 
 ## I want to know more about the Allwinner R8 processor!
-You can find out more from the [Allwinner R8 User Manual.](https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20User%20Manual%20V1.1.pdf)
-The [Allwinner A13 Manual](A13 datasheet [on linux-sunxi.org](https://linux-sunxi.org/images/e/eb/A13_Datasheet.pdf) is also a good cross reference, as it is very similar to the R8.
+You can find out more from the [Allwinner R8 User Manual](https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20User%20Manual%20V1.1.pdf) and the [R8 Datasheet](https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20Datasheet%20V1.2.pdf)
 
 ## What kind of battery can I use with CHIP?
 Any single-cell (3.7V) LiPo battery will work with C.H.I.P. You can go bigger or smaller than 3000mAH as needed for your project!
