@@ -1032,7 +1032,7 @@ vagrant ssh
 
 <h4 id="prepare-chip-for-flashing">Prepare CHIP for Flashing</h4>
 
-<p>Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (UBOOT pin and GND). Here&rsquo;s a reference image that labels the headers and pins:</p>
+<p>Prepare CHIP with a jumper wire connecting Pin 7 and Pin 39 on header U14 (FEL pin and GND). Here&rsquo;s a reference image that labels the headers and pins:</p>
 
 <p><img alt="CHIP with jumper wire attached" src="images/uboot_jumper.jpg" /></p>
 
@@ -2359,16 +2359,23 @@ Please check your data sheets!</p>
 
 <h3 id="control-chip-using-a-serial-terminal">Control CHIP Using a Serial Terminal</h3>
 
-<p>Once you&rsquo;ve connected CHIP to your computer with the UART or USB cable, open up a terminal. There&rsquo;s lots out there. Here&rsquo;s a few:
-  * OS X: <a href="http://www.dalverson.com/zterm/">Zterm</a>, <code class="prettyprint">screen</code> (built-in to OS X terminal)
-  * Windows: <a href="http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/">PuTTy</a> or <a href="https://cygwin.com">cygwin</a>
-  * Linux: <code class="prettyprint">screen</code>, <code class="prettyprint">cu</code>
-No matter the software, you&rsquo;ll need to set some settings for the port (aka connection). You&rsquo;ll probably only need to set the baud rate, as the others will be defaults:
-  * Baud Rate (Data Rate): 115200
-  * Data Bits: 8
-  * Parity: none
-  * Stop bits: 1
-  * Flow control: none</p>
+<p>Once you&rsquo;ve connected CHIP to your computer with the UART or USB cable, open up a terminal. There&rsquo;s lots out there. Here&rsquo;s a few:</p>
+
+<ul>
+<li>OS X: <a href="http://www.dalverson.com/zterm/">Zterm</a>, <code class="prettyprint">screen</code> (built-in to OS X terminal)</li>
+<li>Windows: <a href="http://www.chipkin.com/using-putty-for-serial-com-connections-hyperterminal-replacement/">PuTTy</a> or <a href="https://cygwin.com">cygwin</a></li>
+<li>Linux: <code class="prettyprint">screen</code>, <code class="prettyprint">cu</code></li>
+</ul>
+
+<p>No matter the software, you&rsquo;ll need to set some settings for the port (aka connection). You&rsquo;ll probably only need to set the baud rate, as the others will be defaults:</p>
+
+<ul>
+<li>Baud Rate (Data Rate): 115200</li>
+<li>Data Bits: 8</li>
+<li>Parity: none</li>
+<li>Stop bits: 1</li>
+<li>Flow control: none</li>
+</ul>
 
 <h4 id="using-screen">Using screen</h4>
 
@@ -2757,7 +2764,7 @@ Double-click on the application icon and follow the on-screen directions to comp
 
 <h2 id="i-want-to-know-more-about-the-allwinner-r8-processor">I want to know more about the Allwinner R8 processor!</h2>
 
-<p>The R8 is based on Allwinner&rsquo;s A13, so for tech references you can get a good sense of the R8&rsquo;s features from the A13 datasheet <a href="https://linux-sunxi.org/images/e/eb/A13_Datasheet.pdf">on linux-sunxi.org</a></p>
+<p>You can find out more from the <a href="https://github.com/NextThingCo/CHIP-Hardware/blob/master/CHIP%5Bv1_0%5D/CHIPv1_0-BOM-Datasheets/Allwinner%20R8%20User%20Manual%20V1.1.pdf">Allwinner R8 User Manual.</a>!</p>
 
 <h2 id="what-kind-of-battery-can-i-use-with-chip">What kind of battery can I use with CHIP?</h2>
 
