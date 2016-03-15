@@ -371,9 +371,13 @@ Just connect a standard 3.5 mm (1/8&quot;) TRS audio plug into CHIP&rsquo;s a/v 
 
 <p>CHIP&rsquo;s operating system comes with a default language of English. You can change the language and the location, but you&rsquo;ll need to use the terminal to do so. Use the &ldquo;Computer Things!&rdquo; menu to launch the Terminal Emulator. 
 Then use the <a href="#apt-get"><code class="prettyprint">apt-get</code></a> command to install the language packs and run a simple program to configure your language and location:</p>
-<pre class="highlight shell"><code>sudo apt-get install locales
-sudo dpkg-reconfigure locales
+<pre class="highlight shell"><code>sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get install locales <span class="o">&amp;&amp;</span> sudo dpkg-reconfigure locales <span class="o">&amp;&amp;</span> sudo locale-gen
 </code></pre>
+
+<p>You can set the timezone with 
+<code class="prettyprint">
+sudo dpkg-reconfigure tzdata
+</code></p>
 
 <p><img alt="Orage Globaltime is used to set the time and date" src="images/screen_locales02.jpg" /></p>
 
