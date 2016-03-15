@@ -76,9 +76,13 @@ CHIP's operating system comes with a default language of English. You can change
 Then use the [`apt-get`](#apt-get) command to install the language packs and run a simple program to configure your language and location:
 
 ```shell
-sudo apt-get install locales
-sudo dpkg-reconfigure locales
+sudo apt-get update && sudo apt-get install locales && sudo dpkg-reconfigure locales && sudo locale-gen
 ```
+You can set the timezone with 
+```
+sudo dpkg-reconfigure tzdata
+```
+
 ![Orage Globaltime is used to set the time and date](images/screen_locales02.jpg)
 
 ## Launching Installed Apps
