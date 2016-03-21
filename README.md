@@ -23,6 +23,19 @@ You're going to need:
  - **Ruby, version 1.9.3 or newer**
  - **Bundler** — If Ruby is already installed, but the `bundle` command doesn't work, just run `gem install bundler` in a terminal.
 
+#### Ubuntu 14.04 LTS
+Install the following packages, then jump to the Preview section.
+```
+sudo apt-get install git ruby-dev
+sudo gem install bundler
+cd 
+git clone git@github.com:getchip/chipdocs.git
+cd chipdocs
+bundle install
+```
+
+
+
 #### Getting El Capitan to Behave
 Installing on El Capitan (OS X 10.11) can be difficult. 
 Once you clone the directory, you may need to `cd` to the chipdocs directory, then run the command `bundle install`. 
