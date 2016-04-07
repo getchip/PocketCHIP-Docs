@@ -29,8 +29,8 @@ Install the following packages, then jump to the Preview section.
 sudo apt-get install git ruby-dev
 sudo gem install bundler
 cd 
-git clone git@github.com:getchip/chipdocs.git
-cd chipdocs
+git clone git@github.com:NextThingCo/PocketCHIP-Docs.git
+cd PocketCHIP-Docs
 bundle install
 ```
 
