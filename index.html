@@ -2149,10 +2149,20 @@ sudo ln -s /usr/bin/wish8.6 /usr/bin/wish
 ./configure --disable-portaudio --disable-portmidi --no-recursion
 <span class="nb">cd </span>src
 make -f makefile.gnu
-autoconf
-make clean
 sudo make -f makefile.gnu install
 </code></pre>
+
+<p>You&rsquo;ll probably also want the &ldquo;extra&rdquo; objects such as expr, expr~, clone, fiddle~, bonk~, bob~, sigmund~, et al. 
+These require an extra build step. The &ldquo;extra&rdquo; folder is in <code class="prettyprint">pd-0.46-7/extra</code>, so if you are still in <code class="prettyprint">src/</code> you can</p>
+<pre class="highlight shell"><code><span class="nb">cd</span> ../extra
+make install
+</code></pre>
+
+<p>You&rsquo;ll probably also want to install the deken plugin so you can add more externals to your bag of tricks:
+https://github.com/pure-data/deken</p>
+
+<p>I&rsquo;ve also found this kiosk plugin to be very handy for making a pure data widow take up the entire screen:
+https://puredata.info/downloads/kiosk-plugin</p>
 
 <h3 id="set-up-priority">Set Up Priority</h3>
 
