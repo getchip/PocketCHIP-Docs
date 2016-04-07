@@ -1,4 +1,4 @@
-# Next Thing C.H.I.P. Documentation
+# Next Thing PocketC.H.I.P. Documentation
 
 
 All documentation is written in markdown and staged on github pages. Published documentation is viewable [on the github pages](http://getchip.github.io/chipdocs/#introduction) or [getchip site](http://docs.getchip.com).
