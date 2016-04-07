@@ -33,11 +33,11 @@ cd pd-0.46-7
 You're ready to go ahead and build, running some scripts, then making the install:
 
 ```shell
+cd ~/pd-0.46-7/
 ./autogen.sh
 ./configure --disable-portaudio --disable-portmidi --no-recursion
-cd src
-make -f makefile.gnu
-sudo make -f makefile.gnu install
+make
+sudo make install
 ```
 
 You'll probably also want the "extra" objects such as expr, expr~, clone, fiddle~, bonk~, bob~, sigmund~, et al. 

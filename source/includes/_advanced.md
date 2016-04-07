@@ -502,6 +502,14 @@ cd CHIP-tools
 git pull http://github.com/NextThingCo/CHIP-tools
 ```
 
+You'll also need to add your user to some groups and add a udev rule
+```shell
+sudo usermod -a -G dialout $(logname) &&
+sudo usermod -a -G plugdev $(logname) &&
+'SUBSYSTEM=="usb", ATTRS{idVendor}=="1f3a", ATTRS{idProduct}=="efe8", GROUP="plugdev", MODE="0660" SYMLINK+="usb-chip" SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="1010", GROUP="plugdev", MODE="0660" SYMLINK+="usb-chip-fastboot" SUBSYSTEM=="usb", ATTRS{idVendor}=="1f3a", ATTRS{idProduct}=="1010", GROUP="plugdev", MODE="0660" SYMLINK+="usb-chip-fastboot" SUBSYSTEM=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", GROUP="plugdev", MODE="0660" SYMLINK+="usb-serial-adapter"' | sudo tee /etc/udev/rules.d/99-allwinner.rules &&
+sudo udevadm control --reload-rules
+```
+
 Now you are ready to [flash CHIP](#flash-chip-firmware) with firmware.
 
 #### All The Commands At Once
