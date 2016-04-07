@@ -37,8 +37,6 @@ You're ready to go ahead and build, running some scripts, then making the instal
 ./configure --disable-portaudio --disable-portmidi --no-recursion
 cd src
 make -f makefile.gnu
-autoconf
-make clean
 sudo make -f makefile.gnu install
 ```
 
