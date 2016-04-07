@@ -40,6 +40,21 @@ make -f makefile.gnu
 sudo make -f makefile.gnu install
 ```
 
+You'll probably also want the "extra" objects such as expr, expr~, clone, fiddle~, bonk~, bob~, sigmund~, et al. 
+These require an extra build step. The "extra" folder is in `pd-0.46-7/extra`, so if you are still in `src/` you can
+
+```shell
+cd ../extra
+make install
+```
+
+You'll probably also want to install the deken plugin so you can add more externals to your bag of tricks:
+https://github.com/pure-data/deken
+
+I've also found this kiosk plugin to be very handy for making a pure data widow take up the entire screen:
+https://puredata.info/downloads/kiosk-plugin
+
+
 ### Set Up Priority
 
 Now set up pd so it can run in real-time priority mode for low latency (launching with `pd -rt`). 
