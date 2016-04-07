@@ -1360,6 +1360,14 @@ git clone http://github.com/NextThingCo/CHIP-tools
 git pull http://github.com/NextThingCo/CHIP-tools
 </code></pre>
 
+<p>You&rsquo;ll also need to add your user to some groups and add a udev rule
+<code class="prettyprint">shell
+sudo usermod -a -G dialout $(logname) &amp;&amp;
+sudo usermod -a -G plugdev $(logname) &amp;&amp;
+&#39;SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;1f3a&quot;, ATTRS{idProduct}==&quot;efe8&quot;, GROUP=&quot;plugdev&quot;, MODE=&quot;0660&quot; SYMLINK+=&quot;usb-chip&quot; SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;18d1&quot;, ATTRS{idProduct}==&quot;1010&quot;, GROUP=&quot;plugdev&quot;, MODE=&quot;0660&quot; SYMLINK+=&quot;usb-chip-fastboot&quot; SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;1f3a&quot;, ATTRS{idProduct}==&quot;1010&quot;, GROUP=&quot;plugdev&quot;, MODE=&quot;0660&quot; SYMLINK+=&quot;usb-chip-fastboot&quot; SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;067b&quot;, ATTRS{idProduct}==&quot;2303&quot;, GROUP=&quot;plugdev&quot;, MODE=&quot;0660&quot; SYMLINK+=&quot;usb-serial-adapter&quot;&#39; | sudo tee /etc/udev/rules.d/99-allwinner.rules &amp;&amp;
+sudo udevadm control --reload-rules
+</code></p>
+
 <p>Now you are ready to <a href="#flash-chip-firmware">flash CHIP</a> with firmware.</p>
 
 <h4 id="all-the-commands-at-once">All The Commands At Once</h4>
@@ -2145,11 +2153,11 @@ sudo ln -s /usr/bin/wish8.6 /usr/bin/wish
 <h3 id="build-it">Build It</h3>
 
 <p>You&rsquo;re ready to go ahead and build, running some scripts, then making the install:</p>
-<pre class="highlight shell"><code>./autogen.sh
+<pre class="highlight shell"><code><span class="nb">cd</span> ~/pd-0.46-7/
+./autogen.sh
 ./configure --disable-portaudio --disable-portmidi --no-recursion
-<span class="nb">cd </span>src
-make -f makefile.gnu
-sudo make -f makefile.gnu install
+make
+sudo make install
 </code></pre>
 
 <p>You&rsquo;ll probably also want the &ldquo;extra&rdquo; objects such as expr, expr~, clone, fiddle~, bonk~, bob~, sigmund~, et al. 
