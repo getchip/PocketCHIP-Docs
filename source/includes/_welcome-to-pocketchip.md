@@ -1,14 +1,46 @@
 # Welcome to The PocketC.H.I.P. Launcher 
 
-When we made C.H.I.P., the $9 computer, many people thought it came with a screen and keyboard. At the time it did not. But it made us think, what if we did build a product with a screen and keyboard for C.H.I.P.. We did. It's PocketC.H.I.P..
+When we made C.H.I.P., the $9 computer, many people thought it came with a screen and keyboard. At the time it did not, but it made us think, what if we did build a product with a screen and keyboard that used C.H.I.P.. We did, it's PocketC.H.I.P..
+
+
+
+## PocketC.H.I.P. at a glance
+
+**image of pc front-on**
+
+![Shot of PocketCHIP front-on](TKTKT.jpg)
+
+Label the following: screen, qwerty keyboard, HOME button
+
+SHOT OF Back
+Label chip ports
+
+![Shot of PocketCHIP front-on](TKTKT.jpg)
+
+
+## Start PocketC.H.I.P.
+
+![PocketCHIP with HOME button highlighted]()
+
+
+Turn on PocketC.H.I.P. by holding down the HOME button, located at the bottom, middle of the device. 
+
+Your PocketC.H.I.P. will load , you will see a 3x2 grid of the default applications. To load one of the applications use your finger or stylus and tap it.
+
+
+
+![Sprocket Icon](TKTKTK)
+
+Tap the sprocket icon in the corner of the screen to access PocketC.H.I.P. system settings. You can configure WiFi connections, control backlight contrast, and adjust the system volume. 
+
+While in an application, pressing the HOME button returns you to the home screen. To get back to the app, simply press the HOME button again.
+
+
 
 
 
 ![PocketC.H.I.P. Home Screen](images/home.jpg)
 
-
-## Start PocketC.H.I.P. Boot PocketC.H.I.P.  
-All you need to do to boot PocketC.H.I.P. is hold down the Home button located in the bottom, middle of the device.
 
 If for any reason PocketC.H.I.P. does not respond to your input, hold down the Home button for more than 10 seconds to hard-reboot the device.  
 
@@ -16,11 +48,12 @@ If for any reason PocketC.H.I.P. does not respond to your input, hold down the H
 
 ## Touchscreen
 
-PocketC.H.I.P. has a 4.3" made up of 470px x 272px. It's a resistive touch display, which  means you use almost solid object to interact with the screen. But we recommend fingers or a stylus.
+Your PocketC.H.I.P. features a 4.3" display made up of 470 x 272 pixels. The display is resistive touch and responds to tapping and dragging from your finger or a stylus, pinch-to-zoom is not supported.  
 
+ 
 ## Keyboard 
 
-PocketC.H.I.P. offers a full QWERTY keyboard and a comfortably located D-pad. 
+PocketC.H.I.P. has a full QWERTY keyboard wht a comfortably located D-pad. 
 
 NEED IMAGE OF FINAL KEYBOARD LAYOUT
 
@@ -31,8 +64,10 @@ The battery should last for five hours of use.
 
 ### Charging PocketC.H.I.P.
 
-Charge the battery in PocketC.H.I.P. by attaching
-* No Charger
+To charge your PocketC.H.I.P., connect a USB-micro cable from C.H.I.P. at a 5-volt 1A power supply. Fully charging the device will take about **TKTK** hours.  
+
+*C.H.I.P. must remain attached to PocketC.H.I.P. to charge the battery.*
+
 
 ### Removable CHIP
 
