@@ -18,5 +18,10 @@ includes:
 search: true
 ---
 
-# Introduction
+# Welcome to PocketC.H.I.P. 
 Welcome to Next Thing Co. PocketC.H.I.P. documentation.
+
+When we made C.H.I.P., the $9 computer, many people thought it came with a screen and keyboard. At the time it did not, but it made us think, what if we did build a product with a screen and keyboard that used C.H.I.P.. We did, it's PocketC.H.I.P..
+
+
+
