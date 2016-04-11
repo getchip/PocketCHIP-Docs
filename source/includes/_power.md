@@ -14,6 +14,6 @@ To charge your PocketC.H.I.P., connect a USB-micro cable from C.H.I.P. at a 5-vo
 *C.H.I.P. must remain attached to PocketC.H.I.P. to charge the battery.*
 
 ## Sleep and Shutdown
-PocketC.H.P. does not support a sleep mode at launch, however, the backlight will dim after a period of inactivity. 
+PocketC.H.P. does not support a sleep mode at launch, however, the backlight will dim after a period of inactivity. **(how long?)** 
 
 Shutdown PocketC.H.I.P. by holding down the HOME button for **TKTK** seconds. At the shutdown prompt, select **TKTK**. 
