@@ -1,6 +1,6 @@
 # Applications
 
-Your PocketC.H.I.P. comes with six pre-installed application on the home screen. 
+Your PocketC.H.I.P. comes with six pre-installed application on the home screen.
 
 ## Pico8
 

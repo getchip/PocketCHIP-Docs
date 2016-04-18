@@ -1,75 +1,32 @@
+## Welcome to Next Thing Co. PocketC.H.I.P. documentation.
+
+When we made C.H.I.P., the $9 computer, many people thought it came with a screen and keyboard. At the time it did not, but it made us think, what if we did build a product with a screen and keyboard that used C.H.I.P.. We did, it’s PocketC.H.I.P..
 
 
-## PocketC.H.I.P. at glance
+### Quick Start
+This section explains how to turn on and charge PocketC.H.I.P., plus a quick WiFi setup guide. It’s meant to get you using PocketC.H.I.P. quickly. There’s of couse a ton more you can do with PocketC.H.I.P., but look to other sections for more in-depth coverage. 
 
-**image of pc front-on**
+IMAGE: Modified version of PocketCHIP box art.
 
-![Shot of PocketCHIP front-on](TKTKT.jpg)
+Turn on PocketC.H.I.P. by holding down the Home/Power button, located at the bottom, middle of the keyboard, for TKTK seconds. 
 
-Label the following: screen, qwerty keyboard, HOME button
+Your PocketC.H.I.P. takes a moment to fully start and while it does, you will see a TKTK. Once it is done fully loading, you will see a 3x2 grid of icons. This is the HOME screen.  
 
-SHOT OF Back
-Label chip ports
+ANNOTATED IMAGE of HOME screen w/ numbers calling out 
 
-![Shot of PocketCHIP front-on](TKTKT.jpg)
+Use your finger or a stylus to tap on the application you want to use. Tap the down arrow at the bottom center of the screen to see more applications. For more on specific applications, see the apps section.
 
+When you’re done using an application, press the HOME button and you will return to the HOME screen.
 
-## Get Started 
+### WiFi Setup
 
-![PocketCHIP with HOME button highlighted]()
+From the HOME screen, tap the WiFi icon in the top left corner to access the Settings screen. Then slide the toggle next to the WiFi icon to the right to turn the wifi on. Tap the button to the right of the toggle to select your network.
 
+Slide your finger up and down on the list and tap on the network you want to join.
 
-Turn on PocketC.H.I.P. by holding down the HOME button, located at the bottom, middle of the device. 
+Enter in your network password in the text area, then touch the [Connect] button. It may take a few seconds to connect.
 
-Your PocketC.H.I.P. take a moment to boot and then you will see a 3x2 grid of default applications. Use your finger or stylus to tap on the application you want to use.
+#### Troubleshooting
 
+If for any reason PocketC.H.I.P. does not respond to your input, hold down the Home button for 8 seconds. This will terminate the battery power to PocketC.H.I.P. causing a hard-shutdown. Only use this shutdown method if all other shutdown methods do not work.
 
-
-![Sprocket Icon](TKTKTK)
-
-Tap the sprocket icon in the corner of the screen to access PocketC.H.I.P. system settings. You can configure WiFi connections, control backlight contrast, and adjust the system volume. 
-
-While in an application, pressing the HOME button returns you to the home screen. To get back to the app, simply press the HOME button again.
-
-
-
-
-
-![PocketC.H.I.P. Home Screen](images/home.jpg)
-
-
-If for any reason PocketC.H.I.P. does not respond to your input, hold down the Home button for more than 10 seconds to hard-reboot the device.  
-
-
-## Features 
-
-### Touchscreen
-
-Your PocketC.H.I.P. features a 4.3" display made up of 470 x 272 pixels. The display is resistive touch and responds to tapping and dragging from your finger or a stylus. *Pinch-to-zoom is not supported.*
-
- 
-### Keyboard 
-
-PocketC.H.I.P. has a full QWERTY keyboard wht a comfortably located D-pad. 
-
-NEED IMAGE OF FINAL KEYBOARD LAYOUT
-
-
-
-
-
-### Removable CHIP
-
-![Removing CHIP](images/CHIP-Plug-in_Credit-to-Michael-Bucuzzo.gif)
-
-**REVERSE THIS GIF TO SHOW REMOVAL**
-
-
-Removing C.H.I.P. from PocketC.H.I.P. is a snap.
-
-
-* Snap-fit enclosure
-
-To fully disassemble PocketC.H.I.P. first remove the bezel around the perimeter of the screen. Next make sure your C.H.I.P. is removed from PocketC.H.I.P.. Then carefully 
-
-* Pencil stand

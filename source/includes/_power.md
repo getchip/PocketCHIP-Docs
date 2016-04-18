@@ -3,6 +3,9 @@
 
 
 ## Battery Life
+
+**IMAGE OF PCHIP REAR WITH CLEAR CASE AND SHOWING BATTERY**
+
 Your PocketC.H.I.P. battery should last for about five hours of use. To increase battery life, dim the backlight and turning off WiFi and Bluetooth. 
 
 ## Charge PocketC.H.I.P.
