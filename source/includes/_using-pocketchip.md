@@ -1,35 +1,20 @@
-#Using PocketC.H.I.P.
+Using PocketC.H.I.P.
 
-## Install new software
+Update software
+To update the software on PocketC.H.I.P., tap the Update Software app on the home screen. Each of these applications is curated to run on PocketC.H.I.P.’s screen size and theme.
 
-To install new applications on PocketC.H.I.P., open the terminal app from the home screen.
+System Update
 
-Update the Debian software repositories.
-`sudo apt update`
+Performing a full system update will overwrite all data on PocketC.H.I.P. TKTK
 
+Flashing
+To return your PocketC.H.I.P. to our latest factory settings, use our online flashing tool and select the latest PocketC.H.I.P. image.
 
+WARNING:  This will permanently delete all the data on PocketC.H.I.P., so back-up anything you want to keep!
 
-Use the Debian [package search tool](https://www.debian.org/distrib/packages) to determine if the package is available for **TKTK ARMHF? TKTK**.
-
-Install the package.
-
-`sudo apt install *package_name*` 
-
-## WiFi & Bluetooth
-
-Currently only WiFi is configurable from the PocketC.H.I.P graphical interface. Tab the sprocket icon on the home screen. Enter the name of the network and the password.
+See the CHIP docs for how to backup your files manually.
 
 
-## System Update
 
-
-`sudo apt-get update && sudo aptget upgrade`
-
-
-## Flashing 
-
-To return your PocketC.H.I.P. to factory settings, use our online [flashing tool](http://flasher.getchip.com) and select the latest PocketC.H.I.P. image.
-
-**This will perminently delete *all the data* on PocketC.H.I.P., back-up anything you want to keep!**
-
-
+Applications
+Your PocketC.H.I.P. comes with TK applications on the home screen.

@@ -6,7 +6,7 @@ When we made C.H.I.P., the $9 computer, many people thought it came with a scree
 ### Quick Start
 This section explains how to turn on and charge PocketC.H.I.P., plus a quick WiFi setup guide. It’s meant to get you using PocketC.H.I.P. quickly. There’s of couse a ton more you can do with PocketC.H.I.P., but look to other sections for more in-depth coverage. 
 
-IMAGE: Modified version of PocketCHIP box art.
+![quickstart.png](quickstart.png)
 
 Turn on PocketC.H.I.P. by holding down the Home/Power button, located at the bottom, middle of the keyboard, for TKTK seconds. 
 
