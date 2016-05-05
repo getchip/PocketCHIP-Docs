@@ -1,41 +1,52 @@
-#PocketC.H.I.P. at a glance
+# PocketC.H.I.P. at a glance
 
-***NOTE Label the following: screen, qwerty keyboard, HOME button. This section should mostly be visual with labels***
+![PocketC.H.I.P. front and back](front-and-back.jpg)
 
-***SHOT Back Label chip ports***
-***SHOT of PocketCHIP front-on***
+## Touchscreen
 
-##Touchscreen
-IMAGE finger touching the SCREEN
+![touchscreen](images/finger-on-screen.jpg)
 
-PocketC.H.I.P. features a 4.3" display made up of 470 x 272 pixels. The display is resistive touch and responds to tapping and sliding. You can use a finger or, for more precision, try a non-marking stylus.
+PocketC.H.I.P. features a 4.3" display made up of 480 x 272 pixels. The display is resistive touch and responds to tapping and sliding. That means you can use a finger or almost any object that isn't sharp -- you don't want to scratch your screen.
 
 Tap once to open apps, press buttons, and close windows.
 Press and slide to scroll, adjust sliderbars, and resize windows.
 
-##Keyboard
-IMAGE OF KEYBOARD LAYOUT
+## Keyboard
+
+![Keyboard layout](images/keyboard.jpg)
 
 PocketC.H.I.P. has a full QWERTY keyboard with comfortably located arrow keys for gaming. 
 
-TK
+Each button is labeled with pink text. This identifies the default button behavior. Some buttons have two rows of pink text stacked atop each other. The bottom text is the primary behavior of the key. The top text identifies the button's secondary behavior, which is accessible by holding down SHIFT and pressing the button. 
 
-Each button is labeled with pink text. This signifies the default button behavior. Some buttons have two rows of pink text stacked atop each other. The bottom label is the primary behavior of the key. The top label identifies the button’s secondary behavior, which is accessible by holding down SHIFT and pressing the button. 
+For example: Holding SHIFT and pressing 1 types ! 
 
-For example: SHIFT+1 prints ! 
+Some buttons are labeled to the top, left with white text on a pink background. These keys are mostly located on the right side of PocketC.H.I.P.'s keyboard and are for characters like function keys (F1, F2,...F11) and lesser used punctuation marks ({}<>|;). To type these specialized characters, hold down the FN key and press the desired button.
 
-An even smaller number of  buttons are labeled to the top-left with white text on a pink background. Examples are the function keys (F1, F2,...F11) and lesser used punctuation marks. To type them, hold down FN key and press the desired button.
+![Function keys](images/function-keys.jpg)
 
-For example: FN+J prints >
+For example: Holding FN and pressing J types >
 
-##Pencil stand
-Give your hands a break! You can prop PocketC.H.I.P. up on a table with a pencil or pen. Pencils go in the right-hand-side pencil hole, and pens in the left hole. You only need one.
+## Removable enclosure
 
-##Removable enclosure
-To fully disassemble PocketC.H.I.P., first remove the bezel (frame) around the perimeter of the screen. Make sure that C.H.I.P. is removed from PocketC.H.I.P.. Remove the back case of PocketC.H.I.P. by pressing the tabs above the screen and on either side of the Home/Power button..
+PocketC.H.I.P is extremely hackable and we encourage you to modify the hardware. It is super easy to take apart, since there are no screws used in the assembly. 
+
+If you want to fully disassemble PocketC.H.I.P., first (carefully) remove C.H.I.P. from the back of PocketC.H.I.P.. Then flip PocketC.H.I.P. around and remove the frame (technically known as a bezel) around the perimeter of the screen. Remove the back case of PocketC.H.I.P. by pressing the tabs above the screen and on either side of the Home/Power button.
 
 While the case is open, check out the “secret” prototyping area and GPIO solder pads inside the enclosure!
 
-##GPIO Access
-Along the top edge of PocketC.H.I.P. are the exposed C.H.I.P. input and output pins. These are great for attaching and controlling sensors, motors, and LEDs. 
-See C.H.I.P. documentation to learn how to use them.
+![Open PocketC.H.I.P. to reveal a secret prototyping area](images/secret.jpg)
+
+## GPIO Access
+
+![GPIO](images/gpio.jpg)
+
+Along the top edge of PocketC.H.I.P. are input and output pins from C.H.I.P.. These are great for attaching and controlling sensors, motors, and LEDs. 
+
+See C.H.I.P. documentation to learn how to use them [http://docs.getchip.com/#gpio](http://docs.getchip.com/#gpio).
+
+## Pencil stand
+
+![Stand it up with a pencil](images/stand.jpg)
+
+Give your hands a break! You can prop PocketC.H.I.P. up on a table with a pencil or pen. Pencils go in the right-hand-side pencil hole, and pens in the left hole. You only need one.
