@@ -1,8 +1,8 @@
 # Welcome to Next Thing Co. PocketC.H.I.P. documentation.
 
-![PocketC.H.I.P. Front](images/front-and-back.jpg)
+![PocketC.H.I.P. Front](images/front-and-back.png)
 
-Hey! Thanks for checking out ***PocketC.H.I.P.***!
+Hey! Thanks for checking out **PocketC.H.I.P.**!
 
 PocketC.H.I.P. is a game console, a portable synthesizer, and a Linux field terminal. With a bit of effort, it can become a whole lot more – see PockulusC.H.I.P., PocketC.H.I.P. as a VR headset (http://pockulus.getchip.com/). The point is, PocketC.H.I.P. can be what you want it to be and we're excited to see what you will do with your PocketC.H.I.P..
 
@@ -10,14 +10,14 @@ These are the Docs, which are intended to help you get started with PocketC.H.I.
 
 The Docs will *not* teach you how to code (though it will give tips), how to program a game (though it will explain the tools), how to make music (though it will describe options), or how to build onto PocketC.H.I.P. (though it will encourage it).
 
-Have fun!
+**Have fun!**
 
 # Quick Start
-This section explains how to turn on PocketC.H.I.P., setup WiFi, and charge your device. 
+This section explains how to **turn on PocketC.H.I.P.**, **setup WiFi**, and **charge your device**. 
 
 ![Step 1](images/image_1.png)
 
-Turn on PocketC.H.I.P. by pressing down the Home/Power button at the bottom, middle of the keyboard, for about 2 seconds. 
+Turn on PocketC.H.I.P. by pressing down the **Home/Power button** at the bottom, middle of the keyboard, for about 2 seconds. 
 
 ![Step 2](images/image_2.png)
 
@@ -25,7 +25,7 @@ PocketC.H.I.P. will take a moment to fully load, but while it does you will see 
 
 Once PocketC.H.I.P. is ready you will see a series of slides showing the PocketC.H.I.P. basics. Use the **right arrow key** or **tap the right side of the screen** to advance forward in the slideshow.
 
-Once you have clicked through the basics, you will see a screen with six icons. This is the HOME screen. 
+Once you have clicked through the basics, you will see a screen with six icons. This is the **Home Screen**.
 
 ![Annotated HOME screen](images/home.jpg)
 
