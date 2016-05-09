@@ -17,6 +17,7 @@ When prompted, enter the network password in the text field, then touch the [Con
 Currently only WiFi is configurable from the PocketC.H.I.P graphical interface. If you want to configure Bluetooth, consult the C.H.I.P. documentation page (docs.getchip.com).
 
 ## Screen Brightness
+![brightness](images/brightness.jpg)
 
 Tap the brightness slider on the left to decrease brightness or tap the right to increase. Lowering the brightness is an easy way to increase battery life.
 
