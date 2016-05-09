@@ -1,5 +1,7 @@
 # Welcome to Next Thing Co. PocketC.H.I.P. documentation.
 
+![PocketC.H.I.P. Front](PocketCHIP.jpg)
+
 Hey! Thanks for checking out PocketC.H.I.P.! You're rad!
 
 PocketC.H.I.P. is a game console, a portable synthesizer, and a Linux field terminal. With a bit of effort, it can become a whole lot more – see PockulusC.H.I.P., PocketC.H.I.P. as a VR headset (http://pockulus.getchip.com/). The point is, PocketC.H.I.P. can be what you want it to be and we're excited to see what you will do..
