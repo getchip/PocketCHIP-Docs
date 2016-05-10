@@ -16,6 +16,7 @@ includes:
   - _using-accessories.md
   - _glossary.md
   - _faq.md  
+  - _license.md
 
 search: true
 ---
