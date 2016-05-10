@@ -1,10 +1,12 @@
-# Welcome to Next Thing Co. PocketC.H.I.P. documentation.
+# Welcome to PocketC.H.I.P. 
 
 ![PocketC.H.I.P. Front](images/front-and-back.png)
 
 Hey! Thanks for checking out **PocketC.H.I.P.**!
 
-PocketC.H.I.P. is a game console, a portable synthesizer, and a Linux field terminal. With a bit of effort, it can become a whole lot more – see PockulusC.H.I.P., PocketC.H.I.P. as a VR headset (http://pockulus.getchip.com/). The point is, PocketC.H.I.P. can be what you want it to be and we're excited to see what you will do with your PocketC.H.I.P..
+**PocketC.H.I.P.** is a game console, a portable synthesizer, and a Linux field terminal. With a bit of effort, it can become a whole lot more – see PockulusC.H.I.P., PocketC.H.I.P. as a VR headset [here](http://pockulus.getchip.com/). 
+
+The point is, **PocketC.H.I.P. can be what you want it to be** and we're excited to see what you will do with your PocketC.H.I.P..
 
 These are the Docs, which are intended to help you get started with PocketC.H.I.P.. The Docs will introduce you to the the software that comes pre-installed on PocketC.H.I.P., explain how to use the system, and hopefully plant some ideas about how you can do even more with your PocketC.H.I.P.
 
@@ -21,7 +23,7 @@ Turn on PocketC.H.I.P. by pressing down the **Home/Power button** at the bottom,
 
 ![Step 2](images/image_2.png)
 
-PocketC.H.I.P. will take a moment to fully load, but while it does you will see the C.H.I.P. logo a progress bar in the bottom corner of the screen and then a PocketC.H.I.P. splash screen. 
+**PocketC.H.I.P.** will take a moment to fully load, but while it does you will see the C.H.I.P. logo and then a PocketC.H.I.P. splash screen. 
 
 Once PocketC.H.I.P. is ready you will see a series of slides showing the PocketC.H.I.P. basics. Use the **right arrow key** or **tap the right side of the screen** to advance forward in the slideshow.
 
@@ -29,17 +31,17 @@ Once you have clicked through the basics, you will see a screen with six icons. 
 
 ![Annotated HOME screen](images/home.jpg)
 
-Use a finger or stylus (or really anything that's solid and isn't sharp) to tap on the application you want to use. Press gently enough to make contact with the screen. There's no need to apply a lot of force. A gentle touch will do.
+Use a **finger** or **stylus** (or really anything that's solid and isn't sharp) to tap on the application you want to use. Press gently enough to make contact with the screen. There's no need to apply a lot of force. A gentle touch will do.
 
-While using  an application, press the HOME/Power button to return to the HOME screen.
+While using  an application, **press the HOME/Power button to return to the HOME screen**.
 
 ### WiFi Setup
 
-![Settings icon](images/settings-icon.jpg)
+![Settings icon](images/no_scale/settings-icon.jpg)
 
-From the HOME screen, tap the **settings icon** in the bottom right corner to access the Settings screen. 
+From the Home Screen, tap the **settings icon** in the bottom right corner to access the Settings Screen. 
 
-Press the button to the right of the WiFi switch to open a menu of all the networks in range. Scroll through the list and select your network. If needed, slide your finger up and down on the list to scroll. To refresh the network list, just exit the list and enter again. 
+Press the button to the right of the WiFi switch to open a menu of all the networks in range. Scroll through the list and select your network by pressing the arrows above and below the network names. To refresh the network list, just exit the list and enter again. 
 
 When prompted, enter the network password in the text field, then touch the **[Connect]** button. It may take a few seconds to connect.
 

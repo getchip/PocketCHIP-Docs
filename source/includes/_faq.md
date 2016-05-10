@@ -15,10 +15,14 @@ PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-m
 No. At this time PocketC.H.I.P. does not support multiple displays.
 
 **Will my Bluetooth Device Work?**
-Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal (http://docs.getchip.com/#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
+Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal [here](http://docs.getchip.com/#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
 
 **Pinch-zooming isn't working, is my screen bad?**
 Your screen is fine. The resistive touchscreen used in PocketC.H.I.P. does not support pinch gestures.
 
 **How can I get PockulusC.H.I.P.?**
-Good news! You already almost have one. All you need to do is 3D print  the file at (https://github.com/NextThingCo/PockulusCHIP) or find a friend to do it for you.
+Good news! You already almost have one. All you need to do is 3D print the file at [here](https://github.com/NextThingCo/PockulusCHIP) or find a friend to do it for you.
+
+
+**How can I contact Next Thing Co.?**
+Send us an e-mail at ahoyahoy@nextthing.co.

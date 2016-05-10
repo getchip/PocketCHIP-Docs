@@ -20,7 +20,7 @@ PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-m
 
 ## Sleep and Shutdown
 
-![Power icon](images/power-icon.jpg)
+![Power icon](images/no_scale/power-icon.jpg)
 
 ### Sleep
 

@@ -10,7 +10,7 @@ PocketC.H.I.P. also has a second username called root, which should only be used
 
 Never login directly as root, since it is extremely ease to delete critical files in the system. Instead, use the system administration command sudo, which provides a bit of protection from accidentally breaking your system.
 
-For more information on using sudo, see the C.H.I.P. docs: [http://docs.getchip.com/#terminal-for-beginners-glossary](http://docs.getchip.com/#terminal-for-beginners-glossary)
+For more information on using sudo, see the C.H.I.P. docs [here](http://docs.getchip.com/#terminal-for-beginners-glossary).
 
 |Username 	| Password |
 | ------------- | -------- |
@@ -31,7 +31,7 @@ You'll be prompted for your current password, which is chip and then required to
 
 ![Flash PocketC.H.I.P](images/power-menu.png)
 
-To update your PocketC.H.I.P. to the latest factory settings, tap the power button and then press the flash software button. Then use a USB cable to connect PocketCHIP to a computer and follow the directions on [http://flash.getchip.com](http://flash.getchip.com). 
+To update your PocketC.H.I.P. to the latest factory settings, tap the power button and then press the flash software button. Then use a USB cable to connect PocketCHIP to a computer and follow the directions on [flashing](http://flash.getchip.com). 
 
 ![PocketC.H.I.P. connected to a computer via USB](images/laptop-and-pocketchip.jpg)
 

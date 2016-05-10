@@ -1,6 +1,6 @@
 # Glossary 
 
-**Apt-Get**: the package manager used for installing, upgrading, and removing application in Debian Linux.
+**apt-get**: the package manager used for installing, upgrading, and removing application in Debian Linux.
 
 **Bezel**: section of the case that clips around the touchscreen.
 
@@ -33,4 +33,7 @@ Debian: a version of the Linux Operating System that runs on PocketC.H.I.P..
 
 **Terminal**: a program used to enter text commands for the Operating System to execute or interpret.  
 
+
+
 **TRRS jack**: a connector commonly used for audio or video equipment. TRRS stands for tip, ring, ring, and sleeve and refers the the way the male connector is divided.
+

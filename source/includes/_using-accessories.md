@@ -11,6 +11,8 @@ PocketC.H.I.P. does not have a built-in speaker, but that doesn't mean it can't 
 
 ## Micro USB
 
+![Charging](images/wall-power.jpg)
+
 Use the micro USB port for charging PocketC.H.I.P. with a 5-volt, 1-amp power supply. Most cell phone chargers that use a USB-micro cable will work with PocketC.H.I.P.
 
 ## Standard USB

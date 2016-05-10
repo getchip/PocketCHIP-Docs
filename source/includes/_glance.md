@@ -46,7 +46,7 @@ While the case is open, check out the **“secret” prototyping area** and **GP
 
 Along the top edge of PocketC.H.I.P. are input and output pins from C.H.I.P.. These are great for attaching and controlling sensors, motors, and LEDs. 
 
-See C.H.I.P. documentation to learn how to use them [http://docs.getchip.com/#gpio](http://docs.getchip.com/#gpio).
+See C.H.I.P. documentation to learn how to use them [here](http://docs.getchip.com/#gpio).
 
 ## Pencil stand
 

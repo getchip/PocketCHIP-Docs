@@ -4,12 +4,12 @@
 
 Your PocketC.H.I.P. comes with six applications on the home screen.
 
-* PICO-8 - play, create, share 8-bit games
-* SUNVOX - listen or compose electronic music
-* Terminal - use a Linux shell to run commands 
-* Write - a lightweight text editor
-* File Browser - a graphical file browser
-* Help - the same documentation you're reading here, built-in to PocketC.H.I.P.
+* **PICO-8** - play, create, share 8-bit games
+* **SUNVOX** - listen or compose electronic music
+* **Terminal** - use a Linux shell to run commands 
+* **Write** - a lightweight text editor
+* **File Browser** - a graphical file browser
+* **Help** - the same documentation you're reading here, built-in to PocketC.H.I.P.
 
 ## PICO-8
 
@@ -21,7 +21,9 @@ Play games, change games, and make games with PICO-8! With a couple keystrokes, 
 
 ![Splore all the games](images/pico-splore-with-hands.jpg)
 
-PICO-8 starts in splore mode, which lets you select which game to load. If PocketC.H.I.P. is connected to WiFi, games created by the PICO-8 community can be downloaded and played here. Navigate the menus using the arrow keys, and press 8 to select a game.
+**PICO-8** starts in **splore mode**, which lets you select which game to load. 
+
+If PocketC.H.I.P. is connected to WiFi, **PICO-8 community made games** can be downloaded and played here. Navigate the menus using the arrow keys, and press 8 to select a game.
 
 * **Favourites:** Save games to this list by pressing ESC while in the game and selecting “Favourite”. Games on this list are playable even when you're not connected to WiFi.
 * **New:** Lists the newest additions to the PICO-8 community.
@@ -31,7 +33,7 @@ PICO-8 starts in splore mode, which lets you select which game to load. If Pocke
 * **Search:** Performs a text search of PICO-8's game library
 * **/:** Lets you navigate the PICO-8 folders on your PocketC.H.I.P.
 
-While in the splore mode, press ESC and select EXIT TO CONSOLE to start PICO-8's command line interface. PICO-8's command line commands are listed below:
+While in the splore mode, press **ESC** and select **EXIT TO CONSOLE** to start PICO-8's command line interface. PICO-8's command line commands are listed below:
 
 * **Help** 	lists the available commands
 * **Splore** 	return to cart explorer
@@ -54,13 +56,13 @@ Gamers, get ready to become game-makers. In addition to playing the community's 
 
 ###Code Editor
 
-Access the code editor from the command line by pressing ESC. If you are in the middle of a game, press ESC and select EDIT THIS CART to  edit the game's code. Some other helpful shortcuts are:
+**Access the code editor** from the command line by pressing **ESC**. If you are in the middle of a game, press **ESC** and select **EDIT THIS CART** to  edit the game's code. Some other helpful shortcuts are:
 
-Hold shift to select multiple characters or lines (or tap and drag)
-CTRL-X, C, V to cut, copy, or paste a selection
-CTRL-Z, Y to undo, redo
-CTRL-F, G to search for text, repeat search
-ALT-UP, DOWN to navigate to the previous, next function
+* **Hold SHIFT** to select multiple characters or lines (or tap and drag)
+* **CTRL-X**, **CTRL-C**, **CTRL-V** to cut, copy, or paste a selection
+* **CTRL-Z**, **CTRL-Y** to undo, redo
+* **CTRL-F**, **CTRL-G** to search for text, repeat search
+* **ALT-UP**, **ALT-DOWN** to navigate to the previous, next function
 
 
 The code editor is not the only editor in PICO-8. Access the other editors by tapping on the icons in the upper right-hand corner of the editor. 
@@ -75,25 +77,25 @@ Use the following tools to edit sprites:
 
 #### Draw Tool
 
-Click on the desired color and then click in the editor window to apply the color to each pixel
-Hold the left CONTROL button and click on a pixel to replace all of the same-colored pixels in the window with the selected color
+* Click on the desired color and then click in the editor window to apply the color to each pixel.
+* Hold the **left CONTROL** button and click on a pixel to replace all of the same-colored pixels in the window with the selected color.
 
 #### Stamp Tool
-Select an area of the sprite sheet that you want to copy using the select tool
-Select the stamp tool and click the location where you want the copied pixels to be pasted
-Hold Left-CONTROL to stamp with transparency (this pastes all of the non-black pixels in the selection)
+* Select an area of the sprite sheet that you want to copy using the select tool.
+* Select the stamp tool and click the location where you want the copied pixels to be pasted.
+* Hold **Left-CONTROL** to stamp with transparency (this pastes all of the non-black pixels in the selection).
 
 #### Select Tool // shortcut: left SHIFT or S
-Click and drag with the select tool to highlight an area of the sprite sheet
-Enter or click to select none
+* Click and drag with the select tool to highlight an area of the sprite sheet.
+* Enter or click to select none.
 
 #### Pan Tool // shortcut: space
-Click and drag to move around the sprite sheet
+* Click and drag to move around the sprite sheet.
 
 #### Fill Tool
-Fill an area with the selected color
-If you have selected an area of the sprite sheet, the fill will be limited to the selected area
-If no selection is active, the fill will be limited to the area in the editor window
+* Fill an area with the selected color.
+* If you have selected an area of the sprite sheet, the fill will be limited to the selected area.
+* If no selection is active, the fill will be limited to the area in the editor window.
 
 ### Map Editor
 ![Create your own levels](images/map.jpg)
@@ -104,7 +106,7 @@ The tools for the map editor work similarly to those in the sprite editor. Howev
 
 ![Customize sound effects](images/pico-soundfx.jpg)
 
-PICO-8's sound editor has two view modes: graph view and tracker view. Switch between modes by tapping on the graph and tracker buttons in the upper-left corner of the sound editor.
+PICO-8's sound editor has two view modes: **graph view** and **tracker view**. Switch between modes by tapping on the graph and tracker buttons in the upper-left corner of the sound editor.
 
 In both views, the number in the top left, under the view selector is the sound effect number. PICO-8 can handle 64 different effects. 
 
@@ -124,26 +126,27 @@ In graph mode, choose an instrument and then click-and-drag left-to-right to “
 In the tracker mode, each line of 6 dots represents a note. Each dot represents an aspect of the notes. In left-to-right order they are:
 
 #### Frequency
-* Denoted by the letter of the musical pitch 
-* Input the pitches, using the q2w3er5t6y7ui keys like a piano
-* Q is a 'C' note, W is a 'D' note
-* The number keys are the sharps and flats (like the black keys on a piano)
+* Denoted by the letter of the musical pitch. 
+* Input the pitches, using the q2w3er5t6y7ui keys like a piano.
+* Q is a 'C' note, W is a 'D' note.
+* The number keys are the sharps and flats (like the black keys on a piano).
 
 #### Octave
 
 For each note, choose octave 1, 2, 3, or 4 in the OCT field at the top, or type the corresponding number
-1 is the lowest octave and 4 is highest
+1 is the lowest octave and 4 is highest.
 
 #### Instrument
 
-Choose one of the instruments in the gray waveform boxes or type the corresponding number (0 through 7)
+Choose one of the instruments in the gray waveform boxes or type the corresponding number (0 through 7).
 
 #### Volume
 
-Choose volume level in the VOL field or type the corresponding number (0 through 7)
+Choose volume level in the VOL field or type the corresponding number (0 through 7).
+
 #### Effect
-Choose an effect from the boxes under the instruments or type the corresponding number (0 through 7)
-The 8 effects are
+Choose an effect from the boxes under the instruments or type the corresponding number (0 through 7).
+The 8 effects are:
 * 0 none 
 * 1 slide 
 * 2 vibrato 
@@ -167,15 +170,16 @@ PICO-8 can hold up to 64 song patterns.
 The SunVox tracker is a fully featured music production studio. It's lightweight, sounds great, and is designed to work with a stylus on a single, small screen. As a result, it's a perfect fit for for making music and playing with sound on PocketC.H.I.P.. 
 
 To get started launch SunVox, put on some headphones, press F9 (remember, you'll need to hold the FN key and press 9 to get F9) to start playback, and dive into a complete world of electronic sound.
+
 ### Interface Overview
-Here's a quick overview of what you see when you launch SunVox, and what the different parts of the interface do. Visit the [http://www.warmplace.ru/wiki/sunvox:manual_en](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings.
+Here's a quick overview of what you see when you launch SunVox, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings.
 
 ![SunVox screen areas notated](images/sunvox_editpattern_callout.jpg)
 
 ### Pattern Editor 
-The “Pattern Editor” in SunVox is like a page of sheet music. Instead of staffs, measures, clefs, notes, and articulations, it has 32 rows and several columns that represent pitch, timing, and even how a pitch is played (soft, hard, bright, etc). Patterns represent chunks of a song that will later be dropped into the timeline of the song and arranged with other patterns. 
+The Pattern Editor in SunVox is like a page of sheet music. Instead of staffs, measures, clefs, notes, and articulations, it has 32 rows and several columns that represent pitch, timing, and even how a pitch is played (soft, hard, bright, etc). Patterns represent chunks of a song that will later be dropped into the timeline of the song and arranged with other patterns. 
 
-Note: All the numbers are in hexadecimal ([https://en.wikipedia.org/wiki/Hexadecima](https://en.wikipedia.org/wiki/Hexadecimal)) so instead of the number “46”, you'll see “2E”. These notes can play drums, lead instruments that sound like a guitar (maybe), bass notes, or even atonal washes of sound. 
+Note: All the numbers are in hexadecimal ([see hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)) so instead of the number “46”, you'll see “2E”. These notes can play drums, lead instruments that sound like a guitar (maybe), bass notes, or even atonal washes of sound. 
 
 In the pattern editor you can add notes and note modifiers to compose patterns. Spacebar toggles edit mode on and off, use the arrow keys to select rows, use letters to enter notes, use numbers to enter (hexadecimal) values for velocity, module, and control values.
 
@@ -230,26 +234,26 @@ You can attach a MIDI keyboard or controller to PocketC.H.I.P.'s USB port and ha
 
 ## Terminal
 
-![image of terminal](images/terminal-icon.png)
+![image of terminal](images/no_scale/terminal-icon.png)
 
-Many may find the Terminal archaic, it's a place to type commands directly to the computer for execution and evaluation by the operating system. There are no icons, just text. Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the CHIP documentation (http://docs.getchip.com/#using-the-terminal) if you want to learn more.
+Many may find the Terminal archaic, it's a place to **type commands directly to the computer** for execution and evaluation by the operating system. There are no icons, just text. Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the CHIP documentation [here](http://docs.getchip.com/#using-the-terminal) if you want to learn more.
 
 
 ## Write
 
-![image of write](images/write-icon.png)
+![image of write](images/no_scale/write-icon.png)
 
-Need to jot down a note or write a quick reminder? Write is a minimalist text editor that's well suited for the task. If you're looking to code with Write, you'll be pleased to learn that it supports line numbering and auto indentation, just look under the “Option” menu.
+Need to jot down a note or write a quick reminder? **Write is a minimalist text editor** that's well suited for the task. If you're looking to code with Write, you'll be pleased to learn that it supports line numbering and auto indentation, just look under the “Option” menu.
 
 
 ## File Browser
 
-![image of file browser](images/browser-icon.png)
+![image of file browser](images/no_scale/browser-icon.png)
 
 The File Browser provides a visual representation of the files on your PocketC.H.I.P. using icons. Drag, drop, and double-click your way through this application for full control over every file on your device.
 
 ##Help
 
-![image of help icon](images/help-icon.png)
+![image of help icon](images/no_scale/help-icon.png)
 
 You are reading it right now. No kidding! This document is available online and locally on PocketC.H.I.P., which means anywhere PocketC.H.I.P. goes, help will be right there with it.
