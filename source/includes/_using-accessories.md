@@ -1,7 +1,9 @@
 #Using Accessories
 Just because **PocketC.H.I.P.** is complete with a keyboard and screen doesn't mean you can't add speakers, storage, or wireless gadgets to make it even more fun. 
 
-**PocketC.H.I.P. input and output ports are all handled by C.H.I.P.**. Chances are good that if an accessory works with C.H.I.P., it will work with PocketC.H.I.P.. ![Accessory ports](images/ports.jpg)
+**PocketC.H.I.P. input and output ports are all handled by C.H.I.P.**. Chances are good that if an accessory works with C.H.I.P., it will work with PocketC.H.I.P.. !
+
+![Accessory ports](images/ports.png)
 
 ## Audio
 
