@@ -88,11 +88,13 @@ Use the following tools to edit sprites:
 * Select the stamp tool and click the location where you want the copied pixels to be pasted.
 * Hold **CTRL** to stamp with transparency (this pastes all of the non-black pixels in the selection).
 
-#### Select Tool // shortcut: left SHIFT or S
+#### Select Tool 
+* Use the shortcut: **SHIFT** or **S** to save time.
 * Click and drag with the select tool to highlight an area of the sprite sheet.
 * Enter or click to select none.
 
-#### Pan Tool // shortcut: space
+#### Pan Tool
+* Use the shortcut: **Spacebar**.
 * Click and drag to move around the sprite sheet.
 
 #### Fill Tool
