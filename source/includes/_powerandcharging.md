@@ -24,18 +24,18 @@ PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-m
 
 ### Sleep
 
-Sleep is a low-power state that saves battery, and also saves you time, since it's faster for PocketC.H.I.P. to wake from sleep than to boot from a powered-off state.
+**Sleep** is a low-power state that saves battery, and also saves you time, since it's faster for PocketC.H.I.P. to wake from sleep than to boot from a powered-off state.
 
-To enter sleep mode, **press the power icon** in the bottom left corner of the home screen and **select “sleep.”** from the menu. 
+To enter sleep mode, **tap the power icon** in the bottom left corner of the home screen and **select “Sleep.”** from the menu. 
 
 PocketC.H.I.P. is designed to turn off the screen and backlight after a few minutes without any user interaction. 
 
-To wake from either sleep state, simply touch the screen.
+To wake from either sleep state, simply touch the screen or press a key.
 
-![Power menu](images/power-menu.png)
+![Power menu](images/power-menu.jpg)
 
 ### Shutdown
 
 Shutdown PocketC.H.I.P. by pressing the **power icon** in the bottom left corner of the home screen and **tapping “shutdown.”** 
 
-If for some reason, PocketC.H.I.P. becomes unresponsive, you can also shut down PocketC.H.I.P. by **holding down the HOME/Power button for eight (8) seconds**. This cuts battery power to PocketC.H.I.P. and shuts it off. Only use this method if all other methods do not work.
+If for some reason, PocketC.H.I.P. becomes unresponsive, you can also shut down PocketC.H.I.P. by **holding down the HOME/Power button for eight seconds**. This cuts battery power to PocketC.H.I.P. and shuts it off. Only use this method if all other methods do not work.

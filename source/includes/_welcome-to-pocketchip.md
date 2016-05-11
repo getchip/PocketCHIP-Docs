@@ -8,7 +8,7 @@ Hey! Thanks for checking out **PocketC.H.I.P.**!
 
 The point is, **PocketC.H.I.P. can be what you want it to be** and we're excited to see what you will do with your PocketC.H.I.P..
 
-These are the Docs, which are intended to help you get started with PocketC.H.I.P.. The Docs will introduce you to the software that comes pre-installed on PocketC.H.I.P., explain how to use the system, and hopefully plant some ideas about how you can do even more with your PocketC.H.I.P.
+These are the **Docs**, which are intended to help you get started with PocketC.H.I.P.. The Docs will introduce you to the software that comes pre-installed on PocketC.H.I.P., explain how to use the system, and hopefully plant some ideas about how you can do even more with your PocketC.H.I.P..
 
 The Docs will *not* teach you how to code (though it will give tips), how to program a game (though it will explain the tools), how to make music (though it will describe options), or how to build onto PocketC.H.I.P. (though it will encourage it).
 
@@ -19,7 +19,7 @@ This section explains how to **turn on PocketC.H.I.P.**, **setup WiFi**, and **c
 
 ![Step 1](images/image_1.png)
 
-Turn on PocketC.H.I.P. by pressing down the **Home/Power button** at the bottom, middle of the keyboard, for about 2 seconds. 
+**Turn on PocketC.H.I.P.** by pressing down the **Home/Power button** at the bottom, middle of the keyboard, for about **two seconds**. 
 
 ![Step 2](images/image_2.png)
 
@@ -33,7 +33,7 @@ Once you have clicked through the basics, you will see a screen with six icons. 
 
 Use a **finger** or **stylus** (or really anything that's solid and isn't sharp) to tap on the application you want to use. Press gently enough to make contact with the screen. There's no need to apply a lot of force. A gentle touch will do.
 
-While using  an application, **press the HOME/Power button to return to the HOME screen**.
+While using an application, **press the Home/Power button to return to the Home Screen**.
 
 ### WiFi Setup
 
@@ -46,14 +46,14 @@ Press the button to the right of the WiFi switch to open a menu of all the netwo
 When prompted, enter the network password in the text field, then touch the **[Connect]** button. It may take a few seconds to connect.
 
 ### Charging
-![image of PocketCHIP with cable plugged in](images/wall-power.jpg)
+![image of PocketC.H.I.P. with cable plugged in](images/wall-power.jpg)
 
-Plug PocketC.H.I.P. into a **5-volt 1A power** supply with a USB-micro cable to charge the **3.7V battery**.
+**Plug in PocketC.H.I.P.** to a **5-volt 1A power** supply with a USB-micro cable to charge the **3.7V battery**.
 
-Because it's C.H.I.P.'s on-board circuitry that manages the charging of PocketC.H.I.P.'s battery, the **C.H.I.P. must remain attached to PocketC.H.I.P. for battery charging**.
+Because it is C.H.I.P.'s on-board circuitry that manages the charging of PocketC.H.I.P.'s battery, the **C.H.I.P. must remain attached to PocketC.H.I.P. for battery charging**.
 
 PocketC.H.I.P. is **compatible with most cell phone chargers** that use a USB-micro cable.
 
 ### Troubleshooting
 
-If PocketC.H.I.P. becomes unresponsive, **hold down the Home/Power button for 8 seconds**. This will cut power to PocketC.H.I.P., and immediately shut it down. Only use this shutdown method if no other shutdown methods work.
+If PocketC.H.I.P. becomes unresponsive, **hold down the Home/Power button for eight seconds**. This will cut power to PocketC.H.I.P., and immediately shut it down. Only use this shutdown method if no other shutdown methods work.

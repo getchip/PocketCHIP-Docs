@@ -2,7 +2,7 @@
 
 ![Homescreen](images/homescreen.png)
 
-Your PocketC.H.I.P. comes with six applications on the home screen.
+Your PocketC.H.I.P. comes with six applications on the Home Screen.
 
 * **PICO-8** - play, create, share 8-bit games
 * **SUNVOX** - listen or compose electronic music
@@ -18,6 +18,8 @@ Your PocketC.H.I.P. comes with six applications on the home screen.
 ![Playing PICO-8 games](images/pico-play.jpg)
 
 Play games, change games, and make games with PICO-8! With a couple keystrokes, you can join the PICO-8 community and modify their games, or even make your own! 
+
+For more resources to learn PICO-8, check out this tutorial video series [link](https://www.youtube.com/playlist?list=PLjZAika8vyZkyOjoCp0EbHeIFZ8MLlhvg), this video how to make a basic game [link](https://www.youtube.com/watch?v=ZuaLuMhwcc8), and, of course, the PICO-8 Fanzine [link](https://sectordub.itch.io/pico-8-fanzine-1).
 
 ![Splore all the games](images/pico-splore-with-hands.jpg)
 
@@ -41,6 +43,7 @@ While in the splore mode, press **ESC** and select **EXIT TO CONSOLE** to start 
 * **cd [directory name]**   change to the desired directory
 * **cd ..**      go up a directory
 * **cd /**       change back to top directory (on PICO-8's virtual drive)
+* **keyconfig** customize the keys used by all games 
 * **mkdir**      make a new directory
 * **folder**     open the current directory in the host operating system's file browser
 * **load [name of game]**  load a game from the current directory (this is like putting a cartridge into the console)
@@ -58,7 +61,7 @@ Gamers, get ready to become game-makers. In addition to playing the community's 
 
 **Access the code editor** from the command line by pressing **ESC**. If you are in the middle of a game, press **ESC** and select **EDIT THIS CART** to  edit the game's code. Some other helpful shortcuts are:
 
-* **Hold SHIFT** to select multiple characters or lines (or tap and drag)
+* **Hold SHIFT** to select multiple characters or lines (or tap-and-drag)
 * **CTRL-X**, **CTRL-C**, **CTRL-V** to cut, copy, or paste a selection
 * **CTRL-Z**, **CTRL-Y** to undo, redo
 * **CTRL-F**, **CTRL-G** to search for text, repeat search
@@ -78,12 +81,12 @@ Use the following tools to edit sprites:
 #### Draw Tool
 
 * Click on the desired color and then click in the editor window to apply the color to each pixel.
-* Hold the **left CONTROL** button and click on a pixel to replace all of the same-colored pixels in the window with the selected color.
+* Hold the **CTRL** button and click on a pixel to replace all of the same-colored pixels in the window with the selected color.
 
 #### Stamp Tool
 * Select an area of the sprite sheet that you want to copy using the select tool.
 * Select the stamp tool and click the location where you want the copied pixels to be pasted.
-* Hold **Left-CONTROL** to stamp with transparency (this pastes all of the non-black pixels in the selection).
+* Hold **CTRL** to stamp with transparency (this pastes all of the non-black pixels in the selection).
 
 #### Select Tool // shortcut: left SHIFT or S
 * Click and drag with the select tool to highlight an area of the sprite sheet.
@@ -129,7 +132,7 @@ In the **tracker mode**, each line of **six dots represents a note**. Each dot r
 * Denoted by the letter of the musical pitch. 
 * Input the pitches, using the **q2w3er5t6y7ui** keys like a piano.
 * **Q** is a *C* note, **W** is a *D* note.
-* The number keys are the sharps and flats (like the black keys on a piano).
+* The number keys are the **sharps** and **flats** (like the black keys on a piano).
 
 #### Octave
 
@@ -172,18 +175,24 @@ The **SunVox tracker** is a fully featured music production studio. It's lightwe
 To get started launch **SunVox**, put on some headphones, press **F9** (remember, you'll need to **hold the FN key** and **press 9** to get **F9**) to start playback, and dive into a complete world of electronic sound.
 
 ### Interface Overview
-Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings.
+Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings. You may also find [this SunVox video](https://www.youtube.com/watch?v=FJh6yiKPqE4) helpful.
 
 ![SunVox screen areas notated](images/sunvox_editpattern_callout.jpg)
 
 ### Pattern Editor 
+
+![SunVox pattern editor](images/sunvox_editpattern.jpg)
+
 The **Pattern Editor** is **like a page of sheet music**. Instead of staffs, measures, clefs, notes, and articulations, it has 32 rows and several columns that represent pitch, timing, and even how a pitch is played (soft, hard, bright, *etc*).
 
 **Patterns represent chunks of a song** that will later be dropped into the timeline of the song and arranged with other patterns. 
 
 **Note:** All the numbers are in **hexadecimal** ([see hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)) so instead of the number *46*,  you'll see *2E*. These notes can play drums, lead instruments that sound like a guitar (maybe), bass notes, or even atonal washes of sound. 
 
-In the **pattern editor** you can **add notes and note modifiers to compose patterns**. **Spacebar** toggles edit mode on and off, use the **arrow keys** to select rows, use letters to enter notes, use **numbers** to enter (hexadecimal) values for velocity, module, and control values.
+In the **pattern editor** you can **add notes and note modifiers to compose patterns**. 
+
+
+**Spacebar** toggles edit mode on and off, use the **arrow keys** to select rows, use **letters** to enter notes, use **numbers** to enter (hexadecimal) values for velocity, module, and control values.
 
 ### Touch Keyboard
 The **Touch Keyboard** is in the middle of the screen. Tap on it and you'll hear sound.
@@ -194,22 +203,24 @@ You can also use **PocketC.H.I.P.'s QWERTY keyboard** to enter notes. To enter n
 
 From left to right across the bottom row of the keyboard, the notes ascend. 
 
-For sharp and flat notes, use the row above. For example, **S** is a c-sharp because it is above and between the **Z** and **X** keys (similar to where the c-sharp key is on a piano, above and between the c and d notes). 
+For **sharp** and **flat** notes, use the row above. For example, **S** is a c-sharp because it is above and between the **Z** and **X** keys (similar to where the c-sharp key is on a piano, above and between the c and d notes). 
 
 ### Modules (synths and effects) 
 
+![SunVox modules](images/sunvox_modules.jpg)
+
 The **Module Editor** is located below the **Touch Keyboard** on its right. This includes the **different instruments**, **synthesizers**, or **effects** you can use to change the sounds that you put into the patterns above. You can add new modules, delete current modules or rearrange modules to fit your needs. 
 
-With any sounds you make, you need something to generate the sound first. Double-tap on the background in the **module editor** and then choose a **generator** from the list. Once you've picked a generator need to **connect it to the output**. Do this by holding shift and then tapping and dragging from the generator to the OUT box 
+With any sounds you make, you need something to generate the sound first. Double-tap on the background in the **module editor** and then choose a **generator** from the list. Once you've picked a generator need to **connect it to the output**. Do this by **holding SHIFT** and then tapping and dragging from the generator to the OUT box 
 
-You can also add **effects** to the sounds made by the generator. Double-tap in the background again and choose an effect from the list. Now change the route the sound goes through by tapping and dragging from the generator to the effect. Then tap and drag from the effect to the output box. 
+You can also add **effects** to the sounds made by the generator. Double-tap in the background again and choose an effect from the list. Now change the route the sound goes through by tapping and dragging from the generator to the effect. Then tap-and-drag from the effect to the output box. 
 
 You can have **multiple instruments** and **different paths** for the sound in the editor at one time. When editing patterns, tap on the generator you want to use and then edit the pattern. Changes to the pattern will be made using the currently selected generator.
 
 **To delete an effect or generator**, double-tap the module and tap the delete button.
 
 ### Parameter Controls 
-The bottom left corner of the interface is the **Parameter Controls** for the currently selected module. Violin players can bend a string and change how they bow, vocalists can shape their mouths and vocal chords, electric guitarists can stomp on pedals and hit the whammy bar, synthesizer nerds can turn knobs and sliders. In SunVox, you can modify how a synth or effect sounds using the horizontal sliders in the Parameter Controls. 
+**Parameter Controls** for the currently selected module are in the bottom left corner of the interface. Violin players can bend a string and change how they bow, vocalists can shape their mouths and vocal chords, electric guitarists can stomp on pedals and hit the whammy bar, synthesizer nerds can turn knobs and sliders. In SunVox, you can modify how a synth or effect sounds using the horizontal sliders in the Parameter Controls. 
 
 Tap on a module and use the Parameter Controls on the left to modify the sound. Play the (piano or PocketC.H.I.P.) keyboard to hear the sound of a synth module. Use **CTRL-arrows** to jump to different modules. **SHIFT-drag** to connect and disconnect modules. 
 
@@ -223,15 +234,19 @@ Record new pattern into timeline, play from beginning, play, play pattern, stop.
 Change the octave of the touch keyboard.
 
 #### Edit Pattern Indicator
-When locked, you can't make changes to the pattern. Spacebar unlocks the world of pattern editing!
+When locked, you can't make changes to the pattern. 
+
+**Spacebar** unlocks the world of pattern editing!
 
 #### Volume
+
 Tap-and-drag the volume control to change output volume.
 
 #### Menu Items
 Sunvox has one simple menu. Tap here to save and load projects, set preferences like **MIDI controllers**, and the ultra-fun **Touch Theremin** feature! Select it in the Menu, and start making some noise!
 
 #### Switch To Timeline 
+
 The **Timeline** allows you to place, move, and rearrange patterns to create a song. On PocketC.H.I.P.'s small screen, you'll need to use the **Switch To Timeline** button. 
 
 In **Timeline**, you can also freely record notes while you play them with the **Record** button, or you can clone patterns to repeat them. Move the patterns blocks around to create your composition. When finished, you can render a finished stereo file and distribute it as you want!
@@ -245,14 +260,16 @@ You can attach a **MIDI keyboard or controller** to PocketC.H.I.P.'s USB port an
 
 ![image of terminal](images/no_scale/terminal-icon.png)
 
-Many may find the **Terminal** archaic or intimidating, it's a place to **type commands directly to the computer** for execution and evaluation by the operating system. There are no icons, just text. Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the CHIP documentation [here](http://docs.getchip.com/#using-the-terminal) if you want to learn more.
+Many may find the **Terminal** archaic or intimidating, it's a place to **type commands directly to the computer** for execution and evaluation by the operating system. There are no icons, just text. 
+
+Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the C.H.I.P. documentation [here](http://docs.getchip.com/#using-the-terminal) if you want to learn more.
 
 
 ## Write
 
 ![image of write](images/no_scale/write-icon.png)
 
-**Write is a minimalist text editor** that's well suited for the task. If you're looking to code with Write, you'll be pleased to learn that it supports line numbering and auto indentation, just look under the “Option” menu.
+**Write is a minimalist text editor** that's well suited for basic text entry tasks. If you're looking to code with Write, you'll be pleased to learn that it supports line numbering and auto indentation, just look under the “Option” menu.
 
 
 ## File Browser

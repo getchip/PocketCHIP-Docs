@@ -6,7 +6,7 @@
 
 ![touchscreen](images/finger-on-screen.jpg)
 
-**PocketC.H.I.P.** features a **4.3" display** made up of **480 x 272 pixels**. The display is **resistive touch** and responds to tapping and sliding. That means you can use a finger or almost any object that isn't sharp -- you don't want to scratch your screen.
+**PocketC.H.I.P.** features a **4.3" display** made up of **480 x 272 pixels**. The display is **resistive touch** and responds to **tapping** and **sliding**. This means you can use a finger or almost any object that isn't sharp -- you don't want to scratch your screen.
 
 **Tap once** to open apps, press buttons, and close windows.
 
