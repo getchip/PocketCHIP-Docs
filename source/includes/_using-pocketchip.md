@@ -12,18 +12,18 @@ Never login directly as root, since it is extremely ease to delete critical file
 
 For more information on using sudo, see the C.H.I.P. docs [here](http://docs.getchip.com/#terminal-for-beginners-glossary).
 
-|Username 	| Password |
+|**Username** 	| **Password** |
 | ------------- | -------- |
 |chip		| chip     |
 |root		| chip     |
 
 
 ### Changing Your Password
-You should change your password for both the chip and root account to something other than chip. Open the terminal application from the PocketC.H.I.P. home screen, type the following command:
+You should change your password for both the chip and root account to something other than chip. Open the terminal application from the PocketC.H.I.P. Home Screen, type the following command:
 
 *passwd*
 
-and press ENTER.
+and press **ENTER**.
 
 You'll be prompted for your current password, which is chip and then required to enter in your new password twice. That's it!
 
@@ -31,7 +31,7 @@ You'll be prompted for your current password, which is chip and then required to
 
 ![Flash PocketC.H.I.P](images/power-menu.png)
 
-To update your PocketC.H.I.P. to the latest factory settings, tap the power button and then press the flash software button. Then use a USB cable to connect PocketCHIP to a computer and follow the directions on [flashing](http://flash.getchip.com). 
+To flash your PocketC.H.I.P. to the latest factory image, tap the power button and then press the flash software button. Then use a USB cable to connect PocketC.H.I.P. to a computer and follow the directions on [flashing](http://flash.getchip.com). 
 
 ![PocketC.H.I.P. connected to a computer via USB](images/laptop-and-pocketchip.jpg)
 

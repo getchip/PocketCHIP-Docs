@@ -10,7 +10,7 @@
 
 **Tap once** to open apps, press buttons, and close windows.
 
-**Press and slide** to scroll, adjust sliderbars, and resize windows.
+**Press and slide** to scroll, adjust sliders, and resize windows.
 
 ## Keyboard
 
@@ -46,7 +46,7 @@ While the case is open, check out the **“secret” prototyping area** and **GP
 
 Along the top edge of PocketC.H.I.P. are input and output pins from C.H.I.P.. These are great for attaching and controlling sensors, motors, and LEDs. 
 
-See C.H.I.P. documentation to learn how to use them [here](http://docs.getchip.com/#gpio).
+See the C.H.I.P. documentation to learn how to use them [here](http://docs.getchip.com/#gpio).
 
 ## Pencil stand
 

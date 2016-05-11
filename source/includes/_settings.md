@@ -9,10 +9,9 @@ Use the **PocketC.H.I.P.** settings to change **WiFi**, **screen brightness**, o
 
 From the Home Screen, tap the settings icon in the bottom right corner to access the Settings screen. Then tap the switch next to the WiFi icon to turn WiFi on. 
 
-Press the button to the right of the WiFi switch to open a menu of all the networks in range. Scroll through the list and select your network. If needed, tap the down arrow to see more networks.
+Press the button to the right of the WiFi switch to open a menu of all the networks in range. Scroll through the list by tapping the onscreen arrows, and select your network by tapping on its name.
 
-
-When prompted, enter the network password in the text field, then touch the [Connect] button. It may take a few seconds to connect.
+When prompted, enter the network password in the text field, then touch the **[Connect]** button. It may take a few seconds to connect.
 
 Currently only WiFi is configurable from the PocketC.H.I.P graphical interface. If you want to configure Bluetooth, consult the C.H.I.P. documentation page [here](http://docs.getchip.com).
 

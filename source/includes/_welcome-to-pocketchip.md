@@ -8,7 +8,7 @@ Hey! Thanks for checking out **PocketC.H.I.P.**!
 
 The point is, **PocketC.H.I.P. can be what you want it to be** and we're excited to see what you will do with your PocketC.H.I.P..
 
-These are the Docs, which are intended to help you get started with PocketC.H.I.P.. The Docs will introduce you to the the software that comes pre-installed on PocketC.H.I.P., explain how to use the system, and hopefully plant some ideas about how you can do even more with your PocketC.H.I.P.
+These are the Docs, which are intended to help you get started with PocketC.H.I.P.. The Docs will introduce you to the software that comes pre-installed on PocketC.H.I.P., explain how to use the system, and hopefully plant some ideas about how you can do even more with your PocketC.H.I.P.
 
 The Docs will *not* teach you how to code (though it will give tips), how to program a game (though it will explain the tools), how to make music (though it will describe options), or how to build onto PocketC.H.I.P. (though it will encourage it).
 
