@@ -29,10 +29,11 @@ Some buttons are labeled to the top, left with **white text on a pink background
 For example: **Holding FN** and **pressing J** types **>**
 
 ## Removable enclosure
-
-![Bezel](images/bezel.jpg)
+![Exploded View](images/exploded.jpg)
 
 **PocketC.H.I.P.** is extremely hackable and we encourage you to modify the hardware. It is **easy to take apart**, since there are no screws used in the assembly. 
+
+![Bezel](images/bezel.jpg)
 
 If you want to fully disassemble PocketC.H.I.P., first (carefully) **remove C.H.I.P.** from the back of PocketC.H.I.P.. Then flip PocketC.H.I.P. around and **remove the frame** (technically known as a bezel) around the perimeter of the screen. **Remove the back case** of PocketC.H.I.P. by pressing the tabs above the screen and on either side of the Home/Power button.
 

@@ -10,9 +10,10 @@ Yes. PocketC.H.I.P. and C.H.I.P. are open source hardware. We encourage you to m
 **Will my microUSB charge work with PocketC.H.I.P.?**
 PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-micro cable. PocketC.H.I.P. needs a power supply capable of outputting 5-volts with at least 1 amp.
 
-
 **Can I connect PocketC.H.I.P. to a second display?**
 No. At this time PocketC.H.I.P. does not support multiple displays.
+
+**Is it OK to eat PocketC.H.I.P.?** No! Neither C.H.I.P. nor PocketC.H.I.P. should ever be eaten, even by C.H.I.P.py Ruxpin. 
 
 **Will my Bluetooth Device Work?**
 Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal [here](http://docs.getchip.com/#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
