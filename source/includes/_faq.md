@@ -1,13 +1,12 @@
 # FAQ
 
 **Can I take C.H.I.P. out of PocketC.H.I.P. use it?**
-Not without reflashing. The C.H.I.P.s in PocketC.H.I.P. run a custom graphics software that's designed for monitors and keyboards. It will boot, but the resolution and input will not be easy to use. Consider flashing your C.H.I.P. with a C.H.I.P. image.
+At this time, it will not work as expected without reflashing. The C.H.I.P.s in PocketC.H.I.P. run a custom graphics software that's designed for the touchscreen and PocketC.H.I.P. keyboard. C.H.I.P. may boot, but the resolution and input will not work as expected.
 
 **Is it Legal to Modify PocketC.H.I.P.?**
 Yes. PocketC.H.I.P. and C.H.I.P. are open source hardware. We encourage you to modify PocketC.H.I.P. and be sure to share what you've done with our community!
 
-
-**Will my microUSB charge work with PocketC.H.I.P.?**
+**Will my microUSB charger work with PocketC.H.I.P.?**
 PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-micro cable. PocketC.H.I.P. needs a power supply capable of outputting 5-volts with at least 1 amp.
 
 **Can I connect PocketC.H.I.P. to a second display?**
