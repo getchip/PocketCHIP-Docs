@@ -12,7 +12,7 @@ The top left corner of the screen shows your battery level, and PocketC.H.I.P. w
 
 ![Charging PocketC.H.I.P. ](images/wall-power.jpg)
 
-**Plug PocketC.H.I.P. into a 5-volt 1A power supply with a USB-micro cable to charge the 3.7V battery.**
+**Plug PocketC.H.I.P. into a 5-volt 1.5A power supply with a USB-micro cable to charge the 3.7V battery.**
 
 Because it's C.H.I.P.'s on-board circuitry that manages the charging of PocketC.H.I.P.'s battery, the C.H.I.P. must remain attached to PocketC.H.I.P. for battery charging.
 

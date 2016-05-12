@@ -48,7 +48,7 @@ When prompted, enter the network password in the text field, then touch the **[C
 ### Charging
 ![image of PocketC.H.I.P. with cable plugged in](images/wall-power.jpg)
 
-**Plug in PocketC.H.I.P.** to a **5-volt 1A power** supply with a USB-micro cable to charge the **3.7V battery**.
+**Plug in PocketC.H.I.P.** to a **5-volt 1.5A power** supply with a USB-micro cable to charge the **3.7V battery**.
 
 Because it is C.H.I.P.'s on-board circuitry that manages the charging of PocketC.H.I.P.'s battery, the **C.H.I.P. must remain attached to PocketC.H.I.P. for battery charging**.
 

@@ -1,6 +1,6 @@
 # FAQ
 
-**Can I take C.H.I.P. out of PocketC.H.I.P. use it?**
+**Can I take C.H.I.P. out of PocketC.H.I.P. and use it?**
 At this time, it will not work as expected without reflashing. The C.H.I.P.s in PocketC.H.I.P. run a custom graphics software that's designed for the touchscreen and PocketC.H.I.P. keyboard. C.H.I.P. may boot, but the resolution and input will not work as expected.
 
 **Is it Legal to Modify PocketC.H.I.P.?**
