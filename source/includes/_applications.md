@@ -13,13 +13,15 @@ Your PocketC.H.I.P. comes with six applications on the Home Screen.
 
 ## PICO-8
 
+![PICO-8 icon](images/no_scale/pico8-icon.jpg)
+
 ### Play PICO-8
 
 ![Playing PICO-8 games](images/pico-play.jpg)
 
 Play games, change games, and make games with PICO-8! With a couple keystrokes, you can join the PICO-8 community and modify their games, or even make your own! 
 
-For more resources to learn PICO-8, check out this tutorial video series [link](https://www.youtube.com/playlist?list=PLjZAika8vyZkyOjoCp0EbHeIFZ8MLlhvg), this video how to make a basic game [link](https://www.youtube.com/watch?v=ZuaLuMhwcc8), and, of course, the PICO-8 Fanzine [link](https://sectordub.itch.io/pico-8-fanzine-1).
+For more resources to learn PICO-8, search YouTube for **PICO-8** videos and check out the PICO-8 Fanzine [link](https://sectordub.itch.io/pico-8-fanzine-1).
 
 ![Splore all the games](images/pico-splore-with-hands.jpg)
 
@@ -53,11 +55,13 @@ While in the splore mode, press **ESC** and select **EXIT TO CONSOLE** to start 
 
 ### Make Games (with PICO-8)
 
-![Write your own PICO-8 games](images/pico-code.jpg)
+![Edit Screens](images/pico8-icon-callout.png)
 
-Gamers, get ready to become game-makers. In addition to playing the community's games, PICO-8 allows you to modify existing games, or create games of your own using the code, graphics, and sound editors. 
+Gamers, get ready to become game-makers. In addition to playing the community's games, PICO-8 allows you to modify existing games, or create games of your own using the code, graphics, and sound editors. See the image above to learn which icon stands for which editing mode, and keep reading for an explanation of each mode.
 
 ###Code Editor
+
+![Write your own PICO-8 games](images/pico-code.jpg)
 
 **Access the code editor** from the command line by pressing **ESC**. If you are in the middle of a game, press **ESC** and select **EDIT THIS CART** to  edit the game's code. Some other helpful shortcuts are:
 
@@ -172,12 +176,15 @@ The **music editor** allows **up to four effects at a time** for your game's sou
 
 
 ## SunVox
+
+![SunVox Icon](images/no_scale/sunvox-icon.png)
+
 The **SunVox tracker** is a fully featured music production studio. It's lightweight, sounds great, and is designed to work with a stylus on a single, small screen. As a result, it's a perfect fit for for making music and playing with sound on PocketC.H.I.P.. 
 
 To get started launch **SunVox**, put on some headphones, press **F9** (remember, you'll need to **hold the FN key** and **press 9** to get **F9**) to start playback, and dive into a complete world of electronic sound.
 
 ### Interface Overview
-Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings. You may also find [this SunVox video](https://www.youtube.com/watch?v=FJh6yiKPqE4) helpful.
+Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings. There are also lots of introductory SunVox videos on YouTube, just search for **SunVox intro videos**.
 
 ![SunVox screen areas notated](images/sunvox_editpattern_callout.jpg)
 
@@ -189,7 +196,7 @@ The **Pattern Editor** is **like a page of sheet music**. Instead of staffs, mea
 
 **Patterns represent chunks of a song** that will later be dropped into the timeline of the song and arranged with other patterns. 
 
-**Note:** All the numbers are in **hexadecimal** ([see hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)) so instead of the number *46*,  you'll see *2E*. These notes can play drums, lead instruments that sound like a guitar (maybe), bass notes, or even atonal washes of sound. 
+**Note:** All the numbers are in **hexadecimal**, so instead of the number *46*,  you'll see *2E*. These notes can play drums, lead instruments that sound like a guitar (maybe), bass notes, or even atonal washes of sound. 
 
 In the **pattern editor** you can **add notes and note modifiers to compose patterns**. 
 
@@ -282,6 +289,6 @@ The **File Browser** provides a **visual representation** of the files on your P
 
 ##Help
 
-![image of help icon](images/no_scale/help-icon.png)
+![image of help icon](images/no_scale/help-icon.jpg)
 
 You are reading it right now. No kidding! This document is available online and locally on PocketC.H.I.P., which means anywhere PocketC.H.I.P. goes, help will be right there with it.
