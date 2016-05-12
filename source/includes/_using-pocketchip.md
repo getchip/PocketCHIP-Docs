@@ -4,7 +4,7 @@
 
 **PocketC.H.I.P.** has a few keyboard shortcuts that will make it faster for you to do common tasks on the device.
 
-* Hold **ALT** and press **TAB** to change the current window (also known as window focus). 
+* Hold **CTRL** and press **TAB** to change the current window (also known as window focus). 
 
 * Hold **CTRL** and press **q** to quit an application.
 
