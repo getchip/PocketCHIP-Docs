@@ -181,12 +181,25 @@ The **music editor** allows **up to four effects at a time** for your game's sou
 
 The **SunVox tracker** is a fully featured music production studio. It's lightweight, sounds great, and is designed to work with a stylus on a single, small screen. As a result, it's a perfect fit for for making music and playing with sound on PocketC.H.I.P.. 
 
-To get started launch **SunVox**, put on some headphones, press **F9** (remember, you'll need to **hold the FN key** and **press 9** to get **F9**) to start playback, and dive into a complete world of electronic sound.
+To get started launch **SunVox**, put on some headphones, press **SHIFT-space** to start playback, and dive into a complete world of electronic sound.
 
 ### Interface Overview
 Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings. There are also lots of introductory SunVox videos on YouTube, just search for **SunVox intro videos**.
 
 ![SunVox screen areas notated](images/sunvox_editpattern_callout.jpg)
+
+### Keyboard Shortcuts
+
+We've modified some of the default keyboard shortcuts to work better with the PocketC.H.I.P. keyboard. Here's what's different:
+
+Command | Keys 
+--- | --- 
+play | Shift-space 
+stop | Shift-v
+play from beginning | Shift-b
+play pattern | Shift-n
+record | Shift-r
+octaves 0-8 | Shift-[0-8]
 
 ### Pattern Editor 
 
@@ -199,7 +212,6 @@ The **Pattern Editor** is **like a page of sheet music**. Instead of staffs, mea
 **Note:** All the numbers are in **hexadecimal**, so instead of the number *46*,  you'll see *2E*. These notes can play drums, lead instruments that sound like a guitar (maybe), bass notes, or even atonal washes of sound. 
 
 In the **pattern editor** you can **add notes and note modifiers to compose patterns**. 
-
 
 **Spacebar** toggles edit mode on and off, use the **arrow keys** to select rows, use **letters** to enter notes, use **numbers** to enter (hexadecimal) values for velocity, module, and control values.
 
