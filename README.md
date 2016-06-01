@@ -1,9 +1,9 @@
-# Next Thing PocketC.H.I.P. Documentation
+# Next Thing DIP Documentation
 
 
-All documentation is written in markdown and staged on github pages. Published documentation is viewable [on the github pages](http://getchip.github.io/chipdocs/#introduction) or [getchip site](http://docs.getchip.com).
+All documentation is written in markdown and staged on github pages. Published documentation is viewable on the github pages.
 
-If you want to add or modify a document, add your markdown file to the [includes](https://github.com/getchip/chipdocs/tree/master/source/includes) directory and make a pull request. You can use [Github markdown](https://help.github.com/articles/github-flavored-markdown/) or [regular markdown](https://daringfireball.net/projects/markdown/syntax). 
+If you want to add or modify a document, add your markdown file to the [includes](https://github.com/NextThingCo/DIP-Docs/tree/master/source/includes) directory and make a pull request. You can use [Github markdown](https://help.github.com/articles/github-flavored-markdown/) or [regular markdown](https://daringfireball.net/projects/markdown/syntax). 
 
 Each include represents a top-level topic in the left-hand navigation if it is in the list of includes in `index.html`.
 
@@ -29,8 +29,8 @@ Install the following packages, then jump to the Preview section.
 sudo apt-get install git ruby-dev
 sudo gem install bundler
 cd 
-git clone git@github.com:NextThingCo/PocketCHIP-Docs.git
-cd PocketCHIP-Docs
+git clone git@github.com:NextThingCo/DIP-Docs.git
+cd DIP-Docs
 bundle install
 ```
 
@@ -39,7 +39,7 @@ bundle install
 #### Getting El Capitan to Behave
 Installing on El Capitan (OS X 10.11) can be difficult. 
 Once you clone the directory, you may need to `cd` to the chipdocs directory, then run the command `bundle install`. 
-If you get errors when you try to run `rake publish` after that, try `bundle update` to install the bundler, and then try `rake publish` again. 
+If you get errors when you try to run `./deploy.sh` after that, try `bundle update` to install the bundler, and then try `./deploy.sh` again. 
 
 There may be some other black magic involved in getting it working on El Capitan, including:
 ```
@@ -58,5 +58,5 @@ bundle exec middleman server
 
 ### Publish
 
-If you are a contributor, it is easy to publish any changes you make. First, push your local changes to the master branch, then, in a terminal `cd` to your local repo and use the command `rake publish`. This will render static html pages, and push the changes to the gh-pages branch of this repo, making them live at http://docs.getchip.com
+If you are a contributor, it is easy to publish any changes you make. First, push your local changes to the master branch, then, in a terminal `cd` to your local repo and use the command `./deploy.sh`. This will render static html pages, and push the changes to the gh-pages branch of this repo, making them live at http://docs.getchip.com
 
