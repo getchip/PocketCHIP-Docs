@@ -58,5 +58,4 @@ bundle exec middleman server
 
 ### Publish
 
-If you are a contributor, it is easy to publish any changes you make. First, push your local changes to the master branch, then, in a terminal `cd` to your local repo and use the command `./deploy.sh`. This will render static html pages, and push the changes to the gh-pages branch of this repo, making them live at http://docs.getchip.com
-
+The normal Slate workflow requires that changes to the master branch be commited and pushed. Then, the `deploy.sh` script can be run locally to render HTML, push changes to the `gh-pages` branch, and made live. We've modified the workflow so an external script monitors this repo, renders any changes to the HTML, then merges with the other "-Docs" and "landingpage" repositories in this organization to create the "masterdocs" repository. Ultimately it all ends up at [docs.getchip.com](http://docs.getchip.com)
