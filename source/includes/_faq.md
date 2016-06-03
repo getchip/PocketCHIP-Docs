@@ -6,6 +6,9 @@ At this time, it will not work as expected without reflashing. The C.H.I.P.s in 
 **Is it Legal to Modify PocketC.H.I.P.?**
 Yes. PocketC.H.I.P. and C.H.I.P. are open source hardware. We encourage you to modify PocketC.H.I.P. and be sure to share what you've done with our community!
 
+**Is PocketC.H.I.P. Open Source?**
+Yes, and you can get the hardware files at our [github repo](https://github.com/NextThingCo/PocketCHIP-PCB).
+
 **Will my microUSB charger work with PocketC.H.I.P.?**
 PocketC.H.I.P. is compatible with with most cell phone chargers that use a USB-micro cable. PocketC.H.I.P. needs a power supply capable of outputting 5-volts with at least 1 amp.
 
