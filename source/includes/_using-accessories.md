@@ -11,7 +11,7 @@ Just because **PocketC.H.I.P.** is complete with a keyboard and screen doesn't m
 
 **PocketC.H.I.P.** does not have a built-in speaker, but that doesn't mean it can't output sound.
 
-To listen to audio from PocketC.H.I.P., **attach any wired headphones or speakers to the audio jack** at the top of the device. This jack is known as a TRRS jack and can accommodate headphones with built-in microphones. 
+To listen to audio from PocketC.H.I.P., **attach any wired headphones or speakers to the audio jack** at the top of the device. This jack is known as a TRRS jack and can accommodate headphones. With a [simple modification to the C.H.I.P.](chip.html#microphone-and-audio-input), the TRRS jack can accomodate headphones that have built-in microphones.
 
 ## Micro-USB
 
