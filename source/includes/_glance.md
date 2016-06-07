@@ -22,7 +22,7 @@ Each button is labeled with **pink text**, which identifies the default button b
 
 For example: **Holding SHIFT** and **pressing 1** types **!** 
 
-Some buttons are labeled to the top, left with **white text on a pink background**. These keys are mostly located on the right side of PocketC.H.I.P.'s keyboard and are for characters like function keys (**F1**, **F2**, ... **F11**) and lesser used punctuation marks (**{}<>|;**). To type these specialized characters, **hold the FN key** and press the desired button.
+Some buttons are labeled to the top-left with **white text on a pink background**. These keys are mostly located on the right side of PocketC.H.I.P.'s keyboard and are for characters like function keys (**F1**, **F2**, ... **F11**) and lesser used punctuation marks (**{}<>|;**). To type these specialized characters, **hold the FN key** and press the desired button.
 
 ![Function keys](images/function-keys.jpg)
 

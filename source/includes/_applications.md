@@ -9,7 +9,7 @@ Your PocketC.H.I.P. comes with six applications on the Home Screen.
 * **Terminal** - use a Linux shell to run commands 
 * **Write** - a lightweight text editor
 * **File Browser** - a graphical file browser
-* **Help** - the same documentation you're reading here, built-in to PocketC.H.I.P.
+* **Help** - the same documentation you're reading here, built into to PocketC.H.I.P.
 
 ## PICO-8
 
@@ -27,7 +27,7 @@ For more resources to learn PICO-8, search YouTube for **PICO-8** videos and che
 
 **PICO-8** starts in **splore mode**, which lets you select which game to load. 
 
-If PocketC.H.I.P. is connected to WiFi, **PICO-8 community made games** can be downloaded and played here. Navigate the menus using the arrow keys, and press 8 to select a game.
+If PocketC.H.I.P. is connected to WiFi, **PICO-8 community made games** can be downloaded and played here. Navigate the menus using the arrow keys, and press 0 to select a game.
 
 * **Favourites:** Save games to this list by pressing **ESC** while in the game and selecting “Favourite”. Games on this list are playable even when you're not connected to WiFi.
 * **New:** Lists the newest additions to the PICO-8 community.

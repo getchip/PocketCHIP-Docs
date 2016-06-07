@@ -21,8 +21,6 @@ This section explains how to **turn on PocketC.H.I.P.**, **setup WiFi**, and **c
 
 **Turn on PocketC.H.I.P.** by pressing down the **Home/Power button** at the bottom, middle of the keyboard, for about **two seconds**. 
 
-![Step 2](images/image_2.png)
-
 **PocketC.H.I.P.** will take a moment to fully load, but while it does you will see the C.H.I.P. logo and then a PocketC.H.I.P. splash screen. 
 
 Once PocketC.H.I.P. is ready you will see a series of slides showing the PocketC.H.I.P. basics. Use the **right arrow key** or **tap the right side of the screen** to advance forward in the slideshow.
