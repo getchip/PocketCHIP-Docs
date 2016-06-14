@@ -181,7 +181,7 @@ The **music editor** allows **up to four effects at a time** for your game's sou
 
 The **SunVox tracker** is a fully featured music production studio. It's lightweight, sounds great, and is designed to work with a stylus on a single, small screen. As a result, it's a perfect fit for for making music and playing with sound on PocketC.H.I.P.. 
 
-To get started launch **SunVox**, put on some headphones, press **SHIFT-space** to start playback, and dive into a complete world of electronic sound.
+To get started launch **SunVox**, put on some headphones, press **SHIFT-space** to start playback, and dive into a complete world of electronic sound. While SunVox is pretty much limitless in its configuration, C.H.I.P. has limied CPU and memory resources. Keep in mind if you add a lot of filters, reverbs, and delays, SunVox might stutter on playback. It's also a good idea to quit any other processes running on C.H.I.P. using ALT-tab to go to other applications and windows and CTL-q to quit them.
 
 ### Interface Overview
 Here's a quick overview of what you see when you launch **SunVox**, and what the different parts of the interface do. Visit [the SunVox page](http://www.warmplace.ru/wiki/sunvox:manual_en) for more information, including complete keyboard mappings. There are also lots of introductory SunVox videos on YouTube, just search for **SunVox intro videos**.
