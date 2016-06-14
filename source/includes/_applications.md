@@ -285,7 +285,22 @@ Many may find the **Terminal** archaic or intimidating, it's a place to **type c
 
 Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the C.H.I.P. documentation [here](http://docs.getchip.com/#using-the-terminal) if you want to learn more.
 
+### Terminal Top Buttons
 
+![Terminal buttons](images/noscale/application_terminal_top.jpg)
+
+The Terminal has a few small buttons at top.  From left to right, they are:
+
+  * New Tab
+  * Close Tab
+  * Zoom in (increase font size)
+  * Zoom out (decrease font size) 
+  * Copy selected text
+  * Previous tab
+  * Next tab
+  * Flip toolbar
+  * Paste - Paste selected text (can be from another tab, not in another application)
+  
 ## Write
 
 ![image of write](images/no_scale/write-icon.png)
