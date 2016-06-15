@@ -287,7 +287,7 @@ Use the terminal to dive into the operating system’s guts, quickly move files 
 
 ### Terminal Top Buttons
 
-![Terminal buttons](images/noscale/application_terminal_top.jpg)
+![Terminal buttons](images/no_scale/application_terminal_top.jpg)
 
 The Terminal has a few small buttons at top.  From left to right, they are:
 
