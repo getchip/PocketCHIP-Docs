@@ -18,7 +18,7 @@ No. At this time PocketC.H.I.P. does not support multiple displays.
 **Is it OK to eat PocketC.H.I.P.?** No! Neither C.H.I.P. nor PocketC.H.I.P. should ever be eaten, even by C.H.I.P.py Ruxpin. 
 
 **Will my Bluetooth Device Work?**
-Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal [here](http://docs.getchip.com/#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
+Yes, so long as the device is supported under Debian Linux. However, you will need to setup the bluetooth pairing using the terminal [here](http://docs.getchip.com/chip.html#connecting-bluetooth-devices). Our initial release of PocketC.H.I.P. does not provide graphical bluetooth configuration.
 
 **Pinch-zooming isn't working, is my screen bad?**
 Your screen is fine. The resistive touchscreen used in PocketC.H.I.P. does not support pinch gestures.

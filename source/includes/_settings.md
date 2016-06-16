@@ -40,7 +40,7 @@ At startup, **PocketC.H.I.P. automatically logs you in as chip**. This means the
 
 **Never login directly as root**, since it is extremely easy to delete critical files in the system. Instead, use the system administration command **sudo**, which provides a bit of protection from accidentally breaking your system.
 
-For more information on using sudo, see the C.H.I.P. docs [here](http://docs.getchip.com/#terminal-for-beginners-glossary).
+For more information on using sudo, see the C.H.I.P. docs [here](http://docs.getchip.com/chip.html#terminal-for-beginners-glossary).
 
 |**Username** 	| **Password** |
 | ------------- | -------- |

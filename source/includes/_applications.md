@@ -283,7 +283,7 @@ You can attach a **MIDI keyboard or controller** to PocketC.H.I.P.'s USB port an
 
 Many may find the **Terminal** archaic or intimidating, it's a place to **type commands directly to the computer** for execution and evaluation by the operating system. There are no icons, just text. 
 
-Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the C.H.I.P. documentation [here](http://docs.getchip.com/#using-the-terminal) if you want to learn more.
+Use the terminal to dive into the operating system’s guts, quickly move files around, play with PocketC.H.I.P.'s GPIO, or extend its capabilities. There's a primer on using Terminal in the C.H.I.P. documentation [here](http://docs.getchip.com/chip.html#using-the-terminal) if you want to learn more.
 
 ### Terminal Top Buttons
 
