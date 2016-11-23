@@ -5,7 +5,7 @@ PocketC.H.I.P. boots using U-Boot 2015.10 (GPLv2) with custom patches.
 
 Source code is available at:
 
-* https://github.com/CHIP-u-boot
+* [https://github.com/NextThingCo/CHIP-u-boot](https://github.com/NextThingCo/CHIP-u-boot)
 
 See below for the full text of the GPLv2.
 
@@ -14,7 +14,7 @@ PocketC.H.I.P. runs mainline Linux 4.3 (GPLv2) with custom patches.
 
 Source code is available at:
 
-* https://github.com/CHIP-Linux
+* [https://github.com/NextThingCo/CHIP-Linux](https://github.com/NextThingCo/CHIP-Linux)
 
 See below for the full text of the GPLv2.
 
