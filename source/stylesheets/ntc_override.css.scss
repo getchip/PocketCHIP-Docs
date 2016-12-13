@@ -1,0 +1,187 @@
+@charset "utf-8";
+@import 'normalize';
+@import 'variables';
+@import 'ntc_variables';
+@import 'icon-font';
+
+////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+////////////////////////////////////////////////////////////////////////////////
+
+#toc > ul > li > a > span {
+  background-color: $pink51;
+}
+
+// This is the logo at the top of the ToC
+.tocify-wrapper {
+  &>img {
+    display: block;
+  }
+  & .nav-bar-logo {
+    padding-top: 15px;
+    text-align: center;
+    
+    & img {
+      width: 40%;
+    }
+  }
+  
+
+ 
+// The Table of Contents is composed of multiple nested
+// unordered lists.  These styles remove the default
+// styling of an unordered list because it is ugly.
+  
+  .tocify-item {
+    transition: all .35s;
+  }
+  li.tocify-item:hover {
+    background: $pink51;
+  }
+  // This is the currently selected ToC entry
+  .tocify-focus {
+    background-color: $pink51;
+  }
+
+  .tocify-header {
+    font-size: 15px;
+  }
+  // Subheaders are the submenus that slide open
+  // in the table of contents.
+  .tocify-subheader {
+		font-weight: 800;
+		padding-left: 10px;
+		font-size: 13px;
+		background-color: $nav-bg;
+    .tocify-item>a {
+      font-size: 13px;
+		  padding-left: 15px;
+    }
+
+  }
+
+}
+ 
+// button to show navigation on mobile devices
+#nav-button {
+  color: $pink51;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// CONTENT STYLES
+////////////////////////////////////////////////////////////////////////////////
+// This is all the stuff with the light background in the left half of the page
+
+.content {
+  & a {
+    text-decoration: none;
+    color: #EB008B;
+    &:hover {
+      color: #6b56d0;
+    }
+  }
+  
+	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
+    margin-right: inherit;
+  }
+  
+  h1 {
+    font-size: 26px;
+    margin-top: 1em;
+    color: $pink51;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 2em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: $pink51;
+  }
+  
+  h3, h4, h5, h6 {
+    font-size: 18px;
+    margin-top: 1em;
+    color: $pink51;
+  }
+
+  h4, h5, h6 {
+    font-size: 15px;
+  }
+  
+  table {
+    th {
+      border: 1px solid #ccc;
+    }
+    td {
+      border: 1px solid #ccc;
+    }
+    td:nth-child(odd) {
+      background-color: darken($main-bg,5%);
+    }
+    th:nth-child(odd) {
+      background-color: darken($main-bg,5%);
+    }
+    tr:nth-child(odd)>td {
+      background-color: lighten($main-bg,0%);
+    }
+    tr:nth-child(even)>td {
+      background-color: lighten($main-bg,0%);
+    }
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// PAGE LAYOUT AND CODE SAMPLE BACKGROUND
+////////////////////////////////////////////////////////////////////////////////
+
+.page-wrapper {
+// The dark box is what gives the code samples their dark background.
+// It sits essentially under the actual content block, which has a
+// transparent background.
+// I know, it's hackish, but it's the simplist way to make the left
+// half of the content always this background color.
+  .dark-box {
+    display: none;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// CODE SAMPLE STYLES
+////////////////////////////////////////////////////////////////////////////////
+// This is all the stuff that appears in the right half of the page
+
+.content {
+  pre, blockquote {
+    width: inherit;
+    float:none;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// RESPONSIVE DESIGN
+////////////////////////////////////////////////////////////////////////////////
+// These are the styles for phones and tablets
+// There are also a couple styles disperesed
+
+@media (max-width: $tablet-width) {
+  .dark-box {
+    display: none;
+  }
+
+  %right-col {
+    width: auto;
+    float: none;
+  }
+}
+
+
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #909090;
+}
+
+.highlight, .highlight .w {
+  background-color: $code-bg;
+}

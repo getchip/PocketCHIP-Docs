@@ -1,0 +1,35 @@
+
+
+////////////////////////////////////////////////////////////////////////////////
+// CUSTOMIZE SLATE
+////////////////////////////////////////////////////////////////////////////////
+// Use these settings to help adjust the appearance of Slate
+
+
+// Font
+@import url(https://fonts.googleapis.com/css?family=Monda|Press+Start+2P|Noto+Sans);
+
+// OFFICIAL COLORS
+$pink51: #EB008B; // pocketC.H.I.P. pinky
+$main-bg: #fff;
+$code-bg: #292929;
+
+// SIZES
+////////////////////
+$nav-width: 250px; // width of the navbar
+$tablet-width: 930px !default; // min width before reverting to tablet size
+
+// FONTS
+////////////////////
+%default-font {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 15px;
+}
+
+%header-font {
+  font-family: Monda, "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+
+%code-font {
+  font-size: 15px;
+}

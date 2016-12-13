@@ -23,10 +23,6 @@ $print-color: #999;
 $print-color-light: #ccc;
 $print-font-size: 12px;
 
-@media print {
-    h1 {page-break-before: always;}
-}
-
 body {
   @extend %default-font;
 }
@@ -49,6 +45,12 @@ body {
     border: 1px solid $print-color;
     border-radius: 5px;
     font-size: 0.8em;
+  }
+
+  pre {
+    code {
+      border: 0;
+    }
   }
 
   pre {
