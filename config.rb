@@ -18,6 +18,8 @@ set :fonts_dir, 'fonts'
 # Activate the syntax highlighter
 activate :syntax
 
+activate :sprockets
+
 activate :autoprefixer do |config|
   config.browsers = ['last 2 version', 'Firefox ESR']
   config.cascade  = false
@@ -38,3 +40,7 @@ configure :build do
   # activate :asset_hash
   # activate :gzip
 end
+
+# Deploy Configuration
+# If you want Middleman to listen on a different port, you can set that below
+set :port, 4567
