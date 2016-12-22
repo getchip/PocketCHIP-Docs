@@ -1,4 +1,4 @@
-# Next Thing DIP Documentation
+# Next Thing PocketCHIP Documentation
 
 
 All documentation is written in markdown and staged on github pages. Published documentation is viewable on the github pages.
