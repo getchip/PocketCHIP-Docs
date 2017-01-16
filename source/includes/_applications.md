@@ -9,7 +9,7 @@ Your PocketC.H.I.P. comes with six applications on the Home Screen.
 * **Terminal** - use a Linux shell to run commands
 * **Write** - a lightweight text editor
 * **File Browser** - a graphical file browser
-* **Help** - the same documentation you're reading here, built into to PocketC.H.I.P.
+* **Help** - the same documentation you're reading here, built into PocketC.H.I.P.
 
 ## PICO-8
 
